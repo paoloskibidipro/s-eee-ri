@@ -55,17 +55,11 @@ if oldGui then oldGui:Destroy() end
 
 -- ============================================================================
 -- PING READER v2 — Ultra-ligero
---   • Cachea la referencia al objeto Data Ping (nada de FindFirstChild x3 por tick)
---   • Shift circular en array de 3 muestras (cero allocations de tabla)
---   • Anti-churn: si el ping no cambió ≥1ms, no recalcula ni reescribe
---   • Fallback en cascada: Stats → GetNetworkPing
---   • NUNCA congela el valor (evita el bug del 46ms fijo)
---   • 4 ticks/segundo, trabajo real ~0 cuando el ping es estable
 -- ============================================================================
 local cachedPingValue = 0.05
 local lastRawPingMS   = 50
-local pingSamples     = { 50, 50, 50 }   -- pre-llenado: evita rampa al inicio
-local _cachedDataPing = nil              -- ref cacheada a Stats...Data Ping
+local pingSamples     = { 50, 50, 50 }
+local _cachedDataPing = nil
 
 local function tryCacheDataPing()
     local ok, obj = pcall(function()
@@ -80,23 +74,20 @@ local function tryCacheDataPing()
 end
 
 local function readPingMS()
-    -- Fuente 1: Data Ping cacheado (Stats service, mismo valor que F9)
     local dp = _cachedDataPing
     if dp and dp.Parent then
         local ok, v = pcall(function() return dp:GetValue() end)
         if ok and v and v > 0 then return v end
     elseif dp then
-        _cachedDataPing = nil   -- invalidar cache si el objeto dejó de existir
+        _cachedDataPing = nil
     end
 
-    -- Reintentar cachear (por si aún no existía al inicio del script)
     dp = _cachedDataPing or tryCacheDataPing()
     if dp and dp.Parent then
         local ok, v = pcall(function() return dp:GetValue() end)
         if ok and v and v > 0 then return v end
     end
 
-    -- Fuente 2: LocalPlayer:GetNetworkPing() → devuelve SEGUNDOS
     local ok, v = pcall(function() return LocalPlayer:GetNetworkPing() end)
     if ok and v and v > 0 then return v * 1000 end
 
@@ -107,14 +98,12 @@ local pingTask = task.spawn(function()
     while task.wait(0.25) do
         local pMS = readPingMS()
         if pMS and pMS > 0 then
-            -- Anti-churn: si está estable (<1ms de delta), no recalcular nada
             if math_abs(pMS - lastRawPingMS) < 1 then
                 local desired = lastRawPingMS / 1000
                 if math_abs(cachedPingValue - desired) > 0.0005 then
                     cachedPingValue = desired
                 end
             else
-                -- Shift circular sin table.insert/remove (0 allocations)
                 pingSamples[1] = pingSamples[2]
                 pingSamples[2] = pingSamples[3]
                 pingSamples[3] = pMS
@@ -145,13 +134,7 @@ TabSheriff:CreateSlider("Sheriff_HScale", "Horizontal Prediction", 0, 300, funct
 TabSheriff:CreateSlider("Sheriff_VScale", "Vertical Prediction", 0, 300, function() end, 100)
 
 -- ============================================================================
--- PRIORITIZE PING v2 — Ultra-ligero
---   • Solo llama Set() si el MS cambió ≥2ms (elimina ~3 saves/seg cuando
---     el ping es estable → cero I/O de disco, cero callbacks innecesarios)
---   • Cachea el elemento del slider (nada de lookup por string cada tick)
---   • pcall con firma directa (0 allocations de closure en el hot path)
---   • Cancel limpio del thread anterior antes de respawnear
---   • NO afecta la predicción: solo escribe en el slider de UI
+-- PRIORITIZE PING v2
 -- ============================================================================
 local sliderPing = TabSheriff:CreateSlider("Sheriff_PingComp", "Ping Compensation", 0, 300, function() end, 50)
 
@@ -159,16 +142,14 @@ local pingLoopThread
 local _lastPingSetMS = -1
 
 TabSheriff:CreateToggle("Sheriff_PrioritizePing", "Prioritize Ping", function(estado)
-    -- Matar thread previo (idempotente, evita huérfanos)
     if pingLoopThread then
         pcall(task.cancel, pingLoopThread)
         pingLoopThread = nil
     end
 
     if estado then
-        _lastPingSetMS = -1   -- forzar primer Set
+        _lastPingSetMS = -1
 
-        -- Cachear el elemento del slider UNA sola vez al activar
         local cachedElement = sliderPing
         if not (cachedElement and cachedElement.Set) then
             cachedElement = KillerHub.Elements and KillerHub.Elements["Sheriff_PingComp"]
@@ -178,14 +159,10 @@ TabSheriff:CreateToggle("Sheriff_PrioritizePing", "Prioritize Ping", function(es
             while Flag("Sheriff_PrioritizePing", false) do
                 local currentMS = math_floor(lastRawPingMS + 0.5)
 
-                -- Solo Set() si el cambio es visible (≥2ms) → cero churn
-                -- Nota: 2ms es imperceptible en pantalla pero mata el spam
                 if _lastPingSetMS < 0 or math_abs(currentMS - _lastPingSetMS) >= 2 then
                     if cachedElement and cachedElement.Set then
-                        -- Forma sin allocation de closure (evita GC pressure)
                         local ok = pcall(cachedElement.Set, cachedElement, currentMS)
                         if not ok then
-                            -- Re-lookup por si Elements cambió
                             local el = KillerHub.Elements and KillerHub.Elements["Sheriff_PingComp"]
                             if el and el.Set then
                                 pcall(el.Set, el, currentMS)
@@ -210,7 +187,7 @@ TabSheriff:CreateToggle("Sheriff_PiercerDropComp", "Compensate Bullet Drop", fun
 TabSheriff:CreateSlider("Sheriff_PiercerBulletSpeed", "Bullet Speed (studs/s)", 80, 500, function() end, 200)
 
 -- ----------------------------------------------------------------------------
--- Visuals — ahora incluye slider de suavizado de tracers
+-- Visuals — ya SIN slider de smoothness (constantes internas abajo)
 -- ----------------------------------------------------------------------------
 TabSheriff:CreateSection("Visuals")
 TabSheriff:CreateMultiDropdown("Sheriff_Tracers", "Tracers", {
@@ -222,14 +199,8 @@ TabSheriff:CreateMultiDropdown("Sheriff_Tracers", "Tracers", {
     "Prediction X/Y offset"
 }, function() end)
 
--- Cache de suavizado (evita leer flag cada frame en el render loop)
-local tracerSmoothPct = 55
-TabSheriff:CreateSlider("Sheriff_TracerSmooth", "Tracer Smoothness", 0, 100, function(val)
-    tracerSmoothPct = val
-end, 55)
-
 -- ----------------------------------------------------------------------------
--- Interface — Button Size movido debajo de los toggles
+-- Interface
 -- ----------------------------------------------------------------------------
 local cachedShootButton, cachedScreenGui
 
@@ -375,7 +346,6 @@ local Label, SubLabel, DecalTexture = nil, nil, nil
 
 local tweenInfoFast = TweenInfo.new(0.25, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
 
--- Estado de desync/juke del target actual (lo llena getPredictedPosition)
 local currentTargetDesynced   = false
 local currentTargetJukeFactor = 1.0
 
@@ -730,7 +700,7 @@ local function isPartVisibleFromCamera(targetChar, part)
 end
 
 -- ----------------------------------------------------------------------------
--- SMART TARGET PART — MM2 TUNED: HRP siempre (hitbox más grande)
+-- SMART TARGET PART — HRP siempre (hitbox más grande)
 -- ----------------------------------------------------------------------------
 local function getSmartTargetPart(targetChar)
     if not targetChar then return nil, true end
@@ -922,7 +892,6 @@ local function getPredictedPosition(targetChar, targetPart, customDelta)
         end
     end
 
-    -- Exportar estado para el suavizado visual de los tracers
     currentTargetDesynced   = isDesynced
     currentTargetJukeFactor = jukeFactor
 
@@ -1018,13 +987,17 @@ local function getPredictedPosition(targetChar, targetPart, customDelta)
 end
 
 -- ============================================================================
--- TRACER VISUAL SMOOTHING (critically-damped spring / SmoothDamp)
---   • Elimina el látigo cuando el objetivo frena en seco o cambia de dirección.
---   • Elimina el temblor cuando el objetivo tiene lag/desync.
---   • Elimina latigazos verticales al saltar / correr+saltar.
---   • Adaptativo: más suave si desync o juke, responsivo si todo está limpio.
---   • 100% visual: NO afecta la predicción real ni el disparo.
+-- TRACER VISUAL SMOOTHING v2 — FAST / 85 % INSTANT
+--   • 85 % instantáneo: el tracking sigue la predicción casi 1:1
+--   • 15 % suave: filtro critically-damped que SOLO mata el whiplash
+--   • Adaptativo: más amortiguación SOLO en desync/juke (sigue siendo veloz)
+--   • 100 % visual: NO afecta la predicción real ni el disparo
+--   • Slider de smoothness ELIMINADO (tuning interno abajo)
 -- ============================================================================
+local TRACER_BASE_SMOOTH_TIME = 0.010   -- ≈85 % instantáneo @ 60 fps
+local TRACER_DESYNC_MULT      = 1.60    -- +amortiguación en desync
+local TRACER_JUKE_MULT        = 1.25    -- +amortiguación en juke
+
 local function smoothDampAxis(current, target, velocity, smoothTime, dt)
     smoothTime = math_max(0.0001, smoothTime)
     local omega = 2 / smoothTime
@@ -1055,8 +1028,6 @@ local function smoothDamp3D(state, target, smoothTime, dt, maxSnap)
         return target
     end
 
-    -- Snap: si el objetivo salta demasiado en un frame (teleport / respawn),
-    -- reubicamos el visual sin whipear.
     if maxSnap and state.lastRaw then
         if (target - state.lastRaw).Magnitude > maxSnap then
             state.pos = target
@@ -1147,7 +1118,6 @@ local renderConn = RunService.RenderStepped:Connect(function(dt)
     local targetChar = murderer.Character
     handLineIsBlocked = isBlocked
 
-    -- Resetear estados de suavizado cuando cambia el target
     if lastSmoothTargetChar ~= targetChar then
         resetAllTracerSmooth()
         lastSmoothTargetChar = targetChar
@@ -1164,24 +1134,25 @@ local renderConn = RunService.RenderStepped:Connect(function(dt)
     local showConfirmWall = tracersTable["Confirm wall check"]      == true
     local showXYOffset    = tracersTable["Prediction X/Y offset"]   == true
 
-    -- SmoothTime adaptativo base
-    local baseSmoothTime = 0.025 + (tracerSmoothPct / 100) * 0.075
-    local adaptiveSmoothTime = baseSmoothTime
+    -- Smooth time adaptativo: base 0.010s (85 % instantáneo).
+    -- Solo se sube un poco si el target está desync o jukeando.
+    local adaptiveSmoothTime = TRACER_BASE_SMOOTH_TIME
     if currentTargetDesynced then
-        adaptiveSmoothTime = baseSmoothTime * 1.75
+        adaptiveSmoothTime = TRACER_BASE_SMOOTH_TIME * TRACER_DESYNC_MULT
     elseif currentTargetJukeFactor < 1.0 then
-        adaptiveSmoothTime = baseSmoothTime * 1.35
+        adaptiveSmoothTime = TRACER_BASE_SMOOTH_TIME * TRACER_JUKE_MULT
     end
 
     if visualPart then
         local _, predNoY, minPredNoY, predXYExaggerated, finalPred36X = getPredictedPosition(targetChar, visualPart, dt)
 
         if predNoY and minPredNoY then
+            -- Valores ultra-snappy: cada uno con su propio margen
             local stPredNoY     = adaptiveSmoothTime
-            local stMinPredNoY  = adaptiveSmoothTime * 1.15
-            local stPredXYExag  = adaptiveSmoothTime * 1.25
-            local stFinalPred36 = adaptiveSmoothTime * 1.10
-            local stHand        = math_min(0.035, adaptiveSmoothTime * 0.60)
+            local stMinPredNoY  = adaptiveSmoothTime * 1.05
+            local stPredXYExag  = adaptiveSmoothTime * 1.15
+            local stFinalPred36 = adaptiveSmoothTime * 1.02
+            local stHand        = math_min(0.020, adaptiveSmoothTime * 0.55)
 
             local smoothedPredNoY     = smoothDamp3D(tracerSmooth.predNoY,     predNoY,          stPredNoY,     dt, 40)
             local smoothedMinPredNoY  = smoothDamp3D(tracerSmooth.minPredNoY,  minPredNoY,       stMinPredNoY,  dt, 40)
