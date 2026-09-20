@@ -117,6 +117,9 @@ TabSheriff:CreateSection("Piercer Bullet Compensation")
 TabSheriff:CreateToggle("Sheriff_PiercerDropComp", "Compensate Bullet Drop", function() end)
 TabSheriff:CreateSlider("Sheriff_PiercerBulletSpeed", "Bullet Speed (studs/s)", 80, 500, function() end, 200)
 
+-- ----------------------------------------------------------------------------
+-- Visuals — ahora incluye slider de suavizado de tracers
+-- ----------------------------------------------------------------------------
 TabSheriff:CreateSection("Visuals")
 TabSheriff:CreateMultiDropdown("Sheriff_Tracers", "Tracers", {
     "Tracer Prediction",
@@ -127,16 +130,26 @@ TabSheriff:CreateMultiDropdown("Sheriff_Tracers", "Tracers", {
     "Prediction X/Y offset"
 }, function() end)
 
+-- Cache de suavizado (evita leer flag cada frame en el render loop)
+local tracerSmoothPct = 55
+TabSheriff:CreateSlider("Sheriff_TracerSmooth", "Tracer Smoothness", 0, 100, function(val)
+    tracerSmoothPct = val
+end, 55)
+
+-- ----------------------------------------------------------------------------
+-- Interface — Button Size movido debajo de los toggles
+-- ----------------------------------------------------------------------------
 local cachedShootButton, cachedScreenGui
-TabSheriff:CreateSlider("Sheriff_BtnSize", "Button Size", 50, 200, function(val)
-    if cachedShootButton then cachedShootButton.Size = udim2New(0, val, 0, val) end
-end, 95)
 
 local checkWeaponVisibility
 TabSheriff:CreateSection("Interface")
 TabSheriff:CreateToggle("Sheriff_WeaponDetect", "Weapon Detector", function() if checkWeaponVisibility then checkWeaponVisibility() end end)
 TabSheriff:CreateToggle("Sheriff_ShowButton", "Show Button", function() if checkWeaponVisibility then checkWeaponVisibility() end end)
 TabSheriff:CreateToggle("Sheriff_LockBtnPos", "Lock Button Position", function() end)
+
+TabSheriff:CreateSlider("Sheriff_BtnSize", "Button Size", 50, 200, function(val)
+    if cachedShootButton then cachedShootButton.Size = udim2New(0, val, 0, val) end
+end, 95)
 
 local PageOthers = TabSheriff:CreatePage("Others", "Gear")
 PageOthers:CreateSection("Auto Shoot")
@@ -269,6 +282,10 @@ local waitSightThread   = nil
 local Label, SubLabel, DecalTexture = nil, nil, nil
 
 local tweenInfoFast = TweenInfo.new(0.25, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+
+-- Estado de desync/juke del target actual (lo llena getPredictedPosition)
+local currentTargetDesynced   = false
+local currentTargetJukeFactor = 1.0
 
 -- ============================================================================
 -- WAIT-FOR-SIGHT VISUAL STATE
@@ -631,12 +648,10 @@ local function getSmartTargetPart(targetChar)
     local wallCheck  = Flag("Sheriff_WallCheck", true)
     local shotType   = Flag("Sheriff_ShotType", "Normal")
 
-    -- Sin wall check o piercer: HRP directo, sin verificación
     if not wallCheck or shotType == "Piercer Bullet" then
         return hrp, false
     end
 
-    -- Con wall check: HRP es el objetivo, verifica visibilidad
     if isPartVisibleFromCamera(targetChar, hrp) then
         if not isGunBlocked(hrp.Position, targetChar) then
             return hrp, false
@@ -699,11 +714,6 @@ end
 
 -- ============================================================================
 -- PREDICTION ENGINE V3 (MM2 TUNED)
---   • HRP como objetivo
---   • Balística pura (sin "jump to landing" que metía la bala al piso)
---   • tFall clamp: nunca predice más allá del aterrizaje
---   • 2do orden (aceleración)
---   • Juke detection
 -- ============================================================================
 local function getPredictedPosition(targetChar, targetPart, customDelta)
     if not targetChar or not targetPart then return nil, nil, nil, nil, nil end
@@ -800,12 +810,10 @@ local function getPredictedPosition(targetChar, targetPart, customDelta)
         smoothedVelocity = VECTOR_ZERO
     end
 
-    -- Aceleración (2do orden)
     local accel = (smoothedVelocity - lastData.PrevVel) / math_max(activeDT, 0.008)
     lastData.PrevVel = smoothedVelocity
     if accel.Magnitude > 60 then accel = accel.Unit * 60 end
 
-    -- Juke detection
     local jukeFactor = 1.0
     if #lastData.Samples >= 3 then
         local s1 = lastData.Samples[#lastData.Samples - 2]
@@ -822,7 +830,10 @@ local function getPredictedPosition(targetChar, targetPart, customDelta)
         end
     end
 
-    -- Latencia efectiva
+    -- Exportar estado para el suavizado visual de los tracers
+    currentTargetDesynced   = isDesynced
+    currentTargetJukeFactor = jukeFactor
+
     local prioritizePing = Flag("Sheriff_PrioritizePing", false)
     local vScale = Flag("Sheriff_VScale", 100)
     local hScale = Flag("Sheriff_HScale", 100)
@@ -843,12 +854,10 @@ local function getPredictedPosition(targetChar, targetPart, customDelta)
 
     local t = effectiveHLatency * predictionWeight * jukeFactor
 
-    -- Horizontal (2do orden)
     local velPart   = vec3New(smoothedVelocity.X, 0, smoothedVelocity.Z) * t
     local accelPart = vec3New(accel.X, 0, accel.Z) * (0.5 * t * t)
     local horizontalShift = velPart + accelPart
 
-    -- Vertical (balística pura, sin "jump to landing")
     local verticalShift = VECTOR_ZERO
     if vScale > 0 and not isDesynced then
         local isAir = (humanoid.FloorMaterial == Enum.Material.Air)
@@ -860,27 +869,21 @@ local function getPredictedPosition(targetChar, targetPart, customDelta)
 
             if isAir then
                 if calculatedVelY < -0.5 then
-                    -- CAYENDO: balística pura con clamp a tiempo de aterrizaje
-                    -- Así NUNCA se dispara al piso antes de llegar al target
                     local floorY = getCachedFloorY(hrp, targetChar, now)
                     local localVFactor = vFactor
                     if floorY then
                         local h = hrp.Position.Y - floorY
                         local v0 = math_abs(calculatedVelY)
                         if h > 0.1 then
-                            -- tFall = tiempo hasta tocar el piso
                             local tFall = (v0 + math_sqrt(v0 * v0 + 2 * workspace_Gravity * h)) / workspace_Gravity
-                            -- Clamp: si predice más allá del aterrizaje, se queda en el aterrizaje
                             if localVFactor > tFall then
                                 localVFactor = tFall
                             end
                         end
                     end
-                    -- Balística: y = v0·t − ½·g·t²
                     local yp = calculatedVelY * localVFactor - 0.5 * workspace_Gravity * (localVFactor * localVFactor)
                     verticalShift = vec3New(0, yp, 0)
                 else
-                    -- SUBIENDO: balística normal (esto funciona bien, no lo tocamos)
                     local gravityEffect = 0.5 * workspace_Gravity * math_pow(vFactor, 2)
                     local pY = (calculatedVelY * vFactor) - gravityEffect
                     verticalShift = vec3New(0, pY, 0)
@@ -891,7 +894,6 @@ local function getPredictedPosition(targetChar, targetPart, customDelta)
         end
     end
 
-    -- Clamps finales
     if horizontalShift.Magnitude > 8.5 then horizontalShift = horizontalShift.Unit * 8.5 end
     if verticalShift.Magnitude   > 6.0 then verticalShift   = verticalShift.Unit   * 6.0 end
 
@@ -906,7 +908,6 @@ local function getPredictedPosition(targetChar, targetPart, customDelta)
 
     local finalPred36X = targetPosition + (horizontalShift * 3.6) + vec3New(0, smoothedVisualY, 0)
 
-    -- Floor clamp visual
     local floorY = getCachedFloorY(hrp, targetChar, now)
     if floorY then
         local minAllowedY = floorY + (hrp.Size.Y / 2) + 0.15
@@ -925,7 +926,85 @@ local function getPredictedPosition(targetChar, targetPart, customDelta)
 end
 
 -- ============================================================================
--- TRACERS
+-- TRACER VISUAL SMOOTHING (critically-damped spring / SmoothDamp)
+--   • Elimina el látigo cuando el objetivo frena en seco o cambia de dirección.
+--   • Elimina el temblor cuando el objetivo tiene lag/desync.
+--   • Elimina latigazos verticales al saltar / correr+saltar.
+--   • Adaptativo: más suave si desync o juke, responsivo si todo está limpio.
+--   • 100% visual: NO afecta la predicción real ni el disparo.
+-- ============================================================================
+local function smoothDampAxis(current, target, velocity, smoothTime, dt)
+    smoothTime = math_max(0.0001, smoothTime)
+    local omega = 2 / smoothTime
+    local x = omega * dt
+    local expFactor = 1 / (1 + x + 0.48 * x * x + 0.235 * x * x * x)
+    local change = current - target
+    local temp = (velocity + omega * change) * dt
+    local newVel = (velocity - omega * temp) * expFactor
+    local output = target + (change + temp) * expFactor
+    return output, newVel
+end
+
+local function makeSmoothState()
+    return { pos = nil, vel = VECTOR_ZERO, lastRaw = nil }
+end
+
+local function resetSmoothState(s)
+    s.pos = nil
+    s.vel = VECTOR_ZERO
+    s.lastRaw = nil
+end
+
+local function smoothDamp3D(state, target, smoothTime, dt, maxSnap)
+    if not state.pos then
+        state.pos = target
+        state.vel = VECTOR_ZERO
+        state.lastRaw = target
+        return target
+    end
+
+    -- Snap: si el objetivo salta demasiado en un frame (teleport / respawn),
+    -- reubicamos el visual sin whipear.
+    if maxSnap and state.lastRaw then
+        if (target - state.lastRaw).Magnitude > maxSnap then
+            state.pos = target
+            state.vel = VECTOR_ZERO
+            state.lastRaw = target
+            return target
+        end
+    end
+    state.lastRaw = target
+
+    local newX, vX = smoothDampAxis(state.pos.X, target.X, state.vel.X, smoothTime, dt)
+    local newY, vY = smoothDampAxis(state.pos.Y, target.Y, state.vel.Y, smoothTime, dt)
+    local newZ, vZ = smoothDampAxis(state.pos.Z, target.Z, state.vel.Z, smoothTime, dt)
+
+    state.pos = vec3New(newX, newY, newZ)
+    state.vel = vec3New(vX, vY, vZ)
+    return state.pos
+end
+
+local tracerSmooth = {
+    predNoY     = makeSmoothState(),
+    minPredNoY  = makeSmoothState(),
+    predXYExag  = makeSmoothState(),
+    finalPred36 = makeSmoothState(),
+    hand        = makeSmoothState(),
+    confirm     = makeSmoothState(),
+}
+local lastSmoothTargetChar = nil
+
+local function resetAllTracerSmooth()
+    resetSmoothState(tracerSmooth.predNoY)
+    resetSmoothState(tracerSmooth.minPredNoY)
+    resetSmoothState(tracerSmooth.predXYExag)
+    resetSmoothState(tracerSmooth.finalPred36)
+    resetSmoothState(tracerSmooth.hand)
+    resetSmoothState(tracerSmooth.confirm)
+end
+
+-- ============================================================================
+-- TRACERS (Drawing API)
 -- ============================================================================
 local MinPredictionLine = Drawing.new("Line")
 MinPredictionLine.Color = color3RGB(4, 0, 220); MinPredictionLine.Thickness = 2.0; MinPredictionLine.Transparency = 1.0; MinPredictionLine.ZIndex = 5
@@ -953,8 +1032,7 @@ table.insert(_G.KillerHubLines, ConfirmWallLine)
 table.insert(_G.KillerHubLines, PredictionXYLine)
 
 local worldToViewport = Camera.WorldToViewportPoint
-
-local visPredNoY, visMinPredNoY, visPredXYExaggerated, visFinalPred36X
+local EMPTY_TRACERS = {}
 
 local renderConn = RunService.RenderStepped:Connect(function(dt)
     emaDeltaTime = emaDeltaTime + 0.2 * (dt - emaDeltaTime)
@@ -967,46 +1045,62 @@ local renderConn = RunService.RenderStepped:Connect(function(dt)
         LeadTimePredLine.Visible  = false
         ConfirmWallLine.Visible   = false
         PredictionXYLine.Visible  = false
-        visPredNoY = nil
+        if lastSmoothTargetChar then
+            resetAllTracerSmooth()
+            lastSmoothTargetChar = nil
+        end
         return
     end
 
     local targetChar = murderer.Character
     handLineIsBlocked = isBlocked
 
+    -- Resetear estados de suavizado cuando cambia el target
+    if lastSmoothTargetChar ~= targetChar then
+        resetAllTracerSmooth()
+        lastSmoothTargetChar = targetChar
+    end
+
     local myChar = LocalPlayer.Character
     local rightHand = myChar and (myChar:FindFirstChild("RightHand") or myChar:FindFirstChild("Right Arm"))
 
-    local tracersTable = Flag("Sheriff_Tracers", {})
-    local showRed         = tracersTable["Tracer Prediction"] == true
-    local showBlue        = tracersTable["Min Tracer Prediction"] == true
-    local showGreen       = tracersTable["Lead Time"] == true
-    local showLeadPred    = tracersTable["Lead Time Prediction"] == true
-    local showConfirmWall = tracersTable["Confirm wall check"] == true
-    local showXYOffset    = tracersTable["Prediction X/Y offset"] == true
+    local tracersTable = Flag("Sheriff_Tracers", EMPTY_TRACERS)
+    local showRed         = tracersTable["Tracer Prediction"]       == true
+    local showBlue        = tracersTable["Min Tracer Prediction"]   == true
+    local showGreen       = tracersTable["Lead Time"]               == true
+    local showLeadPred    = tracersTable["Lead Time Prediction"]    == true
+    local showConfirmWall = tracersTable["Confirm wall check"]      == true
+    local showXYOffset    = tracersTable["Prediction X/Y offset"]   == true
+
+    -- SmoothTime adaptativo base
+    local baseSmoothTime = 0.025 + (tracerSmoothPct / 100) * 0.075
+    local adaptiveSmoothTime = baseSmoothTime
+    if currentTargetDesynced then
+        adaptiveSmoothTime = baseSmoothTime * 1.75
+    elseif currentTargetJukeFactor < 1.0 then
+        adaptiveSmoothTime = baseSmoothTime * 1.35
+    end
 
     if visualPart then
         local _, predNoY, minPredNoY, predXYExaggerated, finalPred36X = getPredictedPosition(targetChar, visualPart, dt)
 
         if predNoY and minPredNoY then
-            local tracerLerpAlpha = math_clamp(25 * dt, 0.15, 0.55)
-            if not visPredNoY then
-                visPredNoY            = predNoY
-                visMinPredNoY         = minPredNoY
-                visPredXYExaggerated  = predXYExaggerated
-                visFinalPred36X       = finalPred36X
-            else
-                visPredNoY    = visPredNoY:Lerp(predNoY, tracerLerpAlpha)
-                visMinPredNoY = visMinPredNoY:Lerp(minPredNoY, tracerLerpAlpha)
-                if predXYExaggerated then visPredXYExaggerated = visPredXYExaggerated:Lerp(predXYExaggerated, tracerLerpAlpha) end
-                if finalPred36X      then visFinalPred36X      = visFinalPred36X:Lerp(finalPred36X, tracerLerpAlpha)      end
-            end
+            local stPredNoY     = adaptiveSmoothTime
+            local stMinPredNoY  = adaptiveSmoothTime * 1.15
+            local stPredXYExag  = adaptiveSmoothTime * 1.25
+            local stFinalPred36 = adaptiveSmoothTime * 1.10
+            local stHand        = math_min(0.035, adaptiveSmoothTime * 0.60)
+
+            local smoothedPredNoY     = smoothDamp3D(tracerSmooth.predNoY,     predNoY,          stPredNoY,     dt, 40)
+            local smoothedMinPredNoY  = smoothDamp3D(tracerSmooth.minPredNoY,  minPredNoY,       stMinPredNoY,  dt, 40)
+            local smoothedPredXYExag  = predXYExaggerated and smoothDamp3D(tracerSmooth.predXYExag,   predXYExaggerated, stPredXYExag,  dt, 40)
+            local smoothedFinalPred36 = finalPred36X     and smoothDamp3D(tracerSmooth.finalPred36, finalPred36X,     stFinalPred36, dt, 40)
 
             local currentViewportSize = Camera.ViewportSize
             local screenOrigin = vec2New(currentViewportSize.X / 2, currentViewportSize.Y)
 
             if showBlue then
-                local screenPos, onScreen = worldToViewport(Camera, visMinPredNoY)
+                local screenPos, onScreen = worldToViewport(Camera, smoothedMinPredNoY)
                 if onScreen then
                     MinPredictionLine.From    = screenOrigin
                     MinPredictionLine.To      = vec2New(screenPos.X, screenPos.Y)
@@ -1015,7 +1109,7 @@ local renderConn = RunService.RenderStepped:Connect(function(dt)
             else MinPredictionLine.Visible = false end
 
             if showRed then
-                local screenPos, onScreen = worldToViewport(Camera, visPredNoY)
+                local screenPos, onScreen = worldToViewport(Camera, smoothedPredNoY)
                 if onScreen then
                     PredictionLine.From    = screenOrigin
                     PredictionLine.To      = vec2New(screenPos.X, screenPos.Y)
@@ -1023,8 +1117,8 @@ local renderConn = RunService.RenderStepped:Connect(function(dt)
                 else PredictionLine.Visible = false end
             else PredictionLine.Visible = false end
 
-            if showLeadPred and visFinalPred36X then
-                local screenPos, onScreen = worldToViewport(Camera, visFinalPred36X)
+            if showLeadPred and smoothedFinalPred36 then
+                local screenPos, onScreen = worldToViewport(Camera, smoothedFinalPred36)
                 if onScreen then
                     LeadTimePredLine.From    = screenOrigin
                     LeadTimePredLine.To      = vec2New(screenPos.X, screenPos.Y)
@@ -1032,8 +1126,8 @@ local renderConn = RunService.RenderStepped:Connect(function(dt)
                 else LeadTimePredLine.Visible = false end
             else LeadTimePredLine.Visible = false end
 
-            if showXYOffset and visPredXYExaggerated then
-                local screenPos, onScreen = worldToViewport(Camera, visPredXYExaggerated)
+            if showXYOffset and smoothedPredXYExag then
+                local screenPos, onScreen = worldToViewport(Camera, smoothedPredXYExag)
                 if onScreen then
                     PredictionXYLine.From    = screenOrigin
                     PredictionXYLine.To      = vec2New(screenPos.X, screenPos.Y)
@@ -1042,9 +1136,10 @@ local renderConn = RunService.RenderStepped:Connect(function(dt)
             else PredictionXYLine.Visible = false end
 
             if rightHand and showGreen then
-                local targetPosForLead = showLeadPred and visFinalPred36X or visPredNoY
+                local targetPosForLead = (showLeadPred and smoothedFinalPred36) or smoothedPredNoY
                 if targetPosForLead then
-                    local handScreenPos, handOnScreen = worldToViewport(Camera, rightHand.Position)
+                    local smoothedHandPos = smoothDamp3D(tracerSmooth.hand, rightHand.Position, stHand, dt, 25)
+                    local handScreenPos, handOnScreen = worldToViewport(Camera, smoothedHandPos)
                     local predScreenPos, predOnScreen = worldToViewport(Camera, targetPosForLead)
                     if handOnScreen and predOnScreen then
                         LeadTimeLine.Color   = color3RGB(35, 255, 35)
@@ -1054,12 +1149,19 @@ local renderConn = RunService.RenderStepped:Connect(function(dt)
                     else LeadTimeLine.Visible = false end
                 else LeadTimeLine.Visible = false end
             else LeadTimeLine.Visible = false end
+        else
+            PredictionLine.Visible    = false
+            MinPredictionLine.Visible = false
+            LeadTimeLine.Visible      = false
+            LeadTimePredLine.Visible  = false
+            PredictionXYLine.Visible  = false
         end
 
         if showConfirmWall and myChar and myChar:FindFirstChild("HumanoidRootPart") then
             local myHrp = myChar.HumanoidRootPart
             local myScreenPos, myOnScreen = worldToViewport(Camera, myHrp.Position)
-            local targetScreenPos, targetOnScreen = worldToViewport(Camera, visualPart.Position)
+            local smoothedTargetPos = smoothDamp3D(tracerSmooth.confirm, visualPart.Position, adaptiveSmoothTime, dt, 40)
+            local targetScreenPos, targetOnScreen = worldToViewport(Camera, smoothedTargetPos)
 
             if myOnScreen and targetOnScreen then
                 ConfirmWallLine.From = vec2New(myScreenPos.X, myScreenPos.Y)
@@ -1083,7 +1185,6 @@ local renderConn = RunService.RenderStepped:Connect(function(dt)
         LeadTimePredLine.Visible  = false
         ConfirmWallLine.Visible   = false
         PredictionXYLine.Visible  = false
-        visPredNoY = nil
     end
 end)
 KillerHub:AddTask(renderConn)
@@ -1134,14 +1235,12 @@ executeActualShoot = function(targetChar, bestPart)
                 local spawnOrigin = finalPredictedPos - (horizDir * 1.5)
                 originCFrame = cframeNew(spawnOrigin, finalPredictedPos)
 
-                -- Compensación de bullet drop para piercer a distancia
                 if Flag("Sheriff_PiercerDropComp", false) then
                     local bulletSpeed = Flag("Sheriff_PiercerBulletSpeed", 200)
                     if bulletSpeed > 0 then
                         local dist = (finalPredictedPos - originCFrame.Position).Magnitude
                         local travelTime = dist / bulletSpeed
                         local drop = 0.5 * workspace_Gravity * travelTime * travelTime
-                        -- Compensamos 85% para no pasarnos (el servidor puede tener velocidad distinta)
                         finalPredictedPos = finalPredictedPos + vec3New(0, drop * 0.85, 0)
                     end
                 end
