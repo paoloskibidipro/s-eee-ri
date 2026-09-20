@@ -54,26 +54,76 @@ local oldGui = game:GetService("CoreGui"):FindFirstChild("KillerHub_SheriffGui")
 if oldGui then oldGui:Destroy() end
 
 -- ============================================================================
--- PING READER
+-- PING READER v2 — Ultra-ligero
+--   • Cachea la referencia al objeto Data Ping (nada de FindFirstChild x3 por tick)
+--   • Shift circular en array de 3 muestras (cero allocations de tabla)
+--   • Anti-churn: si el ping no cambió ≥1ms, no recalcula ni reescribe
+--   • Fallback en cascada: Stats → GetNetworkPing
+--   • NUNCA congela el valor (evita el bug del 46ms fijo)
+--   • 4 ticks/segundo, trabajo real ~0 cuando el ping es estable
 -- ============================================================================
 local cachedPingValue = 0.05
+local lastRawPingMS   = 50
+local pingSamples     = { 50, 50, 50 }   -- pre-llenado: evita rampa al inicio
+local _cachedDataPing = nil              -- ref cacheada a Stats...Data Ping
+
+local function tryCacheDataPing()
+    local ok, obj = pcall(function()
+        local network = Stats:FindFirstChild("Network")
+        if not network then return nil end
+        local serverStats = network:FindFirstChild("ServerStatsItem")
+        if not serverStats then return nil end
+        return serverStats:FindFirstChild("Data Ping")
+    end)
+    if ok and obj then _cachedDataPing = obj end
+    return _cachedDataPing
+end
+
+local function readPingMS()
+    -- Fuente 1: Data Ping cacheado (Stats service, mismo valor que F9)
+    local dp = _cachedDataPing
+    if dp and dp.Parent then
+        local ok, v = pcall(function() return dp:GetValue() end)
+        if ok and v and v > 0 then return v end
+    elseif dp then
+        _cachedDataPing = nil   -- invalidar cache si el objeto dejó de existir
+    end
+
+    -- Reintentar cachear (por si aún no existía al inicio del script)
+    dp = _cachedDataPing or tryCacheDataPing()
+    if dp and dp.Parent then
+        local ok, v = pcall(function() return dp:GetValue() end)
+        if ok and v and v > 0 then return v end
+    end
+
+    -- Fuente 2: LocalPlayer:GetNetworkPing() → devuelve SEGUNDOS
+    local ok, v = pcall(function() return LocalPlayer:GetNetworkPing() end)
+    if ok and v and v > 0 then return v * 1000 end
+
+    return nil
+end
+
 local pingTask = task.spawn(function()
-    while task.wait(0.2) do
-        local currentPing = nil
-        pcall(function()
-            if LocalPlayer and LocalPlayer.GetNetworkPing then
-                currentPing = LocalPlayer:GetNetworkPing()
-            end
-        end)
-        if not currentPing or currentPing <= 0 then
-            pcall(function()
-                if Stats and Stats.Network and Stats.Network:FindFirstChild("ServerStatsItem") then
-                    local dataPing = Stats.Network.ServerStatsItem:FindFirstChild("Data Ping")
-                    if dataPing then currentPing = dataPing:GetValue() / 1000 end
+    while task.wait(0.25) do
+        local pMS = readPingMS()
+        if pMS and pMS > 0 then
+            -- Anti-churn: si está estable (<1ms de delta), no recalcular nada
+            if math_abs(pMS - lastRawPingMS) < 1 then
+                local desired = lastRawPingMS / 1000
+                if math_abs(cachedPingValue - desired) > 0.0005 then
+                    cachedPingValue = desired
                 end
-            end)
+            else
+                -- Shift circular sin table.insert/remove (0 allocations)
+                pingSamples[1] = pingSamples[2]
+                pingSamples[2] = pingSamples[3]
+                pingSamples[3] = pMS
+
+                local avg = (pingSamples[1] + pingSamples[2] + pingSamples[3]) * 0.3333333
+                lastRawPingMS   = avg
+                cachedPingValue = avg / 1000
+            end
         end
-        if currentPing and currentPing > 0 then cachedPingValue = currentPing end
     end
 end)
 KillerHub:AddTask(pingTask)
@@ -94,18 +144,60 @@ TabSheriff:CreateSection("Prediction")
 TabSheriff:CreateSlider("Sheriff_HScale", "Horizontal Prediction", 0, 300, function() end, 100)
 TabSheriff:CreateSlider("Sheriff_VScale", "Vertical Prediction", 0, 300, function() end, 100)
 
+-- ============================================================================
+-- PRIORITIZE PING v2 — Ultra-ligero
+--   • Solo llama Set() si el MS cambió ≥2ms (elimina ~3 saves/seg cuando
+--     el ping es estable → cero I/O de disco, cero callbacks innecesarios)
+--   • Cachea el elemento del slider (nada de lookup por string cada tick)
+--   • pcall con firma directa (0 allocations de closure en el hot path)
+--   • Cancel limpio del thread anterior antes de respawnear
+--   • NO afecta la predicción: solo escribe en el slider de UI
+-- ============================================================================
 local sliderPing = TabSheriff:CreateSlider("Sheriff_PingComp", "Ping Compensation", 0, 300, function() end, 50)
 
 local pingLoopThread
+local _lastPingSetMS = -1
+
 TabSheriff:CreateToggle("Sheriff_PrioritizePing", "Prioritize Ping", function(estado)
-    if pingLoopThread then task.cancel(pingLoopThread) pingLoopThread = nil end
+    -- Matar thread previo (idempotente, evita huérfanos)
+    if pingLoopThread then
+        pcall(task.cancel, pingLoopThread)
+        pingLoopThread = nil
+    end
+
     if estado then
+        _lastPingSetMS = -1   -- forzar primer Set
+
+        -- Cachear el elemento del slider UNA sola vez al activar
+        local cachedElement = sliderPing
+        if not (cachedElement and cachedElement.Set) then
+            cachedElement = KillerHub.Elements and KillerHub.Elements["Sheriff_PingComp"]
+        end
+
         pingLoopThread = task.spawn(function()
             while Flag("Sheriff_PrioritizePing", false) do
-                local currentMS = math_floor(cachedPingValue * 1000)
-                if sliderPing and sliderPing.Set then sliderPing:Set(currentMS) end
+                local currentMS = math_floor(lastRawPingMS + 0.5)
+
+                -- Solo Set() si el cambio es visible (≥2ms) → cero churn
+                -- Nota: 2ms es imperceptible en pantalla pero mata el spam
+                if _lastPingSetMS < 0 or math_abs(currentMS - _lastPingSetMS) >= 2 then
+                    if cachedElement and cachedElement.Set then
+                        -- Forma sin allocation de closure (evita GC pressure)
+                        local ok = pcall(cachedElement.Set, cachedElement, currentMS)
+                        if not ok then
+                            -- Re-lookup por si Elements cambió
+                            local el = KillerHub.Elements and KillerHub.Elements["Sheriff_PingComp"]
+                            if el and el.Set then
+                                pcall(el.Set, el, currentMS)
+                            end
+                        end
+                    end
+                    _lastPingSetMS = currentMS
+                end
+
                 task.wait(0.3)
             end
+            pingLoopThread = nil
         end)
     end
 end)
