@@ -1,5 +1,5 @@
 -- ============================================================================
--- 👾 KILLER HUB | ENGINE V12.8.1 - SHERIFF SUITE (MM2 TUNED)
+-- 👾 KILLER HUB | ENGINE V12.8.2 - SHERIFF SUITE (MM2 TUNED & SMOOTHED TRACERS)
 -- ============================================================================
 local KillerHub = loadstring(game:HttpGet("https://raw.githubusercontent.com/paoloskibidipro/noname/refs/heads/main/unknow.lua"))()
 
@@ -187,7 +187,7 @@ TabSheriff:CreateToggle("Sheriff_PiercerDropComp", "Compensate Bullet Drop", fun
 TabSheriff:CreateSlider("Sheriff_PiercerBulletSpeed", "Bullet Speed (studs/s)", 80, 500, function() end, 200)
 
 -- ----------------------------------------------------------------------------
--- Visuals — ya SIN slider de smoothness (constantes internas abajo)
+-- Visuals
 -- ----------------------------------------------------------------------------
 TabSheriff:CreateSection("Visuals")
 TabSheriff:CreateMultiDropdown("Sheriff_Tracers", "Tracers", {
@@ -700,7 +700,7 @@ local function isPartVisibleFromCamera(targetChar, part)
 end
 
 -- ----------------------------------------------------------------------------
--- SMART TARGET PART — HRP siempre (hitbox más grande)
+-- SMART TARGET PART — HRP siempre
 -- ----------------------------------------------------------------------------
 local function getSmartTargetPart(targetChar)
     if not targetChar then return nil, true end
@@ -724,7 +724,7 @@ local function getSmartTargetPart(targetChar)
 end
 
 -- ============================================================================
--- FLOOR HEIGHT (cache 100 ms)
+-- FLOOR HEIGHT
 -- ============================================================================
 local function getFloorHeight(targetHrp, targetChar)
     if not targetHrp then return nil end
@@ -987,16 +987,10 @@ local function getPredictedPosition(targetChar, targetPart, customDelta)
 end
 
 -- ============================================================================
--- TRACER VISUAL SMOOTHING v2 — FAST / 85 % INSTANT
---   • 85 % instantáneo: el tracking sigue la predicción casi 1:1
---   • 15 % suave: filtro critically-damped que SOLO mata el whiplash
---   • Adaptativo: más amortiguación SOLO en desync/juke (sigue siendo veloz)
---   • 100 % visual: NO afecta la predicción real ni el disparo
---   • Slider de smoothness ELIMINADO (tuning interno abajo)
+-- TRACER VISUAL SMOOTHING ENGINE v3 — 75% INSTANTÁNEO / 25% SUAVE (ANTI-LATIGAZO)
 -- ============================================================================
-local TRACER_BASE_SMOOTH_TIME = 0.010   -- ≈85 % instantáneo @ 60 fps
-local TRACER_DESYNC_MULT      = 1.60    -- +amortiguación en desync
-local TRACER_JUKE_MULT        = 1.25    -- +amortiguación en juke
+local TRACER_BASE_SMOOTH_TIME = 0.024 -- Puntos exactos: 75% rápido / 25% suave
+local TRACER_JITTER_DEADZONE  = 0.12  -- Ignora micro-temblores menores a 0.12 studs
 
 local function smoothDampAxis(current, target, velocity, smoothTime, dt)
     smoothTime = math_max(0.0001, smoothTime)
@@ -1020,7 +1014,7 @@ local function resetSmoothState(s)
     s.lastRaw = nil
 end
 
-local function smoothDamp3D(state, target, smoothTime, dt, maxSnap)
+local function smoothDamp3D(state, target, smoothTime, dt, maxSpeedLimit)
     if not state.pos then
         state.pos = target
         state.vel = VECTOR_ZERO
@@ -1028,8 +1022,16 @@ local function smoothDamp3D(state, target, smoothTime, dt, maxSnap)
         return target
     end
 
-    if maxSnap and state.lastRaw then
-        if (target - state.lastRaw).Magnitude > maxSnap then
+    -- Filtro Anti-Temblores (Deadzone)
+    local distToTarget = (target - state.pos).Magnitude
+    if distToTarget < TRACER_JITTER_DEADZONE then
+        return state.pos
+    end
+
+    -- Anti-Latigazo: limita la velocidad máxima del vector visual para giros instantáneos
+    if maxSpeedLimit and state.lastRaw then
+        local deltaDist = (target - state.lastRaw).Magnitude
+        if deltaDist > 30 then
             state.pos = target
             state.vel = VECTOR_ZERO
             state.lastRaw = target
@@ -1134,30 +1136,27 @@ local renderConn = RunService.RenderStepped:Connect(function(dt)
     local showConfirmWall = tracersTable["Confirm wall check"]      == true
     local showXYOffset    = tracersTable["Prediction X/Y offset"]   == true
 
-    -- Smooth time adaptativo: base 0.010s (85 % instantáneo).
-    -- Solo se sube un poco si el target está desync o jukeando.
     local adaptiveSmoothTime = TRACER_BASE_SMOOTH_TIME
     if currentTargetDesynced then
-        adaptiveSmoothTime = TRACER_BASE_SMOOTH_TIME * TRACER_DESYNC_MULT
+        adaptiveSmoothTime = TRACER_BASE_SMOOTH_TIME * 1.30
     elseif currentTargetJukeFactor < 1.0 then
-        adaptiveSmoothTime = TRACER_BASE_SMOOTH_TIME * TRACER_JUKE_MULT
+        adaptiveSmoothTime = TRACER_BASE_SMOOTH_TIME * 1.15
     end
 
     if visualPart then
         local _, predNoY, minPredNoY, predXYExaggerated, finalPred36X = getPredictedPosition(targetChar, visualPart, dt)
 
         if predNoY and minPredNoY then
-            -- Valores ultra-snappy: cada uno con su propio margen
             local stPredNoY     = adaptiveSmoothTime
-            local stMinPredNoY  = adaptiveSmoothTime * 1.05
-            local stPredXYExag  = adaptiveSmoothTime * 1.15
-            local stFinalPred36 = adaptiveSmoothTime * 1.02
-            local stHand        = math_min(0.020, adaptiveSmoothTime * 0.55)
+            local stMinPredNoY  = adaptiveSmoothTime
+            local stPredXYExag  = adaptiveSmoothTime * 1.08
+            local stFinalPred36 = adaptiveSmoothTime * 1.05
+            local stHand        = math_min(0.015, adaptiveSmoothTime * 0.5)
 
-            local smoothedPredNoY     = smoothDamp3D(tracerSmooth.predNoY,     predNoY,          stPredNoY,     dt, 40)
-            local smoothedMinPredNoY  = smoothDamp3D(tracerSmooth.minPredNoY,  minPredNoY,       stMinPredNoY,  dt, 40)
-            local smoothedPredXYExag  = predXYExaggerated and smoothDamp3D(tracerSmooth.predXYExag,   predXYExaggerated, stPredXYExag,  dt, 40)
-            local smoothedFinalPred36 = finalPred36X     and smoothDamp3D(tracerSmooth.finalPred36, finalPred36X,     stFinalPred36, dt, 40)
+            local smoothedPredNoY     = smoothDamp3D(tracerSmooth.predNoY,     predNoY,          stPredNoY,     dt, 30)
+            local smoothedMinPredNoY  = smoothDamp3D(tracerSmooth.minPredNoY,  minPredNoY,       stMinPredNoY,  dt, 30)
+            local smoothedPredXYExag  = predXYExaggerated and smoothDamp3D(tracerSmooth.predXYExag,   predXYExaggerated, stPredXYExag,  dt, 30)
+            local smoothedFinalPred36 = finalPred36X     and smoothDamp3D(tracerSmooth.finalPred36, finalPred36X,     stFinalPred36, dt, 30)
 
             local currentViewportSize = Camera.ViewportSize
             local screenOrigin = vec2New(currentViewportSize.X / 2, currentViewportSize.Y)
@@ -1201,7 +1200,7 @@ local renderConn = RunService.RenderStepped:Connect(function(dt)
             if rightHand and showGreen then
                 local targetPosForLead = (showLeadPred and smoothedFinalPred36) or smoothedPredNoY
                 if targetPosForLead then
-                    local smoothedHandPos = smoothDamp3D(tracerSmooth.hand, rightHand.Position, stHand, dt, 25)
+                    local smoothedHandPos = smoothDamp3D(tracerSmooth.hand, rightHand.Position, stHand, dt, 20)
                     local handScreenPos, handOnScreen = worldToViewport(Camera, smoothedHandPos)
                     local predScreenPos, predOnScreen = worldToViewport(Camera, targetPosForLead)
                     if handOnScreen and predOnScreen then
@@ -1223,7 +1222,7 @@ local renderConn = RunService.RenderStepped:Connect(function(dt)
         if showConfirmWall and myChar and myChar:FindFirstChild("HumanoidRootPart") then
             local myHrp = myChar.HumanoidRootPart
             local myScreenPos, myOnScreen = worldToViewport(Camera, myHrp.Position)
-            local smoothedTargetPos = smoothDamp3D(tracerSmooth.confirm, visualPart.Position, adaptiveSmoothTime, dt, 40)
+            local smoothedTargetPos = smoothDamp3D(tracerSmooth.confirm, visualPart.Position, adaptiveSmoothTime, dt, 30)
             local targetScreenPos, targetOnScreen = worldToViewport(Camera, smoothedTargetPos)
 
             if myOnScreen and targetOnScreen then
@@ -1253,7 +1252,7 @@ end)
 KillerHub:AddTask(renderConn)
 
 -- ============================================================================
--- CORE SHOOT HANDLER (con Piercer bullet-drop compensation)
+-- CORE SHOOT HANDLER
 -- ============================================================================
 local executeActualShoot
 
