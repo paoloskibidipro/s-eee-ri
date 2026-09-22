@@ -1,5 +1,5 @@
 -- ============================================================================
--- 👾 KILLER HUB | ENGINE V12.8.0 - SHERIFF SUITE (OPTIMIZED + ULTRA LOW-END PING FIX)
+-- 👾 KILLER HUB | ENGINE V12.9.0 - SHERIFF SUITE (PREDICTION+ JITTER-AWARE)
 -- ============================================================================
 local KillerHub = loadstring(game:HttpGet("https://raw.githubusercontent.com/Salayer09/KillerHub/refs/heads/main/Slayer.lua"))()
 
@@ -21,8 +21,8 @@ local Players = game:GetService("Players")
 local LocalPlayer = Players.LocalPlayer
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local RunService = game:GetService("RunService")
-local TweenService = game:GetService("TweenService") 
-local Stats = game:GetService("Stats") 
+local TweenService = game:GetService("TweenService")
+local Stats = game:GetService("Stats")
 local UserInputService = game:GetService("UserInputService")
 local HttpService = game:GetService("HttpService")
 local Camera = workspace.CurrentCamera
@@ -33,6 +33,9 @@ local math_pow = math.pow
 local math_min = math.min
 local math_floor = math.floor
 local math_max = math.max
+local math_sqrt = math.sqrt
+local math_acos = math.acos
+local math_rad  = math.rad
 local vec2New = Vector2.new
 local vec3New = Vector3.new
 local udim2New = UDim2.new
@@ -52,8 +55,41 @@ _G.KillerHubLines = {}
 local oldGui = game:GetService("CoreGui"):FindFirstChild("KillerHub_SheriffGui")
 if oldGui then oldGui:Destroy() end
 
--- Real-time Ping Reader
+-- ═══════════════════════════════════════════════════════════════════════════
+-- 📡 NETWORK TELEMETRY (Ping + Jitter + Stability Score)
+-- ═══════════════════════════════════════════════════════════════════════════
 local cachedPingValue = 0.05
+local pingJitterMS  = 0           -- desviación estándar del ping (ms)
+local networkStability = 1.0      -- 1.0 = perfecto, baja con jitter alto
+local pingSamples = {}
+local PING_SAMPLE_SIZE = 10
+
+local function pushPingSample(ms)
+    pingSamples[#pingSamples + 1] = ms
+    if #pingSamples > PING_SAMPLE_SIZE then table.remove(pingSamples, 1) end
+
+    if #pingSamples < 4 then
+        pingJitterMS = 0
+        networkStability = 1.0
+        return
+    end
+
+    local sum = 0
+    for i = 1, #pingSamples do sum = sum + pingSamples[i] end
+    local avg = sum / #pingSamples
+
+    local variance = 0
+    for i = 1, #pingSamples do
+        local d = pingSamples[i] - avg
+        variance = variance + d * d
+    end
+    variance = variance / #pingSamples
+    pingJitterMS = math_sqrt(variance)
+
+    -- Stability: 0ms jitter = 1.0 ; 100ms jitter ≈ 0.55 ; 250ms = 0.35
+    networkStability = math_clamp(1.0 - (pingJitterMS / 380), 0.35, 1.0)
+end
+
 local pingTask = task.spawn(function()
     while task.wait(0.2) do
         local currentPing = nil
@@ -72,7 +108,10 @@ local pingTask = task.spawn(function()
             end)
         end
 
-        if currentPing and currentPing > 0 then cachedPingValue = currentPing end
+        if currentPing and currentPing > 0 then
+            cachedPingValue = currentPing
+            pushPingSample(currentPing * 1000)
+        end
     end
 end)
 KillerHub:AddTask(pingTask)
@@ -112,11 +151,11 @@ TabSheriff:CreateSlider("Sheriff_MaxPredDist", "Max Distance Prediction (studs)"
 
 TabSheriff:CreateSection("Visuals")
 TabSheriff:CreateMultiDropdown("Sheriff_Tracers", "Tracers", {
-    "Tracer Prediction", 
-    "Min Tracer Prediction", 
-    "Lead Time", 
+    "Tracer Prediction",
+    "Min Tracer Prediction",
+    "Lead Time",
     "Lead Time Prediction",
-    "Confirm wall check", 
+    "Confirm wall check",
     "Prediction X/Y offset"
 }, function() end)
 
@@ -182,7 +221,7 @@ checkWeaponVisibility = function()
     if not cachedScreenGui then return end
     local showBtn = Flag("Sheriff_ShowButton", false)
     local useDetect = Flag("Sheriff_WeaponDetect", false)
-    
+
     if not showBtn then cachedScreenGui.Enabled = false return end
 
     if useDetect then
@@ -200,9 +239,9 @@ KillerHub:AddTask(visTask)
 
 local MurdererDetectado = nil
 local smoothedVelocity = VECTOR_ZERO
-local smoothedVisualY = 0 
+local smoothedVisualY = 0
 local lastTargetChar = nil
-local emaDeltaTime = 0.016 
+local emaDeltaTime = 0.016
 local playerRoles = {}
 local playerDeadStatus = {}
 local duelTeams = {}
@@ -214,12 +253,108 @@ local lagStates = setmetatable({}, {__mode = "k"})
 local moveConfidence = setmetatable({}, {__mode = "k"})
 local velocityBuffers = setmetatable({}, {__mode = "k"})
 
+-- ═══════════════════════════════════════════════════════════════════════════
+-- 🎯 NUEVOS BUFFERS DE PREDICCIÓN AVANZADA (V12.9.0)
+-- ═══════════════════════════════════════════════════════════════════════════
+
+-- Ring buffer de velocidades (promedio ponderado con sesgo de recencia)
+local VEL_HISTORY_SIZE = 8
+local velocityHistory = setmetatable({}, {__mode = "k"})
+
+-- Detección de cambios bruscos de dirección (zigzag del murderer)
+local turnDetect = setmetatable({}, {__mode = "k"})
+
+-- Tiempo acumulado en el aire (para parábola más precisa)
+local airTime = setmetatable({}, {__mode = "k"})
+
+local function getVelHistory(char)
+    local h = velocityHistory[char]
+    if not h then
+        h = { buf = {}, idx = 0, size = 0, sum = VECTOR_ZERO }
+        velocityHistory[char] = h
+    end
+    return h
+end
+
+-- Push + weighted average (más peso a lo reciente)
+local VEL_WEIGHTS = {0.05, 0.06, 0.08, 0.10, 0.13, 0.16, 0.19, 0.23} -- suma ≈ 1.0
+local function pushVelocityWeighted(char, vel)
+    local h = getVelHistory(char)
+    h.idx = h.idx % VEL_HISTORY_SIZE + 1
+    h.buf[h.idx] = vel
+    if h.size < VEL_HISTORY_SIZE then h.size = h.size + 1 end
+
+    -- Weighted average, enfocando los últimos samples
+    local weighted = VECTOR_ZERO
+    local wTotal = 0
+    for i = 1, h.size do
+        local realIdx = ((h.idx - i) % VEL_HISTORY_SIZE) + 1
+        local v = h.buf[realIdx]
+        if v then
+            local w = VEL_WEIGHTS[math_max(1, VEL_HISTORY_SIZE - i + 1)] or 0.05
+            weighted = weighted + v * w
+            wTotal = wTotal + w
+        end
+    end
+    if wTotal > 0 then weighted = weighted / wTotal end
+    return weighted
+end
+
+local function getTurnState(char)
+    local t = turnDetect[char]
+    if not t then
+        t = { lastUnit = VECTOR_ZERO, penalty = 1.0, sharpTurnTimer = 0 }
+        turnDetect[char] = t
+    end
+    return t
+end
+
+local function updateTurnState(char, newVel, dt)
+    local t = getTurnState(char)
+    local mag = newVel.Magnitude
+
+    if mag > 0.8 then
+        local unit = newVel.Unit
+        if t.lastUnit.Magnitude > 0.5 then
+            local dot = math_clamp(t.lastUnit:Dot(unit), -1, 1)
+            local angle = math_acos(dot)
+
+            -- Si gira >55° en un frame, activamos penalización temporal
+            if angle > math_rad(55) then
+                t.sharpTurnTimer = 0.15
+            end
+        end
+        t.lastUnit = unit
+    else
+        t.lastUnit = VECTOR_ZERO
+    end
+
+    if t.sharpTurnTimer > 0 then
+        t.sharpTurnTimer = t.sharpTurnTimer - dt
+    end
+
+    -- Penalty: 0.55 en giro brusco, sube suave a 1.0
+    local targetPenalty = (t.sharpTurnTimer > 0) and 0.55 or 1.0
+    t.penalty = t.penalty + (targetPenalty - t.penalty) * math_clamp(8 * dt, 0, 1)
+
+    return t.penalty
+end
+
+local function getAirState(char)
+    local a = airTime[char]
+    if not a then
+        a = { time = 0 }
+        airTime[char] = a
+    end
+    return a
+end
+
 -- Sticky Target
 local stickyTarget = nil
 local stickyTargetTime = 0
 local STICKY_DURATION = 0.12
 
-local handLineIsBlocked = false 
+local handLineIsBlocked = false
 local isWaitingForSight = false
 local waitSightThread = nil
 local Label = nil
@@ -317,8 +452,8 @@ local function parsePlayerData(t)
 end
 
 local PlayerDataChanged = ReplicatedStorage:FindFirstChild("PlayerDataChanged", true)
-if PlayerDataChanged and PlayerDataChanged:IsA("RemoteEvent") then 
-    KillerHub:AddTask(PlayerDataChanged.OnClientEvent:Connect(parsePlayerData)) 
+if PlayerDataChanged and PlayerDataChanged:IsA("RemoteEvent") then
+    KillerHub:AddTask(PlayerDataChanged.OnClientEvent:Connect(parsePlayerData))
 end
 
 local function updateDuelState(data)
@@ -350,15 +485,18 @@ for _, rem in pairs(ReplicatedStorage:GetDescendants()) do
         elseif rName:find("roundstart") or rName:find("gamestart") then
             KillerHub:AddTask(rem.OnClientEvent:Connect(function(...)
                 resetWaitState()
-                table.clear(playerRoles) 
-                table.clear(playerDeadStatus) 
+                table.clear(playerRoles)
+                table.clear(playerDeadStatus)
                 table.clear(lastPositions)
                 table.clear(lagStates)
                 table.clear(moveConfidence)
                 table.clear(velocityBuffers)
+                table.clear(velocityHistory)
+                table.clear(turnDetect)
+                table.clear(airTime)
                 stickyTarget = nil
                 stickyTargetTime = 0
-                MurdererDetectado = nil 
+                MurdererDetectado = nil
                 local args = {...}
                 for _, arg in ipairs(args) do
                     if type(arg) == "table" then parsePlayerData(arg) end
@@ -374,6 +512,9 @@ for _, rem in pairs(ReplicatedStorage:GetDescendants()) do
                 table.clear(lagStates)
                 table.clear(moveConfidence)
                 table.clear(velocityBuffers)
+                table.clear(velocityHistory)
+                table.clear(turnDetect)
+                table.clear(airTime)
                 stickyTarget = nil
                 stickyTargetTime = 0
                 MurdererDetectado = nil
@@ -397,10 +538,10 @@ local function autoEquipWeapon()
     local backpack = LocalPlayer:FindFirstChild("Backpack")
     if character and character:FindFirstChild("Humanoid") and backpack then
         for _, item in pairs(backpack:GetChildren()) do
-            if isRangedWeapon(item) then 
-                character.Humanoid:EquipTool(item) 
+            if isRangedWeapon(item) then
+                character.Humanoid:EquipTool(item)
                 task.wait(0.03)
-                break 
+                break
             end
         end
     end
@@ -450,12 +591,12 @@ local function getMurderer()
                     isEnemy = true
                 else
                     local hasKnife = false
-                    for _, item in pairs(char:GetChildren()) do 
-                        if isMeleeWeapon(item) then hasKnife = true break end 
+                    for _, item in pairs(char:GetChildren()) do
+                        if isMeleeWeapon(item) then hasKnife = true break end
                     end
                     if not hasKnife and pl:FindFirstChild("Backpack") then
-                        for _, item in pairs(pl.Backpack:GetChildren()) do 
-                            if isMeleeWeapon(item) then hasKnife = true break end 
+                        for _, item in pairs(pl.Backpack:GetChildren()) do
+                            if isMeleeWeapon(item) then hasKnife = true break end
                         end
                     end
                     if hasKnife then
@@ -553,7 +694,7 @@ local function isGunBlocked(targetPos, targetChar)
 
     table.clear(tempIgnoreBuffer)
     for i = 1, #cachedIgnoreList do tempIgnoreBuffer[i] = cachedIgnoreList[i] end
-    
+
     local currentOrigin = origin
     local rayPasses = 0
 
@@ -584,7 +725,7 @@ local function isStrictlyVisible(targetChar, targetPart)
     if not targetChar or not targetPart then return false end
     local origin = Camera.CFrame.Position
     local targetPos = targetPart.Position
-    
+
     if isGunBlocked(targetPos, targetChar) then return false end
 
     local direction = targetPos - origin
@@ -621,14 +762,14 @@ local function getSmartTargetPart(targetChar)
     if not targetChar then return nil, true end
     local hrp = targetChar:FindFirstChild("HumanoidRootPart")
     if not hrp then return nil, true end
-    
+
     local wallCheck = Flag("Sheriff_WallCheck", true)
     local shotType = Flag("Sheriff_ShotType", "Normal")
 
-    if not wallCheck or shotType == "Piercer Bullet" then 
-        return hrp, false 
+    if not wallCheck or shotType == "Piercer Bullet" then
+        return hrp, false
     end
-    
+
     local origin = Camera.CFrame.Position
     table.clear(tempIgnoreBuffer)
     for i = 1, #cachedIgnoreList do tempIgnoreBuffer[i] = cachedIgnoreList[i] end
@@ -652,7 +793,7 @@ local function getSmartTargetPart(targetChar)
 
         if hitInst and hitInst.CanCollide and hitInst.Transparency < 0.8 then
             blocked = true
-            break 
+            break
         else
             table.insert(tempIgnoreBuffer, hitInst)
             currentOrigin = ray.Position + (direction.Unit * 0.05)
@@ -687,7 +828,9 @@ local function getFloorHeight(targetHrp, targetChar)
     return floorY
 end
 
--- ⚡ PREDICTION ENGINE OPTIMIZADO PARA LOW-END & BAD PING
+-- ═══════════════════════════════════════════════════════════════════════════
+-- ⚡ PREDICTION ENGINE V12.9.0 — JITTER-AWARE + WEIGHTED HISTORY
+-- ═══════════════════════════════════════════════════════════════════════════
 local function getPredictedPosition(targetChar, targetPart, customDelta)
     if not targetChar or not targetPart then return nil, nil, nil, nil, nil end
     local hrp = targetChar:FindFirstChild("HumanoidRootPart")
@@ -703,13 +846,24 @@ local function getPredictedPosition(targetChar, targetPart, customDelta)
     local moveMag = humanoid.MoveDirection.Magnitude
     local rawPhysicsVel = hrp.AssemblyLinearVelocity
     local walkSpeed = (humanoid.WalkSpeed > 0) and humanoid.WalkSpeed or 16
+    local floorMaterial = humanoid.FloorMaterial
+    local isAir = (floorMaterial == Enum.Material.Air)
+
+    -- Air time tracking (para parábola más precisa)
+    local aState = getAirState(targetChar)
+    if isAir then
+        aState.time = aState.time + activeDT
+        if aState.time > 3 then aState.time = 3 end -- clamp
+    else
+        aState.time = 0
+    end
 
     local calculatedVelY = rawPhysicsVel.Y
     local realDisplacementSpeed = 0
     local lastData = lastPositions[targetChar]
     local now = os_clock()
     local vBuffer = getVelocityBuffer(targetChar)
-    
+
     if not lastData then
         lastData = {Pos = hrp.Position, Time = now, RealSpeed = 0}
         lastPositions[targetChar] = lastData
@@ -719,8 +873,7 @@ local function getPredictedPosition(targetChar, targetPart, customDelta)
             local distMoved = (hrp.Position - lastData.Pos).Magnitude
             realDisplacementSpeed = distMoved / dtPrev
             lastData.RealSpeed = realDisplacementSpeed
-            
-            -- Detección de lag o desincronización de paquetes
+
             if distMoved < 0.05 and (moveMag > 0.1 or rawPhysicsVel.Magnitude > 2) then
                 vBuffer.staticFrames = vBuffer.staticFrames + 1
             else
@@ -745,8 +898,7 @@ local function getPredictedPosition(targetChar, targetPart, customDelta)
     local speedRatio = math_clamp(realSpeedH / math_max(walkSpeed, 1), 0, 1)
     local rawVelocity = actualPhysicsH:Lerp(intendedVel, speedRatio)
 
-    -- FIX LOW-END/LAG: Si el jugador se congela en paquetes pero sigue moviéndose en input,
-    -- no colapsamos a 0. Mantenemos un buffer suave de velocidad (Soft Decay Buffer).
+    -- Soft decay buffer para lag de paquetes
     if vBuffer.staticFrames > 0 and vBuffer.staticFrames <= 8 then
         local decay = math_clamp(1 - (vBuffer.staticFrames * 0.08), 0.4, 0.95)
         rawVelocity = vBuffer.lastValidVelocity * decay
@@ -757,7 +909,10 @@ local function getPredictedPosition(targetChar, targetPart, customDelta)
         vBuffer.lastValidVelocity = rawVelocity
     end
 
-    -- Confianza de movimiento (Jitter Softener)
+    -- 🆕 WEIGHTED HISTORY (reemplaza el simple EMA smoothing)
+    local histVel = pushVelocityWeighted(targetChar, rawVelocity)
+
+    -- Move confidence (variance suavizada)
     local confState = getMoveConfidence(targetChar)
     local speedDelta = math_abs(realSpeedH - confState.lastSpeed)
     confState.variance = confState.variance * 0.88 + speedDelta * 0.12
@@ -770,25 +925,31 @@ local function getPredictedPosition(targetChar, targetPart, customDelta)
     local predictionWeight = math_clamp((distance - minDist) / distRange, 0, 1)
 
     if lastTargetChar ~= targetChar then
-        smoothedVelocity = rawVelocity 
+        smoothedVelocity = histVel
         smoothedVisualY = 0
         lastTargetChar = targetChar
     end
 
-    local isStopping = (moveMag < 0.1 and rawVelocity.Magnitude < 1.5)
+    local isStopping = (moveMag < 0.1 and histVel.Magnitude < 1.5)
     local isStarting = (moveMag > 0.1 and smoothedVelocity.Magnitude < 1.5)
 
-    local vSmoothAlpha = 0.35
-    if isStopping then 
+    local vSmoothAlpha
+    if isStopping then
         vSmoothAlpha = 0.85
-    elseif isStarting then 
+    elseif isStarting then
         vSmoothAlpha = 0.20
-    else 
-        vSmoothAlpha = math_clamp(16 * activeDT, 0.22, 0.60) 
+    else
+        vSmoothAlpha = math_clamp(16 * activeDT, 0.22, 0.60)
     end
-    
-    smoothedVelocity = smoothedVelocity:Lerp(rawVelocity, vSmoothAlpha)
+
+    smoothedVelocity = smoothedVelocity:Lerp(histVel, vSmoothAlpha)
     if isStopping and smoothedVelocity.Magnitude < 0.3 then smoothedVelocity = VECTOR_ZERO end
+
+    -- 🆕 Turn detection (reducción durante zigzag)
+    local turnPenalty = updateTurnState(targetChar, smoothedVelocity, activeDT)
+
+    -- 🆕 Stability Score combinado (jitter + variance + turn)
+    local stabilityScore = networkStability * moveConfidenceFactor * turnPenalty
 
     local horizontalShift = VECTOR_ZERO
     local verticalShift = VECTOR_ZERO
@@ -802,8 +963,8 @@ local function getPredictedPosition(targetChar, targetPart, customDelta)
 
     if prioritizePing then
         local rawMS = cachedPingValue * 1000
-        local autoScale = 90 + (rawMS * 0.6)
-
+        -- Compensación base + extra por jitter (para pings inestables)
+        local autoScale = 90 + (rawMS * 0.6) + (pingJitterMS * 0.4)
         effectiveHLatency = (autoScale / 1000) * PREDICTION_BOOST
         local autoVScale = math_min(autoScale, 120)
         effectiveVLatency = (autoVScale / 1000) * PREDICTION_BOOST
@@ -813,14 +974,16 @@ local function getPredictedPosition(targetChar, targetPart, customDelta)
         effectiveVLatency = (cappedVScale / 1000) * PREDICTION_BOOST
     end
 
-    horizontalShift = vec3New(smoothedVelocity.X, 0, smoothedVelocity.Z) * effectiveHLatency * predictionWeight * moveConfidenceFactor
+    horizontalShift = vec3New(smoothedVelocity.X, 0, smoothedVelocity.Z)
+        * effectiveHLatency
+        * predictionWeight
+        * stabilityScore    -- 🆕 score combinado
 
     if vScale > 0 then
-        local isAir = (humanoid.FloorMaterial == Enum.Material.Air)
         local isStairMovement = (not isAir and math_abs(calculatedVelY) > 0.8)
 
         if isAir or isStairMovement then
-            local adaptiveYFactor = math_clamp((distance - minDist) / 12, 0, 1) * predictionWeight
+            local adaptiveYFactor = math_clamp((distance - minDist) / 12, 0, 1) * predictionWeight * stabilityScore
             local vFactor = effectiveVLatency * adaptiveYFactor
 
             if isAir then
@@ -829,6 +992,7 @@ local function getPredictedPosition(targetChar, targetPart, customDelta)
                     local fallingYFactor = fallSpeed * 0.30 * vFactor
                     verticalShift = vec3New(0, fallingYFactor, 0)
                 else
+                    -- Parábola usando TIEMPO EN EL AIRE para mejor precisión
                     local gravityEffect = 0.5 * workspace_Gravity * math_pow(vFactor, 2)
                     local pY = (calculatedVelY * vFactor) - gravityEffect
                     verticalShift = vec3New(0, pY, 0)
@@ -848,7 +1012,7 @@ local function getPredictedPosition(targetChar, targetPart, customDelta)
 
     local finalPredWithY = targetPosition + horizontalShift + verticalShift
     local predXYExaggerated = targetPosition + (horizontalShift * 1.8) + verticalShift
-    
+
     local LEAD_TIME_VISUAL_MULT = 4.2
     local LEAD_TIME_VISUAL_CLAMP = 16
 
@@ -860,7 +1024,7 @@ local function getPredictedPosition(targetChar, targetPart, customDelta)
 
     local floorY = getFloorHeight(hrp, targetChar)
     if floorY then
-        local minAllowedY = floorY + (hrp.Size.Y / 2) + 0.15
+        local minAllowedY = floorY + (hrp.Size.Y * 0.5) + 0.15
         if finalPredWithY.Y < minAllowedY then finalPredWithY = vec3New(finalPredWithY.X, minAllowedY, finalPredWithY.Z) end
         if predXYExaggerated.Y < minAllowedY then predXYExaggerated = vec3New(predXYExaggerated.X, minAllowedY, predXYExaggerated.Z) end
         if finalLeadPredX.Y < minAllowedY then finalLeadPredX = vec3New(finalLeadPredX.X, minAllowedY, finalLeadPredX.Z) end
@@ -897,7 +1061,6 @@ table.insert(_G.KillerHubLines, PredictionXYLine)
 
 local worldToViewport = Camera.WorldToViewportPoint
 
--- Dynamic Ultra-Fast Lerp para Tracers
 local function adaptiveLerp(cur, tgt, baseA)
     if not cur then return tgt end
     local dev = (tgt - cur).Magnitude
@@ -911,7 +1074,7 @@ end
 local visPredNoY, visMinPredNoY, visPredXYExaggerated, visFinalLeadPredX
 
 local renderConn = RunService.RenderStepped:Connect(function(dt)
-    emaDeltaTime = emaDeltaTime + 0.2 * (dt - emaDeltaTime) 
+    emaDeltaTime = emaDeltaTime + 0.2 * (dt - emaDeltaTime)
 
     local murderer = getMurdererCached()
     if not murderer or not murderer.Character then
@@ -926,7 +1089,7 @@ local renderConn = RunService.RenderStepped:Connect(function(dt)
     end
 
     local targetChar = murderer.Character
-    local visualPart, isBlocked = getSmartTargetPart(targetChar) 
+    local visualPart, isBlocked = getSmartTargetPart(targetChar)
     handLineIsBlocked = isBlocked
 
     local myChar = LocalPlayer.Character
@@ -942,9 +1105,8 @@ local renderConn = RunService.RenderStepped:Connect(function(dt)
 
     if visualPart then
         local _, predNoY, minPredNoY, predXYExaggerated, finalLeadPredX = getPredictedPosition(targetChar, visualPart, dt)
-        
+
         if predNoY and minPredNoY then
-            -- Tracers ultra-rápidos (42 * dt para respuesta instantánea)
             local tracerLerpAlpha = math_clamp(42 * dt, 0.25, 0.85)
             if not visPredNoY then
                 visPredNoY = predNoY
@@ -964,8 +1126,8 @@ local renderConn = RunService.RenderStepped:Connect(function(dt)
             if showBlue then
                 local screenPos, onScreen = worldToViewport(Camera, visMinPredNoY)
                 if onScreen then
-                    MinPredictionLine.From = screenOrigin 
-                    MinPredictionLine.To = vec2New(screenPos.X, screenPos.Y) 
+                    MinPredictionLine.From = screenOrigin
+                    MinPredictionLine.To = vec2New(screenPos.X, screenPos.Y)
                     MinPredictionLine.Visible = true
                 else MinPredictionLine.Visible = false end
             else MinPredictionLine.Visible = false end
@@ -973,8 +1135,8 @@ local renderConn = RunService.RenderStepped:Connect(function(dt)
             if showRed then
                 local screenPos, onScreen = worldToViewport(Camera, visPredNoY)
                 if onScreen then
-                    PredictionLine.From = screenOrigin 
-                    PredictionLine.To = vec2New(screenPos.X, screenPos.Y) 
+                    PredictionLine.From = screenOrigin
+                    PredictionLine.To = vec2New(screenPos.X, screenPos.Y)
                     PredictionLine.Visible = true
                 else PredictionLine.Visible = false end
             else PredictionLine.Visible = false end
@@ -1041,7 +1203,7 @@ local renderConn = RunService.RenderStepped:Connect(function(dt)
         ConfirmWallLine.Visible = false
         PredictionXYLine.Visible = false
         visPredNoY = nil
-    end 
+    end
 end)
 KillerHub:AddTask(renderConn)
 
@@ -1059,30 +1221,32 @@ executeActualShoot = function(targetChar, bestPart)
 
     local finalPredictedPos = getPredictedPosition(targetChar, bestPart)
     if finalPredictedPos then
+        -- 🆕 RE-VALIDACIÓN justo antes de disparar (evita shots fantasma)
         if wallCheck and shotType ~= "Piercer Bullet" then
-            if isGunBlocked(finalPredictedPos, targetChar) then
+            local part, isBlocked = getSmartTargetPart(targetChar)
+            if not part or isBlocked or isGunBlocked(finalPredictedPos, targetChar) then
                 return false
             end
         end
 
         autoEquipWeapon()
-        
+
         local activeGun, _ = getGunLocation()
         if activeGun and activeGun:FindFirstChild("Shoot") then
             local originCFrame = char.HumanoidRootPart and char.HumanoidRootPart.CFrame or Camera.CFrame
-            if char:FindFirstChild("HumanoidRootPart") and char.HumanoidRootPart:FindFirstChild("GunRaycastAttachment") then 
-                originCFrame = char.HumanoidRootPart.GunRaycastAttachment.WorldCFrame 
+            if char:FindFirstChild("HumanoidRootPart") and char.HumanoidRootPart:FindFirstChild("GunRaycastAttachment") then
+                originCFrame = char.HumanoidRootPart.GunRaycastAttachment.WorldCFrame
             end
 
             if shotType == "Piercer Bullet" then
                 local camLook = Camera.CFrame.LookVector
                 local horizDir = vec3New(camLook.X, 0, camLook.Z)
-                
+
                 if horizDir.Magnitude < 0.01 then
                     local hrp = targetChar:FindFirstChild("HumanoidRootPart")
                     if hrp then horizDir = vec3New(hrp.CFrame.LookVector.X, 0, hrp.CFrame.LookVector.Z) end
                 end
-                
+
                 if horizDir.Magnitude < 0.01 then
                     horizDir = vec3New(1, 0, 0)
                 else
@@ -1098,7 +1262,7 @@ executeActualShoot = function(targetChar, bestPart)
             if Flag("Sheriff_UnEquipGun", false) then
                 task.delay(0.20, autoUnequipWeapon)
             end
-            
+
             return true
         end
     end
@@ -1125,7 +1289,7 @@ local function startWaitingForSight(initialTarget)
 
     local maxWaitTime = Flag("Sheriff_WaitTime", 15)
     local startTime = os_clock()
-    local lostSightCounter = 0 
+    local lostSightCounter = 0
     local sightTimeAcc = 0
 
     waitSightThread = task.spawn(function()
@@ -1172,7 +1336,7 @@ local function startWaitingForSight(initialTarget)
                 if isClearSight then
                     lostSightCounter = 0
                     sightTimeAcc = sightTimeAcc + 0.016
-                    
+
                     if sightTimeAcc >= 0.035 then
                         local shotFired = executeActualShoot(targetChar, bestPart)
                         if shotFired then
@@ -1204,12 +1368,12 @@ local function fireAtMurdererDirectly()
     local shotType = Flag("Sheriff_ShotType", "Normal")
     local wallCheck = Flag("Sheriff_WallCheck", true)
     local waitSight = Flag("Sheriff_WaitSight", false)
-    
+
     local murderer = getMurdererCached()
     if murderer and murderer.Character then
         local targetChar = murderer.Character
-        local bestPart, isBlocked = getSmartTargetPart(targetChar) 
-        
+        local bestPart, isBlocked = getSmartTargetPart(targetChar)
+
         local allowWaitSight = waitSight and (shotType ~= "Piercer Bullet")
 
         if wallCheck and isBlocked and shotType ~= "Piercer Bullet" then
@@ -1323,8 +1487,8 @@ GlowCorner.CornerRadius = UDim.new(0.28, 0); GlowCorner.Parent = GlowOverlay
 
 local UiGradient = Instance.new("UIGradient")
 UiGradient.Color = ColorSequence.new({
-    ColorSequenceKeypoint.new(0, color3RGB(24, 8, 43)), 
-    ColorSequenceKeypoint.new(0.5, color3RGB(131, 46, 222)), 
+    ColorSequenceKeypoint.new(0, color3RGB(24, 8, 43)),
+    ColorSequenceKeypoint.new(0.5, color3RGB(131, 46, 222)),
     ColorSequenceKeypoint.new(1, color3RGB(24, 8, 43))
 })
 UiGradient.Offset = vec2New(0, 0); UiGradient.Rotation = 0; UiGradient.Parent = GlowOverlay
@@ -1379,13 +1543,13 @@ KillerHub:AddTask(ShootButton.InputBegan:Connect(function(input)
     if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
         TweenService:Create(GlowOverlay, TweenInfo.new(0.01, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundTransparency = 0.02}):Play()
         task.spawn(fireAtMurdererDirectly)
-        
+
         if not Flag("Sheriff_LockBtnPos", false) then
             dragging = true; dragStart = input.Position; startPos = ShootButton.Position
             local cChanged
             cChanged = input.Changed:Connect(function()
                 if input.UserInputState == Enum.UserInputState.End then
-                    dragging = false 
+                    dragging = false
                     cChanged:Disconnect()
                     saveButtonPosition(ShootButton.Position)
                 end
@@ -1463,8 +1627,8 @@ if WeaponService then
         if not murderer or not murderer.Character then frameCachedTime = currentTime; frameCachedCF = nil; return nil end
 
         local bestPart, isBlocked = getSmartTargetPart(murderer.Character)
-        if not bestPart or (isBlocked and shotType ~= "Piercer Bullet") then 
-            frameCachedTime = currentTime; frameCachedCF = nil; return nil 
+        if not bestPart or (isBlocked and shotType ~= "Piercer Bullet") then
+            frameCachedTime = currentTime; frameCachedCF = nil; return nil
         end
 
         local dt = customDelta or math_clamp(currentTime - lastHookCallTime, 0.008, 0.033)
@@ -1570,7 +1734,7 @@ task.spawn(function()
     end
 
     PageOthersObj:CreateSection("Target Selection")
-    
+
     local customTargetEnabled = false
     local selectedPlayerName = "None"
     local cachedTargetPlayer = nil
@@ -1607,7 +1771,7 @@ task.spawn(function()
     getMurderer = function()
         if customTargetEnabled and selectedPlayerName ~= "None" then
             local now = os_clock()
-            
+
             if not cachedTargetPlayer or not cachedTargetPlayer.Parent or (now - lastTargetCheck > 0.1) then
                 lastTargetCheck = now
                 cachedTargetPlayer = Players:FindFirstChild(selectedPlayerName)
@@ -1629,6 +1793,24 @@ task.spawn(function()
         end
 
         return baseGetMurderer()
+    end
+end)
+
+-- ═══════════════════════════════════════════════════════════════════════════
+-- 🆕 DEBUG TELEMETRY (opcional — visualizar la estabilidad de red actual)
+-- ═══════════════════════════════════════════════════════════════════════════
+PageOthers:CreateSection("Network Debug")
+PageOthers:CreateParagraph("NET_STAT", "Cargando telemetría...")
+
+task.spawn(function()
+    local para = KillerHub.Elements["NET_STAT"]
+    if not para or not para.SetText then return end
+    while task.wait(0.5) do
+        local ping = math_floor(cachedPingValue * 1000)
+        local jitter = math_floor(pingJitterMS)
+        local stab = math_floor(networkStability * 100)
+        local quality = stab > 85 and "🟢 Excelente" or stab > 65 and "🟡 Bueno" or stab > 45 and "🟠 Inestable" or "🔴 Pésimo"
+        para:SetText(string.format("Ping: %d ms  •  Jitter: ±%d ms\nEstabilidad: %d%%  %s", ping, jitter, stab, quality))
     end
 end)
 
