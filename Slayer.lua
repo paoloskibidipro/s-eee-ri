@@ -1239,23 +1239,54 @@ executeActualShoot = function(targetChar, bestPart)
             end
 
             if shotType == "Piercer Bullet" then
-                local camLook = Camera.CFrame.LookVector
-                local horizDir = vec3New(camLook.X, 0, camLook.Z)
+    -- ═══════════════════════════════════════════════════════════════════════
+    -- 🆕 PIERCER V2 — Velocity-aligned ray + Dynamic offset + Airborne boost
+    -- ═══════════════════════════════════════════════════════════════════════
 
-                if horizDir.Magnitude < 0.01 then
-                    local hrp = targetChar:FindFirstChild("HumanoidRootPart")
-                    if hrp then horizDir = vec3New(hrp.CFrame.LookVector.X, 0, hrp.CFrame.LookVector.Z) end
-                end
+    -- 1️⃣ Dirección del rayo basada en VELOCIDAD del target (no cámara).
+    --    Esto asegura que cualquier error de predicción a lo largo del
+    --    movimiento quede cubierto por la LONGITUD del rayo, no por su ancho.
+    local velH = vec3New(smoothedVelocity.X, 0, smoothedVelocity.Z)
+    local velMagH = velH.Magnitude
 
-                if horizDir.Magnitude < 0.01 then
-                    horizDir = vec3New(1, 0, 0)
-                else
-                    horizDir = horizDir.Unit
-                end
+    local rayDir
+    if velMagH > 0.8 then
+        -- Target en movimiento → rayo paralelo a su trayectoria
+        rayDir = velH.Unit
+    else
+        -- Target estático → usar dirección shooter→target (más fiable que cámara)
+        local shooterHrp = char:FindFirstChild("HumanoidRootPart")
+        local shooterPos = shooterHrp and shooterHrp.Position or Camera.CFrame.Position
+        local toTarget = finalPredictedPos - shooterPos
+        rayDir = vec3New(toTarget.X, 0, toTarget.Z)
+        if rayDir.Magnitude < 0.01 then
+            local cl = Camera.CFrame.LookVector
+            rayDir = vec3New(cl.X, 0, cl.Z)
+        end
+        if rayDir.Magnitude < 0.01 then rayDir = vec3New(0, 0, 1) end
+        rayDir = rayDir.Unit
+    end
 
-                local spawnOrigin = finalPredictedPos - (horizDir * 1.5)
-                originCFrame = cframeNew(spawnOrigin, finalPredictedPos)
-            end
+    -- 2️⃣ Offset dinámico: escala con distancia + velocidad del target.
+    --    Corto alcance → offset pequeño (bajo error). Largo alcance → offset
+    --    grande (cubre más trayectoria para compensar cualquier lag del server).
+    local shooterHrp2 = char:FindFirstChild("HumanoidRootPart")
+    local shooterPos2 = shooterHrp2 and shooterHrp2.Position or Camera.CFrame.Position
+    local dist = (finalPredictedPos - shooterPos2).Magnitude
+
+    local velBoost = math_min(velMagH * 0.06, 1.8)      -- +0 a +1.8 studs según velocidad
+    local dynamicOffset = math_clamp(1.8 + dist * 0.025 + velBoost, 1.8, 6.5)
+
+    -- 3️⃣ Airborne boost: si el target está en el aire (jump spam),
+    --    extendemos el rayo más para cubrir la imprevisibilidad vertical.
+    local aState = getAirState(targetChar)
+    if aState.time > 0.1 then
+        dynamicOffset = dynamicOffset * (1.0 + math_min(aState.time * 0.35, 0.5))
+    end
+
+    local spawnOrigin = finalPredictedPos - (rayDir * dynamicOffset)
+    originCFrame = cframeNew(spawnOrigin, finalPredictedPos)
+end
 
             activeGun.Shoot:FireServer(originCFrame, cframeNew(finalPredictedPos))
 
