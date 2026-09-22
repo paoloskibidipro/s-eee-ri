@@ -1,5 +1,5 @@
 -- ============================================================================
--- 👾 KILLER HUB | ENGINE V12.8.0 - SHERIFF SUITE (OPTIMIZED + STABLE v3)
+-- 👾 KILLER HUB | ENGINE V12.8.0 - SHERIFF SUITE (OPTIMIZED + ULTRA LOW-END PING FIX)
 -- ============================================================================
 local KillerHub = loadstring(game:HttpGet("https://raw.githubusercontent.com/Salayer09/KillerHub/refs/heads/main/Slayer.lua"))()
 
@@ -208,22 +208,18 @@ local playerDeadStatus = {}
 local duelTeams = {}
 local currentTarget = nil
 
--- ✅ weak keys: cuando un personaje se destruye (respawn), la entrada sale sola.
+-- Weak keys para limpiezas de memoria automáticas
 local lastPositions = setmetatable({}, {__mode = "k"})
-
--- ✅ Estado de lag por personaje con HISTÉRESIS.
 local lagStates = setmetatable({}, {__mode = "k"})
-
--- ✅ Confianza de movimiento (varianza de velocidad real).
 local moveConfidence = setmetatable({}, {__mode = "k"})
+local velocityBuffers = setmetatable({}, {__mode = "k"})
 
--- ✅ STICKY TARGET.
+-- Sticky Target
 local stickyTarget = nil
 local stickyTargetTime = 0
-local STICKY_DURATION = 0.12 -- 120ms ≈ 2 ciclos del caché (60ms)
+local STICKY_DURATION = 0.12
 
 local handLineIsBlocked = false 
-
 local isWaitingForSight = false
 local waitSightThread = nil
 local Label = nil
@@ -262,7 +258,7 @@ end
 
 local function setTarget(nt) currentTarget = nt end
 
--- ✅ helpers de estado por personaje
+-- Target Buffers & Lag Handlers
 local function getLagState(targetChar)
     local s = lagStates[targetChar]
     if not s then
@@ -281,7 +277,15 @@ local function getMoveConfidence(targetChar)
     return s
 end
 
--- ✅ STICKY TARGET helpers
+local function getVelocityBuffer(targetChar)
+    local v = velocityBuffers[targetChar]
+    if not v then
+        v = { lastValidVelocity = VECTOR_ZERO, staticFrames = 0 }
+        velocityBuffers[targetChar] = v
+    end
+    return v
+end
+
 local function setStickyTarget(plr)
     stickyTarget = plr
     stickyTargetTime = os_clock()
@@ -351,6 +355,7 @@ for _, rem in pairs(ReplicatedStorage:GetDescendants()) do
                 table.clear(lastPositions)
                 table.clear(lagStates)
                 table.clear(moveConfidence)
+                table.clear(velocityBuffers)
                 stickyTarget = nil
                 stickyTargetTime = 0
                 MurdererDetectado = nil 
@@ -368,6 +373,7 @@ for _, rem in pairs(ReplicatedStorage:GetDescendants()) do
                 table.clear(lastPositions)
                 table.clear(lagStates)
                 table.clear(moveConfidence)
+                table.clear(velocityBuffers)
                 stickyTarget = nil
                 stickyTargetTime = 0
                 MurdererDetectado = nil
@@ -475,7 +481,6 @@ local function getMurderer()
         return closestEnemy
     end
 
-    -- ✅ STICKY TARGET FALLBACK.
     if stickyTarget and (os_clock() - stickyTargetTime) < STICKY_DURATION then
         local char = stickyTarget.Character
         if char then
@@ -493,7 +498,6 @@ local function getMurderer()
     return nil
 end
 
--- ✅ CACHE: getMurderer con caché de 60ms.
 local MURDERER_CACHE_INTERVAL = 0.06
 local lastMurdererCalc = 0
 local cachedMurdererResult = nil
@@ -663,10 +667,6 @@ local function getSmartTargetPart(targetChar)
     return hrp, blocked
 end
 
--- ✅ NUEVO (v3): Cache de altura de piso.
--- Antes se hacía un raycast por frame en el render loop. Con el cache
--- (150ms de validez + invalidación si el target se mueve >1.5 studs en Y)
--- el coste baja muchísimo sin cambiar la lógica visual.
 local floorCache = setmetatable({}, {__mode = "k"})
 
 local function getFloorHeight(targetHrp, targetChar)
@@ -687,7 +687,7 @@ local function getFloorHeight(targetHrp, targetChar)
     return floorY
 end
 
--- ⚠️ PREDICTION ENGINE — con HISTÉRESIS DE LAG + MOVE CONFIDENCE + JUMP PRED
+-- ⚡ PREDICTION ENGINE OPTIMIZADO PARA LOW-END & BAD PING
 local function getPredictedPosition(targetChar, targetPart, customDelta)
     if not targetChar or not targetPart then return nil, nil, nil, nil, nil end
     local hrp = targetChar:FindFirstChild("HumanoidRootPart")
@@ -708,17 +708,25 @@ local function getPredictedPosition(targetChar, targetPart, customDelta)
     local realDisplacementSpeed = 0
     local lastData = lastPositions[targetChar]
     local now = os_clock()
+    local vBuffer = getVelocityBuffer(targetChar)
     
     if not lastData then
         lastData = {Pos = hrp.Position, Time = now, RealSpeed = 0}
         lastPositions[targetChar] = lastData
     else
         local dtPrev = now - lastData.Time
-        if dtPrev > 0.008 then
+        if dtPrev > 0.005 then
             local distMoved = (hrp.Position - lastData.Pos).Magnitude
             realDisplacementSpeed = distMoved / dtPrev
             lastData.RealSpeed = realDisplacementSpeed
             
+            -- Detección de lag o desincronización de paquetes
+            if distMoved < 0.05 and (moveMag > 0.1 or rawPhysicsVel.Magnitude > 2) then
+                vBuffer.staticFrames = vBuffer.staticFrames + 1
+            else
+                vBuffer.staticFrames = 0
+            end
+
             local realYVel = (hrp.Position.Y - lastData.Pos.Y) / dtPrev
             if math_abs(realYVel) > 0.5 then calculatedVelY = realYVel end
         else
@@ -727,26 +735,6 @@ local function getPredictedPosition(targetChar, targetPart, customDelta)
         lastData.Pos = hrp.Position
         lastData.Time = now
     end
-
-    -- ✅ Detección de desync con HISTÉRESIS.
-    local immediatelySuspicious = (realDisplacementSpeed < 1.2 and (rawPhysicsVel.Magnitude > 3 or moveMag > 0.1))
-
-    local lagState = getLagState(targetChar)
-    if immediatelySuspicious then
-        lagState.lagFrames = lagState.lagFrames + 1
-        lagState.normalFrames = 0
-    elseif realDisplacementSpeed > 2.5 and rawPhysicsVel.Magnitude < walkSpeed * 1.6 then
-        lagState.normalFrames = lagState.normalFrames + 1
-        lagState.lagFrames = math_max(0, lagState.lagFrames - 1)
-    end
-
-    if lagState.lagFrames >= 2 then lagState.isLagging = true end
-    if lagState.isLagging and lagState.normalFrames >= 6 then
-        lagState.isLagging = false
-        lagState.lagFrames = 0
-    end
-
-    local isDesynced = lagState.isLagging
 
     local actualPhysicsH = vec3New(rawPhysicsVel.X, 0, rawPhysicsVel.Z)
     local realSpeedH = actualPhysicsH.Magnitude
@@ -757,18 +745,19 @@ local function getPredictedPosition(targetChar, targetPart, customDelta)
     local speedRatio = math_clamp(realSpeedH / math_max(walkSpeed, 1), 0, 1)
     local rawVelocity = actualPhysicsH:Lerp(intendedVel, speedRatio)
 
-    if isDesynced then
+    -- FIX LOW-END/LAG: Si el jugador se congela en paquetes pero sigue moviéndose en input,
+    -- no colapsamos a 0. Mantenemos un buffer suave de velocidad (Soft Decay Buffer).
+    if vBuffer.staticFrames > 0 and vBuffer.staticFrames <= 8 then
+        local decay = math_clamp(1 - (vBuffer.staticFrames * 0.08), 0.4, 0.95)
+        rawVelocity = vBuffer.lastValidVelocity * decay
+    elseif vBuffer.staticFrames > 8 then
         rawVelocity = VECTOR_ZERO
         smoothedVelocity = VECTOR_ZERO
-    elseif smoothedVelocity.Magnitude > 0.5 and rawVelocity.Magnitude > 0.5 then
-        local dotProduct = smoothedVelocity.Unit:Dot(rawVelocity.Unit)
-        if dotProduct < 0.85 then
-            local dampingFactor = math_clamp((dotProduct + 1) / 1.85, 0.25, 1.0)
-            rawVelocity = rawVelocity * dampingFactor
-        end
+    else
+        vBuffer.lastValidVelocity = rawVelocity
     end
 
-    -- ✅ Confianza de movimiento (jitter → menos predicción).
+    -- Confianza de movimiento (Jitter Softener)
     local confState = getMoveConfidence(targetChar)
     local speedDelta = math_abs(realSpeedH - confState.lastSpeed)
     confState.variance = confState.variance * 0.88 + speedDelta * 0.12
@@ -786,20 +775,20 @@ local function getPredictedPosition(targetChar, targetPart, customDelta)
         lastTargetChar = targetChar
     end
 
-    local isStopping = (moveMag < 0.1 and rawVelocity.Magnitude < 2)
-    local isStarting = (moveMag > 0.1 and smoothedVelocity.Magnitude < 2)
+    local isStopping = (moveMag < 0.1 and rawVelocity.Magnitude < 1.5)
+    local isStarting = (moveMag > 0.1 and smoothedVelocity.Magnitude < 1.5)
 
     local vSmoothAlpha = 0.35
     if isStopping then 
-        vSmoothAlpha = 0.80
+        vSmoothAlpha = 0.85
     elseif isStarting then 
-        vSmoothAlpha = 0.15
+        vSmoothAlpha = 0.20
     else 
-        vSmoothAlpha = math_clamp(14 * activeDT, 0.18, 0.50) 
+        vSmoothAlpha = math_clamp(16 * activeDT, 0.22, 0.60) 
     end
     
     smoothedVelocity = smoothedVelocity:Lerp(rawVelocity, vSmoothAlpha)
-    if (isStopping or isDesynced) and smoothedVelocity.Magnitude < 0.3 then smoothedVelocity = VECTOR_ZERO end
+    if isStopping and smoothedVelocity.Magnitude < 0.3 then smoothedVelocity = VECTOR_ZERO end
 
     local horizontalShift = VECTOR_ZERO
     local verticalShift = VECTOR_ZERO
@@ -826,10 +815,7 @@ local function getPredictedPosition(targetChar, targetPart, customDelta)
 
     horizontalShift = vec3New(smoothedVelocity.X, 0, smoothedVelocity.Z) * effectiveHLatency * predictionWeight * moveConfidenceFactor
 
-    -- ✅ JUMP PREDICTION FUNCIONAL (seguro contra "disparos al piso")
-    local jumpPredEnabled = Flag("Sheriff_JumpPred", false)
-
-    if vScale > 0 and not isDesynced then
+    if vScale > 0 then
         local isAir = (humanoid.FloorMaterial == Enum.Material.Air)
         local isStairMovement = (not isAir and math_abs(calculatedVelY) > 0.8)
 
@@ -839,45 +825,23 @@ local function getPredictedPosition(targetChar, targetPart, customDelta)
 
             if isAir then
                 if calculatedVelY < -0.5 then
-                    -- 🔽 CAYENDO: comportamiento conservador (30% de la vel real).
-                    -- Nunca se hace boost aquí → evita disparar al suelo.
                     local fallSpeed = math_max(calculatedVelY, -18)
                     local fallingYFactor = fallSpeed * 0.30 * vFactor
                     verticalShift = vec3New(0, fallingYFactor, 0)
                 else
-                    -- 🔼 SUBIENDO / ÁPICE: balística normal
                     local gravityEffect = 0.5 * workspace_Gravity * math_pow(vFactor, 2)
                     local pY = (calculatedVelY * vFactor) - gravityEffect
-
-                    -- ✅ NUEVO: Jump Prediction boost
-                    -- SOLO cuando el target está claramente subiendo (velY > 1.5)
-                    -- Boost multiplicativo 1.30x, con cap absoluto de +2.5 studs.
-                    if jumpPredEnabled and calculatedVelY > 1.5 then
-                        local boostedPY = pY * 1.30
-                        local boostDelta = boostedPY - pY
-                        if boostDelta > 2.5 then
-                            boostedPY = pY + 2.5
-                        end
-                        pY = boostedPY
-                    end
-
                     verticalShift = vec3New(0, pY, 0)
                 end
             elseif isStairMovement then
-                -- Escaleras: predicción directa (no es salto)
                 local pY = calculatedVelY * vFactor
                 verticalShift = vec3New(0, pY, 0)
             end
         end
     end
 
-    -- Caps horizontales / verticales
     if horizontalShift.Magnitude > 8.5 then horizontalShift = horizontalShift.Unit * 8.5 end
-
-    -- ✅ Cap Y sube a 7.5 con Jump ON (suficiente para ápex ~6.37 studs)
-    -- sin Jump ON: 6.0 (comportamiento original intacto)
-    local maxYShift = jumpPredEnabled and 7.5 or 6.0
-    if verticalShift.Magnitude > maxYShift then verticalShift = verticalShift.Unit * maxYShift end
+    if verticalShift.Magnitude > 6.0 then verticalShift = verticalShift.Unit * 6.0 end
 
     local finalPredNoY = vec3New(targetPosition.X + horizontalShift.X, targetPosition.Y, targetPosition.Z + horizontalShift.Z)
     local minPredNoY = vec3New(targetPosition.X + (horizontalShift.X * 0.4), targetPosition.Y, targetPosition.Z + (horizontalShift.Z * 0.4))
@@ -885,17 +849,15 @@ local function getPredictedPosition(targetChar, targetPart, customDelta)
     local finalPredWithY = targetPosition + horizontalShift + verticalShift
     local predXYExaggerated = targetPosition + (horizontalShift * 1.8) + verticalShift
     
-    -- Lead Time Prediction visual ×4.2 (era ×3.6), clamp Y ±16
     local LEAD_TIME_VISUAL_MULT = 4.2
     local LEAD_TIME_VISUAL_CLAMP = 16
 
     local rawVisualY = math_clamp(verticalShift.Y * LEAD_TIME_VISUAL_MULT, -LEAD_TIME_VISUAL_CLAMP, LEAD_TIME_VISUAL_CLAMP)
-    local yLerpAlpha = math_clamp(12 * activeDT, 0.08, 0.28)
+    local yLerpAlpha = math_clamp(14 * activeDT, 0.10, 0.35)
     smoothedVisualY = smoothedVisualY + (rawVisualY - smoothedVisualY) * yLerpAlpha
 
     local finalLeadPredX = targetPosition + (horizontalShift * LEAD_TIME_VISUAL_MULT) + vec3New(0, smoothedVisualY, 0)
 
-    -- 🛡️ FLOOR CLAMP FINAL — garantiza que NUNCA se dispare bajo el piso
     local floorY = getFloorHeight(hrp, targetChar)
     if floorY then
         local minAllowedY = floorY + (hrp.Size.Y / 2) + 0.15
@@ -935,14 +897,14 @@ table.insert(_G.KillerHubLines, PredictionXYLine)
 
 local worldToViewport = Camera.WorldToViewportPoint
 
--- ✅ Lerp adaptativo para tracers.
+-- Dynamic Ultra-Fast Lerp para Tracers
 local function adaptiveLerp(cur, tgt, baseA)
     if not cur then return tgt end
     local dev = (tgt - cur).Magnitude
     if dev <= 1.5 then
         return cur:Lerp(tgt, baseA)
     end
-    local soft = baseA * math_clamp(2.5 / dev, 0.35, 1.0)
+    local soft = baseA * math_clamp(3.5 / dev, 0.45, 1.0)
     return cur:Lerp(tgt, soft)
 end
 
@@ -982,7 +944,8 @@ local renderConn = RunService.RenderStepped:Connect(function(dt)
         local _, predNoY, minPredNoY, predXYExaggerated, finalLeadPredX = getPredictedPosition(targetChar, visualPart, dt)
         
         if predNoY and minPredNoY then
-            local tracerLerpAlpha = math_clamp(25 * dt, 0.15, 0.55)
+            -- Tracers ultra-rápidos (42 * dt para respuesta instantánea)
+            local tracerLerpAlpha = math_clamp(42 * dt, 0.25, 0.85)
             if not visPredNoY then
                 visPredNoY = predNoY
                 visMinPredNoY = minPredNoY
