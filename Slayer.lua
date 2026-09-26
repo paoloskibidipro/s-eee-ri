@@ -1,5 +1,5 @@
 -- ============================================================================
--- 👾 KILLER HUB | ENGINE V12.9.1 - SHERIFF SUITE (PREDICTION+ JITTER-AWARE)
+-- 👾 KILLER HUB | ENGINE V12.9.0 - SHERIFF SUITE (PREDICTION+ JITTER-AWARE)
 -- ============================================================================
 local KillerHub = loadstring(game:HttpGet("https://raw.githubusercontent.com/Salayer09/KillerHub/refs/heads/main/Slayer.lua"))()
 
@@ -59,8 +59,8 @@ if oldGui then oldGui:Destroy() end
 -- 📡 NETWORK TELEMETRY (Ping + Jitter + Stability Score)
 -- ═══════════════════════════════════════════════════════════════════════════
 local cachedPingValue = 0.05
-local pingJitterMS  = 0
-local networkStability = 1.0
+local pingJitterMS  = 0           -- desviación estándar del ping (ms)
+local networkStability = 1.0      -- 1.0 = perfecto, baja con jitter alto
 local pingSamples = {}
 local PING_SAMPLE_SIZE = 10
 
@@ -86,6 +86,7 @@ local function pushPingSample(ms)
     variance = variance / #pingSamples
     pingJitterMS = math_sqrt(variance)
 
+    -- Stability: 0ms jitter = 1.0 ; 100ms jitter ≈ 0.55 ; 250ms = 0.35
     networkStability = math_clamp(1.0 - (pingJitterMS / 380), 0.35, 1.0)
 end
 
@@ -253,12 +254,17 @@ local moveConfidence = setmetatable({}, {__mode = "k"})
 local velocityBuffers = setmetatable({}, {__mode = "k"})
 
 -- ═══════════════════════════════════════════════════════════════════════════
--- 🎯 BUFFERS DE PREDICCIÓN AVANZADA
+-- 🎯 NUEVOS BUFFERS DE PREDICCIÓN AVANZADA (V12.9.0)
 -- ═══════════════════════════════════════════════════════════════════════════
 
+-- Ring buffer de velocidades (promedio ponderado con sesgo de recencia)
 local VEL_HISTORY_SIZE = 8
 local velocityHistory = setmetatable({}, {__mode = "k"})
+
+-- Detección de cambios bruscos de dirección (zigzag del murderer)
 local turnDetect = setmetatable({}, {__mode = "k"})
+
+-- Tiempo acumulado en el aire (para parábola más precisa)
 local airTime = setmetatable({}, {__mode = "k"})
 
 local function getVelHistory(char)
@@ -270,13 +276,15 @@ local function getVelHistory(char)
     return h
 end
 
-local VEL_WEIGHTS = {0.05, 0.06, 0.08, 0.10, 0.13, 0.16, 0.19, 0.23}
+-- Push + weighted average (más peso a lo reciente)
+local VEL_WEIGHTS = {0.05, 0.06, 0.08, 0.10, 0.13, 0.16, 0.19, 0.23} -- suma ≈ 1.0
 local function pushVelocityWeighted(char, vel)
     local h = getVelHistory(char)
     h.idx = h.idx % VEL_HISTORY_SIZE + 1
     h.buf[h.idx] = vel
     if h.size < VEL_HISTORY_SIZE then h.size = h.size + 1 end
 
+    -- Weighted average, enfocando los últimos samples
     local weighted = VECTOR_ZERO
     local wTotal = 0
     for i = 1, h.size do
@@ -311,6 +319,7 @@ local function updateTurnState(char, newVel, dt)
             local dot = math_clamp(t.lastUnit:Dot(unit), -1, 1)
             local angle = math_acos(dot)
 
+            -- Si gira >55° en un frame, activamos penalización temporal
             if angle > math_rad(55) then
                 t.sharpTurnTimer = 0.15
             end
@@ -324,6 +333,7 @@ local function updateTurnState(char, newVel, dt)
         t.sharpTurnTimer = t.sharpTurnTimer - dt
     end
 
+    -- Penalty: 0.55 en giro brusco, sube suave a 1.0
     local targetPenalty = (t.sharpTurnTimer > 0) and 0.55 or 1.0
     t.penalty = t.penalty + (targetPenalty - t.penalty) * math_clamp(8 * dt, 0, 1)
 
@@ -383,6 +393,7 @@ end
 
 local function setTarget(nt) currentTarget = nt end
 
+-- Target Buffers & Lag Handlers
 local function getLagState(targetChar)
     local s = lagStates[targetChar]
     if not s then
@@ -523,8 +534,36 @@ local floorCastParams = RaycastParams.new()
 floorCastParams.FilterType = Enum.RaycastFilterType.Exclude
 
 -- ═══════════════════════════════════════════════════════════════════════════
--- 🔫 SISTEMA DE EQUIP / UN-EQUIP PROFESIONAL (DEBOUNCED POR TOKEN)
+-- 🛡️ MM2 GUN RECHARGE & UNEQUIP COOLDOWN CONTROLLER
 -- ═══════════════════════════════════════════════════════════════════════════
+local MM2_GUN_RELOAD_TIME = 2.15 -- Tiempo de recarga nativo del revólver en MM2
+local lastGunShotTimestamp = 0
+local isFiringOrReloading = false
+
+local function isGunReloading()
+    local now = os_clock()
+    if (now - lastGunShotTimestamp) < MM2_GUN_RELOAD_TIME then
+        return true
+    end
+    if isFiringOrReloading then
+        return true
+    end
+    local char = LocalPlayer.Character
+    local hum = char and char:FindFirstChildOfClass("Humanoid")
+    local animator = hum and hum:FindFirstChildOfClass("Animator")
+    if animator then
+        for _, track in ipairs(animator:GetPlayingAnimationTracks()) do
+            local trackName = (track.Name or ""):lower()
+            local animObj = track.Animation
+            local animName = (animObj and animObj.Name or ""):lower()
+            if (trackName:find("reload") or animName:find("reload")) and track.IsPlaying then
+                return true
+            end
+        end
+    end
+    return false
+end
+
 local function autoEquipWeapon()
     local character = LocalPlayer.Character
     local backpack = LocalPlayer:FindFirstChild("Backpack")
@@ -547,26 +586,6 @@ local function autoUnequipWeapon()
             humanoid:UnequipTools()
         end
     end
-end
-
--- Debounce token-based: cada shot programa un "unequip diferido".
--- Solo se ejecuta si NINGÚN otro shot llegó en la ventana de espera.
-local unequipToken = 0
-local lastShootTime = 0
-local UNEQUIP_IDLE_DELAY = 0.55 -- segundos sin disparar antes de desequipar
-
-local function scheduleUnequipAfterIdle()
-    if not Flag("Sheriff_UnEquipGun", false) then return end
-    lastShootTime = os_clock()
-    unequipToken = unequipToken + 1
-    local myToken = unequipToken
-    task.delay(UNEQUIP_IDLE_DELAY, function()
-        -- Otro shot canceló esta programación
-        if unequipToken ~= myToken then return end
-        -- Todavía hay actividad de disparo reciente
-        if (os_clock() - lastShootTime) < (UNEQUIP_IDLE_DELAY - 0.1) then return end
-        autoUnequipWeapon()
-    end)
 end
 
 local function getMurderer()
@@ -684,6 +703,8 @@ local function updateIgnoreListCache()
 end
 
 KillerHub:AddTask(LocalPlayer.CharacterAdded:Connect(function()
+    lastGunShotTimestamp = 0
+    isFiringOrReloading = false
     updateIgnoreListCache()
     resetWaitState()
 end))
@@ -770,32 +791,15 @@ local function isStrictlyVisible(targetChar, targetPart)
     return true
 end
 
--- ═══════════════════════════════════════════════════════════════════════════
--- ⚡ CACHÉ POR FRAME — getSmartTargetPart (evita ~20 raycasts/frame → ~5)
--- ═══════════════════════════════════════════════════════════════════════════
-local smartTargetCache = setmetatable({}, {__mode = "k"})
-local SMART_TARGET_CACHE_TTL = 0.016
-
 local function getSmartTargetPart(targetChar)
     if not targetChar then return nil, true end
-
-    local now = os_clock()
-    local cached = smartTargetCache[targetChar]
-    if cached and (now - cached.t) < SMART_TARGET_CACHE_TTL then
-        return cached.part, cached.blocked
-    end
-
     local hrp = targetChar:FindFirstChild("HumanoidRootPart")
-    if not hrp then
-        smartTargetCache[targetChar] = {part = nil, blocked = true, t = now}
-        return nil, true
-    end
+    if not hrp then return nil, true end
 
     local wallCheck = Flag("Sheriff_WallCheck", true)
     local shotType = Flag("Sheriff_ShotType", "Normal")
 
     if not wallCheck or shotType == "Piercer Bullet" then
-        smartTargetCache[targetChar] = {part = hrp, blocked = false, t = now}
         return hrp, false
     end
 
@@ -834,7 +838,6 @@ local function getSmartTargetPart(targetChar)
         blocked = true
     end
 
-    smartTargetCache[targetChar] = {part = hrp, blocked = blocked, t = now}
     return hrp, blocked
 end
 
@@ -859,7 +862,7 @@ local function getFloorHeight(targetHrp, targetChar)
 end
 
 -- ═══════════════════════════════════════════════════════════════════════════
--- ⚡ PREDICTION ENGINE V12.9.1 — JITTER-AWARE + WEIGHTED HISTORY
+-- ⚡ PREDICTION ENGINE V12.9.0 — JITTER-AWARE + WEIGHTED HISTORY
 -- ═══════════════════════════════════════════════════════════════════════════
 local function getPredictedPosition(targetChar, targetPart, customDelta)
     if not targetChar or not targetPart then return nil, nil, nil, nil, nil end
@@ -879,10 +882,11 @@ local function getPredictedPosition(targetChar, targetPart, customDelta)
     local floorMaterial = humanoid.FloorMaterial
     local isAir = (floorMaterial == Enum.Material.Air)
 
+    -- Air time tracking (para parábola más precisa)
     local aState = getAirState(targetChar)
     if isAir then
         aState.time = aState.time + activeDT
-        if aState.time > 3 then aState.time = 3 end
+        if aState.time > 3 then aState.time = 3 end -- clamp
     else
         aState.time = 0
     end
@@ -927,6 +931,7 @@ local function getPredictedPosition(targetChar, targetPart, customDelta)
     local speedRatio = math_clamp(realSpeedH / math_max(walkSpeed, 1), 0, 1)
     local rawVelocity = actualPhysicsH:Lerp(intendedVel, speedRatio)
 
+    -- Soft decay buffer para lag de paquetes
     if vBuffer.staticFrames > 0 and vBuffer.staticFrames <= 8 then
         local decay = math_clamp(1 - (vBuffer.staticFrames * 0.08), 0.4, 0.95)
         rawVelocity = vBuffer.lastValidVelocity * decay
@@ -937,8 +942,10 @@ local function getPredictedPosition(targetChar, targetPart, customDelta)
         vBuffer.lastValidVelocity = rawVelocity
     end
 
+    -- 🆕 WEIGHTED HISTORY (reemplaza el simple EMA smoothing)
     local histVel = pushVelocityWeighted(targetChar, rawVelocity)
 
+    -- Move confidence (variance suavizada)
     local confState = getMoveConfidence(targetChar)
     local speedDelta = math_abs(realSpeedH - confState.lastSpeed)
     confState.variance = confState.variance * 0.88 + speedDelta * 0.12
@@ -971,8 +978,10 @@ local function getPredictedPosition(targetChar, targetPart, customDelta)
     smoothedVelocity = smoothedVelocity:Lerp(histVel, vSmoothAlpha)
     if isStopping and smoothedVelocity.Magnitude < 0.3 then smoothedVelocity = VECTOR_ZERO end
 
+    -- 🆕 Turn detection (reducción durante zigzag)
     local turnPenalty = updateTurnState(targetChar, smoothedVelocity, activeDT)
 
+    -- 🆕 Stability Score combinado (jitter + variance + turn)
     local stabilityScore = networkStability * moveConfidenceFactor * turnPenalty
 
     local horizontalShift = VECTOR_ZERO
@@ -987,6 +996,7 @@ local function getPredictedPosition(targetChar, targetPart, customDelta)
 
     if prioritizePing then
         local rawMS = cachedPingValue * 1000
+        -- Compensación base + extra por jitter (para pings inestables)
         local autoScale = 90 + (rawMS * 0.6) + (pingJitterMS * 0.4)
         effectiveHLatency = (autoScale / 1000) * PREDICTION_BOOST
         local autoVScale = math_min(autoScale, 120)
@@ -1000,7 +1010,7 @@ local function getPredictedPosition(targetChar, targetPart, customDelta)
     horizontalShift = vec3New(smoothedVelocity.X, 0, smoothedVelocity.Z)
         * effectiveHLatency
         * predictionWeight
-        * stabilityScore
+        * stabilityScore    -- 🆕 score combinado
 
     if vScale > 0 then
         local isStairMovement = (not isAir and math_abs(calculatedVelY) > 0.8)
@@ -1015,6 +1025,7 @@ local function getPredictedPosition(targetChar, targetPart, customDelta)
                     local fallingYFactor = fallSpeed * 0.30 * vFactor
                     verticalShift = vec3New(0, fallingYFactor, 0)
                 else
+                    -- Parábola usando TIEMPO EN EL AIRE para mejor precisión
                     local gravityEffect = 0.5 * workspace_Gravity * math_pow(vFactor, 2)
                     local pY = (calculatedVelY * vFactor) - gravityEffect
                     verticalShift = vec3New(0, pY, 0)
@@ -1233,6 +1244,8 @@ KillerHub:AddTask(renderConn)
 local executeActualShoot
 
 executeActualShoot = function(targetChar, bestPart)
+    if isGunReloading() then return false end
+
     local shotType = Flag("Sheriff_ShotType", "Normal")
     local wallCheck = Flag("Sheriff_WallCheck", true)
     local char = LocalPlayer.Character
@@ -1243,7 +1256,7 @@ executeActualShoot = function(targetChar, bestPart)
 
     local finalPredictedPos = getPredictedPosition(targetChar, bestPart)
     if finalPredictedPos then
-        -- Re-validación justo antes de disparar
+        -- 🆕 RE-VALIDACIÓN justo antes de disparar (evita shots fantasma)
         if wallCheck and shotType ~= "Piercer Bullet" then
             local part, isBlocked = getSmartTargetPart(targetChar)
             if not part or isBlocked or isGunBlocked(finalPredictedPos, targetChar) then
@@ -1262,16 +1275,21 @@ executeActualShoot = function(targetChar, bestPart)
 
             if shotType == "Piercer Bullet" then
     -- ═══════════════════════════════════════════════════════════════════════
-    -- PIERCER V2 — Velocity-aligned ray + Dynamic offset + Airborne boost
+    -- 🆕 PIERCER V2 — Velocity-aligned ray + Dynamic offset + Airborne boost
     -- ═══════════════════════════════════════════════════════════════════════
 
+    -- 1️⃣ Dirección del rayo basada en VELOCIDAD del target (no cámara).
+    --    Esto asegura que cualquier error de predicción a lo largo del
+    --    movimiento quede cubierto por la LONGITUD del rayo, no por su ancho.
     local velH = vec3New(smoothedVelocity.X, 0, smoothedVelocity.Z)
     local velMagH = velH.Magnitude
 
     local rayDir
     if velMagH > 0.8 then
+        -- Target en movimiento → rayo paralelo a su trayectoria
         rayDir = velH.Unit
     else
+        -- Target estático → usar dirección shooter→target (más fiable que cámara)
         local shooterHrp = char:FindFirstChild("HumanoidRootPart")
         local shooterPos = shooterHrp and shooterHrp.Position or Camera.CFrame.Position
         local toTarget = finalPredictedPos - shooterPos
@@ -1284,13 +1302,18 @@ executeActualShoot = function(targetChar, bestPart)
         rayDir = rayDir.Unit
     end
 
+    -- 2️⃣ Offset dinámico: escala con distancia + velocidad del target.
+    --    Corto alcance → offset pequeño (bajo error). Largo alcance → offset
+    --    grande (cubre más trayectoria para compensar cualquier lag del server).
     local shooterHrp2 = char:FindFirstChild("HumanoidRootPart")
     local shooterPos2 = shooterHrp2 and shooterHrp2.Position or Camera.CFrame.Position
     local dist = (finalPredictedPos - shooterPos2).Magnitude
 
-    local velBoost = math_min(velMagH * 0.06, 1.8)
+    local velBoost = math_min(velMagH * 0.06, 1.8)      -- +0 a +1.8 studs según velocidad
     local dynamicOffset = math_clamp(1.8 + dist * 0.025 + velBoost, 1.8, 6.5)
 
+    -- 3️⃣ Airborne boost: si el target está en el aire (jump spam),
+    --    extendemos el rayo más para cubrir la imprevisibilidad vertical.
     local aState = getAirState(targetChar)
     if aState.time > 0.1 then
         dynamicOffset = dynamicOffset * (1.0 + math_min(aState.time * 0.35, 0.5))
@@ -1300,13 +1323,22 @@ executeActualShoot = function(targetChar, bestPart)
     originCFrame = cframeNew(spawnOrigin, finalPredictedPos)
 end
 
+            lastGunShotTimestamp = os_clock()
+            isFiringOrReloading = true
+
             activeGun.Shoot:FireServer(originCFrame, cframeNew(finalPredictedPos))
 
-            -- 🔧 Un-Equip diferido: solo desequipa tras 0.55s sin disparar
-            -- Se cancela automáticamente si otro shot ocurre antes.
             if Flag("Sheriff_UnEquipGun", false) then
-                scheduleUnequipAfterIdle()
+                task.delay(0.22, function()
+                    if Flag("Sheriff_UnEquipGun", false) then
+                        autoUnequipWeapon()
+                    end
+                end)
             end
+
+            task.delay(MM2_GUN_RELOAD_TIME, function()
+                isFiringOrReloading = false
+            end)
 
             return true
         end
@@ -1400,6 +1432,8 @@ local function startWaitingForSight(initialTarget)
 end
 
 local function fireAtMurdererDirectly()
+    if isGunReloading() then return end
+
     local cancelOnClick = Flag("Sheriff_CancelOnClick", false)
 
     if isWaitingForSight then
@@ -1438,6 +1472,7 @@ end
 local lastAutoShootTime = 0
 local autoShootConn = RunService.Heartbeat:Connect(function()
     if not Flag("Sheriff_AutoShoot", false) then return end
+    if isGunReloading() then return end
 
     local now = os_clock()
     if now - lastAutoShootTime < 0.18 then return end
