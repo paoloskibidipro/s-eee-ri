@@ -1,1 +1,1879 @@
-return(function(...)local t={"uEe,/n","uU5o&5";"uO=op$/TR)1;2t_]T;/31rC^Pk<ll7","uAN";"uB<A[g33H5Qqh";"uh@Zc/R%T1Z+LW6b!J";"uE1Uch4!F";"ul@W=(P:f";"uOV";"ujVB\":1ct1hk!G0g";"u=\\_M@W:EaO","u_YWTei[&JBjt95)i`*86oP1lm","uM2<)","uClZM+\'1,9GI_Tj+ES7P@","u-1?(";"up0%!AnX<h3+4]Wg4W";"u0^\'*";"uh9JO?";"u\"0fh7eZCF[h-";"uILRPjii";"u%BUR/J+qm>";"uh[6-E1O%0";"u.2Cm:MJQ#";"uEEI_W)B//W&^","u(AC&ghmlm6";"u\')sC]B8aa0","uCdnd5k\\]nMYI","upPIF\"JF";"u0UZtT";"u29(HA","uqg851lnNEP","u+CEP!g6kM";"u.S=.S";"uR\"YoNb\\horJ:\\:WHq$/4";"u/mica";"u*>17CqYRt7";"u!D1R4XIN","uCkB3%IdqmS_=qc,cfP(^";"u0a)IP","uSkeYHn\\Zk`C;rg.?:O","uac@%:p#6d\\t,]:]bfl!Y","u(S/s1Q@^GZ)=_*S-di]gG*3,5","ueWhT";"u4qS4(9%*#^Nh";"u!\"1PT8RRW";"u`9L@a*%gkOWsJJ$","u-4NcR7<#";"ucr_\'UleiP^51","u8UOB^U7@$?[I","uhWS@","uMi==#iJLI1","uek;(h_B)pV@W<__m7\"l=";"uJELO>=,rNm+:6!R=Pm","uf;N?UJa(:M78\\XIV*5SkNs*=","uII;oUbQ5toNF","uEt$\'dT][?nKht(W";"uCsB54i%j)b1]b6T4?";"ub&Z[H]5h)`";"u%t7sk=0LW9%2jRe`Xek2l2nM1fP";"u!k]a_]h","uL<.0@QBedkPiGV&k`f";"u3jIFfX#4E*2_IA<S[mui9\"","uputUMJ2_7G=P*R;5<","u?K?JUk.<P3pK?V`Uk)";"uKcA*\\8dEqBTrJWW02L\"m([[";"u5oPuHPf";"um4+AidPe$?]af.%]M_6phr","uA]V9NNPt\'8)Jl","ueLDSe$EFIbRl","u&6oY7G?G=3(U";"uiLOLiYius4";"u;:";"uRT<7c!Nj\\k!B";"uL;YdqQHi0dWgt\"Q@o8sDWBlRrZi7E","u5KMLP?l/s-R]=g&","u&niZjHY:";"uQDrL7GmQiEt%Cb\"8(4d/\\N$p_SQG.";"u;:CS(H$;k\'`B";"upqchUS]F@p+d]G=";"uSeF4;.`[k";"umYd:)J63P=C:KD_<;b-*","u)`D\\THR-2","u(,!`upe:?q";"ui:J3e","uA$[_Y=U)Z#KF6j^Da#V4","u+n0_JC-%P34I\"kY0tr";"uf%d,dHj)s\'er9o&4N","u2r";"uIf6(KZi8]<";"ujoY?]T^:+L[$`USY@iasrXJ\\HE/^U[%;Cll","u+qjWE]J25r!(/-t6=","uPNp\"Fge?:b","u]J\"7$JKdRiUsh\"0!V","uZ?76bAag","uP1eY9r5hD6","uI7E!-tr","uH\"tJo5bS\'h";"uaJ/o*$P1g]U%5hX`M=-6";"u\\<.b&.M@u=Ql\'PN";"u0N\"iO5].Q;rn","uH*&Uh8bBS:;a$Y\\&A4V>,]hnVi;Z","u-\\KEnB]e)\\2&","ulNYBgRCXI@";"ub.p$#F3h:","u4W";"uU;lFsX/\'a","uc<e2OU[7";"u2c,\"u\'$+*","u\\npJLld6E-;:";"u?$I#UNM!-29^";"uUh9QPcIW\\):P";"uCLMh#qdld)J\\";"uJNfe9CMSZp5tf\"[.5","udV","ugg88","u0f:Mh!kb(r?32j20f0[f(s_#ek,9&","uUQ\"FRJasA+6=","uf&XqbX/lLKp1A1IHtlZlAS<u","uFP","u+`^n226#X!ENT";"uJVNVTpnW\'[","u<cip\"3$GO9YNR0cD7+TA","uc?","uJ0jF","um`4UTWn8QnPY4Ki/N>M6mDW","ur[0\")<]#DidB8%Sj1PT=XAOs^1qpd";"u\\sO_*=9:fo*[:^6";"uhnee;nIVW4UFnRD","u;Z!)QY1YtOh&U3j8jI)f:&,#","uTmhoM;qlt]","uV91D0$TFRLo0hue";"u%6F;";"uka50?J;:M6W&p1J[Rp\\<X^","uHK\'PK<.rg68lQ]Tr\\nmcfk;CZqh","u?3f5>]q^m","u5Rh_C29d-e&n\"r,]ukMs";"uCcDT&STU[c","ue2h$&<mSn9?Su%12r","u/V6S1","u0f:Mh!k[OQX/?0DR]e","u2!SWPOjA,P,N","u8P45$C422";"uB%@a6gVn/s";"uURFE`+lI#OC.>\\14W","ucWGR`H##W%:*rrtO8e","uSe>)12&";"uBalqB<cmL%2HUbcE;/Aa]B9-;674","u*q`iugS0Fp6%!P/S3aDJI8Y0]QO^","u_n[3:6QIgIOg\"PTa&B","u+htNWbR";"uBbYPN5.u9<<B/F<","ukPY2m!!N+7]lF*o","ua(r,^FcQ\'J$W";"unhI1^4ORq2?2[BMCI\'","u/elD4P8";"uX\\d94kIEH3nI+o?";"u]B1kc(a";"uS?[>`<-J8\'\'=4jfH/Mo[L+U3_JiS","u@u:ST+62^","u8Et,kH@+XiYG6d","u%\'gIT";"und)k;`SgUilo\"";"uA?PVEhN*SC*!]O1@Mg+1TY6@Y","u(1V\"5+dJ-M\"%&lA0r","uYRX*$\"m2e[0DL","unj*(iVuq";"u0f:Mh!kb?$pu^!gXt","uhol4@[\'s!","u6E3cOe=u8LdY&:\"V&hi&";"u0@!&DpU0P","u\\tC/DTgba";"uL\"lrD";"ua_k!dZ.QBU:Lm!+AM.F_5?mGb\\@Y]E[/","u&-E.+R<r","u5r()96MSl5n\\$7o5/?","uqh70<FaDdc!EO]C+VdNL","u_0]/:u,8YA","uSd`4C+AOcj";"u3@).caX/fiP=>mXUVd5Upp1d!q.R";"uXK4c\"cq)K;8`AEl*lh","u:[F!FY(K","uC^,K%\\!E";"uJ!@CDCk./$";"u]EMCm=YcPW?CFg#Xt";"uXG$\"8J+me/J30?4kN","uL6AY";"u(+5I/d=a^&O1@";"u-0%?>","ulW&]8k=a3Z&^";"uSjWQZ\\8r@]\'/W*?\"!T";"ul^sF\"!ja]E?&A$%P[j";"uiW.bUl-[-*3:4!`MD`0Y`eoH\"Tl";"uF9EVRIlii";"uFH4N";"uOO0[p,:OT";"u+H:M-+H:YM!p5sLkZD";"u9h+7rjipBW@$o:#";"upK?<WC/2Kn+n7a1R^`";"uj<4A\"2Tp9p%TYa!2f;1","ukN","uslGW;%E`Gu9F`9gJ.7rs","u4C+<EkS</QkSr=0";"u;&VrIpsQ9J)r","uA<`6!pG","uRT:0R6Z7B]QC[4JNUVt@@cV.(","uEUK%,Q\'dZ&t-";"utd#HQXt";"uY;bU`eL%jckCe";"u1N_t","uH8","ud:+Z","u6X_2S(<.jLh6kbG5r%","u!_]j6M6\"HFuTYGZ","uLRKMX\"OW2G]AAZ1D3nd";"uDa<`VK\"9";"uI,LnV";"u+n[0;","u7I@&+,\')#$s(mJZgB3RCk1qr2[He9","uJ=]uY+9hF";"uRM]p","u7RqtM2?Jt*E&L0b@V","uM`]hl<ihd@ECa`WANMC8","u\'0W,","u!k?07";"uJrV3f!WA`T6>>8P","u$mY8QU8!:,";"ur\'eK&sq)pA:o?";"u(W[.78=A/1","usmfIQs+aP-3cL\\";"uXsTC1]lj-1R\"_JUk?";"u]\\1)4$)]lT/ZlCU\'_o&15(","uX3KDO_`IRaV1";"uCIQndBVl\"hlogj#Lpb","uaDU,S`/=jFLW";"uq)LE";"uZ).i!a3_(@GJ/";"u*\'<=HVNB-CG<","uf)*]c62q$K","uCWfSJ%7C8PuFgrQ-a","u7@^q@$N,l48-m";"uuRLW34$h0R";"u0nZ=0UR2&:0\"ApnkN","uE_3DF";"ubF","uJ2I&Q0>GTh]+m","ugs1juK:","uAC=e$]`H:PI4@N&4oiFT";"uLE4*f!)j","u4+CiI,c:8YA2lOu";"u&q&!^,3/","uZ\"";"ufJdMpUNk6\'BnYRUQVgoE","u:1d#Fa\"GG:]I=$[n^";"u!$0S&g*`+m)4E,nIM]o<";"uQob]Jf(#RdclV?-m(HD=_gF7jK.E&]0Xj1$\"T6T=*3l!TjK7f!,=<0:DH&uKDN6?SE24&CC5I685CiV/P-,fdQ:_NVlJrIOO\"=Kidoo1DIh","u2rG@Gl\')sq9O,>,","uCPk(!JLUFYkPh_E4PG";"uZjt\'+k(Oo?`V3CY";"u0L2D1X.-","uB,Pir(\'KkP1t","u\'Y,G2","uJ0Vc$=CsrWP\\\'#JC\\I";"uAF@U#93Pji1`AQh\'kkD","u/,XQUQ@i";"u`n)Vle#3@Z-`]7Y";"u(;50l?2e;","u($m@[+UCeG0B:Bk","uIcGZm","uu_*1ea4k@>";"u.Y4V4SU";"u6MWV";"u%Q$3?eMeanlm,@qn)B_","uHHE5mP-7Jcs2n]";"uR9_3+);sDjnCT1D?$ge1","u!cp=b\"jie]pBjD]","un/n4;au";"uk6&cR";"u#2]RM","uuLDSLUa","uKMi[;)jp0#-ss\\\"ZAb[\'cP/\\M9;,I";"u,j*[","u]ET!\"p4d4KRjJF\"","un$VV+eIOrT";"u!8[G!h@#","u0f:Mh!kb(r?32j2","u74N_1@=6VB";"ue#;4QsF(nPOB";"uF^8mOeYOhGEd\"c";"uuWWV";"umh$)W","uhsFY*rU`<","u0f:Mh!kbiaXGR";"u!l<&%!/NF2";"uW_La<ch2!nL2=_mC5_d23CD)","u0n5+Q(gF=H=*4:(U]M";"uRah>8s#.`*o7b,#Jb;*IG<";"uSM$WO=F3$S\\:","uo0*!c\",`;I./","uQS%RYRP`fZ";"utd#mW!k?=@pH/V";"u5q8:mmEaM0";"u9\"","u<b3BZu+0d1g=>e<u?0VuUO-$Z","u]K\\2o(sNN$P1]0%4Sj","u5WD)+V.A";"uZ^";"uhC/fB<!Fa><!fn&=uq","u!<1*\\p9^";"u$+K\\-bT7;p82@";"u?3fCNpnV\'FpnGMo]VHLc]\\";"uBs9Ie5tD","u#K`^ep!7=,FP","uVrYI9;:";"um09d\'nCYW6$$sJPVIFf","uC\\<)\'XG/1YXMYQ2";"uAQ+ui)UKEMBeN=";"u\"VJ9s","ueqMDq@WgLDlu5SE","udiN=qt@2j@+:3q0P#n%%3Oi";"uh6sN0R\"9,S4Zdi\\";"uR?.X\"]q\\dY]h","u!X2l?(;V(c";"uA,$(";"u=b$tERfF>R]`_t:","uR^Lh\'ga,fE?c8bH1^G","uLS&W_Cq!%8XCZO#T@2IR","uX/m";"u5r%%O8limJ";"urUb2a9_Au","uE5Nb,GUo*","ukCX#C()hCYUDDeJ=1";"u0f:Mh!k;","u($)]J<0o8";"uRSO`aJ31<EK=ekUUjlq<B,I[Ie.u\\8.G";"uQ&O[XOl%h","uQOc]nH/u";"u3:dc+KFW2V\\2";"uCRLdQ?0]Iu6X(@oRWU";"u(a8\'^FY#:","u+oJ-G!kWG)nhhIc+G","u0/X`q3V\"WI","u+a$dTU]q(jU]q<54/.","u+Mr9R=Fl=9Jh","u],Mhg6q<I]","uD*jla","u?l&cip9m";"u.?#3N\'Xp_fI+^`!","uTg3dG]cHE?";"u/oX$-[AoR>mlL2+5//","u5*dpYU:\\4Lu<)S\\\\KO5#*cch\"gCMjqTA=";"u\\Y6N9Eu4!:","uaG^n?:P","uXInW6";"uDNAXI";"u7bZIkVCA9/H8","uRn-S3?&P(#RQnl6?*/";"u`+?e+Z,l\\NTm4I=fFa","uhP","u@fUtJ%&T_A\\7J","u/!/g.K!_oO@n[6.l2,","u\\kA*fdnV1j","uN4H.RZpa3,L;DRLbKbL";"u8kMTbeac4","u7M\\4^ZXEe4Y7dh1[WjE25>m[9-\"f4cJ\\","u\"#U5FfDGBpd2#l$";"uF<7<c0KN2C";"uAZ3$UIAA";"uAc)!C!(i3S;\\;hFu6S+0XM8:$6\\;&\"pW?","u,\'Gh]XTsp";"upn\'F3!(5FE+BX<EnA*";"u:\"lHQ.I1kiaQE1";"uF-";"uK,oble7)FE[nfIi","uCfY[?[?dZ","ueX-/T@fF","u;Cs[3+Fd$";"u9n#;1H&m","u?3f5^!s,","u\'G","uVYE[0`Ed*Z4?","uQHcq<%/ua,=B<O5";"u;<)!#?`^(>_BMl$X8","un,1]NJE&\'3C-2Zm";"up%fjbQr5","uJ:]sd=`H[W?2.V\"=`\'","u6k:KfkSDi1UN%U9","u=tR_4Sqn`mieu:-cQCNu","uB-4L?bkb%bQ;:","uk._uJaLf%hDu","uDP6\\","uUFHT>!%=9<4SLbe+/";"u@:SE6";"uB[K#[FEB_#5\\kLe","u0f0[f(<0`Z!s\\h8]h","u![)l9,ijIs3$#*N+s528","uSu","uJ)c[<j^4mZWC;ssC,\\\"";"uk;;";"uS<d,3dc%:\"_N";"uPGZV4U<i=_Rg.!M4Is";"u6DV@l=Z*]/61s%_+5";"uZk\'.!&^";"uB_!ZaFt/";"u+QPiaD4+U0s\"";"u!X2N\"X.+go";"uL_Nnl";"u/o`)TR69?g0oW","uO(eXk0p-/r_4i`T7<q>","u82ntRu/Vg#o8p\"\\+>9";"u(s]Jm09n(gJBbaf!et";"u+n.\"n[C[T$kTo#H\"uT-mB#E]";"uLY7ZEX*u;","u?P2\\","ul>3dIRHuKApa3H)","u85RetoC\\5";"u(7UUYkW","uqP4fH9+:";"uu?jYG<:4g+dW`0`";"uLRL`";"uc4(_KX$If","uj4U8","uBEJ9%g()3$niZ$W4?","uR0Ih9m:@";"u%WNie%tr+F-u3Xc6=";"u96%?<-/]S3X-Ds=72[SNZ\"","un/T:`U[N3!?*(CEP8";"u=(","um:","uPc_cWuS^O298";"u0qtIGj-\\>R14#o","uTK","u:^YQ%A75t","uCG)H:!X>PnpK9>4";"uE\\";"ui7>=";"upg2!KjKf*J[?D";"u_n9@5YeQa&&tM","u/MYqEbZ\'","u]VXA5(a";"u-IaQ/bTg73./";"ual%=>";"u8hBB<tAp","u]&\'c\'Jl7%O(<89$","uCr:g%X)gQsS(VYD(;8","uTSTs]H[.o!%W)h";"uSLY","uXt","u=Zp0Xp\'TWi0Vp&QP)?","uA8eZ5H9gsc","ui+e6I/+^dI,0rn";"uC5]0[h8Y!Wk*jLP";"uJ2I&Q+nFL\']+m","u2YTr/#o&]","u[qs/HTl","u]KY]q0q9k_]PIDE","u1Z\\7R?\\L";"unFJ[Wn(V47","uIoms(Dnh-\'*dh9Z`p;u","u,C65","u\'u\"=*hr","uT*k\"V!`gP018";"u7EnEg@sp","ueG","u+EDu?4k\",\\![H=)","upELi&!M\\f:4*Tmt+6@";"u(;5D7R%k","uWp*a5";"u=,OJGPR._Vk.$BV6=","uolK?:d_p\'\\[p7A4m?6c!bqicT(/b?";"uET:\\a6ZY8(FAk";"u!qO\'X&WA#.";"ubW]g";"ugu$1WAZGDZ.MO8]@g4cF";"u80","u:g&`f#?Xl2-,1_J-VR*Z";"u-Oi#/C=eWt]@Z*q*:>NAPEU1";"u5hV?Z","uPYpB","uME;W=FLq9E","u,ZcdX\"\";uQ+j[>3","u2q/!i&Z.EoHM@EqBX","u.tiXKMU.GY";"u#u??P*`B4h";"u0>_$KX/5hcpu9","uJPd@:R\"XO6]:inq6D!","ur$):^X6jHscSlM>","u<fHDEBaQt(;][8`","u?:%A1X.\'/>X.\'ANXbN","u4$Q93+Z8";"u4SL*MXA\\T`","u";"uDO=8","u1Ck26!5jAW#K#jt4N";"uFcsa(UAh:c#7(2qt6>D)";"u#G","u/`%,oDqafk@Qc$d:r";"uUFGBL]++FkX5.[1p*","u/Wmf`B\"tq0!4Rp.#R;","u.p_WE7,a5";"uFLj)im6q\'La4#(D[epS-*)";"uW<";"u\"2r>C","uSjrU(m,(<`.<$6WWWA1^g9/HaV2H(EZf","u/p_W]k0g;";"u_[dgC9]<C,7V";"u9NS=!";"uOeAPZQR";"uYOFf9-n","uAp$A","uqi@j9!rmaB*7P,c%t:kDIh";"uX5=J((XJEa5Oj;j";"u!e7)ti<hmfRZ7J;rA$N","uJPZPRpW2!b$:&.CTf.K$.Q=/3","u!N0_bRW#L[((8Z-!V","u3b2drlkd/85\'Fih&ThjN&6.&K+/","uIE91mV[&di";"u3trf";"u3\"k\'";"u6@F<VjU^;$","u0f:Mh!k[[W!(XR6","u%U$P";"uCtcRpj\'r6DbR";"uekCq]:W05&","uFl.g1@o8*VG(";"ueYMC!DuK$mFJ&2p","uU<#uk;rSQM&[DO";"u63%W","utd#RL";"uih7j\'aNA\'";"uY(HhJ/`U?c\"2";"u6+R$LFKj","uSR,Grn!`PT+Ui(_6V";"uMah,JR#G>h@79UuJ*pmj=Z7M","u61a79]lYII?Tn,)X/V9uXbdDP";"u4#EM&E_tC@/k&N)MUc";"um,=j-$<D";"u-u";"ueqIT4l,F&oc\"J?<<X4+V";"u$jCd-k`AfG","ut%S!UJt/B[&Z[tV2&";"u+qdV","ug>P/Qg3[%=WJT6\\c5C";"u!(BF@?,o>%6p0lg?Cn";"u-csn[qF";"u\"nE$Hk\"%b","u?e@uP/F$","u<<Pu\'","uX*Sa=]PJ#@04``$k?";"u<ctt`Gf85E7B";"u=TY$`!13FR?-J;a0r","uC&kVD?:%MCSh)/3";"u!(9Z4XbJ","uc+`+YOQ&>j";"u7V","u%)4=m;#G,$K?RH@YF=;B","umdujNo%okT","u_<Il";"ur75_5","u:Ph7";"uKCAss)>g%";"uFr";"uEp[2RS7k84lEk2/?Et^Z<hIbApin","u9m@(d";"u%&@UtZ^:*f+gIOBY:L";"u2ak4ln%1rNWc[/_%HR";"u1K7u`.)C";"uN_hs\\";"u]H@$XWN5+p","uN0c[6I[H","u#++3/2Gi#H_D<?p3:DhcZ#Xls1D:6E)$m(#";"u+9h[PRWe&+!(4]_h6e","u;HFS/(aj+aD\'sp";"u,ZCAT","uQ=Mt3.(&6e";"u(a","uELki","u5<r+*\\ja]1";"u;G,9@H[?";"u1-kUhhY]","uT^DI%NRD;ZjI\\_nf_j>?`-b$V!DuBp5B^","u5T-4e++k_@?l&02R>.","u.q9)[9B$\\";"ujm4sGUfQDT";"uQT^YON)QA";"uPDT*WUDD3k=Sj3:";"uOr!,ugo:HNbBL8A";"u@WEbZN_ms\"","u6<6%<gPh`J";"uAjAt/Bu%l,4+X";"uZa^.P2ETm`9t?>o%;I@bn#oqm","uH>7q\"sIL1;f%Hq)r/P[\\k<V%2sP\"-j","uG[*L7,QuG^g]%2f";"u@*\\g<a;GsXt-","uXFcpZpu\"pe6sA?(+nP";"uX/?\";C#2a","uiWtH`<0QMGq\\","u@=","u+9h[kpn,g>";"u-0kr\"og:G6O0qL=#..ba";"u2<.Uj\\l8#";"u\"&RJ";"u*]/E_b4gKZSU";"uebo$*-&\'gZm2","u6ug871e\"m+sEC6#/<4se.r\"Y0]mp7[B$X";"ue\'$Ul)HM","u4RbKVM]oA,Bi/[:,2sbnmC<";"urpjPbcm14","uU75as]V]EW]VHGE!kb^7","uORoGrl5RP9)/+PBDc%F3Im<","u(F(OV=2uo#JJ_k[?0!","u]94Eh","u2jT7Yt%:<\'<n","u3q%SJ1Zr9:[ffMaP!dfHh\'=dO]-;FB#Xo-mL0R","uJg1n2Z5+F","u4.pgZ&n36p]A4),Q]sJ6","uh\")NrPIeHqXRr>WkN","ufP#XR(JBpi82F!#";"u4t\\e!kZ+:\"Q!f=pSW1fA";"u$pHaalQbd\'";"u(;*fr]EFgY";"uZulRN<3J*gVM5[k";"uejM$aF[ep3/QW>*]ZH#jZf";"uE;V7-:GYb&qr.&E*\'t\'","ufG6LM:ln3#","u6c\\/;+aSU+?KX=E";"u@033";"uf/.ifH!(A\"%5","udB";"ukZRml;l2SHaa";"u?*@<l0KJFA$N","u0f:Mh!kb?b?TC[9";"u`N/%0A3G","upa;c,J2#Vk?&HneU;Z";"uhq_l`FQH";"u3V";"uib/;+ct8#L/nibV30]C1\"QV(","uk&YI#-n","uL<@Db9n=M(";"u6kRue]KhB45rc;G","u4m`.`Tj)W`k=>r`(qj?","uFbG5","u&+A.bs*1IQrBkD=f)&@b.S[q>m2";"uC3=GYg4N";"ub`:8Diu]-Dnf","uT2t]Zl2";"u2Hq0s0eq";"uSN68dX;SlBJ\\","u8rn\'>l$k)CW/+gYX@XE2b0mj1EHeNY";"uS9^;&\\<`S(:d.8*U\"Jujf`e";"uhEu8hMlfYiWK?\\P9O1g\\/3WtqlCt<I82";"uD?T/lkadF$t<ZEfh($#aFi&3u","ubq\\O^h)t","uGZ>2lDf1RTadnpuFr";"uC0C`\'";"u,R2dhT^et","ur#$*PHcg+qr7>uOMd<C+SBA","ujE9:c4m4\'","ue1).DdjGA!";"u8uhac$\'0EM&_#&(9nl%fLN","u+\\oYb7h/.[";"ur^PS!)EGqokW95+Z^SOE*t+>VZ8W-L!:-3L=%(";"updSg\\";"u!s3aA!MpCAR$@kI5bu";"ur[X\'Q?h%HqK:";"uX..`@","uui5^]Mc4l";"u!cGhC]VHpNp4!%M";"uC&V?U4*dZpC\\1.)";"u-L&PO";"ugrRX&Q*pUI0S";"uA7L;";"uuJ`#O9+\\TdDQ7fbVm%Y%";"uWXP\\J","ui+DhjPa(FNf#k8a";"ug#DWpF@ZUX<i#,oYn\\!>","uJ\\efMVR[","u5:Bo1?3FidPF!^W";"u3K4-?WFgVi&8";"utd#&;]+W^";"u7]YTl5@Di3`V","ui4SeMM5^=D$9k#^lE+X=";"u6drkf<E;<G","un#`rQpU0-bpU\\[E(u";"uM%\"BVKH/?d&(B-endKDrjhS8,W0nZU?u7nT","uP1e3kMN,fp";"u`d5IGN5EYq2U)1I5O`","u9ahd>6#Lt","uS($nT?3R`$4.p:54N","uXbH-9l>TDZpuhGL";"u*I6nA`kq";"un^","u6D,L]a;Kg";"uJZn%c.IOfX","u18","u+)1]-ii9Iu#<G^W5P-,T","uTETT<!\"V@e=p$sQ/P^N";"u#K\"H/0-";"uT=E-??.S","u\"!VN\\]tP9R3G&sN","u\'0fT/";"u\\\"68[Fm)*M!%%?`";"uJ6`<:Oq([egKEc6r6`\\J","up\'U$!J38O(hJ]1-nt";"uJV\'kl+oWNo]0&HQ+5","u\"U_m6?ekr","u0-";"uR/E_)mZ<TA9eJ+)","uq\\";"ukrU<Y!D1R4XIN";"ua\'F\\r$I[*";"uIF","usQ\'h6S\'!`;3B","u?Hlt]=9tH";"u-!^]tEF";"u0f0Oe]\'//","u6RMO\",M5nVgn%XAAh%JFg<";"uD=CU";"u=7-2V.H]f<*h";"uW/a.I]B13-cg","uDU";"u4SZ\\D+q[Ib4S5uQ6<`","u4bRE0XMqIM6WY#\"6V","u(7D#j(u","uHpIE[:S,9^";"u?0*S1";"uAom\\#VS+W";"uGphrkaX-";"un>,T&\\4lFXQHT(?","u4\\(S6T>9","uq>83SJq_B^=9H";"uL,I^<D!e@","usX1NM\\jh7)TM/u5r\"g[735!O6%l^43";"u+9h[4X/_\\3","u0>,!W(F03";"u;M7b`A<EaARMQ6n-7b:C","ukPFuo*)","u1!EnOIF";"u!<sMo(\\58XJ&<.m!>r","uRhf`c","uluZL_+E.RA]2cp*X!@","uX8","uW1","upE_hGShBdJ\"8Ih$0-","u0f:Mh!kb(epG","uk/G-tcWPc,ZGV";"uD8N:^591C:W9umnHNu3]Q\\";"u(\\.5_nbqY8S(JL#5Ir";"uQ/-[mt?u]c";"uhEPVh!$?$ip*","u+H:Yqnb=^Y]Vp","u=3$;p(sVPK+n0Ol","u!eQsTUF9&IXhkLR";"u6(e.A!13fl\"j6t;]\\","uH-e-/$4n1";"u@qRhVO\'7U:r@$P","u[5C*7OAVt`Y4DD";"u;KSYiU1FMq!V";"u(!Sq2rX[UU_lZi0";"ueKl\')3F:6r`tIu!K2.\"B`IK.-Yg)","u/EK(iOAg-UuFofr]ui*";"u6K/MsZ8kP4@=";"uN>J,ZOl5l\"/1","u!1(OnkCkpT]K)/S4.8","ubq/`/8+ms","u#/","u4d\"@OrH2fC";"u=-F`QpB[l%JTs)kRpA";"u`m%GBMm\'1@7B";"u1U3^uhd7=SuH";"usF+L-s\"";"ugXDil\":]8K-n","uU;lFsX/\'V","ulo_dCrl\\","uY,ZVc3GE","uB\'[!3X=a","u(\\Ita","uVOl3Tme%`Wc?";"uUa","uUkkKU";"upuh0_pUn","u`A+?4jtLi].^ZZ5F?\'H6GjPNO,tJ","u[l6I/";"u0f0[f(Q[";"umYbJL";"u+m\\2$Oac2";"uMcgeaK&m;MZHI";"uZ5kN.?E^";"u.5","u\"g7Mf+HhAA+J^WVUa";"uT2";"ub4ujCHGc+3<u";"uA2T\']";"ukj;ea","ujHS!egOtsZ","uk;m";"uCIPA-k*\'sf+UL`[Pf";"uqF9Zler\"lnc\'4F&LjHU+:.%a\"5Dn$IVgf";"uSa","u?3R`A-a","up9W!<k,$[ZkZ+H","uUX07[5GDrB(NkcC","u04-Q1(Rq(G(<YgZ(1:";"up9W4T";"u8t+8m`V";"u!3?-kT(\"";"u0ene(X7\'KoXR<=J";"uiu";"uU&\\LpXf";"ukRcCX3#0";"uL+W[\'PNb!#U]qa2KKr2;#?+G0)SNm.";"u]OA/Lk`ga1nA&]S";"u-/NZ4pjhomd#V@a","uMhn7Z#I&n6Y)-c[2Z4]","u84X+-A)&VV:0h";"utU_=o<%Tn)-+:D[BX";"uT@Q0h6$`?7=+glN%Ubu","uFoiJA";"u[fjh>RO8","umOX4](I#@p\\hc","u6(bet4F-)86tNB9(a","ui\'<&2%:Rdt","u4I2/+OU9E:qQHIJ-Q4";"u#UMZG#2YN";"uL]","uCM\'FtObr@ai@ormC[X";"uc,i$j=_i3h3VFng_N";"u6ltEaCN","uT8`E","ur07eM=\"eD73MVb8";"u4,OaFj^2/2","uFlL=\"sI<ZBUM8,XWX";"ucS2XuNHrB!hf]/\"k,Ki","uTE.C>Z^q2142e.Bau";"ujn-t]<a","uC#RTEX7j/W6WqeX5/?";"uaf,^\'r2cc\"FZ:_.Sa";"unecB<s)Y","u=Z?mpC\\&p+6e;21pKb";"u)C!\\";"uk!Fh0<!*0";"u8d)j","u(h>HfX*aj1]\'[a5XR,";"uAGf54","uU)&E;X!EsdXf";"us%L:g:UqnlAW","uthSg3#2CINRl_\"3","u&^";"u\'GUi";"u]T7`h+a()`R6h!5!8U","ufWE<C`4<icQ(O";"uK\'Rn@KNhE*kW","ussm=^I-9D";"um/G[\\IJm";"u5h#:)CW>?+`$U?dFQ-OJ";"uP!A;J4;f:_pB>LDC?","uiD&9b\\\'QdQ<a","uc?L&3LZjQ";"u0Ju[<]K^N_pngkant","u:9@lFrZf";"u?2[Y8kZS";"u0*^Y79]g";"u+9h[6kAZL8($Tc/XD9^!(M<#@]Vp","u5TlSg!<G^u5:V2A";"uR8PO-P/n\\Mk)>Vo]2b","uX#Ej%pu)c1!<&j";"un#`rQpU0&";"u\'(7JXrIGqG","u\'l%%)";"u?&S1)5GifD]`LV7","uqo!#^Cbc/KJF","un8T4&=i\\u";"uU)&PKJE5;UR8HYA","uU1;qbl^5_[poc7hX[i";"uRCA:It<-+r8oejT";"ug,qS@j3K00;2","utX::k1p\'%:eEbo7","u;Z]D:ZeYOB";"ub-nsD";"uT8Jd=7BVZhG.XF@!B";"u+4G9\'X/q?c?Y(V!0L,","u6s5:MUNbW3pKk];","u4rg:F","ur0=Nlm$r>!";"uFOF>((Uh^s";"u<`UIi2hWG(Sn0gU.SdW=","u:(PtC+9%6KBX","uJE1=oR@[jmp20Htkb`","uug/`I";"u=KN0<","uQ1T+N`$J))";"uC*5<8C\\U=H!mf[%","uYi%L=#Z&";"uRE>8[h&nu^%*_","u&Q@@!9qh7oF&N!Pf@Mc","uBLRGuiq+","ur+CqD9q(";"uB<";"uqElfJ1;&!@jJSGQ";"u,u=(?5_(<%";"uR@*F&le-TR1Db","u]EK\'_J&-8?pLHWJ";"u!7HIZJ+3P;sJ5-11?%0","u5&8mqkZlHXl>->0";"ul>@!W!]F$[UN/Cu","unIkhN=IG+s+KECn!(#","uk\"K[@(UZ*M";"uqFQ:";"uTj?cH#b\"2K<u";"u0.C2%5Dn","uunGPog$W-";"u!M)P!=0nOk+V`&G","u+9h[p]VXo.p9\"";"uBJIj\'R9Wm;+I8b4nR),/";"u`5if4<pT`JY``l+","u?3ldA";"u+H:M-+H:YM!p5sLkZ)6\'0m_CK(u";"uDu","u[mA>96!CB]l>k";"uj-","uVe<:J","uE#-cpW<";"unIWj,X*oET+KbZ@";"uR?:nq?0\'t2+ERd\'X^","uR]Z&n!1mK>]h";"u,bsbFJLD*5`+NMsidc_";"u+9h[6(FlB.(FF\'B?`K[T]\'Es\'?lH)B","u9_0FGLAofON<D";"uYrAP\'db(q?trCW";"u0^2$e?2+K";"u*tI9u&J\"De\\2","ujig^uU.o?0!6)^bcg";"u0f0[f(<0`Z!s\\h8]K0Ve(\\Vh.!J","uj5KK:s7OI","u+9h[6kAZL8(FH","uD(X#SsVr*";"uLAYu<U2jm34W";"uN<CZ";"u<l9/\"F?t>u,-U","u183acm5[c","u3D`F?(u","u8HPVb=m$r";"uRl";"u0f:Mh!kbDHh@cGD]\\";"uBL6hY5(";"uc+3Dmk&$V6";"u]r`,+Af^A2V37*u72U","u%7;","uUkkKUCN","us8","uRfY\"fI8(e=";"uC#6]bpLO@\'\"@&E4Xf";"u(M<ruX/8";"u[ILGJ)lF","u]2UX3Sct>m?Cm`U";"uRlD?F4J\"W";"ulqln^kS/XWFP";"ure^J-]U.VYHkn`d.1R";"uRnOR\\Jlar+=Z%VRP\\!";"ummN03","uj4P3`AD5$qmf2bA2qW&.Bm,2QdM$";"udp.af2UY!U";"ur%*>LMTu2"}for H,S in ipairs({{2867039304%14553499,1574210666%12395352},{-750369-(-750370);-396528-(-397436)},{-345213+346122,96618+-95656}})do while S[883095-883094]<S[1349-1347]do t[S[659797609%3234302]],t[S[1636710976%12214261]],S[-781052+781053],S[439208-439206]=t[S[-293085+293087]],t[S[1668570851%8139370]],S[814449-814448]+(-629269-(-629270)),S[73293699%3857563]-(742376-742375)end end local function H(H)return t[H-(371242-360453)]end do local H=math.floor local S=table.insert local p=string.char local Z=type local Y=string.len local v={w=564211+-564160,c=618536473%15086254,P=1255132576%9437087;N=582949+-582906;W=-874478+874517,s=-22613+22662,C=-436824-(-436876);["5"]=665737104%3804212,["+"]=670197+-670174,V=784881+-784840,U=332456-332441;i=-278461-(-278477),X=967314+-967276;["8"]=-656507-(-656513);u=1227601968%9590640,F=834376+-834339;D=-456124+456132,O=-165848+165865;B=1595076180%14115718,["4"]=699077+-699064,H=-591674+591728;M=865385095%14186640,p=516686419%3270167,a=380244-380199,d=173353515%784405;n=-368697-(-368723);["3"]=418626-418607,e=467077+-467066;x=773563-773519;I=-855764-(-855771);["6"]=810574812%14737723;S=-692319-(-692341),["/"]=1834941920%11468387;l=241516+-241460;L=369632563%3932261;A=146383-146347;["1"]=-607127+607129,o=1120648397%9578191;J=-894482-(-894512),q=-603115-(-603176);v=-74385-(-74413),T=16261983%1084128,["7"]=1620745258%14093437;E=-711428-(-711452);R=-528770+528812;["9"]=-692479+692510,z=-303563-(-303572),b=-28737-(-28777),["0"]=1308171891%8779677;Y=118778863%893074,Z=536881577%4793585,G=201879752%5046993;j=214045699%14269711,y=741958+-741938,r=-641513+641525;h=905474723%14604431,g=-899010+899045,k=582898668%11895890;t=808901+-808874;f=434324+-434299,Q=-211662-(-211676),m=-814399+814461;["2"]=82080994%1548697,K=-226882+226942}local e=table.concat local m=t local G={["3"]=349035+-349016,j=378367368%2045229;["+"]=788279980%14597777;["\'"]=368439+-368390,b=1152367933%13557269,["$"]=846841-846780,["]"]=-889160+889192,O=1261880008%9782015,["&"]=231461688%1995359,r=65041244%596708;h=875167-875128,["."]=848754-848741,d=-91385+91440,B=3043552128%15371475,A=1215562770%14134450;W=624080412%14859056;Q=834252569%4150510;k=205773-205739;["^"]=892439+-892355;["#"]=-986830+986870,["@"]=375578740%7364289,E=1828277807%13542798,["["]=-682514+682581,Z=92782+-92711,P=476973-476956,[";"]=424468-424403;p=2560921171%10042828;g=-798579+798585;["\""]=739223+-739194;R=2831281030%12527792;["%"]=535752145%2339529;e=914451-914393;["1"]=-829213-(-829221);[")"]=2046530976%14514404;_=886996+-886917,J=155971-155948,["-"]=77301317%508561;M=225774304%3762904,["?"]=-812964+812997;i=-150796+150796,["0"]=-169018+169039,o=770316442%12838606;m=494631+-494575;s=927606-927544,["9"]=141098397%8299901,t=1972219950%11205795,u=1275503583%7547358,V=-179060-(-179111);["8"]=76089-76087,["="]=-809034-(-809058);C=2098071681%9161885,l=292029716%5214816;I=30475361%2539610,F=506788906%12669721,["/"]=6311283%34677,n=-427959+427985;[","]=420025+-419982,["`"]=429397+-429351;N=869431+-869426,T=-106084+106158;D=-590468-(-590477);[":"]=1288333713%7534115;["("]=406609-406573;["!"]=-167542-(-167579),X=261295+-261260;G=891730+-891688,H=28392-28339,a=-370048-(-370102);U=-189933+189960;[">"]=494541+-494458;["\\"]=825168656%7858749,q=-316312+316362,["<"]=727562559%15157552;["*"]=646884-646870;["2"]=2815554234%13471551,["5"]=637637190%6072735;K=455468059%13396118,["7"]=141348+-141338;c=862602573%10392802;L=791586+-791534;f=3622+-3565;["6"]=1660201116%9022832;Y=2495964008%16207558,["4"]=64281-64256,S=1642817966%6961093}local B=string.sub for t=381028-381027,#m,44854-44853 do local U=m[t]if Z(U)=="string"then local Z=B(U,350359381%5561260,-747395-(-747396))if Z=="("then U=B(U,649952834%4961472)local Z=Y(U)local G={}local u=497754-497753 local s=254218-254218 local w=924451-924451 while u<=Z do local t=B(U,u,u)local Y=v[t]if Y then s=s+Y*((1224283624%6001390)^(((-578495+578498)-w)))w=w+621108298%4814793 if w==696513156%5441509 then w=-570788-(-570788)local t=H(s/(-635950+701486))local Z=H((s%(21692-(-43844)))/(2211236416%11516855))local Y=s%(-230495-(-230751))S(G,p(t,Z,Y))s=-788999+788999 end elseif t=="="then S(G,p(H(s/(374771+-309235))))if u>=Z or B(U,u+(-29619-(-29620)),u+(-1006829+1006830))~="="then S(G,p(H((s%(592229076%16004420))/(-188096-(-188352)))))end break end u=u+2756592994%11933303 end m[t]=e(G)elseif Z=="u"then U=B(U,121469878%2760679)local Z=Y(U)local v={}local u=698977-698976 while u<=Z do local t=(Z-u)+(-876647-(-876648))local Y=t>=1724323195%8057585 and 1253830924%10362239 or t local e=3085837293%13358603 local m=Y>216540-216539 for t=556771+-556771,205685-205681,3447+-3446 do local H if t<Y then local S=B(U,u+t,u+t)H=G[S]if not H then m=false break end else H=390482+-390398 end e=e*(685502+-685417)+H end if m then local t=H(e/(666162+16111054))%(818608-818352)local Z=H(e/(2155060378%9663654))%(105969548%741044)local m=H(e/(-881201+881457))%(-255883+256139)local G=e%(908059+-907803)if Y==205304-205299 then S(v,p(t,Z,m,G))elseif Y==514803+-514799 then S(v,p(t,Z,m))elseif Y==969226-969223 then S(v,p(t,Z))elseif Y==1904761486%14540164 then S(v,p(t))end end u=u+Y end m[t]=e(v)end end end end return(function(t,p,e,Y,Z,m,v,s,L,B,g,u,M,W,U,V,O,G,w,P,f,S,a)W,V,w,O,g,u,M,s,S,a,B,G,f,P,L,U=function(t,H)local p=s(H)local Z=function(Z)return S(t,{Z},H,p)end return Z end,function(t,H)local p=s(H)local Z=function(Z,Y,v)return S(t,{Z;Y,v},H,p)end return Z end,function(t)local H,S=9422591%4711295,t[1350493651%12277215]while S do B[S],H=B[S]-(856128+-856127),(998205-998204)+H if-1021057-(-1021057)==B[S]then B[S],G[S]=nil,nil end S=t[H]end end,function(t,H)local p=s(H)local Z=function(Z,Y)return S(t,{Z,Y},H,p)end return Z end,function(t,H)local p=s(H)local Z=function(Z,Y,v,e)return S(t,{Z;Y,v;e},H,p)end return Z end,494170-494170,function(t,H)local p=s(H)local Z=function(Z,Y,v,e,m,G)return S(t,{Z;Y;v;e,m,G},H,p)end return Z end,function(t)for H=968289-968288,#t,1244977801%12449778 do B[t[H]]=(354687-354686)+B[t[H]]end if Z then local S=Z(true)local p=v(S)p[H(-982574-(-993988))],p[H(-233681-(-244944))],p[H(611931-600989)]=t,w,function()return 2400549-(-465258)end return S else return Y({},{[H(865621+-854358)]=w,[H(199676-188262)]=t;[H(465440-454498)]=function()return 326891+2538916 end})end end,function(S,Z,Y,v)local LG={}local IL,J,BG,bL,z,BL,eL,VL,i,GL,CL,c,zL,R,jL,QL,pG,XL,EL,d,HG,T,cL,TL,eG,y,KL,tG,mL,SG,uL,uG,wL,x,h,AL,YL,I,N,WL,UG,UL,FL,E,k,lL,r,wG,m,GG,hL,sL,Q,l,PL,B,xL,qL,F,w,K,X,ML,q,tL,rL,sG,A,RL,LL,yL,mG,HL,fL,OL,ZL,kL,j,JL,C,nL,dL,iL,o,s,vG,DL,b,D,aL,SL,YG,ZG,pL,NL,vL,gL,oL,n,u while S do if S<9470430-972623 then if 4500101-95000>S then if S>-785193+2755509 then if 773507+2538889>S then if 169005+2673535>S then if S>-242084+2601213 then if S<685894069%16665718 then if S<3965148336%18431029 then if 1206397348%10846996>S then J,S,o=nil,137927+10163066,nil elseif S<1101033818%6313877 then l=653245289%4200126<=955287+1948224 S=l and 556662+6024166 or-395992+5958310 else m,S={},t[H(-526275-(-537561))]end else if 948836+1585779>S then S=948028971%10595298 y=G[Y[837114-837107]]m=y elseif-228368+2802127>S then m,S={},t[H(959714+-948546)]else SL=H(910500-899316)R=G[Y[310930-310919]]i=G[Y[979848+-979846]]N=G[Y[-319992+319995]]c=-719541+22004189536955 n=N(SL,c)r=i[n]k=o[r]r=H(5788989%577772)r=R[r]r={r(R,k)}j=r[418720-418718]D=r[290748+-290747]S=j and 2902707141%17623893 or 1409973469%27910273 end end else if S<2866344295%13767693 then if S<2240201-(-387829)then s=G[Y[-436352-(-436356)]]S=13805977-(-532066)w=s()m=w elseif S<795740362%5322753 then S,J,C=723238+8114703,nil,nil else B=Z[870985-870984]S=not B S=S and 1728638495%18826319 or 3291814997%15124555 end else if 2741995-(-14061)>S then m,S={},t[H(507627+-496229)]elseif 1442560330%11997672>S then A=G[Y[370335+-370333]]C,Q=H(-324610-(-335684)),767845+10309839772507 x=G[Y[2091934833%12305499]]E=x(C,Q)C,Q=H(776898158%5629618),35011713213361-(-482302)F=A[E]y=B[F]A=G[Y[-901007+901009]]x=G[Y[798460+-798457]]E=x(C,Q)F=A[E]h=y[F]T=h==w m,S=T,12589737-49609 else C=S q=G[Y[888517+-888513]]J=-249381+5023169976136 l=G[Y[-857756+857761]]o=H(-209674+220647)b=l(o,J)d=q[b]J=486360+21537385675605 K=F[d]q=G[Y[3516694060%14471992]]o=H(106061-95090)l=G[Y[621088421%15925344]]b=l(o,J)d=q[b]Q=K[d]E,S=Q,Q and 4188312064%24557656 or-343001+4217276 end end end else if 2201593023%10942291>S then if 489032+1547518>S then if S<262378367%9644224 then Q=G[Y[119311-119307]]q,l=H(-412176-(-423732)),-29800+7316963099063 K=G[Y[1028994-1028989]]d=K(q,l)C=Q[d]q,l=H(-716032+726975),34792725483435-1036386 E=y[C]Q=G[Y[162922954%5430765]]K=G[Y[-538641+538646]]d=K(q,l)S=15054766-1001275 C=Q[d]x=E[C]F=x elseif 986363-(-1012291)>S then S=m and 6700076-740694 or 215644+9930079 elseif 1664186-(-341621)>S then q,S,l=nil,-575472+9137267,nil else h=H(237757+-226166)m=G[Y[-938614+938615]]s=G[Y[84189071%529491]]y=371520+10177975576387 w=G[Y[-109633+109636]]T=w(h,y)u=s[T]S=m[u]u=S S=not u S=S and 196721+12940628 or 794516+5338587 end else if S<2607661-538327 then E=G[Y[877009+-877004]]C=E(F)S,A=852994+15368062,C elseif S<839304650%9406509 then S,m=t[H(-559753-(-570563))],{}else S,GG=2991788857%21029993,wG end end else if S<-537389+2847938 then if S<74654+2142567 then m,S={u},t[H(605254+-593632)]elseif-401747+2662658>S then S,K=9067169-(-956849),nil else m=H(-892184-(-903317))S=t[m]B=H(255150+-243620)m=t[B]B=H(-992814-(-1004344))t[B]=S S,B=7255273-984032,H(75078581%9383431)t[B]=m B=G[Y[773078386%5561715]]u=B()end else if S<2248276-(-80894)then YL=G[Y[856124+-856116]]LL=H(261686-250862)GL=G[Y[-837510-(-837511)]]uL=33954709944459-(-607544)BL=G[Y[1078+-1076]]wL,UL=15478418463234-(-262693),H(1457997140%13376014)sL=BL(UL,uL)mL=GL[sL]eL=s[mL]sL=H(870585567%14271715)BL=t[sL]UL=G[Y[-436715+436716]]uL=G[Y[-137270+137272]]ML=uL(LL,wL)sL=UL[ML]GL=BL[sL]LL=167003+13602462846051 sL=G[Y[-658637+658638]]ML=H(-591664-(-602619))UL=G[Y[1002244-1002242]]uL=UL(ML,LL)LL=93473+23311629614406 BL=sL[uL]mL=GL[BL]vL=eL==mL eL=G[Y[-882616+882630]]sL=G[Y[10793601%5396800]]UL=G[Y[989260+-989258]]ML=H(289025027%1142347)uL=UL(ML,LL)BL=sL[uL]GL=C[BL]mL=eL(GL)eL,GL=vL,S S=vL and 2577694596%20420751 or 2178058210%9895105 elseif 624170+1717312>S then x=G[Y[1327968255%5311873]]S=1039808+13594238 A=x[h]m=A else LG[207010022%1014755]=G[u]LG[894898103%4709990]=G[w]LG[-762785-(-762790)],LG[961632+-961626]=H(-417648-(-428883)),-462560+32914223073982 LG[-957149+957153]=LG[1825958711%10616039](LG[-311915+311920],LG[980472-980466])LG[1005876+-1005875]=LG[1465002927%8468225][LG[109918+-109914]]LG[-819058+819064]=H(13773363%6880827)GG=wG[LG[-588963-(-588964)]]LG[-923676+923683]=20849822513676-906272 LG[683856+-683855]=U()G[LG[-552277+552278]]=GG LG[349137-349134]=G[u]LG[973335+-973331]=G[w]LG[476112543%5065027]=LG[-135057+135061](LG[264153+-264147],LG[2210270202%9021511])LG[376435+-376433]=LG[-514707-(-514710)][LG[3363470493%13562381]]GG=wG[LG[535882-535880]]S,LG[345435441%4264635]=15573026-(-761602),H(689745+-678388)LG[205902+-205900]=U()LG[723311-723304]=3981636876292-274630 G[LG[556762+-556760]]=GG LG[462415-462412]=G[u]LG[1029303+-1029299]=G[w]LG[512865776%7654713]=LG[-462247+462251](LG[-914680-(-914686)],LG[106933-106926])GG=LG[-373358+373361][LG[446302293%3599212]]LG[933511+-933504]=-206031+19820569774300 LG[245342+-245339]=P(1846583756%15268978,{EL,u,w;JL;fL;rL;IL;j,LG[868299328%7296633]})wG[GG]=LG[838415-838412]LG[180182-180179]=G[u]LG[2632676644%10969486]=G[w]LG[-852590+852596]=H(254229+-243191)LG[268061072%11654829]=LG[1341514864%7579180](LG[-767829+767835],LG[-689913+689920])LG[998507-998506]=L(LG[761766299%3866834])GG=LG[538814-538811][LG[607196925%2759986]]LG[517399-517396]=P(4910380-645695,{EL;u;w;JL;fL,rL;IL;j;LG[459983-459981]})LG[2718657982%11668060]=L(LG[726706290%4718872])wG[GG]=LG[-219570-(-219573)]end end end end else if S<1732974536%10115997 then if 813118194%4939642>S then if S>2593758071%14314029 then if S<-632461+3587471 then m=G[Y[-87093-(-87094)]]u=G[B]S=m[u]m={S}S=t[H(534354748%2396157)]elseif-379982+3364787>S then S=G[Y[-933851-(-933852)]]T=G[Y[-199638-(-199640)]]E=H(928866+-917286)m=S(T)m,C=2002081472%8105593,11459638205556-(-882788)S=G[Y[3370188632%13216426]]h=G[Y[-361971-(-361974)]]F=G[Y[-969936-(-969940)]]A=G[Y[-661661+661666]]x=A(E,C)y=F[x]F=H(13628+-2525)T=h[y]S[m]=T T=w S=G[Y[276684-276682]]m=218571442%1150376 S[m]=T m,A=-487185-(-487188),-465192+2752940596777 S=G[Y[-483800-(-483802)]]E=479972+20748597809881 T=G[Y[-344978-(-344984)]]S[m]=T S=G[Y[320411-320404]]T=G[Y[740289+-740285]]x=H(112743421%2749576)h=G[Y[-934861-(-934866)]]y=h(F,A)m=T[y]T=G[Y[528928+-528926]]S[m]=T S=s-B T=S y=G[Y[850785381%5034233]]F=G[Y[772228+-772223]]A=F(x,E)h=y[A]m=T[h]h=.1 S=m<h S=S and 91370332%13565245 or 1778340505%17644384 else A,F=5316507704778-(-961505),H(-910457+921685)T=G[Y[-172987-(-172988)]]B=Z[175018-175017]h=G[Y[684425-684423]]C=16427540420665-948824 y=h(F,A)E=H(6455022%6443747)w=T[y]s=B[w]y=H(611602+-600650)h=t[y]F=G[Y[228649-228648]]A=G[Y[30175238%239486]]x=A(E,C)y=F[x]E=-527546+563947294144 T=h[y]y=G[Y[-585253+585254]]F=G[Y[2677045184%11248089]]x=H(-101748+112865)A=F(x,E)h=y[A]w=T[h]u=s==w m,S=u,u and 12127409-(-637943)or 301765+457136 end else if 2781679-(-89808)>S then S=Q and-1015004+7837197 or 1956835756%18149805 elseif S<3918300-1019915 then S=G[Y[997392551%4596279]]o=G[Y[439423-439421]]j=445266+2571084822875 J=G[Y[3104362399%12988964]]D=H(-289261+300346)R=J(D,j)b=K m=o[R]o=G[Y[2413281109%13557759]]S[m]=o m=H(2378074288%11270439)S=t[m]o=G[Y[882780-882772]]m=H(1165113193%7104278)m=S[m]m=m(S,T,C,o)o=m S=not o S=S and 4721857265%18577512 or-43419+7074068 else b=G[Y[-653296+653297]]o=G[Y[295812-295810]]D,R=6695208323443-(-82618),H(-617441+628649)J=o(R,D)l=b[J]q=A[l]K,S=q,2874886776%19990086 end end else if 2129171-(-929687)>S then if 2563105-(-475254)>S then i=S S,r=w and 604938+292145 or 2137177776%20399863,w elseif 771694152%19216143>S then S=337863887%20083066<=1710947542%13226532 m={S}S=t[H(-901356-(-912887))]else T=G[Y[-523814-(-523816)]]F=H(-751720+763260)h=G[Y[-630107-(-630110)]]A=182810+17507197539774 y=h(F,A)m=T[y]S=w[m]T=S S=nil h=S S=G[Y[-822923+822928]]y=S F=not y S,m=F and 15298659-(-669977)or 239503757%6370385,F end else if S<-947184+4037423 then F,S=nil,507091+8758119 elseif-72196+3195686>S then Q,C,S=1143675320115-390431,H(425969-414497),324102292%22481697 A=G[Y[25584422%154123]]x=G[Y[1240786655%7298745]]E=x(C,Q)F=A[E]y=H(1038911+-1027980)y=u[y]y=y(u,F)T=y else E=-84007+23913820861350 y=G[Y[-377025+377026]]x=H(801280468%16352438)F=G[Y[155268+-155266]]A=F(x,E)h=y[A]T=H(1037037467%7797192)T=s[T]T=T(s,h)S,h=441625+13073371,nil w=T~=h m=w end end end else if 3365712-131688>S then if S<3531881-337794 then if S<2180206216%12440268 then X,HL=H(-660904+672618),17994-17993 X,S=n[X],102534+4300939 X=X(n,n)I=X>HL SL=I elseif S<3266640-89422 then J,o,S=nil,nil,692395008%25202499>=1779527651%16102657 Q=S S,b=6912315-(-978897),nil else B=Z[89232841%743607]s=G[Y[145843606%9722907]]u=B==s S,m=u and 4520206348%18261809 or 15553379-894451,u end else if 1002431+2203528>S then w=not u m,S=w,-816712+5449708 elseif S<3028557-(-182386)then x,S=y,-472017+6907645 else S=-613169+16473501<9993286-114080 G[Y[905376605%4920525]]=S m=G[Y[364418+-364412]]w=G[Y[839420-839413]]x=20019406112863-893941 h=G[Y[1016195-1016194]]A=H(1957031789%8188370)y=G[Y[383879+-383877]]F=y(A,x)S=10780193-(-459685)T=h[F]s=w[T]u=m(s)end end else if 1120399679%19948750>S then if 4820410499%19191836>S then vL=M(-774483+11089139,{})ZL,S=vL,582851+4236076 elseif S<502060+2763664 then B,A=Z[641504-641503],13531645612863-(-984414)T=G[Y[252682-252681]]h=G[Y[355102-355100]]F=H(-822622+833470)y=h(F,A)C=31388584558338-706026 w=T[y]y=H(3320902877%14131455)s=B[w]h=t[y]E=H(887108+-876316)F=G[Y[116034781%11603478]]A=G[Y[-1044217+1044219]]x=A(E,C)y=F[x]T=h[y]x=H(2019527042%16027906)y=G[Y[62074-62073]]F=G[Y[119413+-119411]]E=933611+5217570720402 A=F(x,E)h=y[A]w=T[h]u=s==w m,S=u,u and 2146365850%20322431 or-369191+11275980 else PL=G[Y[91806-91794]]OL,S=400617+-400602,396714+11554269 WL=PL(LL,OL)LL=WL end else if 857389256%4994781>S then B,m=Z[231549-231548],H(-10909+21954)S=t[m]u,y={e(654544+-654542,p(Z))},H(164236355%16422482)m=S()h=t[y]y=h()s,T,S=m,not y,{p(u)}w,m=S,T S=T and 11231327-495381 or 5557108-(-552326)elseif S<-806768+4104013 then B=G[Y[-371128+371129]]m=#B B=-229489-(-229489)S=m==B S=S and 310017+3231789 or-44729+5037324 else d,K=H(81617843%2040173),23344+8141103690654 m=G[Y[-126795+126798]]S=m[h]y=S S=G[Y[-631370+631374]]x=G[Y[379400285%4992109]]Q=H(355830-344124)E=G[Y[1504894036%12335197]]q=831037+1152324801499 C=E(Q,K)A=x[C]F=u[A]C=G[Y[409471271%6299558]]Q=G[Y[-884542+884544]]K=Q(d,q)E=C[K]x=y[E]d=H(768580-757645)C=G[Y[475909+-475908]]q=30996506029024-914303 Q=G[Y[-223145+223147]]K=Q(d,q)E=C[K]d=H(1380528200%13023741)A=x[E]C=G[Y[-874765-(-874766)]]q=-1012119+2095455696230 Q=G[Y[1990207358%11570973]]K=Q(d,q)E=C[K]x=u[E]Q=H(877179-865485)m=S(F,A,x)F,K=m,-747685+13668679762305 x=G[Y[710772055%10010874]]E=G[Y[610091102%8841900]]C=E(Q,K)A=x[C]m=h[A]S=m~=F S=S and 15636307-914644 or 307312092%10596150 end end end end end else if S>3483722777%18030436 then if 356550554%5107326>S then if 1013147586%5544888>S then if 3459430-(-451477)>S then if 3077206-(-785131)>S then j,k=9374116229585-893124,604025+33184467404003 o=G[Y[1016994-1016992]]J=G[Y[153923290%9054311]]D=H(592145-580871)R=J(D,j)j=H(396066933%6093157)b=o[R]m=q[b]J=G[Y[-707575-(-707577)]]R=G[Y[582823+-582820]]D=R(j,k)o=J[D]b=u[o]S=m-b b=S S=H(-629886+641600)S=b[S]S=S(b,b)o=S S=o<=A S=S and 1811163589%20064584 or 1599070-(-337688)elseif 454022317%16076256>S then A,S=E,C S=726659+9854465 else S=G[Y[2627655222%11626793]]A,F,y=27712667643730-(-525078),47467+6260923699704,H(-870292+881701)w=G[Y[-90185+90187]]T=G[Y[-740609+740612]]h=T(y,F)s=w[h]F=H(130271923%1834658)T=G[Y[-215272+215274]]h=G[Y[-677526+677529]]y=h(F,A)w=T[y]m=S(s,w)E=12646794744696-48247 S=G[Y[943717-943713]]A,s=-1028139+25064902581698,m T=G[Y[-432960+432962]]h=G[Y[-939970-(-939973)]]F=H(136624+-125726)y=h(F,A)w=T[y]T=6312087-(-376127)<=2098333232%14452730 m=S(w,T)w=m S=G[Y[504929-504925]]x,A=22468658756490-(-191828),H(204921344%5254111)h=G[Y[-78868-(-78870)]]y=G[Y[789818+-789815]]F=y(A,x)T=h[F]h=-224073+10837376<=689299321%4020155 m=S(T,h)T,x=m,H(-153708-(-165083))S=G[Y[941006+-941002]]y=G[Y[34201616%589683]]C=17687272971607-(-557781)F=G[Y[399876124%2071897]]A=F(x,E)h=y[A]y=-128078+128228 m=S(h,y)h=m S=G[Y[-227038+227043]]E,m=H(1089165450%15559345),H(790047+-778378)m=S[m]m=m(S)F=G[Y[-873817-(-873819)]]A=G[Y[-906756+906759]]y=m x=A(E,C)m=F[x]S=s==m S=S and 678769873%28799204 or 2466978189%14393048 end else if S<2900386443%17344026 then S=R S=m and 6747825-(-636433)or 548996+2883164 elseif 279318764%5399311>S then S=3182028-788056 else S=A and-781254+15665034 or 319088843%4242530 end end else if S<4144468-86139 then if S<3687340-(-327183)then w,u=H(888122-877009),S s=t[w]B,S=s,s and 14396945-(-923347)or 14371494-786339 elseif 1058971017%19535727>S then m,S=nil,nil m={S;m}S=t[H(2091979610%14040053)]else S,x,A,K=y,H(-355982-(-366777)),H(147567963%1916319),H(-124866-(-135661))F=t[A]A=H(662240+-650553)y=F[A]F=U()G[F]=y A=t[x]C,x=S,H(3068131735%13946001)y=A[x]Q=t[K]x=S S,E=Q and-464043+8020777 or 283647+14082502,Q end else if S<4495907-402868 then r=G[Y[234933346%14683334]]SL,n,S=16707677888114-(-589810),H(236286-225302),228442802%8315593 i=G[Y[24344+-24341]]N=i(n,SL)k=r[N]j=J[k]k=363310.75-363310 D=j>=k m=D elseif S<4143558-21221 then q=H(801303+-789579)S=G[Y[-541750+541764]]l=17945625542213-(-451167)Q=G[Y[54242957%278169]]K=G[Y[-830030+830033]]d=K(q,l)C=Q[d]E=T[C]C={S(E)}x,S,m=C[1046930354%5033319],4554206305%25250622,C[-379256-(-379257)]A,F=x,m else S=G[Y[-83187-(-83191)]]m=S()S=1082106949%11472256 end end end else if S>4333826-43896 then if S<3923879-(-427818)then if 3374188-(-944790)>S then S=c S=SL and 422183+14632886 or 3893272057%15792227 elseif 3063658507%12538214>S then I=2091838099%15728106 c=k[I]n,S=c,-912465+2233033 else b,S=J,R S=2647580514%19732647 end else if 1311669027%9271617>S then x,h=not A,F+h m=h<=y m=x and m x=h>=y x=A and x m=x or m x=-606513+1215029 S=m and x m=3203279-161951 S=S or m elseif S<1543921379%11934321 then SL=G[u]N,n=SL,S S=SL and 13985120-(-536029)or 181211+3594780 else S=c S=SL and 525497927%5590318 or 3586965993%15374365 end end else if 806888+3387164>S then if S<886039991%12598176 then S,T=nil,s B[T]=S S,T=15045273-(-803880),nil elseif 3736459-(-443834)>S then T,w,S=nil,nil,-228650+14810450 else w=G[Y[-672071+672077]]T=w()m,S=T,911376+11793418 end else if 5169531-965949>S then SL=H(-959370+971072)D=G[Y[-279321+279328]]S,c=4153575861%27972108,30519455528186-(-934537)i=G[Y[-769670-(-769672)]]N=G[Y[-724954+724957]]n=N(SL,c)r=i[n]k=d[r]j=D(k)R=not j m=R elseif 4254451-18014>S then b=H(868927279%3827822)d=G[Y[428767-428763]]o=21847642632348-297183 q=G[Y[25037+-25032]]l=q(b,o)K=d[l]o=671387+23136792898426 Q=h[K]b=H(-396757+408109)d=G[Y[148783828%2361648]]q=G[Y[397240-397235]]l=q(b,o)K=d[l]C=Q[K]Q=523882.75-523882 E=C<Q S,A=8799678-(-488210),E else B,A=Z[3774529249%15219876],H(203387-192110)s=G[Y[578768+-578767]]x=6.3402821613842e+14%3582080399529 h=G[Y[206809634%1752624]]u={e(-130643-(-130645),p(Z))}y=G[Y[600254+-600251]]F=y(A,x)T=h[F]h=8099420-(-652139)>=6465599595%28537797 w=s(T,h)m,S=w,w and-440588+3051827 or 14901597-563554 end end end end else if S>882012216%13942884 then if S<1109155514%8986615 then if S>4698029-953675 then if S<-636412+4411319 then R,S=nil,45541+14414278 elseif S<2297914096%9598855 then G[u]=N S=n S=-500628+8230405 else E=G[Y[-736542+736544]]S,d,K=-806407+16775043,31429085738262-97259,H(169254-158419)C=G[Y[-223857+223860]]Q=C(K,d)x=E[Q]A=y[x]F=not A m=F end else if-345496+3983761>S then S=m and 2492604416%22799887 or 1794731134%19888089 elseif S<211014+3467301 then B=G[Y[763352-763351]]m,S=B,B and 444648+-288827 or 3246092690%22651830 else u,m,B,S=nil,{},nil,t[H(202531-190990)]end end else if 526457+3293299>S then if 363148+3443787>S then S=E C=S S,E=x and 8185785-(-493722)or 12492410-909392,x elseif S<-960828+4774488 then x=C+x m,K=x<=E,not Q m=K and m K=E<=x K=Q and K m=K or m K=8654407-(-1012598)S=m and K m=858503+12496151 S=S or m else T,A,y,x,w,F,h,S=nil,nil,nil,nil,nil,nil,nil,334318+5938141 end else if-447643+4272049>S then q=G[Y[254475-254468]]r,k=-398307+20388549179641,H(1147599540%4883355)o=G[Y[149674010%5986960]]R=G[Y[1042598-1042596]]D=G[Y[-888249-(-888252)]]j=D(k,r)J=R[j]b=o[J]l=q(b)S,K=2031951087%27682802,l elseif S<617904+3219012 then l=G[Y[32216+-32211]]J=H(1772619567%10551239)b=G[Y[137888-137882]]R,S=15982803039842-973136,-328520+9420084 o=b(J,R)q=l[o]d=Q[q]m=d else m,S={},t[H(650804622%4893183)]end end end else if S>800494+2658624 then if S<2568176-(-947460)then if S<3135993-(-340637)then S=17262290-826282<=2240762275%17225630 G[Y[506828-506824]]=S m=G[Y[237191434%13952437]]S=m and 1580697-289231 or 669170+1147812 elseif 2635732512%12300219>S then E=G[Y[790613-790605]]k,j=840626+19236059533131,H(255926-244612)q=G[Y[-703312+703321]]D,R=-664952+34176666559394,H(-440325-(-451787))b=G[Y[-538534+538536]]o=G[Y[85540705%6580054]]J=o(R,D)R=275136+23350208903097 l=b[J]d=q[l]l=G[Y[458212628%5656946]]J=H(-559039+570060)b=G[Y[1297953123%10638960]]o=b(J,R)q=l[o]K=d[q]b=G[Y[-149825+149834]]J=G[Y[-615374-(-615376)]]R=G[Y[-395204+395207]]D=R(j,k)o=J[D]l=b[o]j=7524+32993439293087 o=G[Y[560362745%15144939]]D=H(13858152%13847349)J=G[Y[388174540%5467247]]R=J(D,j)b=o[R]q=l[b]S,l=553883+3025061,608435125%8112467 d=q*l Q=K+d C=E(Q)A=C else F=1729854128%12096882 m=y==F S=m and 3848198-(-1009754)or 536036+13139573 end else if-417277+3977652>S then s=-167946-(-168087)u=G[Y[-68605-(-68607)]]B=u*s u=622123+20171146045060 m=B+u B=-111663+35184372200495 S=m%B G[Y[123036-123034]]=S S=1898018699%10513898 elseif-192258+3774861>S then h,F,S=A,nil,4639762-(-784063)else sG=U()GG,wG=nil,H(2344346713%10903886)G[sG]=GG GG=t[wG]LG[560426985%3130877],LG[445886+-445880]=H(22646834%5658796),H(304753-293831)LG[-417340+417341]=t[LG[-834431-(-834433)]]S,LG[-1016617-(-1016624)]=t[H(922357177%3958567)],126078+30586776800037 LG[1622326833%6362066]=G[u]LG[-893032+893036]=G[w]LG[3787465125%14911280]=LG[-823141-(-823145)](LG[-340280+340286],LG[814339312%4176099])LG[-148778-(-148782)]=H(946185-934585)LG[-341922+341924]=LG[-959838+959841][LG[-241365-(-241370)]]LG[-675162-(-675167)]=P(3132229-(-139882),{u;w,EL,I;sG})LG[897916+-897913]=t[LG[-464365-(-464369)]]LG[878341402%13308203]={LG[169233-169230](LG[1024963-1024958])}wG=GG(LG[310392-310391],LG[-841139-(-841141)],p(LG[-802176-(-802180)]))G[sG]=wG GG=G[T]m={GG}end end else if S>-256491+3663916 then if 2655307-(-765290)>S then S=m and 849805+12346746 or 10991399-(-376417)elseif-313787+3753268>S then m,S=221151-(-270201)>5331135-502213,2932011453%19111897 Q,o,J,b=m,nil,nil,nil else B=U()G[B]=Z[1146290729%13026031]C=775686+24689348073186 w=G[B]h=G[Y[563257681%7040721]]y=G[Y[1839135273%13231189]]x,A=19192495702929-925864,H(590727+-579166)F=y(A,x)T=h[F]E,y=H(-236873+248032),H(319139+-308187)s=w[T]h=t[y]F=G[Y[853488+-853487]]A=G[Y[-485081+485083]]x=A(E,C)E=-437081+3017106632917 y=F[x]T=h[y]x=H(948096-936875)y=G[Y[883792-883791]]F=G[Y[-834334-(-834336)]]A=F(x,E)h=y[A]w=T[h]u=s==w S,m=u and-977851+6325989 or 921975835%13545872,u end else if 3581801-256396>S then m,u,s=2102660101%11890516,H(-1009530-(-1020860)),4946584444%27117723 B=u^s S=m-B B,m=S,H(-866765+877815)S=m/B m={S}S=t[H(574583+-563438)]elseif S<4368081-1000886 then E,m=A,{A}G[Y[1611620872%6295394]]=E S=t[H(997904429%10846665)]elseif S<-1045404+4450902 then m,S={},t[H(-218252-(-229626))]else S=o S=b and 14226250-330817 or 358959+9942034 end end end end end end else if S<-401864+1533705 then if 633098-62440>S then if 622539+-305885>S then if 664002626%7903314>S then if 682562-663262>S then if S<861055-854239 then x=-543740+29707353358853 h=G[Y[1488894750%7962004]]S,A=-152982+15348034,H(109479771%10946805)y=G[Y[306697443%12779060]]F=y(A,x)T=h[F]w=s[T]m=w elseif 1757786849%12830495>S then c=G[Y[-948374-(-948376)]]z,HL=15138084194836-142987,H(813678+-802562)I=G[Y[-864651+864654]]X=I(HL,z)SL=c[X]c=143465+10614699>512104218%5306785 k[SL]=c SL=G[Y[423325257%16281740]]n,S=SL,9214285-(-337000)elseif 1406952641%11923222>S then x,l,b=S,H(-199004+210623),-323574+6441230826413 K=G[Y[170622892%7109287]]d=G[Y[-814257+814262]]q=d(l,b)Q=K[q]l=H(-44933+56413)C=h[Q]b=34794857712620-(-963422)K=G[Y[1684516334%8298110]]d=G[Y[-844220-(-844225)]]q=d(l,b)Q=K[q]E=C[Q]S,A=E and-81821+4290011 or 3388470323%18265851,E else T=G[Y[417976418%8038008]]h=G[Y[-772606-(-772609)]]A,S,F=865524+20118497767332,15135159-(-561255),H(848200-836544)y=h(F,A)s=H(1337062097%11728519)s=u[s]w=T[y]s=s(u,w)m=s end else if 147814321%2592245>S then Q=110389+16275908456038 A=G[Y[860877-860876]]x=G[Y[-576312-(-576314)]]C=H(1211071268%6617815)E=x(C,Q)m=A[E]S=h[m]S=S and 72526405%3958886 or 818328444%12768748 elseif S<3953094815%16539743 then S=C S=m and 6171540-(-414847)or 1303243647%12018571 else S=11286573-(-91747)end end else if S<-729965-(-932526)then if S<136305192%4254837 then S=R S=J and 542692283%21335492 or 2631384481%11615089 elseif 707750841%12635248>S then A=263103986314-408080 s=G[Y[671668-671667]]T=G[Y[-859706+859708]]h=G[Y[-1046082-(-1046085)]]F=H(-562018+573058)y=h(F,A)w=T[y]u=s[w]s=G[Y[294292+-294288]]B=u==s S,m=4417491472%22852904,B else m,S={},t[H(-455015+466661)]end else if S<530258-286302 then B,s,S,m,u=nil,nil,t[H(219183+-207599)],{},nil elseif S<538837799%4343080 then S=G[Y[82154247%2053856]]C=G[Y[-619483-(-619485)]]Q=G[Y[297601703%11904068]]d,q=H(48431-37256),-157265+20624527428565 K=Q(d,q)E=C[K]x=y[E]E={S(x)}F=E[1978230883%11369143]A=E[2328051887%12721595]S=A and 3445811131%16694622 or 875314+7275747 else SL,S=H(620218+-608813),531883+16087632 R=G[Y[1285101258%7260459]]i=G[Y[2753243530%11867429]]c=26994170448298-(-911216)N=G[Y[1624229603%10151435]]n=N(SL,c)r=i[n]k=J[r]j=R(k,K,y,Q,A)end end end else if-815592+1270515>S then if S<577766-185108 then if S<-570334-(-894224)then A,u=27067709957568-(-559996),H(515538185%3202030)S=G[Y[-714641-(-714642)]]B=t[u]s=G[Y[-397989-(-397991)]]u={B(s)}m,E=H(318828-307848),20551083548492-(-853525)m=S[m]m=m(S,p(u))S=G[Y[653697-653694]]w=G[Y[-1010781+1010785]]F=12735066776087-(-128275)T=G[Y[577531352%12287901]]B,y=m,H(-660741+672329)h=T(y,F)s=w[h]u=B[s]T=G[Y[-865054+865058]]x,F=29214128903756-975145,H(2285457990%14556986)h=G[Y[954409+-954404]]y=h(F,A)w=T[y]A=H(1447473087%6520097)s=B[w]h=G[Y[2617671874%13220565]]y=G[Y[367159+-367154]]F=y(A,x)T=h[F]x=H(294061-282332)w=B[T]y=G[Y[348460+-348456]]F=G[Y[1053308317%5374022]]A=F(x,E)h=y[A]T=B[h]m={S(u,s,w,T)}S,m=t[H(3286968778%13147830)],{p(m)}elseif S<2840844511%13335685 then o,b=-275237+27038467155027,H(477119412%12233553)d=G[Y[-786242+786243]]q=G[Y[2529785414%13385108]]l=q(b,o)K=d[l]Q=x[K]S,K=365626+15537436,312229+-312227 C=Q>K m=C else h,w,S,y,A=nil,nil,261100-(-305460),nil,F s[u]=A F=nil end else if S<1013950595%9472203 then S,l=J,o S=2953799820%19128916 elseif S<180163+258996 then S=G[Y[2407489284%10747720]]F=H(468026488%4254682)F=S[F]F=F(S)E,C=F,S S=F and-634209+16484176 or-36657+4443386 else A=G[Y[-464013-(-464015)]]C,S,Q=H(550579-539353),14614803-929513,-818337+10328756752234 x=G[Y[1707565866%9330961]]E=x(C,Q)F=A[E]y=w==F T=y end end else if S>692257519%4142372 then if S<736266+-210211 then m,S={},t[H(542528-531125)]elseif 49557-(-512312)>S then S,m=t[H(-330987+342475)],{}else m,S={u},t[H(2812637545%12282212)]end else if 1275748-816884>S then T,S=not w,12617566-(-94272)m=T elseif 1047290-583407>S then C,S=-697810+697813,x x=U()G[x]=A S=1978737867%17685312 A=G[F]Q=-205159+205224 E=A(C,Q)A=U()G[A]=E C=740654+-740654 q=f(3248432357%18866923,{})E=1161869184%4610592 d=H(-163741-(-174892))K=t[d]d={K(q)}J,q,Q=H(57188837%2598990),H(1440779855%7787939),{p(d)}d=756445-756443 K=Q[d]d=t[q]l=G[w]o=t[J]J=o(K)o=H(704963347%2987087)b=l(J,o)l={b()}q=d(p(l))d=U()G[d]=q l=G[A]b,q=l,-711765+711766 l=725822138%9942769 o=l l=15649260%119460 J=l>o l=q-o else F=G[h]S,s=-204865+4253882,F end end end end else if S>-156443-(-995301)then if 1154331761%4950038>S then if S>-884047+1779659 then if S<1788805-890717 then n=G[Y[468399715%2518278]]tL=H(476465-465498)X=G[Y[382068452%1698082]]HL=G[Y[-973084+973087]]pL=30495687143504-(-329512)z=HL(tL,pL)S=2636277724%17471238 I=X[z]c=l[I]SL=n(c)N=not SL r=N elseif S<412111383%13263980 then S=3287757593%17795801 else S,m=t[H(671906+-660420)],{}end else if 1243633706%9205712>S then w=G[B]h=G[Y[-595036-(-595037)]]A,x=H(2986894045%16411446),14156510800369-512049 y=G[Y[264276508%10164481]]F=y(A,x)E=H(372380-361558)T=h[F]y=H(960189+-949237)s=w[T]h=t[y]C=135507+26160808484419 F=G[Y[253314-253313]]A=G[Y[-875806+875808]]x=A(E,C)y=F[x]T=h[y]y=G[Y[-588996+588997]]E,x=-105900+31592506464035,H(371046779%1733812)F=G[Y[-97043+97045]]A=F(x,E)h=y[A]w=T[h]u=s==w m,S=u,285688418%6229784 elseif 2425067802%10359771>S then m=977189-977188 S=w[m]y,K,m=S,286333+11364073928238,300063+-300061 S=w[m]F,d=S,16261935062638-(-868134)x=G[Y[59370+-59369]]Q=H(-507195-(-518504))E=G[Y[-419709+419711]]C=E(Q,K)A=x[C]m=F[A]K=H(723341252%8821103)E=G[Y[632621-632620]]C=G[Y[655965417%3545759]]Q=C(K,d)x=E[Q]A=y[x]K=17380115006908-(-383457)S=m-A x=G[Y[-118385+118386]]Q,A=H(337396+-325890),S E=G[Y[-870797+870799]]C=E(Q,K)m=x[C]S=A[m]m,x=113324184%12591576,S S=x>m S=S and-278241+5956712 or 2868256981%13872122 else b=G[Y[-458402+458410]]k=G[Y[-483014+483016]]HL,n=157121+22975716967433,1972153004061-814215 r=G[Y[281112411%5512008]]X,N,I=2361279918820-(-495975),H(403111569%3149223),H(843943457%6593221)i=r(N,n)j=k[i]k=G[Y[504334-504316]]n=G[Y[2328250520%9464433]]SL=G[Y[-508329-(-508332)]]c=SL(I,X)N=n[c]i=o[N]SL=G[Y[-816151+816153]]X=H(84199+-72889)c=G[Y[-868476-(-868479)]]I=c(X,HL)n=SL[I]N=o[n]r=k(i,N)b[j]=r b=G[Y[259587-259579]]k=G[Y[1499538777%8568793]]n=1021446+13029775720877 r=G[Y[43868+-43865]]N=H(-688516+700198)i=r(N,n)j=k[i]k=G[Y[1007403261%4361053]]I,X=H(1141011410%12820226),-992683+16640548963311 n=G[Y[681422+-681420]]SL=G[Y[-207749+207752]]c=SL(I,X)S=11766870-333625 N=n[c]i=R[N]SL=G[Y[64279689%2794769]]HL,X=25976148160292-(-32796),H(988802161%5493284)c=G[Y[445611+-445608]]I=c(X,HL)n=SL[I]N=R[n]r=k(i,N)b[j]=r b=G[Y[193449-193441]]n,N=-721825+16858265166411,H(923622-912600)k=G[Y[307930779%2825053]]r=G[Y[34933401%260697]]i=r(N,n)r=-258304-(-258305)j=k[i]N=H(-365444-(-377120))i=G[Y[569835-569824]]k=r*i n=7030341105773-(-1037404)b[j]=k b=G[Y[-819367-(-819375)]]k=G[Y[839819564%3782971]]r=G[Y[890751+-890748]]i=r(N,n)j=k[i]k=11986252-566094>=540808+6836222 b[j]=k end end else if S>800834310%4394456 then if S<1012675-(-82492)then A,Q=H(964356004%5510542),H(-211710+222605)S=G[Y[1827748593%7946733]]u=G[Y[844558-844554]]T=H(-817720+829299)w=t[T]h=G[Y[-375415-(-375416)]]x,K=512975+24506913855684,-199867+9788830654089 y=G[Y[700038+-700036]]F=y(A,x)T=h[F]A=H(308969814%6716497)s=w[T]T=.45 F=t[A]x=G[Y[1291602697%5567253]]E=G[Y[887961+-887959]]C=E(Q,K)A=x[C]y=F[A]A=G[Y[159879602%993041]]Q,d=-355004+24835095762920,721573+17002298301512 x=G[Y[1372997771%10480899]]C=H(1165042477%4697707)E=x(C,Q)x=H(1217837644%5226724)F=A[E]h=y[F]K=H(713624+-702266)A=t[x]E=G[Y[615705101%6157051]]C=G[Y[747890+-747888]]Q=C(K,d)x=E[Q]F=A[x]Q=H(837296435%12496795)x=G[Y[-932326-(-932327)]]E=G[Y[-716555-(-716557)]]K=766413+28981324464874 C=E(Q,K)A=x[C]x=14340071860756-(-290817)y=F[A]A,m=H(-958732-(-970226)),H(461985-450918)w=s(T,h,y)h=G[Y[842924963%3483161]]y=G[Y[99843-99841]]F=y(A,x)T=h[F]h=108832517%8371732 s,m={[T]=h},S[m]m=m(S,u,w,s)S=H(1943017066%8411279)S=m[S]S=S(m)S=G[Y[187739-187734]]S=S and 4091138-878216 or 10387395-(-852483)elseif-237206+1358725>S then R,D=H(408957-397693),2882382858765-(-899889)S=G[Y[2129280843%12826993]]b=G[Y[473603+-473601]]o=G[Y[-330108+330111]]J=o(R,D)l=b[J]b,D=626542+11327632<11721883-487661,514373+24833120097254 S[l]=b S=G[Y[-796738-(-796744)]]R=H(642474-631082)b=G[Y[966893338%6809108]]o=G[Y[37367157%303798]]J=o(R,D)l=b[J]b=1074294345%15025439<165368+3247833 S[l]=b R=H(-581194+592884)S=G[Y[3254384399%16604002]]D=33116919001724-161343 b=G[Y[531528877%11309125]]o=G[Y[773906+-773903]]J=o(R,D)l=b[J]b=-123181+5794943>=484193+10947251 S[l]=b S=-176410+9705986 else m=G[Y[48620663%228266]]S=H(-22145-(-33076))S=B[S]S=S(B,m)A=S S=T and 5509073965%21985265 or 3394428-(-566968)end else if S<417639982%3753559 then S,m=t[H(314967-303781)],{}elseif 621360+384505>S then S,b=185013949%11415396,nil else S,C=5621032606%27616933,A end end end else if 528364-(-147477)>S then if S<517492758%2558777 then if S<-797338+1388705 then S=G[Y[241500-241494]]m=S()u=G[Y[785359+-785352]]B=m m=B-u u=.6 S=m>u S=S and 412980057%9635534 or 928239193%9287508 elseif S<938914-330667 then Q=H(-222193-(-233926))x=G[Y[78142+-78141]]E=G[Y[385225+-385223]]K=507650+7749828398870 C=E(Q,K)S=x[C]x=w A[S]=x S=8926733-406392 elseif 1263196026%11478023>S then m=G[Y[-590077+590082]]x=h S=m[x]E=S S=E and-192285+6381626 or 4399750032%19572099 else n=G[Y[813605426%3600024]]z=17744072684034-610748 I=G[Y[-742768-(-742771)]]HL=H(125193891%645271)X=I(HL,z)N=n[X]i=k[N]n=#i tL,pL,ZL,I=H(329046-317793),30781493191397-(-218392),2844420921522-922502,671132+-671131 N=n+I X=G[Y[149452+-149450]]HL=G[Y[460638+-460635]]z=HL(tL,pL)I=X[z]HL=G[Y[610830-610828]]pL=H(-558133+569715)z=G[Y[370887-370884]]tL=z(pL,ZL)X=HL[tL]n={[I]=R,[X]=F}i[N]=n n=#i I=-900614-(-900618)N=n>I S=N and 2697684359%26045165 or 2310097269%26396182 end else if-416247+1042608>S then l=S b=G[u]q,S=b,b and 3581338157%20053336 or 5256284232%22393902 elseif S<1640532-995017 then S=G[Y[-794251-(-794255)]]T=G[Y[3473126914%13566902]]F=H(-689290-(-700548))h=G[Y[1245841248%6734277]]Q,A=-738121+33077823045492,7395147452006-393459 y=h(F,A)A=31689415301107-(-238001)m=T[y]T=G[Y[790684987%8501989]]S[m]=T S=G[Y[-363935-(-363939)]]T=G[Y[-412876+412878]]F=H(2996098392%16372062)h=G[Y[37050463%1852523]]C=H(237934-227000)y=h(F,A)m=T[y]h=G[Y[315783+-315782]]A=G[Y[-511600-(-511602)]]x=G[Y[227040643%11352032]]E=x(C,Q)F=A[E]A=842466+-842316 y=h(F,A)h=G[Y[366724-366713]]T=y*h S[m]=T S=G[Y[-983249+983253]]F=H(-736794+748125)T=G[Y[87608+-87606]]h=G[Y[377142-377139]]A=653354+2835459460350 y=h(F,A)m=T[y]y=G[Y[-1046229-(-1046240)]]h,A=.8,3690044514028-(-714698)T=h*y S[m]=T S=G[Y[-124935-(-124939)]]T=G[Y[78226358%13037726]]F=H(1792066703%9955862)h=G[Y[1433-1430]]y=h(F,A)m=T[y]C=-540055+13031534794059 T=G[Y[574015+-574014]]E=H(2466360625%11857449)F=G[Y[-510727+510729]]A=G[Y[316712+-316709]]x=A(E,C)E=-170638-(-170893)y=F[x]F=G[Y[226157370%16154097]]x,C=941980-941980,400014+-399829 A={F(x,E,C)}F=H(335923613%11583182)h=T(y,p(A))S[m]=h A=9772568779559-788833 S=G[Y[-855761+855765]]T=G[Y[42920-42918]]h=G[Y[-117583-(-117586)]]y=h(F,A)m=T[y]T=3299779-(-259184)~=268779+6141340 S[m]=T S=708233+12961314 else C=H(378143+-367100)E=t[C]A,S=E,2396338784%16079724 end end else if S<3215375206%13120913 then if 626887-(-77061)>S then m,S={},t[H(1008795+-997549)]elseif 565068-(-164829)>S then s=Z[-155236+155239]S=G[Y[-256199+256200]]u=Z[15458562%3091712]m=S(u,s)B,w=Z[1466533%162948],m T=not w m,S=T,T and 1150041870%5929719 or 2629961650%11297830 else F=H(-432954-(-443797))T=G[Y[-349993-(-349994)]]A=-835200+32973748435578 h=G[Y[1163291835%5079877]]y=h(F,A)w=T[y]m=B[w]w,q=m,25906505036084-918037 m=#w d,R,y,F,T=H(395076+-384130),30335926929245-(-864209),989765+-989763,-782417-(-782418),m h=T-y m=w[h]y=T-F F=m h=w[y]l=5551366987635-54618 y=w[T]b=H(-670875-(-682351))C=G[Y[2381948899%16203734]]Q=G[Y[1128368738%8548248]]K=Q(d,q)E=C[K]x=h[E]Q=G[Y[-651391+651392]]K=G[Y[1910447010%12821792]]q,o=H(914318+-903162),700914+3953561556287 d=K(q,l)C=Q[d]E=F[C]A=x-E x=G[Y[-168366+168371]]d=G[Y[338455441%2820462]]q=G[Y[-138413-(-138415)]]l=q(b,o)K=d[l]Q=h[K]q=G[Y[-660276-(-660277)]]J=11110680405227-(-388938)l=G[Y[1044937-1044935]]o=H(-564631+576190)b=l(o,J)d=q[b]K=F[d]C=Q-K Q=.01 E=x(C,Q)m=A/E q,A,b=H(237496944%13193624),m,10238563450968-126393 Q=G[Y[-602055+602056]]J=30099179530463-(-85473)K=G[Y[215849+-215847]]l=3658861904054-14863 d=K(q,l)C=Q[d]o,l=H(-1003274-(-1014816)),H(-341979+353542)E=y[C]K=G[Y[-710238+710239]]d=G[Y[868045250%7750404]]q=d(l,b)Q=K[q]C=h[Q]x=E-C E=G[Y[437053+-437048]]q=G[Y[108547141%834978]]l=G[Y[667674+-667672]]b=l(o,J)d=q[b]K=y[d]l=G[Y[731271+-731270]]b=G[Y[753615-753613]]J=H(41782-30741)o=b(J,R)q=l[o]d=h[q]Q=K-d K=.01 C=E(Q,K)m=x/C E=S d=G[Y[649900875%3891622]]x,o,b=m,17788053838697-195342,H(67236-55874)q=G[Y[560619044%5050622]]l=q(b,o)K=d[l]Q=A[K]K=541143+-541141 C=Q>K m,S=C,C and 2365605358%9312126 or 2013927937%25948375 end else if S<-394384+1162962 then T=G[Y[-385427-(-385428)]]h=G[Y[1028973+-1028971]]A,C,F=180096+32934390414440,12467258342142-(-449455),H(306092+-294526)y=h(F,A)w=T[y]s=B[w]y=H(90376342%392893)h=t[y]E=H(1983570279%9312485)F=G[Y[471292-471291]]A=G[Y[-302055-(-302057)]]x=A(E,C)S,E=813664+11951688,-392844+8365028920771 y=F[x]x=H(-719683-(-730622))T=h[y]y=G[Y[1103897260%5332837]]F=G[Y[127519-127517]]A=F(x,E)h=y[A]w=T[h]u=s==w m=u elseif S<-191882+991598 then A,q,d=S,18285006676786-197104,H(663048+-651430)C=G[Y[1019496-1019492]]Q=G[Y[22260+-22255]]K=Q(d,q)E=C[K]x=y[E]F,S=x,x and 1649464-(-325720)or 421393+13632098 else S=m and 3194485833%18523119 or 6701751823%29991025 end end end end end else if 65628+1432725>S then if S>614966126%2514864 then if 1300065-(-125281)>S then if S>-142613+1500071 then if 3019051226%15717014>S then C,S=nil,15719295-119439 elseif-55118+1468319>S then F=-953206+13127450665814 w=G[Y[-698118-(-698120)]]y,u=H(524715+-512970),H(-388650-(-399581))u=B[u]T=G[Y[-678853+678856]]h=T(y,F)s=w[h]u=u(B,s)m,S=u,u and 12660587-836141 or 561297069%19173627 else b=G[Y[-900500+900502]]S,R=14979189-(-134321),H(736782+-725564)o=G[Y[146960685%2881582]]D=279321+11576058270197 J=o(R,D)l=b[J]Q=q[l]G[Y[-359401-(-359420)]]=Q end else if 1927366639%18000200>S then J,b,R,S=nil,nil,8654193-271629<751802+7682347,-506566+8397778 Q,o=R,nil elseif 735884-(-615080)>S then S=794684+-597536~=4120833-(-1033790)m={S}S=t[H(-991453-(-1003079))]else Q=G[Y[-753140-(-753142)]]q=H(772649-761737)K=G[Y[1667591293%6643790]]l=-850135+16889402480527 d=K(q,l)C=Q[d]E=x[C]l=H(993094862%13241114)K=G[Y[43736672%8747334]]d=G[Y[2142487158%13646415]]b=-828219+2410612402077 q=d(l,b)Q=K[q]C=u[Q]A=E-C C=H(483632-471918)C=A[C]C=C(A,A)Q=G[Y[144542+-144536]]E=C<=Q S=E and 190599+10302887 or 2023948273%13025741 end end else if-955694+2422054>S then if S<1191881986%14880607 then u=m m,S=u,u and 16098476-(-139257)or 687133+1306322 elseif 292187012%10025807>S then K=G[Y[60035-60033]]S,b,C,l=311915619%5222227,33784322458444-312792,H(-248728-(-260379)),H(199470+-188434)C=A[C]d=G[Y[819910598%9646007]]q=d(l,b)Q=K[q]C=C(A,Q)x=C else d,K=565428+397656104965,H(487366+-476276)E=G[Y[2567894200%16356014]]C=G[Y[-163268+163271]]Q=C(K,d)x=E[Q]A=y[x]S,F=2058775-564068,A end else if S<-10684+1504436 then k=-289008+14530923643742 d=G[Y[-1035396-(-1035402)]]l,b,r=.01,72872.25-72872,-492594+17547475969053 q=d(Q,l,b)b,j=1860882620%11852755,H(-881912+893472)l=F/b d=l+q l=G[Y[-862215-(-862225)]]J=G[Y[723220996%8312885]]N=H(259694-248286)R=G[Y[-126384+126386]]D=R(j,k)k=H(22118-11135)o=J[D]R=G[Y[-546522+546523]]D=G[Y[-1025786-(-1025788)]]j=D(k,r)k=H(948248+-937388)J=R[j]b=l(o,J)l=G[Y[254013-254003]]R=G[Y[364753+-364752]]D=G[Y[646195330%5048401]]r=14296638307691-(-433302)j=D(k,r)J=R[j]R=-102552+102566 o=l(J,R)k=G[Y[-442605-(-442606)]]R=S r=G[Y[447803682%7222640]]l,n=F,21297030182994-(-667243)i=r(N,n)j=k[i]D=b==j J,S=D,D and 8759282-(-456730)or 656086085%9370587 elseif 2643214976%12173822>S then S=F and 1386864184%7833804 or-136248+11598869 else C=383596+4702433422881 F=G[Y[584471747%4995485]]A=G[Y[236444-236441]]E=H(720061+-708978)x=A(E,C)y=F[x]S=4910806-477430 h=s[y]w=h end end end else if S>138149596%1777440 then if S<305393-(-1020722)then if S<-738474+2044491 then S=678749484%6702302 m=G[Y[-901585+901590]]B=H(3882387377%16381334)B=m[B]B=B(m)elseif S<821543+501684 then z,S=-325824-(-325825),SL G[u]=n HL=G[j]X=HL+z I=k[X]c=E+I I,S=-36479-(-36735),573928746%11555081 SL=c%I X=G[D]I=C+X E,X=SL,-504147-(-504403)c=I%X C=c else S=480852533%5793404 s,u,B=S,Z[53416042%1571060],Z[876878341%13490436]S,m=B and 984860+15008178 or 1035247+12168910,B end else if S<1936343-604478 then h=416954260%17132428<=814673+8609538 G[Y[1962769087%16356409]]=h S=1654196579%10660518 elseif-221589+1559763>S then S=nil m={S}S=t[H(760545+-749568)]else F,S=not u,2082167-316020 h=F end end else if 135519223%13427305>S then if 308388885%6270307>S then S=GL S=eL and 10217637-811961 or 11414316-643252 elseif S<12440261%5634274 then S=G[Y[-899388+899397]]m={S(B,p(u))}S,m=t[H(673650+-662172)],{p(m)}elseif S<-153514+1362190 then eL,S,GL=nil,698507391%26284495,nil else u=Z[-546408+546410]S=G[Y[-56244+56245]]s=S S=s[u]S,B=S and 383187+9481401 or 1670796594%20298464,Z[112426+-112425]end else if S<1214189204%12251748 then J,o=S,Q S=Q and 560517129%23731254 or-328019-(-751477)elseif 236966+1037245>S then m=G[Y[-738767-(-738768)]]E=H(-118987+130159)A=G[Y[720669+-720667]]C=-1035588+25280151812927 x=A(E,C)S=m[x]m=460076+12378741>16259474-1045508 h[S]=m S=-346292+1474864 else S=u and-570208+14074578 or 10441473-(-985491)end end end end else if S>2540612431%12953603 then if S>2562708921%15063916 then if-570062+2483023>S then if S<255101438%5627408 then Q=.06 d=S q=G[Y[2996493279%13937178]]K,S=q,q and 215491+8744180 or 1799738184%12598437 elseif 2476666-593796>S then S=G[Y[311910-311901]]m=S()y,u=H(1401660376%11213189),m S=G[Y[349738-349737]]F=1036469+15060665240240 w=G[Y[216496-216494]]T=G[Y[839359+-839356]]h=T(y,F)s=w[h]w=5450965092%26004449<1015249-722071 m=S(s,w)s=m S,m=s and 2901282-(-301673)or 2419203492%15478016,s else s=m m,S=s,s and-603584+5595472 or 3852920-218135 end else if-885966+2832760>S then b,S,o=nil,1900005-(-103848),nil elseif 799011+1162128>S then u=m S=not u S=S and-283562+14027251 or 240253+3659771 else S=G[Y[-438379+438380]]Q=H(544515601%10676564)y=G[Y[188613652%3772273]]m=S(y)S=G[Y[92519162%9251916]]K,m,y=12165406786803-(-594221),833829-833828,w S[m]=y m=-365349+365351 S=G[Y[-692445-(-692447)]]F=G[Y[385409+-385406]]x=G[Y[975235204%6725760]]E=G[Y[22061203%538078]]C=E(Q,K)A=x[C]x=H(922564463%13978078)y=F[A]E=17004670898952-95258 S[m]=y S=G[Y[1791244199%16433433]]y=G[Y[414306%2762]]m=1102820271%16460004 S[m]=y S=G[Y[793547015%10441408]]y=G[Y[-939232+939236]]F=G[Y[134078-134073]]A=F(x,E)m=y[A]y=G[Y[477476-477474]]S[m]=y m=H(675401-663742)S=t[m]y=s-u m=H(540391-528790)m=S[m]F=G[Y[124114315%6532332]]m=m(S,u,y,F)y=m m,S=y,y and 1124435959%4801956 or-807303+15332372 end end else if S>-758630+2562740 then if 951096933%11038143>S then q=-144958+31527997779863 y=G[Y[-909271-(-909282)]]l=7216308200980-497908 F=y()y=G[Y[-562437+562438]]E=G[Y[261684+-261682]]d=11496794340725-(-481140)K=H(-768138-(-779767))C=G[Y[302012853%12080514]]Q=C(K,d)x=E[Q]E=4408414-(-433096)<391275125%8873236 A=y(x,E)y=G[Y[-783238+783239]]C=G[Y[-160320-(-160322)]]d=H(780938411%12201991)Q=G[Y[3797622615%15069931]]K=Q(d,q)D=-267572+27311781922530 E=C[K]C=490826+-490824 x=y(E,C)q=H(-626898+638365)y=G[Y[2276003577%14779244]]Q=G[Y[238139332%4329806]]K=G[Y[91097+-91094]]d=K(q,l)C=Q[d]Q,d,K=-341812-(-341812),1311684049%15076827,-452545+452545 E=y(C,Q)C=G[Y[-982991-(-983003)]]Q=C(E,K,d)C=323491632%1777426 y=Q/C C=G[Y[-483726+483739]]J,R=H(1234559295%5611580),12353759917162-269810 K=G[Y[382333953%4201472]]S=-384769+9222710 l=G[Y[-410039+410041]]b=G[Y[971647+-971644]]o=b(J,R)R=H(1032882-1021540)q=l[o]b=G[Y[960133722%9232055]]o=G[Y[798269853%8869665]]J=o(R,D)l=b[J]d={K(q,l)}Q=C(p(d))d=H(51510+-39841)C=G[Y[47792+-47778]]K=C(x,x,x)C=G[Y[178256294%9903127]]d=C[d]d=d(C)C=726776601%3825140 q=#d l=q q=-939296-(-939297)b=q q=610647240%8849960 o=b<q q=C-b elseif-974105+2796007>S then m=G[Y[1049478482%5195438]]s=G[Y[-882401+882408]]A,S=49912+7113940896248,3021528857%11993262 T=G[Y[2120882051%8382933]]F=H(-270522+281739)h=G[Y[1556603883%9978230]]y=h(F,A)w=T[y]u=s[w]B=m(u)else K=-476024-(-476024)Q=E>K S,C=1882059369%29617115,Q end else if 1076338-(-663992)>S then y,F=S,not s h,S=F,F and 11816613-(-821315)or-757199+17159623 elseif 2772522-993483>S then S=y S=h and-820336+4225517 or 2313025699%22543929 else j=238309+21927309804797 o=G[Y[-413922-(-413924)]]D=H(-789416+800754)J=G[Y[1445673750%6662091]]R=J(D,j)S=1405719024%9373589 b=o[R]l=T[b]Q=l end end end else if S<1999157-406916 then if S<785208704%9795622 then if S<576009+937023 then s=G[Y[-725707-(-725711)]]w=s()m,S=w,1413004740%15838154 elseif 2057783-524388>S then E=G[Y[-399169-(-399171)]]C=G[Y[15038674%791509]]d,K=19452158793496%120820903051,H(-26901+37973)Q=C(K,d)x=E[Q]A=F[x]x,E=A,S S=A and 821176+616119 or-615935+4420161 else w=m S=G[Y[339749776%1509999]]T=w m=G[B]S[m]=T S,m=t[H(360551732%12432428)],{w}end else if 144727+1435467>S then q,Q,E=H(-876830-(-888099)),.28,H(704925509%15664753)S=G[Y[-725864+725879]]C,E=.28,S[E]E=E(S,F,C)G[Y[18558618%2062067]]=E S=G[Y[-150591-(-150607)]]C=H(-199606+211230)C=S[C]C=C(S,A,Q)G[Y[-97186+97202]]=C S=G[Y[461215997%5124622]]q=S[q]d=G[Y[1012714-1012699]]q={q(S,d)}K=q[21563042%2156304]S=G[Y[143479+-143462]]Q,b=q[298166-298165],H(273511-262242)l=G[Y[1086291248%10445108]]b=S[b]b={b(S,l)}S,q,l=K and-11129+15071083 or-517624+11940602,b[1375537347%7435337],K d=b[1658751701%16587517]elseif S<1641511510%14642194 then S=G[Y[746438+-746435]]x=H(168367207%4316826)y=G[Y[1024747+-1024746]]F=G[Y[-48520-(-48522)]]E=28278636331005-(-1028979)A=F(x,E)h=y[A]E=444467+29498546695541 T=B[h]y=G[Y[-33047-(-33048)]]F=G[Y[805481+-805479]]x=H(-236567+248219)A=F(x,E)C=H(435178+-423979)h=y[A]w=T[h]A=G[Y[-388360-(-388361)]]Q,T=16046164612338-128962,-405621-(-405621)x=G[Y[1028583074%6271848]]E=x(C,Q)C=H(1016657312%4363287)F=A[E]Q=-188958+25118645686222 y=B[F]A=G[Y[499386301%6658484]]x=G[Y[318696-318694]]E=x(C,Q)x=H(3239698430%16613779)F=A[E]h=y[F]m=S(w,T,h)E=3688290468676-97423 S=G[Y[912534+-912531]]y=G[Y[614330+-614329]]F=G[Y[467822+-467820]]C,Q,w=H(3848426827%16587997),14046260134105-(-252083),m A=F(x,E)h=y[A]T=u[h]A=G[Y[549298777%5843604]]x=G[Y[418350+-418348]]h=670374-670374 E=x(C,Q)F=A[E]y=u[F]m=S(T,h,y)T,Q,C=m,852582+20453729002190,H(355440-344516)A=G[Y[-401184+401185]]x=G[Y[-276484+276486]]E=x(C,Q)F=A[E]y=w[F]F=-36440-(-36441)h=y>F S,m=h and 3155369753%17204783 or 378126+15204639,h else BL=G[Y[329588+-329573]]OL=861182+33634400311600 UL=G[Y[349315822%3564447]]sL=BL(UL)UL,sL=B,344701461%7493510 BL=G[Y[124949-124933]]BL[sL]=UL sL=-82258+82260 BL=G[Y[423017+-423001]]uL=G[Y[-1021583+1021586]]LL=G[Y[1036451081%7403222]]WL=H(176286471%7050999)wL=G[Y[608125-608123]]PL=wL(WL,OL)ML=LL[PL]UL=uL[ML]BL[sL]=UL LL=H(942013+-930481)BL=G[Y[395529-395513]]PL=485555661%11842821 UL=G[Y[1005251-1005234]]sL=1145232438%5001015 BL[sL]=UL OL=.6 BL=G[Y[309076-309058]]wL=-967583+19109780334177 UL=G[Y[812593-812592]]uL=G[Y[-168902-(-168904)]]ML=uL(LL,wL)sL=UL[ML]wL=484774+-484824 UL=G[Y[3412091296%15870192]]BL[sL]=UL BL=G[Y[-45901-(-45915)]]LL=821932-821932 sL=BL(GL)UL=H(297555+-285896)BL=t[UL]uL=G[Y[2103971191%11434626]]UL=H(-998513+1010114)ML=uL(LL,wL,PL)LL,UL=-635791+635795.5,BL[UL]uL=G[Y[-98001-(-98019)]]PL=-395294+395294.5 UL=UL(BL,y,ML,uL)ML=X*LL uL=ML*J BL=uL*eL uL=sL*BL WL=G[Y[539246-539227]]wL=PL*WL S=UL and 13139921-(-811305)or 3519911-252664 LL=wL*BL ML=LL*BL LL=G[Y[2754419295%11923893]]WL=.28 PL=ML*WL WL=sL*OL wL=LL(PL,WL)ML=wL LL=uL+ML end end else if S<932516704%3911238 then if 1837468153%8421419>S then m=G[Y[238735084%2231169]]T=H(549484+-538225)u=G[Y[-350608-(-350610)]]h=13858284522796-930807 s=G[Y[1876242327%12677313]]w=s(T,h)B=u[w]S=m[B]B=S S=not B S=S and 1874040-536654 or-951359+2356626 elseif 2373113-764803>S then S=m and 1272800325%9808008 or-414100+11709019 else C=F Q=h[C]m=H(629383-617898)m,S=T[m],1615+5327026 m=m(T,Q)C=nil end else if 1041582-(-634058)>S then S=820199+4901281 elseif 1934769750%10015956>S then m={}B=L(B)S=t[H(-799556-(-810377))]else S=G[Y[-567477-(-567478)]]m=S()u=G[Y[432025772%6084870]]B=m m=B-u u=G[Y[346068-346065]]S=m<u S=S and 15340161-(-683761)or 12754447-(-659492)end end end end end end end else if S>7166275-784081 then if S<8114741-694294 then if 1502203307%7514113>S then if S<452771011%13517780 then if S>1419506260%17023592 then if S<2770240712%20172476 then if 7562362-990724>S then q=G[Y[845284+-845279]]o,J=H(696909-685168),15596779401364-(-912330)l=G[Y[-447742+447748]]b=l(o,J)d=q[b]R,J=1.4248319001723e+14%863534563895,H(2596930808%13455544)m=Q[d]d=H(2239547485%12945298)l=G[Y[-847431-(-847436)]]d=m[d]b=G[Y[408623+-408617]]o=b(J,R)q=l[o]d=d(m,q)S=d and 4733449734%24347387 or 3040364244%15781470 elseif 33986+6549621>S then o=929028385%9677379 l=G[F]J=-478482+478488 b=l(o,J)l=H(653545089%5732754)t[l]=b J=H(904408473%15073289)o=t[J]J=4203744872%16485274 l=o>J S=l and 15599656-746378 or 2026278209%13085897 else m=G[Y[959826-959820]]q,d=926948-926948,5.1 K=d-x d=.52 Q=K*d K,d=.4,2.3 C=m(Q,K,d)Q=G[Y[-423887+423894]]d,S=352321+-352321,5526245-288266 K=Q(d,C,q)m=y-K C,y=nil,m end else if S<590161+6051395 then m,S={},t[H(-515416-(-527052))]elseif-635976+7287402>S then S,m=t[H(564751-553692)],{}else y=G[Y[2618854047%16680599]]T=S A=G[Y[-808935+808937]]x=G[Y[427267-427264]]C,Q=H(-266339+277851),777053+31394538200510 E=x(C,Q)F=A[E]h=y[F]S,w=h and 5912374-769426 or 9268457-216011,h end end else if S<511484183%8016528 then if S<319281+6080560 then eL=1.2 yL,BL=H(977354-966145),.04 GL=X/BL uL=663929154%15807837 BL=G[Y[1351890875%5981818]]FL=-688832+24217623424717 TL=G[Y[721052-721051]]hL=G[Y[-895370+895372]]AL=hL(yL,FL)aL=TL[AL]gL=C[aL]PL=gL*d LL=PL*GL ML=LL*eL LL,GL=222690-222690,nil sL=BL(uL,ML,LL)eL,YL,S=nil,sL,7231600081%31651270 elseif 3256914694%13159907>S then z=30624685522098-361726 c=G[Y[1945751492%8884710]]HL=H(898386-887388)I=G[Y[-635346+635349]]X=I(HL,z)SL=c[X]c=n k[SL]=c YL,ZL,c=-929034+7185002723867,H(2517350119%12400686),S z=G[Y[-471422-(-471424)]]tL=G[Y[452727-452724]]pL=tL(ZL,YL)HL=z[pL]X=k[HL]HL=213513798%6279817 I=X>HL S,SL=I and 884786+2264629 or 358491658%10729945,I elseif 5534872-(-895777)>S then S=m and 6798858-(-125103)or-454643+6131076 else S,m=E,x S=x and-101914+6143598 or 16417178-(-221888)end else if 7026764-556003>S then m,B,T,F,h,u,y,S,A,s,w={},nil,nil,nil,nil,nil,nil,t[H(180183-168585)],nil,nil,nil elseif 2734399493%12287779>S then b=13007272055321-(-624015)C=G[Y[-168731+168741]]l,S=H(-142288+153320),14292009-342023 K=G[Y[621999+-621997]]d=G[Y[-778846+778849]]q=d(l,b)Q=K[q]E=C[Q]A=E else S=G[Y[-375045-(-375051)]]m=S()S,y=2499157722%10793064,m end end end else if S>496777+6323604 then if S<7381820-516467 then if 156827957%10714412>S then K=G[Y[284177+-284175]]b=25028209665064-374434 d=G[Y[170166-170163]]l=H(-419688-(-430945))q=d(l,b)Q=K[q]S=T[Q]d=G[Y[-599095+599097]]Q,o=H(1381360112%14853217),242117+8857530949207 q=G[Y[238497-238494]]Q,b=S[Q],H(563234829%4172024)l=q(b,o)K=d[l]Q=Q(S,K)S=Q and 118384922%13741430 or-596590+13407178 elseif-695092+7535038>S then R,q,D=H(6593080%46677),603692+-603691.25,15589011465431-(-14212)S=G[Y[-900508+900519]]d=Q*q K=S(E,d)b=G[Y[1049343174%14374564]]o=G[Y[1936541763%8068924]]J=o(R,D)l=b[J]q=C[l]d=q*K K=nil S=T+d T=S S=890161+8759559 else s,F,y=H(131306376%4102985),-67001+17502871610767,H(1066121742%9270526)m=t[s]w=G[Y[41660163%368674]]T=G[Y[318185648%3833562]]A=13747585799282-719729 h=T(y,F)s=w[h]y=H(-195468+206833)S=m[s]F=19540107300039-436540 w=G[Y[-384083+384084]]T=G[Y[283390-283388]]h=T(y,F)y=H(421168732%4785875)s=w[h]F=14580886554374-420993 m=S(s)G[Y[120200-120196]]=m S=G[Y[50478-50474]]w=G[Y[320919227%1401394]]T=G[Y[-648528+648530]]h=T(y,F)s=w[h]F=H(993320+-982412)T=G[Y[-699742+699743]]h=G[Y[168812574%2136868]]y=h(F,A)w=T[y]S[s]=w S=G[Y[187341-187337]]y,F=H(-812784+823775),-252749+19937763786641 w=G[Y[-155325+155326]]T=G[Y[970883-970881]]h=T(y,F)y,A,F,E=H(534966-523360),18930056449512-(-873606),4461938434796%21046905777,23371251120332-626249 s=w[h]w,C=2848874-873943>=-268479+7663205,-44905+31736961902883 S[s]=w Q=H(-185783-(-197077))S=G[Y[456659379%3653275]]w=G[Y[2192099113%8698806]]T=G[Y[1025561+-1025559]]h=T(y,F)s=w[h]F,w=34010606428136-(-1023477),175185+15389164<13110892-(-253917)S[s]=w y=H(34559599%243297)S=G[Y[1680808900%11672284]]w=G[Y[33734+-33733]]T=G[Y[307401-307399]]h=T(y,F)s=w[h]w=B S[s]=w R=-730444+2793147509344 S=G[Y[-813662-(-813667)]]T=G[Y[560108613%2857697]]h=G[Y[-761734+761736]]F,q=H(2788241004%12848986),H(931047+-919781)y=h(F,A)w=T[y]T=174227-174132 s=S(w,T)S=G[Y[-582641+582647]]w=S()x,h=H(-852626-(-864032)),H(148223+-137367)T=t[h]y=G[Y[-827567-(-827568)]]o=H(896148+-884401)F=G[Y[-591263+591265]]A=F(x,E)h=y[A]S=T[h]E=-685664+18062296422202 y=G[Y[3696432928%15864519]]x=H(718944+-707454)F=G[Y[-605240-(-605242)]]A=F(x,E)x=H(1612966051%7432972)h=y[A]T=S(h)E=693163+16739123841735 G[Y[897105+-897098]]=T S=G[Y[51208+-51201]]y=G[Y[922589-922588]]F=G[Y[-822158+822160]]A=F(x,E)h=y[A]E,J=H(953337+-941773),16724737459837-(-579567)F=G[Y[198495+-198494]]A=G[Y[-697725+697727]]x=A(E,C)E=25084406652006-(-217402)y=F[x]S[h]=y S=G[Y[493820-493813]]y=G[Y[575735+-575734]]F=G[Y[796749+-796747]]x=H(-822543+833439)A=F(x,E)h=y[A]l,x,A=3451751017239-(-138032),-607564-(-607564),1812450648%9390936 y=G[Y[2139541834%9997859]]F=y(A,s,x,s)S[h]=F S=G[Y[2031154156%15745381]]y=G[Y[-690952+690953]]E,x=26714550944948-(-224227),H(-510538+521966)F=G[Y[-810249+810251]]A=F(x,E)C=-53239+29734740018701 h=y[A]y=w S[h]=y x=H(869874917%13382524)S=G[Y[95495-95488]]y=G[Y[988766+-988765]]F=G[Y[38381004%1128853]]E=2814044231577-(-437637)A=F(x,E)h=y[A]E,x=128454+-128428,-568789+568795 y=G[Y[593903-593894]]A=440458-440443 F=y(A,x,E)S[h]=F S=G[Y[321774+-321767]]y=G[Y[838136125%6651874]]x,E=H(849826+-838529),-595720+27070955931717 F=G[Y[760249-760247]]K=-336534+21113897879805 A=F(x,E)h=y[A]y=.05 S[h]=y S=G[Y[-512040-(-512047)]]E,x=275943287526-(-873882),H(-907660-(-918907))y=G[Y[3600449296%14119409]]F=G[Y[-287138-(-287140)]]A=F(x,E)E=-548985+24553918876962 h=y[A]y=-571599-(-571599)S[h]=y S=G[Y[537797010%6807557]]y=G[Y[-439154+439155]]x=H(657588+-646639)F=G[Y[2127849239%8477487]]A=F(x,E)h=y[A]x,y=H(691629-680809),2351259430%12086889>-570443+11477236 S[h]=y E=-1032141+7475595742566 S=G[Y[-640943+640950]]y=G[Y[-234392-(-234393)]]F=G[Y[937577+-937575]]A=F(x,E)u=nil h=y[A]y=5234178-128768~=1742876992%19733083 S[h]=y S=G[Y[686464998%9668521]]y=G[Y[2661702721%16635642]]E=832538+32333338134198 F=G[Y[2814682%51176]]x=H(1017973866%6924914)A=F(x,E)h=y[A]y=G[Y[-441727+441731]]S[h]=y E,y=H(3504259009%14480364),H(636065176%11564624)h=t[y]F=G[Y[1064852501%8518820]]A=G[Y[359278-359276]]x=A(E,C)y=F[x]s,C=nil,21514634368128-(-889506)S=h[y]E=H(1603194968%7456670)F=G[Y[-726935-(-726936)]]B=nil A=G[Y[829527-829525]]x=A(E,C)y=F[x]h=S(y)y=G[Y[985865+-985864]]x=H(172725902%2158938)F=G[Y[-456808-(-456810)]]E=13131768000264-(-927962)A=F(x,E)S=y[A]A=H(-658423-(-669937))F=t[A]x=G[Y[22775061%1626790]]E=G[Y[601153+-601151]]C=E(Q,K)A=x[C]x=1755696330%13005158 y=F[A]A=.28 F=y(A,x)x=H(343905609%6252620)h[S]=F E=5514541278642-89003 y=G[Y[826572+-826571]]F=G[Y[-297186+297188]]C=H(3009141960%14970799)A=F(x,E)S=y[A]F,Q=H(-197438-(-208294)),31974920794437-(-706788)y=G[Y[906298-906291]]h[S]=y y=t[F]A=G[Y[-78487+78488]]x=G[Y[52826+-52824]]E=x(C,Q)F=A[E]S=y[F]A=G[Y[-937938+937939]]x=G[Y[3144663732%13672451]]Q,C=-197696+1526305965830,H(43035-32030)E=x(C,Q)F=A[E]y=S(F)F=U()G[F]=y S=G[F]A=G[Y[-883790-(-883791)]]x=G[Y[554059-554057]]Q,C=6378062838266-93792,H(970586-959608)E=x(C,Q)C,Q=1256205888%4984944,-2198+2199 y=A[E]A=G[Y[800155182%4734646]]E,K=-613013-(-613014),187353608%14411816 x=A(E,C,Q,K)Q=23782009889116-128538 S[y]=x S=G[F]C=H(1761367962%12951155)A=G[Y[674485-674484]]x=G[Y[-890532-(-890534)]]E=x(C,Q)y=A[E]A,Q=-735426-(-735427),11946430068005-89963 S[y]=A C=H(752634218%4325420)S=G[F]A=G[Y[520468+-520467]]x=G[Y[1782878162%7428659]]m={}E=x(C,Q)y=A[E]E=G[Y[-96463+96470]]Q=G[Y[33379-33378]]K=G[Y[866738028%11256338]]d=K(q,l)q=97439614064027%16239937155485 C=Q[d]x=E[C]Q,E,C=6100508935448-(-263680),-506896+506897,H(1065724518%10149646)A=x+E S[y]=A S=G[F]A=G[Y[488736-488735]]x=G[Y[796409+-796407]]d=H(-1018356+1029692)E=x(C,Q)y=A[E]K=316198+31486536525344 A=G[Y[138152-138145]]Q=H(-336728+347941)S[y]=A A=H(1406642024%5494653)y=t[A]x=G[Y[-609478-(-609479)]]E=G[Y[-681690-(-681692)]]C=E(Q,K)A=x[C]S=y[A]K,D=18032637146575-(-158462),26636661087263-961452 x=G[Y[1046600-1046599]]Q=H(2216666461%12383551)E=G[Y[604077-604075]]C=E(Q,K)j=30161110514824-738732 A=x[C]y=S(A)Q=956206+19848093322476 A=G[Y[719422+-719421]]C=H(300536+-289745)x=G[Y[-8506+8508]]E=x(C,Q)l=1552254276807-1020405 S=A[E]E=H(1195395604%5559926)x=t[E]C=G[Y[558015094%15081489]]Q=G[Y[-811261+811263]]K=Q(d,q)E=C[K]C=-890655+890655 A=x[E]E,d=.28,18674329899221-274142 x=A(E,C)C,Q,q=H(-399466-(-411210)),18053678938825-317939,H(1293881545%7794399)y[S]=x K=H(-1016417+1027475)A=G[Y[538703049%4020172]]x=G[Y[284767+-284765]]E=x(C,Q)S=A[E]A=G[F]x=H(-894594-(-905450))y[S]=A A=t[x]E=G[Y[461224949%3908686]]C=G[Y[190811+-190809]]Q=C(K,d)K=H(236068-224514)x=E[Q]S=A[x]E=G[Y[-512524+512525]]C=G[Y[853138+-853136]]d=-662850+35169986272571 Q=C(K,d)K=6240556404066-(-605687)x=E[Q]A=S(x)Q=H(836547644%4334383)x=G[Y[-516525+516526]]E=G[Y[831334-831332]]C=E(Q,K)S=x[C]C=H(890542+-879413)E=t[C]Q=G[Y[3095899329%12688112]]K=G[Y[-269395+269397]]d=K(q,l)C=Q[d]d=H(172061+-160394)x=E[C]K=t[d]q=G[Y[87354421%1455907]]l=G[Y[233638882%994208]]b=l(o,J)J=585204+-585161 d=q[b]o=138491504%2098356 Q=K[d]d,b=-884656-(-884656),279909964%13995497 q=G[Y[-906503+906512]]l={q(b,o,J)}q,J=H(626292219%14564664),H(149238426%909919)K=Q(d,p(l))d=t[q]l=G[Y[1510688059%8255126]]b=G[Y[-134963+134965]]o=b(J,R)J=694447+-694401 q=l[o]R=302019-301797 Q=d[q]o,q=-695191-(-695322),-121377.5-(-121378)l=G[Y[735876285%12687522]]b={l(o,J,R)}l=H(152681+-141014)d=Q(q,p(b))q=t[l]R=H(397358764%10456515)b=G[Y[663505+-663504]]o=G[Y[455331476%3275766]]J=o(R,D)l=b[J]Q=q[l]J,D,R=910813+-910789,-681564-(-681607),-272981-(-272989)b=G[Y[-790695+790704]]l=902129-902128 o={b(J,R,D)}q={Q(l,p(o))}C={K,d,p(q)}K=600956+8254916518791 E=x(C)A[S]=E Q=H(-411461+422460)x=G[Y[552898+-552897]]E=G[Y[21461-21459]]b=-534735+5607191982850 C=E(Q,K)l=H(362467+-351223)S=x[C]x=G[F]A[S]=x S=G[Y[858607617%6004249]]Q=H(553362+-541783)C=t[Q]K=G[Y[912512891%10610615]]d=G[Y[43223129%335063]]q=d(l,b)R=H(749069-737889)Q=K[q]l=H(-247125+258077)E=C[Q]q=t[l]D=18523243872812-516219 b=G[Y[352551247%2231337]]x=H(160464-149397)o=G[Y[3718561784%15054906]]Q=647259+-647256 J=o(R,D)R=-192572+8530861473728 l=b[J]d=q[l]J=H(-231116-(-242747))l=G[Y[705325349%3875414]]D=H(-400735-(-412230))b=G[Y[285419-285417]]x=S[x]o=b(J,R)q=l[o]b=H(-47271+58223)K=d[q]l=t[b]o=G[Y[-1048524-(-1048525)]]J=G[Y[286183-286181]]R=J(D,j)D=44028+25998838022990 b=o[R]q=l[b]b=G[Y[-291557+291558]]R=H(479441007%14100880)o=G[Y[2462767082%10801610]]J=o(R,D)l=b[J]d=q[l]q=-236376-(-236375)C=E(Q,K,d,q)l=H(-578599+589922)K=G[Y[1024402+-1024401]]d=G[Y[902275+-902273]]b=5679827244491-(-914569)q=d(l,b)Q=K[q]K=800822-800462 E={[Q]=K}x=x(S,A,C,E)S,l=H(-412720-(-424337)),24711477818968-166245 S,C=x[S],H(229348+-218492)S=S(x)S=G[Y[1309403091%13929820]]E=H(685829025%5275524)E=S[E]E=E(S,x)E=t[C]Q=G[Y[607288793%13802018]]K=G[Y[-330527-(-330529)]]q=H(-273550+284757)d=K(q,l)C=Q[d]q=H(1161193297%8294160)S=E[C]Q=G[Y[-323956-(-323957)]]l=12329100773376-(-462445)K=G[Y[625467-625465]]d=K(q,l)C=Q[d]E=S(C)C=G[Y[3646465681%16574844]]d=H(1042212+-1030497)Q=G[Y[206781-206779]]q,l=-470270+18811597557557,10641003657821-567042 K=Q(d,q)j=28575399131674-(-1030624)S=C[K]Q=G[Y[-420968-(-420969)]]o,q=H(416360606%2275135),H(-548979+560536)K=G[Y[474270+-474268]]d=K(q,l)w=nil C=Q[d]E[S]=C C=G[Y[1807098030%16578881]]Q=G[Y[696727021%6391991]]d,q=H(72035776%1565744),884904+17843641540557 K=Q(d,q)S=C[K]l=-417176+417176 C=G[Y[478643192%6647822]]d,K,q=383175-383175,.38,.38 Q=C(K,d,q,l)E[S]=Q C=G[Y[908341-908340]]Q=G[Y[983799-983797]]d,q=H(987127-975866),334737+15602146148560 K=Q(d,q)q,A=12167308127399-(-731514),nil S=C[K]y,d,l,K=nil,-667090.5-(-667091),43613+-43613,123333+-123332.5 C=G[Y[-625624-(-625636)]]Q=C(K,d)E[S]=Q C=G[Y[166559975%1034534]]Q=G[Y[895225721%5001261]]d=H(1864372732%8591527)K=Q(d,q)S=C[K]K,q,d=56119034.5%298505.5,.44,-1024925+1024925 C=G[Y[512853-512845]]Q=C(K,d,q,l)l=684495+24113738168845 E[S]=Q C=G[Y[2915477863%15264282]]Q=G[Y[-621128+621130]]q,d=24221704158822-(-1011113),H(180670+-169787)K=Q(d,q)S=C[K]C,q=373083-373082,371029+4199783767630 E[S]=C C=G[Y[-422592+422593]]d=H(629215-618384)Q=G[Y[739533+-739531]]K=Q(d,q)S=C[K]Q=G[Y[493961525%8516578]]q=H(139149+-127730)K=G[Y[-721791-(-721793)]]d=K(q,l)D=30148387825009-208539 C=Q[d]E[S]=C C=G[Y[164189+-164188]]J,d,q=10300294202248-864460,H(723566-712342),544396+27673455797194 Q=G[Y[843313-843311]]K=Q(d,q)S=C[K]K=G[Y[356267+-356260]]q=G[Y[3535412557%14198444]]l=G[Y[3129465412%16131265]]b=l(o,J)d=q[b]Q=K[d]q,d,K=20415903291569-(-298097),H(856983158%5101021),652952+-652950 C=Q+K E[S]=C C=G[Y[-175368+175369]]Q=G[Y[940550-940548]]K=Q(d,q)S=C[K]C=G[Y[-525-(-532)]]E[S]=C b,l,Q,R=10521720957882-(-583529),H(875258+-863982),H(-304042-(-315621)),H(2298609641%9865230)C=t[Q]K=G[Y[1727767294%11753519]]d=G[Y[621818017%3221855]]q=d(l,b)Q=K[q]S=C[Q]Q,l=.8,H(-909684-(-920636))q=t[l]b=G[Y[-965032+965033]]o=G[Y[1090850061%4416397]]J=o(R,D)l=b[J]d=q[l]D=H(43359+-32216)l=G[Y[639491+-639490]]b=G[Y[1497718854%11261044]]J,R=H(161422-149948),-438028+1471460209081 o=b(J,R)b=H(1494705480%6253952)q=l[o]K=d[q]l=t[b]o=G[Y[1000456+-1000455]]J=G[Y[-978537-(-978539)]]R=J(D,j)b=o[R]q=l[b]b=G[Y[264108834%4329653]]D,R=-934382+13638346087100,H(-409072+420504)o=G[Y[354088+-354086]]J=o(R,D)l=b[J]d=q[l]l,q=596013+13918758>230992-(-226797),351180-351181 C=S(Q,K,d,q,l)S=G[Y[-153459-(-153469)]]Q=H(869015-857948)Q=S[Q]q=G[Y[-759086+759087]]o=H(199990+-188927)l=G[Y[-2064-(-2066)]]J=-596609+1457073888551 b=l(o,J)d=q[b]o,q=H(931487-920463),-589112+589472 K={[d]=q}Q=Q(S,E,C,K)S,K,j=H(61138330%304113),H(243982398%1156263),5463046203565-401086 S=Q[S]S=S(Q)S=G[Y[745750-745739]]J,d,K=-149003+34815957321055,H(411306+-400450),S[K]K=K(S,Q)K=t[d]q=G[Y[-588128+588129]]i=27679756090013-(-669628)l=G[Y[594924354%3380252]]b=l(o,J)d=q[b]S=K[d]J=15190597464884-(-944237)q=G[Y[837926-837925]]o=H(538678096%2383482)l=G[Y[1106285942%7474905]]b=l(o,J)J=2424731397050-(-448687)d=q[b]K=S(d)d=G[Y[979192+-979191]]o=279464+18181811051882 q=G[Y[-233187-(-233189)]]b=H(988028-976373)l=q(b,o)S=d[l]E=nil q=G[Y[-214764+214765]]l=G[Y[166457557%7237285]]o=H(1014510-1003173)b=l(o,J)o=6642886897130-451029 d=q[b]K[S]=d d=G[Y[38007841%974560]]q=G[Y[1015046-1015044]]b=H(-824131+835307)l=q(b,o)S=d[l]J=651605+-651605 d=G[Y[1077275570%6775318]]o,b,l=.2,-804360-(-804360),500918+-500917 q=d(l,b,o,J)K[S]=q o=862335+26436727588759 d=G[Y[896267+-896266]]q=G[Y[398923252%7978465]]D,b=H(-672471+684197),H(19481710%1216906)l=q(b,o)S=d[l]J,l,b=-43249+43249,594724-594724,524143659%3296501 d=G[Y[954799914%6723943]]o=-990468.25-(-990469)q=d(l,b,o,J)K[S]=q d=G[Y[626493016%4640689]]q=G[Y[-962662-(-962664)]]o,b=-133660+8031923443896,H(325177-314284)l=q(b,o)o=25166130676714-874020 S=d[l]d=720910+-720909 K[S]=d b=H(103416+-91686)d=G[Y[336044377%4667283]]q=G[Y[782202-782200]]l=q(b,o)S=d[l]J=617983+34967589130652 q=G[Y[1066333918%8812677]]l=G[Y[286175-286173]]o=H(-1030779+1041956)b=l(o,J)d=q[b]K[S]=d d=G[Y[2382530884%11185591]]b,o=H(822932+-811304),-106515+3008661087628 q=G[Y[659538-659536]]l=q(b,o)S=d[l]o=-615497-(-615752)d=G[Y[1408086836%10587119]]l,b=-252439-(-252694),-618815+619070 q=d(l,b,o)b,o=H(137847072%1420985),635538+15980595145343 K[S]=q d=G[Y[479095-479094]]q=G[Y[363677+-363675]]l=q(b,o)S=d[l]b=H(969980+-959028)l=t[b]o=G[Y[2238195259%9564937]]J=G[Y[653904-653902]]R=J(D,j)b=o[R]q=l[b]b=G[Y[-586892+586893]]o=G[Y[-187671-(-187673)]]D,R=27720138790224-156388,H(522972+-512117)J=o(R,D)l=b[J]D,j,r=H(-206586+218108),3176769843161-207378,H(-179006-(-190555))d=q[l]K[S]=d d=G[Y[-715545+715546]]o,b=1019165+28309695997537,H(-73589+85054)q=G[Y[-761067+761069]]l=q(b,o)S=d[l]b,d=H(422230+-410863),5018848-(-867991)>=-205509+2638228 K[S]=d o=-280336+24274643170103 d=G[Y[2271306280%9049029]]q=G[Y[-541404+541406]]l=q(b,o)S=d[l]l=G[Y[-28608-(-28615)]]o=G[Y[47032-47031]]J=G[Y[107433+-107431]]R=J(D,j)b=o[R]o=-632123+10968967969070 q=l[b]l=-965302-(-965304)d=q+l K[S]=d d=G[Y[-29624+29625]]J=H(437410-425738)q=G[Y[888755266%13886801]]b=H(1723196332%9165876)l=q(b,o)S=d[l]d=G[Y[89383+-89376]]q,R=H(-407898-(-418754)),4692416919895-(-364338)K[S]=d d=t[q]l=G[Y[909731-909730]]b=G[Y[268122578%16757661]]o=b(J,R)q=l[o]S=d[q]l=G[Y[1681290361%14010753]]J,R=H(248465+-236726),15344078396352-(-98345)b=G[Y[820649+-820647]]o=b(J,R)q=l[o]d=S(q)J=-592503+6301010553 q=G[Y[323317369%14696244]]l=G[Y[3859533758%16493734]]o=H(10659-(-506))b=l(o,J)J=8892200937684-(-485208)S=q[b]q=2193364431%11666832 d[S]=q q=G[Y[1631496564%10804613]]l=G[Y[-182137-(-182139)]]o=H(-223684+234991)b=l(o,J)S=q[b]x,q=nil,914759-914751 d[S]=q J,o=4273446069561-826740,H(547611-536420)q=G[Y[64051+-64050]]l=G[Y[-910476+910478]]b=l(o,J)S=q[b]q=K d[S]=q q=U()b,l,S=nil,nil,1322020887%8410116>=2093027877%16059789 J=U()o=U()G[q]=S S=nil G[o]=S G[J]=l l=U()G[l]=b b=G[Y[985444+-985437]]d=nil D=G[Y[-153733+153734]]j=G[Y[-606374-(-606376)]]K=nil k=j(r,i)i=2040802987447-969217 R=D[k]S=b[R]R=g(-961070+4407873,{Y[-825295-(-825296)];Y[546482-546480];Y[389970442%3046644];F;Y[979141+-979128];Y[561742+-561737],q,J,Y[-419861+419868],l;Y[3179248361%12566199]})b,r=H(528658586%2683488),H(362373-351049)b=S[b]b=b(S,R)b=G[Y[-562345+562352]]D=G[Y[-396282+396283]]j=G[Y[-487337-(-487339)]]k=j(r,i)R=D[k]i=326930+7953463103845 S=b[R]R=M(2832650-(-431551),{Y[3196235446%16390951],Y[156562+-156560];Y[-994011-(-994021)],F,q,Y[605121+-605107];Y[-210556+210563]})b=H(294198-282748)b=S[b]F=L(F)h=nil b=b(S,R)b=G[Y[-485675+485682]]D=G[Y[43018+-43017]]r=H(480178+-469078)j=G[Y[1856786609%15869971]]k=j(r,i)R=D[k]S=b[R]R=O(893459297%7123687,{Y[2592801871%13939795],Y[2347439202%14141200],o})b,i,C=H(567195-555745),8365338895684-(-748019),nil b=S[b]b=b(S,R)b=G[Y[-856085+856100]]r=H(-982915+994130)D=G[Y[-1023462+1023463]]j=G[Y[218954+-218952]]k=j(r,i)R=D[k]Q=nil S=b[R]R=W(439631+2745589,{o;q;Y[-594954+594959];Y[320656673%10020521];Y[886434-886432],J,Y[1481759392%6470565];Y[174879417%1634387],l})J=L(J)b=H(130607+-119157)b=S[b]l=L(l)b=b(S,R)q=L(q)S=t[H(982691+-971193)]o=L(o)end else if 6134168-(-749510)>S then S=m and 10290763-(-582981)or 853872-279116 elseif 7397940-507530>S then S=o A,m=S,d F,S=m,12601214-561972 else Q=-817297+16695563884271 A=G[Y[-699927-(-699928)]]x=G[Y[-949087+949089]]S,C=16513885-931120,H(1380695725%10957812)E=x(C,Q)F=A[E]y=T[F]F=1620711315%10323002 h=y>F m=h end end else if S>-240222+6984252 then if S<6449883-(-315070)then K=H(-149027-(-160307))E=G[Y[612942+-612941]]C=G[Y[1566425352%13621090]]d=293182+2877651487742 Q=C(K,d)x=E[Q]A=B[x]S=13798620-(-139945)F=#A A=840600-840597 y=F>=A T=y elseif 611796+6182397>S then X=979781958%12724441 I=N>X S,SL=-7899+4323074,I else m=G[Y[295525-295521]]K=G[Y[180721+-180720]]J,b,o=-833345+17865840859072,-341592+28089545664880,H(-411562-(-422864))d=G[Y[104538002%5226900]]l=H(-133059+144463)q=d(l,b)Q=K[q]C=A[Q]q=G[Y[1070019189%8629187]]Q=H(-540402+552116)l=G[Y[-85534+85536]]b=l(o,J)d=q[b]K=x[d]Q=C[Q]Q=Q(C,K)K,C,d=139150+-139149,466751+-466752,657229+-657199 E=m(Q,C,K)m=G[Y[1154796714%7402543]]C=m(E)Q=G[Y[-819990+819997]]K=Q(d)m=C>K S=m and 501173+4183224 or 93554+4507909 end else if 5998463-(-717131)>S then m,S={u},t[H(971012+-960213)]elseif S<414582+6308903 then S=G[Y[-262435+262443]]x=S(A)h,S=x,41328175%16588557 else S=G[Y[143335049%4623711]]m={S(w)}S,m=t[H(-796823-(-808023))],{p(m)}end end end end else if S<8017014-771024 then if S<957373588%9409255 then if S>879681+6078704 then if S<6674862-(-324696)then S=6790712-731465 i=G[Y[805742-805740]]c=-501033+5656349192050 N=G[Y[690581+-690578]]SL=H(444300129%4992012)n=N(SL,c)SL=H(-114099-(-125195))r=i[n]k=Q[r]c=9.0803256117937e+14%19319841844757 i=G[Y[454374727%12982135]]N=G[Y[922865-922862]]n=N(SL,c)r=i[n]j=k[r]R=j elseif-727876+7746354>S then A=G[Y[337865-337861]]C=H(93343194%4057913)x=G[Y[828656155%4082050]]Q,S=14535211478189-971325,3480967676%25517211 E=x(C,Q)y=H(-18584+29515)y=s[y]F=A[E]y=y(s,F)T=y else i=-778306+3882129712977 D=G[Y[-594330-(-594332)]]j=G[Y[-312862+312865]]r=H(714672166%5104722)k=j(r,i)R=D[k]m=o[R]J=m S=J and 10422687-823497 or 619972+719686 end else if S<345172319%14707163 then d=G[Y[4122602220%16623396]]o=G[Y[511225+-511223]]j,D=-990029+27505912515925,H(1135850425%8055598)J=G[Y[-981556-(-981559)]]R=J(D,j)k,j=2673716143473-991380,H(3492146227%13968539)b=o[R]l=C[b]J=G[Y[-342212-(-342214)]]R=G[Y[799664+-799661]]D=R(j,k)o=J[D]b=C[o]q=d(l,b)d=G[Y[894928037%6129644]]K=q-d o=H(-806548-(-818219))q=G[Y[61259+-61257]]l=G[Y[1328654711%14441899]]J=6164186162945-(-582709)b=l(o,J)d=q[b]E=K[d]K=E<h S=K and 9965640-565155 or-803165+16647680 elseif-952660+7874622>S then s=G[Y[-860547-(-860551)]]h,K=H(936927+-926097),H(-497966+509255)w=G[Y[1022148034%6510497]]y=22808996287888-(-447469)T=w(h,y)C=H(-36033-(-47717))u=s[T]h,Q=H(273680489%8293006),17428083812530-(-653057)m=B[u]u=G[Y[-1045840-(-1045846)]]S=m-u y,u=-786970+10233017930935,S S=G[Y[519668+-519661]]s=G[Y[-305795-(-305799)]]d=11883912130964-(-173065)w=G[Y[544366+-544361]]T=w(h,y)m=s[T]s=G[Y[-906153+906161]]y=G[Y[667897-667888]]A=G[Y[-620855+620859]]x=G[Y[-830261+830266]]E=x(C,Q)C=27234723471532-814882 F=A[E]E=H(2727954164%15412108)h=y[F]F=G[Y[936821-936817]]A=G[Y[-548967-(-548972)]]q=H(-599265-(-610072))x=A(E,C)l=25988319428539-577654 y=F[x]T=h[y]A=G[Y[756758-756749]]E=G[Y[-49786+49790]]C=G[Y[3185336688%14284021]]Q=C(K,d)x=E[Q]F=A[x]Q=H(3128876181%15644324)x=G[Y[784275-784271]]K=26933120649682-694485 E=G[Y[-515357-(-515362)]]C=E(Q,K)Q=H(715120-703443)A=x[C]K=473423+12456671763801 y=F[A]x=G[Y[90689+-90685]]E=G[Y[-273317-(-273322)]]C=E(Q,K)A=x[C]F=u[A]h=y+F A=G[Y[928606985%7254742]]d=-229233+18997853479423 E=G[Y[373712444%12055240]]C=G[Y[-1040167+1040172]]K=H(756447-745333)Q=C(K,d)x=E[Q]F=A[x]Q=H(539391549%7097110)x=G[Y[332701+-332697]]K=177809+28973921795619 E=G[Y[676765-676760]]C=E(Q,K)A=x[C]y=F[A]E=G[Y[492247+-492238]]Q=G[Y[1026810-1026806]]K=G[Y[2348968325%13049824]]d=K(q,l)C=Q[d]x=E[C]q=15202065199347-202060 C=G[Y[56339027%333367]]Q=G[Y[2651553175%13955543]]d=H(2607037524%16711705)K=Q(d,q)E=C[K]A=x[E]C=G[Y[419978381%9766939]]Q=G[Y[1778710365%12266968]]d,q=H(255985+-244822),34191492661178-(-966263)K=Q(d,q)E=C[K]x=u[E]F=A+x u=nil w=s(T,h,y,F)S[m]=w S=-568671+6726940 else m,S={y,y},t[H(989085-977865)]end end else if S<1034274313%22328998 then if 631631+6446581>S then o=G[Y[-964711-(-964720)]]k,S,r=H(-438895+449772),2697199649%28562091,-872440+2834915579168 R=G[Y[2797274899%14127651]]D=G[Y[-343320+343322]]j=D(k,r)r=-49417+11718378182233 J=R[j]k=H(765381-754037)b=o[J]o=H(638719-627788)o=b[o]R=G[Y[80669+-80668]]D=G[Y[-969539+969541]]j=D(k,r)J=R[j]o=o(b,J)q=o elseif S<397557045%18592322 then m,S={},t[H(112587903%1705704)]else m,S=B,u S=198028+9816500 end else if S<6651121-(-503262)then m,S=s,w S=195921+1797534 elseif 3098226676%23961500>S then Q=G[Y[-868244-(-868252)]]J=H(-261287+272454)l=G[Y[1647041202%14705725]]R=12893103751359-567628 b=G[Y[-462099+462102]]o=b(J,R)q=l[o]l=417848242%17683263<=9505066-602475 Q[q]=l Q,q=T,S S=T and 1062005-(-729926)or-351426+9405689 else S=G[Y[549938+-549937]]T=G[Y[268024-268022]]h=G[Y[1874129709%8256078]]A,F=6588686236133-(-1004055),H(854892+-843154)y=h(F,A)w=T[y]T=2351452150%10141822>=15388854-(-312260)m=S(w,T)w=m S=w and-31074-(-662665)or 17231641-620019 end end end else if S>324668563%7555769 then if S>-748042+8147477 then if S<2873248456%23684654 then F=#h A=1293289371%10025499 m=F==A S=m and 1101579676%22224484 or 1338214605%12904929 elseif S<7289273-(-123481)then m=G[Y[-189769+189770]]S=not m S=S and 288571708%21594626 or 465500+13014165 else S=G[Y[532382+-532375]]y=G[Y[-278580+278582]]x,E=H(-460024+470832),-182929+19757788982913 F=G[Y[-985343-(-985346)]]A=F(x,E)h=y[A]T=s[h]h={S(T)}w,m=h[291648+-291646],h[983323+-983322]T=m S=w and 1046411+9021319 or-852169+12297627 end else if 7749298-380995>S then S=G[Y[324384668%8767153]]S=S and 72391+7324610 or-330576+5593551 elseif S<7925833-535204 then i,D=H(463706-452273),H(-182259+193054)R=t[D]N=354386+10616509541117 j=G[Y[57010913%1117861]]k=G[Y[27765081%13882539]]r=k(i,N)S=11255148-(-168134)D=j[r]m=R[D]D=G[Y[512592847%4746230]]R=m(D,J)else B=H(999918+-988744)S=t[B]s=381273+-381273 u=G[Y[652827-652819]]B=S(u,s)S=5002336-(-260639)end end else if 6328161-(-953677)>S then if S<589861+6672253 then C,E=1029769+10931708943705,H(-710520-(-721486))T=G[Y[160253-160250]]F=G[Y[750490-750486]]A=G[Y[717006183%4812122]]x=A(E,C)y=F[x]F,S=11948588-1016760<2588949888%14452153,-26978+16647871 h=T(y,F)w=not h u=w elseif S<1175666588%7489716 then m=H(-1021774+1032925)S=t[m]u=V(700350+8557937,{Y[933208-933207];Y[632445-632443],Y[-571005-(-571008)],Y[727018912%3529218];B})m=S(u)S=-942655+12330291 else u=G[Y[953256-953255]]B,T,h=m,H(525393+-514008),32258060276476-(-239537)s=G[Y[1351657386%8776996]]w=s(T,h)S=H(43702871%14563980)m=u[w]S=B[S]S=S(B,m)u=S S=u and 13066945-(-66917)or 7750904-901197 end else if-523256+7810226>S then B,T=H(-575789-(-586748)),H(-306777-(-318296))m=t[B]u=G[Y[58703236%1249005]]s=G[Y[490584+-490582]]h=-800064+13556966854120 w=s(T,h)B=u[w]S=m[B]B=.2 m=S(B)S=m and 580280+12169871 or-237436+13297363 elseif S<8208240-913867 then S=15132583-(-727280)else m,S={},t[H(896036+-884463)]end end end end end else if S<-434326+8382441 then if S<8541740-738211 then if 7257324-(-304689)>S then if S<8525965-1045079 then if-80623+7517432>S then S,o=-290282+3135300,H(675768+-664125)q=G[Y[-314590+314592]]l=G[Y[734664-734661]]J=255170+13112990675736 b=l(o,J)d=q[b]K=T[d]Q=K elseif S<98972031%22878265 then o=26563529348023-(-335002)d=G[Y[1032550+-1032545]]b=H(446656-435070)q=G[Y[2187872022%16574788]]l=q(b,o)o=H(754751+-743268)K=d[l]J=-869647+19184278906868 m=Q[K]q=G[Y[103925885%12990735]]l=G[Y[-863808-(-863814)]]b=l(o,J)d=q[b]K=H(85876298%2601959)K=m[K]K=K(m,d)m,d=K,S S=K and 1613459859%18074715 or 628010+8621614 elseif S<3624121260%15390010 then m=G[Y[733373+-733370]]S=m[u]s=S S=s and 1043076+5104268 or-1009272+14549426 else u,w=S,H(654042959%8605679)s=t[w]S,B=s and 162088566%13999112 or 2579537208%13397969,s end else if 1293873193%13540576>S then x=G[Y[-84693-(-84694)]]Q,K=H(224600-212901),-1026961+3262780207488 E=G[Y[654147+-654145]]C=E(Q,K)S=x[C]x=u A[S]=x S=99236+14640850 elseif S<-523984+8074606 then l=G[Y[-536145-(-536154)]]D=H(-255733-(-266880))o=G[Y[949787-949786]]J=G[Y[570594-570592]]j=5287956346297-(-955365)R=J(D,j)b=o[R]R=H(166119270%1031726)q=l[b]b=G[Y[2823274117%16705764]]o=G[Y[1015951-1015949]]D=5790093348918-99758 J=o(R,D)S=1524235-31438 l=b[J]d=q[l]q=H(5112-(-6221))q=d[q]q=q(d)d=290693+-289693 K=q/d Q=K else d=H(708056-697261)K=t[d]d=H(2241079425%10049634)Q=K[d]E,S=Q,-924908+15291057 end end else if S<784344621%21573104 then if 7740806-150931>S then u=G[Y[-75941-(-75943)]]h,T=794423+11929740211836,H(-841238-(-852123))s=G[Y[574023423%4991508]]w=s(T,h)m=u[w]S=B[m]m={S}S=t[H(669317+-657894)]elseif S<-788316+8447550 then A=G[Y[258925+-258924]]x=G[Y[468951-468949]]Q,C=770002+33584963927365,H(406270962%12310899)E=x(C,Q)F=A[E]h=S y=B[F]T,S=y,y and 326283+6433807 or 13004319-(-934246)else E=G[Y[-817687+817691]]C=G[Y[708031+-708026]]d,K=-839935+12259519014731,H(181675493%2359274)Q=C(K,d)x=E[Q]A=h[x]m=A-B x=G[Y[-654980-(-654984)]]Q=H(-568137-(-579025))E=G[Y[-427893+427898]]K=8506545310066-(-181767)C=E(Q,K)A=x[C]S=m[A]A,d=S,6766107971005-491887 S=G[Y[-365821-(-365829)]]C=-681090-(-681091)E=A-C K,x=H(-194627-(-206080)),218709+-218709 m=S(x,E)E=G[Y[-559750+559754]]x=m C=G[Y[692891+-692886]]Q=C(K,d)m=E[Q]S=y[m]E=S S=x>=E S=S and 2630223-422528 or-98212+15940051 end else if 8368068-643309>S then S=m and 542232+808588 or 9889525-(-887702)elseif 7160559-(-605248)>S then k=nil D=L(D)S=6142986885%26756850 j=L(j)R=L(R)r=L(r)i=L(i)q=L(q)else h=F C=y[h]K=S q=G[Y[659748385%5544104]]d=C~=q S,Q=d and 847455+10736439 or 3327512623%15348155,d end end end else if S>1252010232%14466683 then if S>-532070+8462089 then if S<7644591-(-294383)then m,S,B={},t[H(-701266-(-712634))],nil elseif 8082396-136377>S then x=-692030+692031 m=G[Y[94648400%666538]]A=h+x x=1.94 F=A/x x,A=214255393%1373432,144995.25-144995 y=m(F,A,x)S=s*y s=S S=-222701+11416938 else S=b S=l and 14855441-(-928781)or 11304179-(-1392)end else if 392755+7500903>S then S=Q and 2522953942%18576938 or 614734+9184211 elseif 2303944750%9687903>S then u=G[Y[672189995%5948584]]s=-642683+642715 B=u%s h=G[Y[1859439051%13474196]]T=h-B h,s=505593484%10991162,1285940568%6094505 w=T/h x=-171873-(-171875)u=s-w T=G[Y[336065+-336061]]F=G[Y[1985398640%11410337]]A=x^u y=F/A C=537175+-536919 h=T(y)T=-179945+4295147241 w=h%T h=1778320550%16465931 T=h^B s=w/T T=G[Y[1905741595%7715553]]A,K=-675625-(-675626),-473210-(-473466)F=s%A A=4295580497-613201 y=F*A h=T(y)F=-432469+498005 T=G[Y[6846984%978140]]y=T(s)w=h+y h,B=-276659+342195,nil u,S=nil,1525199681%13946854 T=w%h A=1162149282%5753213 y=w-T h=y/F F=T%A E=T%C x=T-E T,E=nil,693031+-692775 A=x/E E,s=459477-459221,nil x=h%E Q=h%K w=nil C=h-Q Q=-750770+751026 E=C/Q h,y=nil,{F;A;x,E}G[Y[252278866%1475315]]=y else S,m=151654-(-669523),B end end else if S>8213503-377764 then if 1953916294%18893924>S then S,m=t[H(1008409+-996805)],{}elseif S<124133+7727092 then j=G[Y[933500+-933498]]N=-1011463+11490626880493 k=G[Y[1317444299%7888888]]i=H(1115318386%12392296)r=k(i,N)D=j[r]R=J[D]k=G[Y[-864201-(-864203)]]N=H(2053176456%11098192)r=G[Y[68584475%1558738]]D,n=H(2657849459%13842909),7188383950436-842065 D=R[D]i=r(N,n)j=k[i]D=D(R,j)S=D and 10639413-(-277300)or 14770276-(-501534)else F=-784718+784719 m=y==F S=m and 119292+12507597 or-294489+3783955 end else if-708842+8517947>S then s=G[Y[811781903%3326975]]h=G[Y[195222003%2674274]]w,x,A=H(244911576%1188836),10420123188868-(-1021040),H(1183715705%16671899)y=G[Y[-499235-(-499237)]]w,S=s[w],490878+13373433 F=y(A,x)T=h[F]w=w(s,T)B=w elseif 4364559758%18860339>S then u,x=w,S F=s[u]C=G[Y[45584610%3256043]]E=F~=C A,S=E,E and-92180+2157519 or 675421+15545635 else m={}h=m m=G[Y[454895+-454888]]y=H(-35988-(-47657))y=m[y]y=y(m)m=506757+-506756 F=#y A=F F=700683193%7077608 x=F F,S=635784-635784,2134036748%16579660 E=F>x F=m-x end end end end else if 8077597-(-67674)>S then if 1703643350%23881139>S then if S<317915879%23838795 then if S<-673545+8625962 then S,m=h,T S=-688016+16958448 elseif S<-303844+8283947 then y,E=H(167977922%988041),H(3046305273%12234111)h=t[y]F=G[Y[267207+-267205]]A=G[Y[-9729-(-9732)]]C=-707986+30355049022665 x=A(E,C)S=1405367-(-135568)y=F[x]T=h[y]y=G[Y[9936378%4968188]]E,x=413414+8570475266224,H(312145156%1431806)F=G[Y[-9637-(-9640)]]A=F(x,E)h=y[A]w=T[h]m=w else m,E=H(951361-939764),21788351062847-(-50274)S=G[Y[-473785+473789]]K,m=-216239+17582675389610,S[m]m=m(S,B)y=G[Y[48324-48323]]Q,x,h=H(-99944-(-110905)),H(923274-911745),m F=G[Y[623209-623207]]A=F(x,E)m=y[A]S=u[m]y=S x=G[Y[548945+-548944]]E=G[Y[653904+-653902]]C=E(Q,K)A=x[C]F=T[A]m=y-F A=G[Y[146121787%4713606]]Q,C=18638025148925-(-530410),H(820289-809211)x=G[Y[342288+-342286]]E=x(C,Q)F=A[E]S=m[F]m,F=h,S S=h and 2177572479%13595251 or 14694524-60478 end else if-1001275+9036257>S then S=E and 895721+681232 or-794571+16839758 elseif 3323968540%16415354>S then eL=-436968+34001145948353 SL=G[Y[362872492%2812965]]z=G[Y[-659818-(-659819)]]tL=G[Y[43643138%170481]]ZL,YL,vL=H(2028906810%12601837),2725680938664-(-968269),H(-325973-(-337294))pL=tL(ZL,YL)ZL=H(118504-107646)HL=z[pL]YL=-904200+34157411011113 X=A[HL]z=G[Y[642633-642632]]tL=G[Y[534041342%3445428]]pL=tL(ZL,YL)HL=z[pL]I=X[HL]pL=G[Y[1673527591%11868990]]ZL=G[Y[193135457%1369755]]YL=ZL(vL,eL)X=1019635+-1019635 tL=pL[YL]z=A[tL]pL=G[Y[619918-619917]]ZL=G[Y[-166990-(-166992)]]vL,eL=H(166145-154963),-254074+20199874528568 YL=ZL(vL,eL)tL=pL[YL]HL=z[tL]c=SL(I,X,HL)I=G[Y[909735-909734]]z,tL=H(373038-362043),22970423089938-241994 X=G[Y[260900452%4922650]]HL=X(z,tL)SL=I[HL]HL=.85 N=c[SL]c=S X=N*HL I=D<X S,SL=I and 4267042892%18934547 or 1948370834%10740639,I else m,y=131802448%4544912,s S=y==m S=S and 4529558346%18391133 or 7323586-(-536190)end end else if 1634024609%17115021>S then if 8733544-650778>S then S=G[Y[-974758-(-974763)]]m={S(B,p(u))}S,m=t[H(-399462+411039)],{p(m)}elseif S<716535553%21468050 then s=nil G[Y[865281+-865275]]=m u,S=nil,w S=11729575-382407 else s=G[Y[674925769%8230802]]S,m=s and 1162900-(-726264)or-816095+12974834,s end else if 617417+7488790>S then w=H(202546047%5625957)s=t[w]T=G[Y[551127+-551126]]w=s(T)S,B=6180313-(-946847),w elseif 675961+7450820>S then w=H(958450+-947519)w=B[w]h=G[Y[1003117-1003115]]y=G[Y[-459705+459708]]x,A=26434687868697-(-463100),H(-656186-(-667865))F=y(A,x)T=h[F]S=2102872213%23004652 w=w(B,T)m=w else S,m=t[H(797308178%4608655)],{}end end end else if S<8367199-51673 then if-502218+8757069>S then if 7258227-(-921618)>S then A,F,S=nil,nil,10820333-(-642288)elseif 8870985-654292>S then B,m,S,s,u=nil,{},t[H(206753000%1531418)],nil,nil else S,I=13355063-99150,-472704+32123659841774 N=G[Y[3438617502%13754470]]n=G[Y[1275561327%13864797]]c=H(882856+-871478)SL=n(c,I)i=N[SL]r=J[i]i=1433149740%10857195 k=r>i D=k end else if 158507867%12518465>S then S,m=t[H(-245533+256443)],{}elseif S<8317828-27433 then m,S=nil,B G[Y[977610+-977603]]=S G[Y[929305665%14520401]]=m u=G[Y[-876613+876617]]s=H(133309247%7405421)s=u[s]s=s(u)S,u=1258058661%10527663,-181591+181592 w=#s T=w w=-901152-(-901153)h=w w=-540181+540181 y=h<w w=u-h else C,S,h=nil,-1020656+11642506,nil end end else if S<141053+8246589 then if 195154+8162356>S then q=G[Y[-750966+750968]]o=H(468870401%6011010)l=G[Y[646200+-646197]]J,R=31756175586005-(-247534),-961568+23771548079965 b=l(o,J)J=H(470803964%10699826)m=q[b]S=d[m]m=H(1019631-1008700)l=G[Y[288917+-288915]]b=G[Y[46116+-46113]]m=S[m]o=b(J,R)q=l[o]J=H(910048517%8505019)m=m(S,q)l=G[Y[192082-192080]]R,q=34187231391994-(-363829),m b=G[Y[-742043-(-742046)]]o=b(J,R)R=H(417785-406105)m=l[o]D=186776+6749779489455 S=d[m]m=H(964388-952737)b=G[Y[538590345%11459369]]o=G[Y[-856795-(-856798)]]J=o(R,D)m=S[m]l=b[J]m=m(S,l)S,l=q and 2923001543%18945438 or-843464+12160327,m m=q elseif 2673958825%20041941>S then S=2840840148%13392253 else S,N=10331837-622287,nil end else if S<737412+7684863 then K=10139101996548-742291 x=G[Y[745419148%5401588]]E=G[Y[-950903-(-950908)]]Q=H(-476479+488104)C=E(Q,K)A=x[C]F=y[A]m=F-u Q,C=-28505+222136332224,H(-461293-(-472262))A=G[Y[-557836+557840]]x=G[Y[554839-554834]]E=x(C,Q)F=A[E]S=m[F]F,m=S,-347098.5-(-347099)S=F>m S=S and 889332799%19443001 or 2182212450%13950267 elseif S<2088697729%18247598 then d=G[Y[-728684+728686]]q=G[Y[-738997-(-739000)]]o,b=22885558897359-(-40657),H(196497791%8931204)l=q(b,o)K=d[l]S=Q[K]o,J=H(665209+-654130),70121+32246881790143 G[Y[155435+-155420]]=S q=G[Y[406826-406824]]l=G[Y[416546-416543]]b=l(o,J)d=q[b]S=13047048-236460 K=Q[d]G[Y[2847803611%14604121]]=K else S,x=1780476917%10028226,nil end end end end end end else if S>2531182115%18303054 then if 116068+5815325>S then if S<966949116%9424232 then if-923277+6422264>S then if S>69868+5326273 then if S<-883738+6297696 then b,o=l,S S=l and-792137+13439546 or 906970+8933261 elseif S<5531314-78944 then S=G[Y[-34917+34927]]C=G[Y[713060-713058]]q,l=8365710577149-(-786746),7022110898046-(-234823)Q=G[Y[-359333-(-359336)]]d=H(-813484+824628)K=Q(d,q)E=C[K]Q=G[Y[-776666-(-776668)]]q=H(418998-408169)K=G[Y[828528-828525]]d=K(q,l)C=Q[d]F=S(E,C)q=H(124951848%5205877)o=-363922+6261455280373 S=G[Y[-184839+184849]]l=9975426057082-(-577195)Q=G[Y[-40012+40014]]K=G[Y[-845142+845145]]d=K(q,l)b=H(236250852%2952998)C=Q[d]Q=62209914%2488396 E=S(C,Q)d=G[Y[462923-462921]]q=G[Y[-483682+483685]]l=q(b,o)K=d[l]Q=F==K C,S=Q,Q and 1338439-(-488384)or 4897363254%23580590 else x,A=h,nil C=#y E,Q=372214165%1889412,C C=35368+-35367 d=C C=285818-285818 q,S=d<C,-262032+15711495 C=E-d end else if-722496+6099132>S then S=m and-507901+1376535 or 3723522526%27056647 elseif 1453349823%5983327>S then N=G[Y[963695548%5840579]]SL=S n=N(A,C)S,N=A and 4521769065%22661132 or 227556+4682681,A elseif S<740934+4646363 then S=413863+8221956 else F,S=nil,10512656-188260 G[Y[2260185796%12350742]]=F end end else if 302481721%14139659>S then if 1633395582%10111007>S then u=G[Y[232015-232012]]s=-766692+766906 B=u*s u=70613282%14122605 m=B%u s=-450088+450089 G[Y[2576265171%13850888]]=m u=G[Y[-876354-(-876357)]]B=u~=s S=B and-374250+8270355 or-119671+5636730 elseif S<5758192-225543 then S=LG[-113862+113863]S=GG and 2864957-514311 or 404801+15929827 else c=G[Y[-972470-(-972487)]]S,n=1185323455%29240009,c end else if 6011094-426884>S then m,S={},t[H(-686648+697613)]elseif 773382+4867886>S then S=m and 3151097587%14766080 or 2833111175%18337907 else m,K=H(897123+-885817),H(-564359-(-575631))m=B[m]m=m(B)d=3146902155333-797324 E=G[Y[-26850-(-26851)]]C=G[Y[936861-936859]]Q=C(K,d)x=E[Q]q=20031938260664-100936 S=m[x]d,x=H(949973+-938422),S S=1152411521%8864704 C=G[Y[198959+-198958]]E=S Q=G[Y[-126571+126573]]K=Q(d,q)m=C[K]S=H(-952231+963162)S=s[S]S=S(s,m)S=S and 14714611-(-714804)or 5471066261%25265908 end end end else if S<6170401-374134 then if S<-723457+6494386 then if-35220+5735195>S then C=-1006472+1006472.75 S=G[Y[528094+-528090]]E=x*C o=-894014+11927121426927 m=S(h,E)d=G[Y[428228-428227]]q=G[Y[88573242%8857324]]b,E=H(823590+-812079),m l=q(b,o)K=d[l]Q=A[K]C=Q*E S,E=-807657+807658,nil m=y+C w[S]=m S=-531477+11131326 elseif S<-610914+6355144 then S=t[H(-679990-(-691526))]l=V(1024022+12053050,{T})b={l()}m={p(b)}else S=T and-158995+14079237 or 2052506135%13831878 end else if 5944970-164339>S then w=G[Y[1616487056%14179711]]y=H(305545-294423)T=G[Y[161237009%798203]]F=13135161005776-458476 h=T(y,F)s=w[h]S,u=-699673+2656503,H(333793-322862)u=B[u]u=u(B,s)m=u elseif S<1703356259%7969809 then m,C={},H(911565-900080)C,w,B,E=s[C],nil,nil,nil C=C(s,T,h)u,s,y,F,T,S,h=nil,nil,nil,nil,nil,t[H(868216-857256)],nil else T=G[Y[374459233%3900617]]F=H(1321890987%11494603)h=G[Y[-383382-(-383384)]]A=-21117+19109381158207 y=h(F,A)w=T[y]s,S=H(889190-878259),-223576+7943318 s=u[s]s=s(u,w)m=s end end else if 914518+4956360>S then if S<6832094-1020230 then F=not T h,y=F,S S=F and 1520632-181669 or 1633952-(-132195)elseif S<1727346243%7583736 then S=-617512+16600875<2890245601%17276210 m={S}S=t[H(1693660187%7527330)]else C=G[Y[-483212+483213]]Q=G[Y[-682894-(-682896)]]d,q=H(-166280+177858),24133+33597452197592 K=Q(d,q)E=C[K]x=A[E]S=x~=u S=S and-195170+7687607 or 30528636%15788550 end else if S<4493900332%20307715 then u=s S=G[Y[3291617%411452]]F,A=-187369-(-187369),581621964%6685307 y=S(F,A)B[u]=y u,S=nil,6828266-649459 elseif S<6589183-674646 then SL=S c=G[u]n,S=c,c and-650077+4972858 or 1019918338%11317753 else S=7982606-(-11099)<1001800+5850785 m={S}S=t[H(416694+-405795)]end end end end else if S<1063234642%11877324 then if 5980590-(-69875)>S then if S<3081954176%17280836 then if 583149+5366661>S then F,y=-943993+10027033196982,H(-434446-(-446057))w=G[Y[-467354+467356]]T=G[Y[994400283%4603705]]h=T(y,F)m=w[h]S=s[m]m={S}S=t[H(546863+-535406)]elseif 5137557-(-822103)>S then m,S={},t[H(-602411-(-613560))]else F,S=y,y and 619121640%6940244 or 727509+767198 end else if S<-596017+6591024 then m,S={u},t[H(362638-351309)]elseif S<311367+5719083 then S=D S=R and-1014734+8857409 or 654682+1990140 else E,x=S,T S=T and 388151+10497630 or 6655492-385958 end end else if-614564+6733629>S then if 1648560914%19323344>S then S,o=D,R S=774544-351086 elseif S<5422848-(-678920)then y=G[Y[8026530%250829]]E,x=-971425+4057938844162,H(-711348+722336)F=G[Y[50252+-50249]]A=F(x,E)h=y[A]T=B[h]m,S=T,T and 3412398462%31445344 or 15895729-11718 else S=m and 9680997-104647 or 123659+7958962 end else if S<6510729-379830 then S=l J,b=S,S o,S=q,q and-739266+13329719 or 1762198448%11378794 elseif S<1023828324%9880467 then s=G[Y[-151265-(-151267)]]h=H(302759256%4264060)w=G[Y[-989351-(-989354)]]y,S=813145+8252832294570,H(653020-642089)T=w(h,y)m=s[T]S,w=B[S],H(-597098-(-608029))S=S(B,m)h=G[Y[868447602%8684476]]y=G[Y[889689-889686]]x,w,A,s=-761529+10371256447382,B[w],H(-188339+199992),S F=y(A,x)T=h[F]w=w(B,T)S,m=w and-762327+10211208 or-645128+8759208,w else m=G[Y[551126+-551125]]y=10457505277038-86377 w=G[Y[-703828-(-703830)]]F,h=H(447840-436323),H(794746-783400)T=w(h,y)A=8902154132844-(-406213)S=m[T]T=G[Y[638370+-638369]]h=G[Y[-35948+35950]]y=h(F,A)A,h=-760376+12552960635149,H(2439499887%12907346)w=T[y]F=H(415632+-404766)m=s[w]y=5472980638898-299710 u[S]=m m=G[Y[-21275+21276]]w=G[Y[106356+-106354]]T=w(h,y)S=m[T]T=G[Y[767832-767831]]h=G[Y[1659474416%7091771]]y=h(F,A)w=T[y]A=6371197402084-(-855986)m=s[w]u[S]=m h,F,y=H(-500075-(-511640)),H(-117661-(-128637)),22570833522011-(-48051)m=G[Y[3147628225%15132828]]w=G[Y[496348661%5705157]]T=w(h,y)S=m[T]T=G[Y[-421631-(-421632)]]h=G[Y[-494972-(-494974)]]y=h(F,A)w=T[y]m=s[w]u[S]=m S=-391184+13931338 end end end else if S>673534+5596853 then if S<3170239039%16142422 then if 838431731%13208887>S then S=12165198-(-66433)~=7321143-(-1007621)S=S and 1209221485%6004609 or-286197+2845693 elseif S<5979221-(-318281)then y=904490-904489 w=G[Y[-287000+287004]]S,h=t[H(425093142%5667762)],.15 T={w(s,h,y)}m={p(T)}else S,F,y,A={},H(-1045711+1056937),370679903%2989352,897596+-897595 G[Y[206014702%8240588]]=S m=G[Y[867053-867050]]w,T=m,-874037+35184372962869 m=u%T G[Y[56970-56966]]=m h=u%y S,y=574150678%22347451,-911683-(-911685)T=h+y G[Y[-728214-(-728219)]]=T E=342284+-342283 h=#B y=H(-479464-(-490690))s[u]=y x,C=h,E E=858789840%10734873 Q=C<E E,y=A-C,-166156+166243 end else if 443522148%15613574>S then S=107981+3665843 elseif 54412973%6863824>S then y=G[Y[847892501%8231966]]m=y[h]S=not m S=S and 9809418-(-575256)or 3160455-(-142736)else I,j=H(262598+-251085),-265217-(-265302)D=l/j J=D+q D=G[Y[93227-93220]]i=G[Y[-488130+488131]]c=585361+5733301771228 N=G[Y[475650+-475648]]SL=H(93758580%669622)n=N(SL,c)X=-404480+26462046542882 r=i[n]k=C[r]r=91281319%1547141 n=G[Y[678684+-678683]]SL=G[Y[678344249%3374847]]c=SL(I,X)N=n[c]i=C[N]j=D(k,r,i)r=G[Y[519592-519591]]n=H(714028436%14000332)i=G[Y[-991270+991272]]SL=-398498+3117329947213 N=i(n,SL)k=r[N]D=j[k]k=16.715 r=D>k S=r and 928894595%15265564 or 876572+4506403 end end else if S<241022+5943052 then if 1165029760%8914324>S then S,m,B=t[H(-897744-(-909402))],{},nil elseif S<2231934537%13327884 then S,y=5424990-(-380046),nil else y,s=not h,T+s u=w>=s u=y and u y=s>=w y=h and y u=y or u y=5185830-(-698277)S=u and y u=346803+14627846 S=S or u end else if S<3708068977%18146389 then Q=G[Y[1586853452%11754470]]q,l=H(-326346-(-337422)),-954626+23605056961521 K=G[Y[428735-428732]]d=K(q,l)C=Q[d]Q=2995746390%12031110 m=E[C]S=m-T C,m=S,H(75230494%5372770)m=C[m]m=m(C,C)S=m>Q S=S and 3357977399%26981946 or-356380+1720189 elseif 6758869-513151>S then x,l,q=S,465229952893%77540638277,H(-487258-(-498860))Q=G[Y[464376-464372]]K=G[Y[-872905-(-872910)]]d=K(q,l)C=Q[d]E=F[C]A,S=E,E and 2936268097%18684255 or 11006234-425110 else m,S=x,E S=17680587-1041521 end end end end end else if S>5612812-693283 then if 1266672694%6276103>S then if S<3128347635%21689673 then if-659052+5636621>S then if 4498581-(-432608)>S then T=G[Y[-428370+428372]]A,S,s=-917159+8148308708729,4370086544%21138196,H(-859857-(-870788))s,F=u[s],H(772642+-761151)h=G[Y[3742331056%16342057]]y=h(F,A)w=T[y]s=s(u,w)m=s elseif S<281232047%13814303 then EL,S,CL,FL=H(205448681%1022079),UL,5320563517318-728537,165608+3449378455390 BL=U()UL=196.2 mL,ML=sL or UL,nil UL=U()uL=nil sL=U()G[BL]=mL mL,wG=-192425.5-(-192427),-97235+22891974665590 G[sL]=mL mL={}G[UL]=mL LL,mL,fL={},{uL,ML},H(43165187%7192296)ML=H(559140+-547738)uL=U()G[uL]=mL mL=t[ML]gL=5.7739243521011e+15%23761005567018 WL=G[u]OL=G[w]VL=OL(fL,gL)PL=WL[VL]OL=G[u]TL,aL,gL=18482472145720-(-429670),946876+23592075573293,H(-827891+838870)VL=G[w]fL=VL(gL,aL)WL=OL[fL]dL,wL,aL=29327679335565-(-477387),{[PL]=WL},3550188575416-742467 ML=mL(LL,wL)LL=H(525853-514451)mL=U()G[mL]=ML wL={}ML=t[LL]OL=G[u]gL=H(-919388+931092)VL=G[w]fL=VL(gL,aL)WL=OL[fL]VL=G[u]fL=G[w]aL=H(-386421-(-397717))gL=fL(aL,TL)OL=VL[gL]PL={[WL]=OL}LL=ML(wL,PL)wL=U()yL=H(-42044+53370)ML=U()VL=U()G[ML]=LL LL=G[HL]G[wL]=LL PL=U()LL=G[HL]OL=U()G[PL]=LL LL=G[HL]WL=U()G[WL]=LL kL=U()eG,LL=H(-26831-(-37748)),126897459%22432441<=3026296843%18270798 G[OL]=LL oL,LL=-519060+6987070453833,225949-225949 fL=U()uG=H(-38046+49525)G[VL]=LL LL=nil G[fL]=LL aL=U()gL=U()LL=269424+15220453<1364095503%16663213 G[gL]=LL LL=-613585-(-613585)G[aL]=LL TL=G[u]hL=G[w]AL=hL(yL,FL)xL=H(-579500-(-590444))LL=TL[AL]AL=H(746977236%4292907)TL=U()G[TL]=LL hL=t[AL]yL=G[u]FL=G[w]KL=FL(xL,CL)AL=yL[KL]LL=hL[AL]lL=1038604+20717109333155 hL=LL()LL=U()G[LL]=hL CL,xL=32769269870769-(-772842),H(-804085-(-815227))hL=G[LL]yL=G[u]FL=G[w]KL=FL(xL,CL)AL=yL[KL]xL=H(-391533+402485)KL=t[xL]CL=G[u]QL=G[w]qL=QL(EL,dL)xL=CL[qL]FL=KL[xL]dL,LG[152707-152704]=H(-470286+481649),1017627+1750644505620 xL=G[u]EL=806975+27262083604823 CL=G[w]qL=H(1352480897%7044115)QL=CL(qL,EL)KL=xL[QL]yL=FL[KL]hL[AL]=yL AL=G[K]FL=G[u]CL,QL=H(437941427%2157293),-106380+23891030100737 KL=G[w]xL=KL(CL,QL)yL=FL[xL]hL=AL[yL]AL=U()G[AL]=hL JL=1042443+25188116530630 hL=G[R]xL=G[AL]QL=G[u]qL=G[w]EL=qL(dL,lL)CL=QL[EL]KL=xL[CL]lL,xL=H(918490+-906858),231075177%9243007 FL=KL/xL CL=G[AL]qL=G[u]EL=G[w]dL=EL(lL,JL)QL=qL[dL]xL=CL[QL]JL,CL=H(-475800+487347),-264663-(-264665)KL=xL/CL yL=hL(FL,KL)hL=U()G[hL]=yL yL=3312548486%14095951 FL=U()G[FL]=yL xL=H(1948746777%10149666)yL=g(13002427-605172,{K,u;w;AL;R;hL;X,FL})KL=yL()QL=H(417319521%6047940)KL=G[T]CL=G[K]EL=G[u]dL=G[w]lL=dL(JL,oL)qL=EL[lL]bL,HG,QL=-794384+924697436350,nil,CL[QL]QL=QL(CL,qL)qL=H(459358520%2187367)qL=QL[qL]CL={qL(QL,yL)}dL,xL=H(-4329-(-15781)),KL[xL]xL=xL(KL,p(CL))CL=H(-876675-(-888339))xL=t[CL]QL=G[u]lL=30398779645178-(-531025)qL=G[w]EL=qL(dL,lL)lL=-770579+10060584932447 CL=QL[EL]dL=H(2757577418%14746342)KL=xL[CL]QL=G[u]qL=G[w]EL=qL(dL,lL)lL=-927300+6485410279952 CL=QL[EL]xL=KL(CL)DL=U()KL=U()G[KL]=xL xL=G[KL]QL=G[u]dL=H(1029917+-1018976)qL=G[w]EL=qL(dL,lL)CL=QL[EL]QL=.8 xL[CL]=QL xL=G[KL]QL=G[u]lL,dL=27072867865520-(-286094),H(-312886-(-324140))qL=G[w]EL=qL(dL,lL)CL=QL[EL]dL,lL,QL=H(94328734%1164413),-285473+31074811433895,-839821+839857 xL[CL]=QL xL=G[KL]QL=G[u]qL=G[w]EL=qL(dL,lL)CL=QL[EL]QL=2578517139%19778778>=6371046071%25034727 xL[CL]=QL dL,lL=H(865318-853599),-153887+10716118658205 xL=G[KL]QL=G[u]qL=G[w]jL=V(5034004832%20939238,{y;u,w,K;uL;YL,UL;LL})EL=qL(dL,lL)lL=805130+10897403595464 CL=QL[EL]dL,QL=H(344187030%2710044),5553886-(-380868)>=369560+11523079 xL[CL]=QL xL=G[KL]QL=G[u]qL=G[w]EL=qL(dL,lL)CL=QL[EL]QL=.8 xL[CL]=QL CL=H(247011497%15437537)xL=G[T]QL=G[KL]CL=xL[CL]CL=CL(xL,QL)QL=H(532666-521002)CL=t[QL]JL,lL=129142+33727815402723,H(-51567-(-62525))qL=G[u]EL=G[w]dL=EL(lL,JL)QL=qL[dL]JL=23451185743812-318748 xL=CL[QL]qL=G[u]lL=H(-852473-(-864045))EL=G[w]dL=EL(lL,JL)QL=qL[dL]JL,lL=2780743107005-294063,H(461564816%5016886)CL=xL(QL)xL=U()G[xL]=CL CL=G[xL]qL=G[u]EL=G[w]dL=EL(lL,JL)JL,lL=18884+27757571336377,H(318895-308105)QL=qL[dL]qL=113808876%16258410 CL[QL]=qL CL=G[xL]qL=G[u]EL=G[w]dL=EL(lL,JL)QL=qL[dL]qL=1.2 CL[QL]=qL UG,JL=-205118+21629402187925,-1037603+8817898759469 CL=G[xL]qL=G[u]lL=H(-928247-(-939197))EL=G[w]dL=EL(lL,JL)QL=qL[dL]qL,JL=-355850+7991044<=-645725+6707645,-41303+14924305906812 CL[QL]=qL CL=G[xL]RL=28446272891186-(-871052)qL=G[u]lL=H(-607823+619102)EL=G[w]dL=EL(lL,JL)QL=qL[dL]JL,dL=399963761%3100494,609485+-609230 qL=G[k]lL=291834-291799 EL=qL(dL,lL,JL)CL[QL]=EL CL=G[xL]JL,lL=457915+25304503513420,H(269927556%5398333)qL=G[u]EL=G[w]dL=EL(lL,JL)QL=qL[dL]qL=2288587387%17796748<806785+292766 CL[QL]=qL CL=G[T]qL=G[xL]QL=H(186785945%11673440)QL=CL[QL]QL=QL(CL,qL)qL,JL,oL=H(1416789493%14605957),H(-108805+119655),346132+32578902258478 QL=t[qL]EL=G[u]dL=G[w]lL=dL(JL,oL)qL=EL[lL]oL=897914+3332009398933 CL=QL[qL]EL=G[u]JL=H(213604-202264)dL=G[w]lL=dL(JL,oL)qL=EL[lL]QL=CL(qL)tG,JL=nil,H(1043410-1032425)CL=U()oL=28854691259518-(-561150)G[CL]=QL QL=G[CL]EL=G[u]dL=G[w]lL=dL(JL,oL)qL=EL[lL]EL=828300+-828297.5 QL[qL]=EL oL=890112+15877002184673 QL=G[CL]EL=G[u]JL=H(1332940284%7488364)dL=G[w]lL=dL(JL,oL)qL=EL[lL]EL=-17364+17365 QL[qL]=EL QL=G[CL]EL=G[u]JL=H(141088-129936)dL=G[w]oL=-432621+6781389350466 lL=dL(JL,oL)JL=H(2390977673%12014908)qL=EL[lL]oL,EL=34175254329716-(-279734),2171642495%8631487~=195466042%16717376 QL[qL]=EL QL=G[CL]EL=G[u]dL=G[w]lL=dL(JL,oL)JL=2179516431%15135529 qL=EL[lL]EL=G[k]oL,lL=1836110733%9134878,131945-131690 dL=EL(lL,JL,oL)JL=H(91579158%2233364)QL[qL]=dL QL=G[CL]oL=13461901225365-(-387815)EL=G[u]dL=G[w]lL=dL(JL,oL)qL=EL[lL]EL=553044+4055386>=741809+15331397 QL[qL]=EL QL=G[T]qL=H(-813782-(-824687))EL=G[CL]qL=QL[qL]NL=a(2782245886%11123680,{u,w,d;r,X,z;tL})qL=qL(QL,EL)EL=H(-529822-(-541486))qL=t[EL]dL=G[u]lL=G[w]oL=H(482221-470965)JL=lL(oL,bL)EL=dL[JL]QL=qL[EL]oL=H(1955988995%8049291)dL=G[u]sG,bL=H(396149-385174),765746+26252966150286 lL=G[w]JL=lL(oL,bL)EL=dL[JL]LG[-230718-(-230719)]=-43926+28201887882978 qL=QL(EL)QL=U()G[QL]=qL bL=2168559324905-(-177416)qL=G[QL]dL=G[u]oL=H(115490-104250)lL=G[w]JL=lL(oL,bL)EL=dL[JL]dL=1042605917%11332673 qL[EL]=dL qL=G[QL]dL=G[u]bL,oL=614297+21641806399428,H(-404273-(-415835))lL=G[w]JL=lL(oL,bL)oL=-206052+206052 EL=dL[JL]LG[-102493+102499],JL=529830+34399491631340,53672-53487 dL=G[k]bL=66384540%402329 lL=dL(JL,oL,bL)qL[EL]=lL qL=G[QL]dL=G[u]bL,oL=788399+16256711595491,H(-226776+237904)lL=G[w]JL=lL(oL,bL)bL=25426615607098-389370 nL=W(875768+720584,{y;u;w})EL=dL[JL]dL=.65 qL[EL]=dL qL=G[QL]dL=G[u]lL=G[w]oL=H(975105-964001)JL=lL(oL,bL)EL=dL[JL]dL,bL=16358631-1007087<=562031142%13081684,H(494261572%3108495)qL[EL]=dL EL=H(-101935-(-112840))qL=G[T]EL=qL[EL]dL=G[QL]EL=EL(qL,dL)dL=H(761425947%15539067)EL=t[dL]lL=G[u]IL=M(263139+14825006,{YL,UL,y;u;w,K,LL,X})JL=G[w]oL=JL(bL,RL)dL=lL[oL]bL=H(-862092-(-873172))qL=EL[dL]RL=32354740649530-869216 lL=G[u]JL=G[w]oL=JL(bL,RL)dL=lL[oL]EL=qL(dL)qL=U()bL=H(-869104-(-880369))G[qL]=EL EL=G[qL]lL=G[u]JL=G[w]RL=-997225+4076010045139 oL=JL(bL,RL)dL=lL[oL]bL,lL=H(741592+-730711),906055+-906054 EL[dL]=lL EL=G[qL]lL=G[u]RL=248971278017-(-313778)JL=G[w]oL=JL(bL,RL)dL=lL[oL]oL,RL,bL=661829350%5561590,-336212+336467,638745-638745 lL=G[k]JL=lL(oL,bL,RL)bL=H(67701199%578545)EL[dL]=JL SG=U()EL=G[qL]lL=G[u]RL=1006578+27569146844723 JL=G[w]oL=JL(bL,RL)dL=lL[oL]lL=.9 EL[dL]=lL EL=G[qL]lL=G[u]RL,bL=14136592587777-(-622005),H(918340-906598)JL=G[w]oL=JL(bL,RL)dL=lL[oL]lL=406780+12843405<8268605-430252 EL[dL]=lL EL=G[T]lL=G[qL]RL=W(15971144-(-397581),{u,w})dL=H(516030+-505125)bL=g(150101+16249409,{y,u,w})dL=EL[dL]dL=dL(EL,lL)dL=g(17263475-607939,{T,u;w})EL=U()G[EL]=dL dL={}oL=f(-218202+12483317,{pL,VL;y,u,w,OL})lL=U()JL=W(14583048-(-526907),{lL,u,w})G[lL]=dL dL=U()G[dL]=JL JL=U()G[JL]=oL oL=U()mG=9219494158423-(-815214)G[oL]=bL bL=U()rL=W(-758749+4400495,{DL;u,w,s,bL;pL,kL,y})G[bL]=RL RL=U()G[RL]=jL jL=nil G[DL]=jL jL=993694-993694 G[kL]=jL jL=U()iL=W(10768523-(-1000207),{y;u,w,EL,s,GL,RL,fL;jL;DL;K,R,hL})G[jL]=rL rL=U()G[rL]=iL iL=U()G[iL]=NL NL=U()G[NL]=nL nL=U()LG[-476770-(-476777)]=21233383366936-1014393 G[nL]=IL cL=M(17218+2638291,{u;w,y,s,mL;r;d;HL;h;EL,X;I;iL,i;YL;UL;K,LL,BL;NL;nL})IL=U()G[IL]=cL zL=g(581631967%2310494,{pL,aL,sL;oL,u;w;s,y})cL=U()XL=a(15460901-902662,{oL;u;w;y,fL,rL;IL;j,K;EL;I})G[cL]=XL XL=U()G[XL]=zL zL=nil G[SG]=zL zL=U()G[zL]=tG tG=U()G[tG]=HG HG=f(1799614616%7576456,{u;w,y;SG,EL,eL,zL;D;k;x;T,R,cL;ZL,E})pG=HG()pG=a(1410203675%17984550,{SG,EL;u;w;JL})G[tG]=pG ZG=G[T]YG=G[u]vG=G[w]GG=vG(eG,mG)BG=YG[GG]mG,uG=H(310005+-299180),ZG[uG]vG=G[u]GG=G[w]eG=GG(mG,UG)YG=vG[eG]uG=uG(ZG,BG,YG)eG=H(60460743%1405809)YG=G[u]ZG,LG[1872871442%15607262]=H(774873-763971),1853858907249-(-474862)ZG,mG=uG[ZG],-316548+19684477941842 vG=G[w]UG=966445+6464434130069 GG=vG(eG,mG)mG=23559566725742-(-399468)BG=YG[GG]ZG=ZG(uG,BG)YG=G[u]vG=G[w]eG=H(-51176-(-62475))GG=vG(eG,mG)BG=YG[GG]mG=H(319747-308457)vG=G[u]GG=G[w]eG=GG(mG,UG)YG=vG[eG]eG=H(48566129%1387272)vG=f(1921827545%8984451,{})ZG=H(647174-636154)ZG=uG[ZG]ZG=ZG(uG,BG,YG,vG)YG=G[u]mG=797518+27637940258551 vG=G[w]UG=28876075954387-146509 GG=vG(eG,mG)BG=YG[GG]ZG=H(788440716%3961959)vG=G[u]mG=H(185106+-174238)GG=G[w]eG=GG(mG,UG)YG=vG[eG]eG=G[u]mG=G[w]UG=mG(sG,wG)GG=eG[UG]mG=G[u]ZG,wG=uG[ZG],H(-98810-(-110491))UG=G[w]sG=UG(wG,LG[-860054-(-860055)])eG=mG[sG]vG={GG;eG}GG=f(-26214-(-983127),{})eG,LG[-317752-(-317753)]=H(1251482250%9701329),-596140+28534656306323 ZG=ZG(uG,BG,YG,vG,GG)YG=G[u]vG=G[w]mG=26626094376390-79192 GG=vG(eG,mG)BG=YG[GG]UG=20634404080888%174867887403 vG=G[u]GG=G[w]wG,mG=10040078627209-(-352442),H(309985+-298594)eG=GG(mG,UG)mG=-54477+1382544316240 YG=vG[eG]ZG=H(225106-214086)vG=g(843742-645657,{})ZG=uG[ZG]ZG=ZG(uG,BG,YG,vG)YG=G[u]ZG=H(-466220+477240)vG=G[w]ZG,eG=uG[ZG],H(-215124-(-226449))GG=vG(eG,mG)BG=YG[GG]UG=-180444+34991434121346 vG=G[u]GG=G[w]mG=H(691482067%13558246)eG=GG(mG,UG)YG=vG[eG]vG=O(1054499022%11705668,{})ZG=ZG(uG,BG,YG,vG)ZG,mG=H(-790903-(-801778)),11106572236929-992334 YG=G[u]vG=G[w]sG,eG=H(801051+-789541),H(182931-171847)GG=vG(eG,mG)BG=YG[GG]vG=G[u]mG,UG=H(8082943%2690693),-257960+24191541271465 GG=G[w]eG=GG(mG,UG)YG=vG[eG]eG=G[u]mG=G[w]UG=mG(sG,wG)wG=H(887203431%16429476)GG=eG[UG]mG=G[u]UG=G[w]sG=UG(wG,LG[897591-897590])eG=mG[sG]vG,ZG={GG;eG},uG[ZG]GG=W(466080+15743442,{})UG=21923992265168-981487 ZG=ZG(uG,BG,YG,vG,GG)YG=G[u]vG=G[w]mG,LG[-765135-(-765136)],eG=-148273+16241891713212,H(800052740%13115441),H(492648+-481307)GG=vG(eG,mG)BG=YG[GG]vG=G[u]mG=H(868285226%3587909)GG=G[w]ZG=H(23221+-11855)eG=GG(mG,UG)YG=vG[eG]ZG,GG=uG[ZG],29787+-29587 eG=W(1588132424%6651080,{})vG,UG,mG=326148+-326148,28698562838382-(-963781),20283404069829-509664 ZG=ZG(uG,BG,YG,vG,GG,eG)YG=G[u]vG=G[w]eG=H(-772618-(-783489))GG=vG(eG,mG)BG=YG[GG]vG=G[u]GG=G[w]ZG,mG=H(-4357-(-15723)),H(814203014%11973415)eG=GG(mG,UG)ZG=uG[ZG]YG=vG[eG]GG,vG=7621068%1905192,405267-405267 eG=W(-222733+16265794,{})ZG=ZG(uG,BG,YG,vG,GG,eG)mG=5737473443276-998237 YG=G[u]ZG=H(306920118%2256682)vG=G[w]ZG,eG,UG=uG[ZG],H(2181976293%15585465),14072953680906-252529 GG=vG(eG,mG)mG=H(-454693-(-466064))BG=YG[GG]vG=G[u]GG=G[w]eG=GG(mG,UG)mG=19502509637861-(-909972)YG=vG[eG]GG=985544-985424 eG=W(618335850%5135521,{})vG=2219723376%14228996 ZG=ZG(uG,BG,YG,vG,GG,eG)eG=H(-936640+948033)YG=G[u]vG=G[w]GG=vG(eG,mG)BG=YG[GG]eG,ZG=H(-30428+42139),H(1791867540%7657507)ZG,mG=uG[ZG],20939538162650-720324 ZG=ZG(uG,BG)YG=G[u]vG=G[w]ZG=H(-610618+621873)ZG=uG[ZG]GG=vG(eG,mG)BG=YG[GG]YG=V(-275876+14528491,{XL})mG=13080074001591-(-949011)ZG=ZG(uG,BG,YG)YG=G[u]vG=G[w]eG=H(594246-582852)GG=vG(eG,mG)LG[-770479+770483],UG=16983580046300-(-207624),492772+34807070751340 BG=YG[GG]vG=G[u]mG=H(424017630%7709204)GG=G[w]eG=GG(mG,UG)mG=H(17063184%550072)YG=vG[eG]eG=t[mG]UG=G[u]sG=G[w]wG=sG(LG[926071-926070],LG[693603+-693601])mG=UG[wG]LG[1962596147%8645798]=-101621+32648846739544 GG=eG[mG]mG=G[u]UG=G[w]wG=H(1613387119%12222543)sG=UG(wG,LG[953338+-953337])eG=mG[sG]UG=-623165+25879204704591 vG=GG[eG]ZG,mG=H(-174243+185921),4249802290000-191382 ZG=uG[ZG]GG=W(-33346+8318292,{})ZG=ZG(uG,BG,YG,vG,GG)YG=G[u]ZG,eG=H(-63731-(-74758)),H(-963042+974312)ZG=uG[ZG]vG=G[w]GG=vG(eG,mG)BG=YG[GG]eG=H(-613640-(-624739))ZG=ZG(uG,BG)YG=G[u]mG=27741383525387-(-355947)vG=G[w]GG=vG(eG,mG)ZG,eG=H(322629146%4419428),H(727965-717168)BG=YG[GG]mG,ZG=450992+6683969055352,uG[ZG]ZG=ZG(uG,BG)YG=G[u]vG=G[w]GG=vG(eG,mG)mG=H(-979751+991056)BG=YG[GG]vG=G[u]GG=G[w]eG=GG(mG,UG)YG=vG[eG]ZG,mG=H(-473894+484914),-278896+12241489680308 ZG,UG=uG[ZG],-736361+30243537384300 vG=O(-341258+16861969,{tG})eG=H(673488+-662243)ZG=ZG(uG,BG,YG,vG)YG=G[u]vG=G[w]GG=vG(eG,mG)ZG,LG[885576+-885575]=H(-235192-(-246212)),H(2005499704%11796992)BG=YG[GG]vG=G[u]GG=G[w]mG=H(705195440%14103690)eG=GG(mG,UG)mG,UG=233838+32343638944103,4695057616107-(-752543)YG=vG[eG]ZG=uG[ZG]vG=O(1518630556%7996457,{})ZG=ZG(uG,BG,YG,vG)YG=G[u]eG=H(46514232%5166979)vG=G[w]GG=vG(eG,mG)BG=YG[GG]mG=H(540460231%2309612)vG=G[u]GG=G[w]eG=GG(mG,UG)mG=711625851%6650708 YG=vG[eG]GG,UG,vG=1033124321%15419763,32896945506277-(-701425),1811481742%11465074 eG=g(10567857-(-802016),{zL;u;w;D})ZG=H(919534-908168)ZG=uG[ZG]ZG=ZG(uG,BG,YG,vG,GG,eG,mG)eG,mG=H(-822128-(-833117)),20051241234148-(-406933)YG=G[u]vG=G[w]LG[3581748604%16737143]=-652477+15376963195061 GG=vG(eG,mG)BG=YG[GG]vG=G[u]mG=H(650863-639480)GG=G[w]eG=GG(mG,UG)YG=vG[eG]mG=H(342409+-331457)eG=t[mG]UG=G[u]sG=G[w]wG=sG(LG[-47369+47370],LG[-214301+214303])mG=UG[wG]LG[776322+-776321]=20226102470135-(-442067)GG=eG[mG]mG=G[u]UG=G[w]wG,ZG=H(447316647%2171386),H(-544105+555783)sG=UG(wG,LG[31620065%7905016])eG=mG[sG]vG=GG[eG]eG=H(-331699-(-343085))GG=O(-270578+7379984,{})ZG,mG=uG[ZG],-462783+34279490932249 ZG=ZG(uG,BG,YG,vG,GG)YG=G[u]vG=G[w]GG=vG(eG,mG)eG=H(1407845518%15302544)BG=YG[GG]ZG=H(692015-681113)ZG,UG=uG[ZG],-543440+31332674700238 ZG=ZG(uG,BG)YG=G[u]mG=-804908+15184025183178 vG=G[w]sG=H(984942+-973497)GG=vG(eG,mG)ZG,mG=H(-977662-(-988682)),H(-598224+609188)BG=YG[GG]vG=G[u]ZG=uG[ZG]GG=G[w]eG=GG(mG,UG)YG=vG[eG]UG,eG=25224103172022-(-185899),H(660412861%3421768)vG=a(3173949-(-672909),{})ZG=ZG(uG,BG,YG,vG)ZG=H(838493+-827473)YG=G[u]mG=23286659706426-328671 vG=G[w]GG=vG(eG,mG)BG=YG[GG]vG=G[u]GG=G[w]mG,ZG,LG[-72105-(-72106)]=H(-257159-(-268794)),uG[ZG],17360881238316-139672 eG=GG(mG,UG)YG=vG[eG]mG=-65205+24682957826970 vG=a(2985228707%23238451,{})ZG=ZG(uG,BG,YG,vG)YG=G[u]eG=H(-277274-(-288185))vG=G[w]ZG=H(-591807-(-603173))GG=vG(eG,mG)BG=YG[GG]vG=G[u]mG,ZG,UG=H(7953589%198559),uG[ZG],4344178593916-(-243562)GG=G[w]eG=GG(mG,UG)YG=vG[eG]GG,vG=690024-689994,-1005236-(-1005238)eG=g(7613118-976504,{})ZG=ZG(uG,BG,YG,vG,GG,eG)mG=692851+11963721859920 YG=G[u]LG[-964099-(-964104)],ZG,eG=5310219810871-93839,H(-563574-(-574940)),H(792002+-780457)vG=G[w]GG=vG(eG,mG)ZG,UG,mG=uG[ZG],-612002+9781989845101,H(2153352609%16564166)BG=YG[GG]vG=G[u]GG=G[w]eG=GG(mG,UG)GG=-349106-(-349206)YG=vG[eG]vG=235887558%1325211 eG=V(4439944-(-189725),{})ZG=ZG(uG,BG,YG,vG,GG,eG)eG,LG[821906562%12842290],UG=H(93360-82524),273349+3456360061572,17701195191053-193243 YG=G[u]mG=817829+33042741838197 vG=G[w]GG=vG(eG,mG)BG=YG[GG]wG=23854943338867-677391 vG=G[u]mG=H(4025282734%16362891)GG=G[w]ZG=H(52149+-41274)eG=GG(mG,UG)YG=vG[eG]eG=G[u]mG=G[w]UG=mG(sG,wG)GG=eG[UG]wG=H(769129805%16719969)mG=G[u]UG=G[w]sG=UG(wG,LG[423719157%2631796])eG=mG[sG]UG=G[u]LG[510688+-510687]=H(2323421889%9368590)sG=G[w]wG=sG(LG[309360822%4017673],LG[3892619%432513])mG=UG[wG]LG[1981336154%8054212]=H(-98413-(-109521))sG=G[u]wG=G[w]LG[245578-245577]=wG(LG[79815-79813],LG[-28065-(-28068)])UG=sG[LG[-393813-(-393814)]]wG=G[u]LG[1003624-1003623]=G[w]LG[964252-964249]=H(21194-9745)LG[688154-688152]=LG[1344036289%8842344](LG[-1043033+1043036],LG[-726635-(-726639)])sG=wG[LG[949366-949364]]LG[137542481%1719281]=G[u]LG[296955314%1879464]=G[w]LG[97983-97979]=H(-340655-(-351963))LG[-326337-(-326340)]=LG[-23798-(-23800)](LG[2587148554%10559790],LG[-246880-(-246885)])wG=LG[268034806%14107095][LG[1075082102%11814089]]LG[50258+-50256]=G[u]LG[-877911+877914]=G[w]LG[-198564-(-198569)]=H(-916819+927863)LG[-918171-(-918175)]=LG[156190779%1034376](LG[951288080%12683841],LG[155004-154998])LG[54481477%13620369]=LG[1620417608%6954582][LG[3720095593%16682043]]ZG=uG[ZG]LG[-659841+659844]=G[u]LG[2557904966%15986906]=H(-866701-(-877520))LG[-639691+639695]=G[w]LG[-734840+734845]=LG[919965-919961](LG[-148441+148447],LG[509452982%2167885])LG[1386000798%14288668]=LG[48273858%1379253][LG[527957+-527952]]vG={GG;eG;mG;UG;sG,wG;LG[-695337+695338];LG[361181-361179]}eG,mG=H(-162381-(-173308)),33051603785996-187630 GG=g(1222475704%14045756,{})UG=762659+11928213582479 ZG=ZG(uG,BG,YG,vG,GG)ZG=H(150007320%3846062)YG=G[u]ZG=uG[ZG]vG=G[w]GG=vG(eG,mG)mG=5899089973362-411064 BG=YG[GG]ZG=ZG(uG,BG)YG=G[u]ZG,eG=H(662852810%3488641),H(917887-906649)vG=G[w]GG=vG(eG,mG)mG=H(779251+-768367)BG=YG[GG]vG=G[u]GG=G[w]sG,ZG=5086084281579-(-611413),uG[ZG]eG=GG(mG,UG)YG=vG[eG]vG=O(13335166-949983,{})ZG=ZG(uG,BG,YG,vG)YG=G[u]mG,eG=386704+10108720524243,H(919457+-908588)vG=G[w]GG=vG(eG,mG)BG=YG[GG]vG=G[u]UG=958253667472-(-437550)GG=G[w]ZG,mG=H(694562404%4569417),H(425725+-414348)eG=GG(mG,UG)ZG=uG[ZG]YG=vG[eG]vG=W(9340648-(-572742),{})ZG=ZG(uG,BG,YG,vG)mG=9087481897767-479904 YG=G[u]vG=G[w]eG,UG=H(-997682-(-1008950)),14803779219483-(-60114)GG=vG(eG,mG)BG=YG[GG]vG=G[u]mG=H(-704600+716248)GG=G[w]ZG=H(739626138%12124838)eG=GG(mG,UG)YG=vG[eG]ZG=uG[ZG]vG=V(6255314272%24983636,{tG})ZG=ZG(uG,BG,YG,vG)mG,ZG=24893493819707-(-635916),H(324977+-314075)YG=G[u]eG=H(1726465539%14036215)vG=G[w]GG=vG(eG,mG)eG,mG=H(-648326+659676),29138723865753-790425 BG=YG[GG]UG,ZG=12516352620556-(-761528),uG[ZG]ZG=ZG(uG,BG)YG=G[u]LG[-360891-(-360894)]=17561+25023824652523 vG=G[w]GG=vG(eG,mG)BG=YG[GG]vG=G[u]GG=G[w]mG=H(106352180%2215440)eG=GG(mG,UG)YG=vG[eG]GG=G[u]eG=G[w]UG,ZG=H(-584721-(-596152)),H(1621247567%8229628)mG=eG(UG,sG)sG,UG=-858736-(-858921),436796+-436541 vG=GG[mG]mG=-804193-(-804193)GG=G[k]ZG=uG[ZG]eG=GG(mG,UG,sG)GG=f(-144294+14091615,{})mG=W(658637+5987861,{})ZG=ZG(uG,BG,YG,vG,eG,GG,mG)YG=G[u]sG,mG,eG=-152434+1916308575982,-242641+14180454124956,H(-501181-(-512841))vG=G[w]GG=vG(eG,mG)UG=11611471523353-(-222982)BG=YG[GG]vG=G[u]mG=H(-578806-(-589768))GG=G[w]eG=GG(mG,UG)YG=vG[eG]GG,ZG,vG,UG=730652-730052,H(1006059+-994693),-959665-(-959695),H(-260212+271885)ZG=uG[ZG]eG=O(554849-(-2329),{})ZG=ZG(uG,BG,YG,vG,GG,eG)BG=g(1326978-611325,{EL;u;w})ZG=U()wG=H(1421814932%6128464)G[ZG]=BG YG=G[E]GG=G[u]eG=G[w]mG=eG(UG,sG)vG=GG[mG]BG=YG[vG]vG=M(12307221-(-778287),{ZG;u,w;XL;EL;JL;cL})sG,YG=336760+1076397350525,H(527247930%13180912)YG,UG=BG[YG],H(433832559%15493603)YG=YG(BG,vG)vG=H(319292999%2902564)YG=t[vG]GG=G[u]eG=G[w]mG=eG(UG,sG)vG=GG[mG]BG=YG[vG]vG=V(-718763+14010900,{u,w,tG})YG=BG(vG)vG=H(605095257%6302962)BG=G[T]vG=BG[vG]vG=vG(BG,YG)GG=g(-730313+16782524,{u;w;ML,TL})vG=M(2045816192%12050218,{u,w,ML,d,TL})BG=U()G[BG]=vG vG=U()G[vG]=GG mG=G[u]LG[-105774-(-105775)]=7.2360463414982e+15%28828869892228 UG=G[w]sG=UG(wG,LG[-234950+234951])eG=mG[sG]LG[-242201+242202]=H(963104+-951536)mG=a(14090499-(-976747),{EL,u,w,JL;rL,fL,gL,s,y;vG;pL;r,dL;d,BG;mL,HL})GG=A[eG]eG,LG[1658241902%7369964]=H(765269734%15617516),11340755055033-(-516839)eG=GG[eG]eG=eG(GG,mG)GG=G[T]mG=H(2624355417%13668461)mG=GG[mG]mG=mG(GG,eG)UG=G[u]sG=G[w]wG=sG(LG[-108091+108092],LG[1232786786%15604896])mG=UG[wG]GG=A[mG]UG=W(13304735-(-427668),{EL;u;w,KL,CL,xL;QL;qL,JL,hL,FL,k;fL;IL,PL;wL;K,R,WL,y})mG=H(90166400%1477950)mG=GG[mG]mG=mG(GG,UG)UG=H(1452917085%7337910)GG=G[T]LG[191950+-191948],UG=H(2203004288%14885090),GG[UG]UG=UG(GG,mG)sG=G[u]wG=G[w]LG[-330586+330587]=wG(LG[809851-809849],LG[212993+-212990])GG=H(46686716%15558452)UG=sG[LG[345813301%2561580]]sG,GG=122646074%1946763,F[GG]GG=GG(F,UG,sG)UG=U()G[UG]=GG GG=G[UG]S=GG and 551980135%12168047 or 797110467%6011547 elseif S<5139072-178238 then S,A=467734+8021898,nil else S=m and 7354459-642270 or-731454+8437466 end else if S<-483021+5475262 then x,A,S=8447446107767-292634,H(-38095+49442),3070914506%18817667 h=G[Y[-638887-(-638889)]]y=G[Y[2080152207%11183614]]F=y(A,x)T=h[F]w=s[T]m=w elseif S<4216712-(-790584)then u=G[Y[-338199-(-338200)]]B=#u s=G[Y[561337401%5397475]]w=nil u=s[B]S,m=t[H(-276596-(-288008))],{u}s=G[Y[-1032180+1032181]]s[B]=w else K=G[Y[-918639-(-918649)]]G[Y[86882-86874]]=K S=t[H(-239468-(-250355))]d=G[Y[-209282+209292]]m={d}end end else if S<2181205884%12089302 then if S<5330238-244699 then S=h S=m and 2891745011%17787005 or 359611936%17690345 elseif 3235483760%12618581>S then S=-1006662+15190801 else h,F=H(948993376%8786873),H(670048-659123)B=G[Y[-249846-(-249847)]]s=G[Y[328092-328090]]y,A=6603599732411%1650901529577,173422+9505035299804 w=G[Y[690165+-690162]]T=w(h,y)w=H(-503145+514097)u=s[T]m=B[u]s=t[w]T=G[Y[36363073%1253899]]h=G[Y[-152586-(-152589)]]y=h(F,A)w=T[y]u=s[w]F=933603+20406320752187 w=G[Y[689625+-689623]]T=G[Y[-5392-(-5395)]]y=H(997036-985809)h=T(y,F)s=w[h]B=u[s]S=m==B S=S and 229323+3242110 or 691520+10528575 end else if S<-702405+5840193 then m,B=H(758271+-747097),H(523375-512032)S=t[m]m=S(B)S,m=t[H(777897502%6223088)],{}elseif S<-747403+5906569 then C=H(13231+-2184)y=G[Y[236722951%2996493]]A=G[Y[-531934+531936]]x=G[Y[-945017-(-945020)]]Q=25695782564192-(-720221)E=x(C,Q)F=A[E]Q,S=765987+9119981871219,8372276-(-680170)h=y[F]C=H(182480+-171447)A=G[Y[-869101+869103]]x=G[Y[821347+-821344]]E=x(C,Q)y=H(1085877482%5933697)F=A[E]y=h[y]y=y(h,F)w=y else S,m=t[H(2678424963%10544935)],{}end end end else if-116306+5378736>S then if S>-627090+5860325 then if S<876256+4361972 then Q,d,K=S,S,A S=A and-443208+3342021 or 4900211258%31509076 elseif 4549295-(-700887)>S then S,T=7901839-(-679357)<=16576147-379473,H(919856086%14372568)h=U()G[u]=S y=S w=t[T]T=H(49305706%1971785)s=w[T]w=U()x=V(10327017-646627,{h})G[w]=s s=W(210613+4922016,{})T=U()G[T]=s s,A=3619670965%14140285<=803547096%14908669,H(638225+-627074)G[h]=s F=t[A]A=F(x)S,s=A and-37313+505171 or 694696643%4237102,A else F=91771278723502%30590428809477 w=G[Y[305638334%8043114]]y,u=H(-350036-(-360840)),H(-583094+594025)T=G[Y[156018910%2557687]]h=T(y,F)s=w[h]u=B[u]u=u(B,s)S,m=-670191+12494637,u end else if S<4938373-(-250680)then S=G[Y[-888976-(-888983)]]E=26867195067369-(-472310)y=G[Y[18323792%964410]]x=H(554608+-543003)F=G[Y[183058+-183055]]A=F(x,E)h=y[A]T=s[h]h={S(T)}m=h[-991077+991078]T,w=m,h[840495-840493]S=w and 7177244-449273 or 14387745-(-730569)elseif 5924935-709935>S then C,Q,S=nil,nil,5114019-155601 else A,w,u=H(3325757748%15912662),H(-96042-(-107692)),S s=t[w]h=G[Y[1688994839%12151042]]w=H(56094457%9347135)y=G[Y[2691689919%12404101]]x=-426465+26991460791033 F=y(A,x)w=s[w]T=h[F]w=w(s,T)B,S=w,w and 142527+13721784 or 8807201-1001980 end end else if 5240352-(-93782)>S then if S<1101249645%8366296 then u,S=-44268-(-44269),{}s=G[Y[203740343%3453226]]w,B=s,S S,s=5172844-(-1005963),278599+-278598 T=s s=1002925+-1002925 h=T<s s=u-T elseif S<6119894-822192 then F,w=not y,h+w u=T>=w u=F and u F=w>=T F=y and F u=F or u F=1201666398%12435973 S=u and F u=1139551699%23926472 S=S or u else C,F=not E,F+x m=F<=A m=C and m C=F>=A C=E and C m=C or m C=1595449-(-19902)S=m and C m=4791346-(-595058)S=S or m end else if 1047398+4296485>S then m=G[u]F=H(469254-458029)S=m~=F S=S and 473577+-370072 or 3601395038%23132485 elseif 256120548%6116365>S then S=m and 3619888090%29561718 or 2200943-518431 else J=S S,m=w and 41711185%6252035 or-783040+14486917,w end end end end else if S<942513+3673053 then if 896123670%8491698>S then if S>3730003950%14609961 then if 5035871-554290>S then S,b=769843+12867555,D elseif-990332+5473733>S then y,u=-680519+17450500145669,H(-659218-(-670170))B=t[u]s=G[Y[521500+-521499]]w=G[Y[-745913-(-745915)]]h=H(-465804+476717)T=w(h,y)u=s[T]m=B[u]B=G[Y[-222128-(-222131)]]S=m[B]m={S}S=t[H(-883370+894249)]else q=-481495+24541291726202 C=G[Y[613631-613630]]Q=G[Y[-515677+515679]]d,S=H(-344150-(-355799)),-345302+6770972 K=Q(d,q)E=C[K]x=A[E]m=x end else if 4540136206%18289209>S then S=C S,A=E and-218456+3797400 or 1114319277%9105225,E elseif 4676379-250681>S then sG=H(347627-336476)GG=t[sG]LG[678051605%4134461]=V(-615107+13802810,{UG,u,w})LG[-304491-(-304493)]={GG(LG[53894-53893])}LG[-110122-(-110123)],wG,sG=S,LG[1021042+-1021040][-976508+976510],LG[689189074%3313409][231318-231317]GG=sG S=sG and-723299+2900668 or 87155850%6278923 elseif S<5480197-1040077 then S=T T=nil m=w or T m,S={m},t[H(-435728-(-446617))]else z,HL,pL=4655778298143-159911,H(-771105-(-782604)),16731027986664-(-1414)c=G[Y[53740+-53738]]I=G[Y[-49778+49781]]ZL=444802+27226611263492 X=I(HL,z)tL=27762782408887-(-1040841)SL=c[X]n=k[SL]N=R-n i=N/r N=G[Y[563581+-563567]]I=G[Y[49105102%2455255]]X=G[Y[-332748-(-332751)]]z=H(-947797+958890)HL=X(z,tL)c=I[HL]SL=j[c]X=G[Y[313148+-313146]]tL=H(1002664904%13368713)HL=G[Y[672526-672523]]z=HL(tL,pL)I=X[z]pL=H(1700622831%13496919)c=i[I]HL=G[Y[267820072%3826001]]z=G[Y[-107475-(-107478)]]tL=z(pL,ZL)X=HL[tL]I=j[X]z=H(-565157-(-576206))n=N(SL,c,I)I=G[Y[42494-42492]]X=G[Y[-389258-(-389261)]]tL=-51747+34133981759545 HL=X(z,tL)c=I[HL]SL=k[c]N=n-SL I,c=1e-06,H(-486581+498295)c=N[c]c=c(N,N)SL=c<I S=SL and-172205+13265084 or 285501+9170918 end end else if S<-490594+5084083 then if 4885411-343782>S then S,m=t[H(1041212+-1030265)],{}elseif 4588171-3161>S then S=G[Y[-547791-(-547795)]]F=G[Y[-488079-(-488080)]]E=H(1172873591%9308434)A=G[Y[563812-563810]]C=467039753636-(-437045)x=A(E,C)K=383521+18359899096900 y=F[x]h=w[y]x=G[Y[2011683441%9671555]]E=G[Y[157832922%644216]]Q=H(385642+-374039)C=E(Q,K)A=x[C]F=T[A]y=H(324439+-312725)y=h[y]y=y(h,F)F,h=-738098+738099,-223386-(-223385)m=S(y,h,F)h=m m=.94 S=h<m S=S and 4362295847%22445106 or 726811421%22363037 else C=nil u=L(u)u,s=nil,nil A=L(A)d=L(d)T=L(T)w=L(w)C=H(845201+-834406)h=L(h)T=U()w=U()s,y=nil,nil F=L(F)G[w]=u x=L(x)u=U()K,A,Q,E=nil,H(842924-831190),nil,nil G[u]=s Q,E,s=H(-147964+159364),H(752279+-740879),33443022%8360755 G[T]=s s={}y=U()h={}G[y]=h F=t[A]A=H(636299418%10604798)h=F[A]A=U()F,S=525450+-525450,-557992+9196080 G[A]=F x=t[E]E=H(253507+-241820)F=x[E]E=t[C]C=H(-843647-(-854848))x=E[C]C=t[Q]Q=H(-92780+103672)E=C[Q]C=U()Q=-467986+468242 G[C]=E E,K=-1008555+1008556,Q Q=-811614-(-811615)d=Q Q=613134+-613134 J=d<Q Q=E-d end else if 4646868-51240>S then I,ZL,z,pL,c=1786884488558-244270,H(2026444342%13420086),23188167630239-848754,28904934436735-(-591124),H(1032304+-1020717)k=G[Y[-330144-(-330160)]]HL=26588534086695-535498 N=G[Y[-1005281-(-1005283)]]n=G[Y[-39568-(-39571)]]SL=n(c,I)I,X=H(-933020-(-944271)),-94616+9071119221272 i=N[SL]n=G[Y[206261288%1281126]]SL=G[Y[-1024416+1024419]]c=SL(I,X)X=H(-159372-(-170502))N=n[c]SL=G[Y[907603+-907601]]YL,eL,tL=-411021+30937996099027,-864037+22289803974576,12628956780700-983460 c=G[Y[137583867%15287096]]I=c(X,HL)HL=H(740897+-729965)n=SL[I]c=G[Y[212003719%4930319]]I=G[Y[326327-326324]]X=I(HL,z)SL=c[X]I=G[Y[-471035-(-471037)]]X=G[Y[1928534772%8887257]]z=H(2299641482%13937151)HL=X(z,tL)c=I[HL]X=G[Y[1269900502%12699005]]vL,tL=H(-625744+637336),H(-728747-(-740447))HL=G[Y[235757-235754]]z=HL(tL,pL)I=X[z]X=49060-49060 z=G[Y[207715-207713]]tL=G[Y[148077387%1627224]]pL=tL(ZL,YL)HL=z[pL]pL=G[Y[1474640862%6795580]]ZL=G[Y[-522987+522990]]z=15443827-(-938745)<=4650014-(-906908)YL=ZL(vL,eL)tL=pL[YL]pL={}r={[i]=R;[N]=F;[n]=j;[SL]=j;[c]=j;[I]=X;[HL]=z;[tL]=pL}k[J]=r S=259699790%15434423 elseif 1680913248%19721340>S then X=G[Y[149267716%3553993]]tL=G[Y[312243-312242]]YL=H(966215-954785)pL=G[Y[360899+-360897]]eL,vL=848802+33080114808970,12166359340747-(-98134)ZL=pL(YL,vL)z=tL[ZL]GL,tL=6.8,-796411+796556 HL=X(z,tL)X=812185800%16575200 I=HL/X HL=G[Y[1627215870%8564294]]pL=G[Y[-478025-(-478026)]]vL=H(1375732164%9756887)ZL=G[Y[-198823-(-198825)]]YL=ZL(vL,eL)tL=pL[YL]YL,pL=-892543+892563,367233+-367193 z=HL(tL,pL)pL,HL=S,-808962-(-809962)X=z/HL ZL=F<YL vL,YL=874722+-874708.5,1.15 tL,pL=ZL and YL,-737930-(-737931)HL=tL or pL pL,YL,z=-386324-(-386325),.004,S ZL=F*YL YL=.38 tL=pL+ZL z=tL*HL tL=G[Y[-648331+648337]]ZL=F*YL YL=-519596.5-(-519600)pL=tL(ZL,YL,vL)mL=I*GL eL=j*mL vL=eL*d YL=vL*z ZL=YL*n tL=ZL*c YL=H(2700650984%11492082)YL=tL[YL]YL=YL(tL,tL)vL=pL*pL ZL=YL>vL S=ZL and 7198915546%28057791 or 978588772%10276450 else S,E,C=2070892046%20265435,nil,nil end end end else if S<3169895380%16399608 then if S>3634116-(-1043823)then if S<1091451659%9288628 then sL=853935.5-853935 BL=mL>sL S,eL=340523+794587,BL elseif 491684990%11877398>S then b=641138+-641108 m=G[Y[1091128081%9325881]]q=G[Y[403961335%4390884]]l=q(b)d=C-l b=722539-722449 q=G[Y[-781551-(-781558)]]l=q(b)K=d/l d,q=631345-631345,1012066327%6702426 Q=m(K,d,q)d=250166-250165 l=.6 q=Q*l K=d-q S,Q=4146398-(-455065),nil m=s*K s=m else tL=632481+6937107244541 I=G[Y[958154-958152]]X=G[Y[981525-981522]]z,S=H(154968+-143261),254616+9296669 HL=X(z,tL)c=I[HL]I=8884190-(-679451)<=8101990-(-933422)k[c]=I end else if 4527309-(-104023)>S then S,m=t[H(-749177+760880)],{}elseif 4408757-(-245695)>S then S=m and 329974+14861199 or 4537479413%21169384 else o,A=H(558875+-547141),E b=t[o]o=H(2267422689%9988596)l=b[o]b=l(B,A)l=G[Y[-293955-(-293961)]]S=15656738-192335 o=l()q=b+o d=q+y b,A,q=770133-770132,nil,2461757182%16303026 K=d%q y=K l=y+b q=w[l]d=F..q F=d end end else if S<-719953+5558392 then if S<943625438%5186844 then S,s=2341698914%14359180,nil elseif 4199865-(-614710)>S then o=G[Y[2482918989%11711882]]j,D=18843153128726-572112,H(356635353%7587748)J=G[Y[1577023398%9387044]]R=J(D,j)S=2028997905%10465017 b=o[R]l=K[b]b=857429861%7866329 q=l>b m=q else GL,S=H(380115-368776),YL YL=U()VL=H(476614765%13617246)G[YL]=ZL BL,wL=34551397124257-(-702008),H(554005+-542346)vL=G[u]eL=G[w]mL=eL(GL,BL)ZL=vL[mL]UL=S vL=U()eL=g(-625606+13963314,{vL,C,u,w})BL=S G[vL]=ZL fL=21396+12143563031170 mL=f(2836128861%17886264,{vL;C;D;u,w})ZL=U()GL=U()G[ZL]=eL eL=U()G[eL]=mL mL=810694-(-1011806)G[GL]=mL LL=t[wL]PL=G[u]WL=G[w]OL=WL(VL,fL)wL=PL[OL]ML=LL[wL]LL=3059046323%12799357 uL=ML>LL S,sL=uL and 17576693-892798 or 1753482040%21323762,uL end else if S<2139078398%11232692 then S,m=1142752969%24545160,204713+7483302>2196824-(-476491)G[u]=m elseif 5694927-801866>S then k=G[Y[34301-34299]]n,N,SL=619402+10658038390745,H(239094941%2390833),-383727+23325754738012 r=G[Y[991683822%8775963]]i=r(N,n)j=k[i]R=D[j]r=G[Y[-438699+438701]]n=H(-568011-(-578925))i=G[Y[250537+-250534]]N=i(n,SL)k=r[N]j=D[k]i=G[Y[96906+-96890]]r=i[J]k=not r S=k and 412534+4181489 or 11895216-(-853806)else S=SL S=N and 2374968862%23205070 or 79709+9629841 end end end end end end end end else if S<-278727+12954828 then if S>-926127+11591765 then if 5059089859%21297566>S then if S<122444+11010901 then if S<10840342-(-66596)then if S>-13805+10790934 then if 521553+10325596>S then if S<2465529795%11208837 then h=H(-610260+621872)s=G[Y[1037604+-1037603]]y,S=6084274129530-540521,H(271748-260817)S=B[S]w=G[Y[507626-507624]]T=w(h,y)m=s[T]S=S(B,m)s=S S,m=s and 3962208-833525 or 14323529-808533,s elseif 10356073-(-460082)>S then gL=1027581.5-1027580 WL=G[Y[566616607%2563876]]VL=-543671-(-543671)fL=PL-gL OL=WL(VL,fL)WL=G[Y[-185471-(-185483)]]VL=WL(LL,OL)S,LL,OL=-759643+14203423,VL,nil else B,S,m=nil,t[H(-388890+399823)],{}end else if S<3846975900%16118051 then m=G[Y[744349+-744348]]h=745413+26734709985500 u=G[Y[58328-58326]]s=G[Y[1174494252%7676433]]T=H(-1029657-(-1041154))w=s(T,h)B=u[w]S=m[B]B=S S,m=B and 303120131%11680415 or 1115853-(-313705),B elseif S<3571513335%23737447 then b,l=-186593+2874709646875,H(1703473194%11748012)K=G[Y[596230+-596228]]d=G[Y[-790010-(-790013)]]q=d(l,b)Q=K[q]S=7169996-900462 C=T[Q]x=C else F=H(-605027-(-616184))T=G[Y[260129419%6845511]]C=318365+896628712964 h=G[Y[783182+-783180]]S,A,E=2199303112%16442049,-955626+24500614906234,H(211297+-199726)y=h(F,A)w=T[y]s=B[w]y=H(589704057%11126285)h=t[y]F=G[Y[3155070501%16263250]]A=G[Y[-379881-(-379883)]]x=A(E,C)y=F[x]T=h[y]y=G[Y[1489612152%7561483]]E,x=20561649536232-(-612478),H(978042247%7824247)F=G[Y[438481+-438479]]A=F(x,E)h=y[A]w=T[h]u=s==w m=u end end else if S<-646256+11394294 then if S<1797788010%12240478 then K=1.601026732342e+14%3557837195000 x=G[Y[1392395915%5850403]]E=G[Y[153994232%1316190]]Q=H(2469356360%16684763)C=E(Q,K)S=x[C]x=s A[S]=x S=8879757-(-103433)elseif 5445507010%23836879>S then C,K=F,S m=y[C]Q=m q=G[Y[803373-803365]]d=Q~=q m,S=d,d and 552005+3274970 or 2390576296%9840846 elseif S<10875498-154036 then m,S={},t[H(806169+-794687)]else Q,C,h=14688252753049-(-173598),H(649197+-638026),S A=G[Y[989515+-989514]]x=G[Y[789539417%7519423]]E=x(C,Q)F=A[E]y=s==F S,T=y and-856279+11499148 or 15032799-593911,y end else if 10984747-219150>S then S=d S=K and 1999217060%10537950 or 1782977799%8997399 elseif S<2340889977%25055010 then GL=.02 eL=mL>GL S=eL and 1368715728%7966817 or-224576+15335097 else s=G[Y[-215481-(-215487)]]w=s()m,S=w,-244633+16119694 end end end else if S<-85885+11024034 then if S<10312757-(-601878)then if-270072+11179569>S then S,m=t[H(553056+-541600)],{s}elseif S<11774810-862445 then d,l,o=H(1686994647%7271480),-26253+26255,H(317015+-305419)K=t[d]q=w[l]d=K(q)q=G[Y[2294926169%13342594]]l=G[Y[1956642669%14711599]]J=-579502+28489734949760 b=l(o,J)K=q[b]S=16037413-(-600642)Q=d==K E=Q else S,u,F=512715090%7688611,nil,nil end else if 10679842-(-236737)>S then u=V(262361216%1241890,{Y[2565571430%10180839];Y[442218907%4755042];Y[-411893+411896],Y[-273159-(-273163)],Y[709899-709894]})m=H(-887225-(-898376))S=t[m]s={S(u)}m,B=s[370685306%9041105],s[561194762%13361780]u=m S,m=u and 145824+7781550 or-181415+1002592,u elseif S<10505830-(-411498)then S=u and 1021084-710201 or 326628+16292887 else S=4422036-(-170919)end end else if 411619+10689175>S then if 11879853-875640>S then k,r=R,l A,S,x=r,803052+5523056,k elseif 1453645899%15680145>S then J=H(-931911-(-943044))l=t[J]J,S=H(606344898%3525194),188702+13440491 t[J]=l else S,s=2815482223%20228542,nil end else if S<10916313-(-191835)then S=d S=K and-364327+5386325 or 2292797093%18212082 elseif S<12028234-912611 then y=H(301140213%14339471)w=G[Y[452514+-452512]]F=119158+28067009241495 T=G[Y[-788190+788193]]h=T(y,F)S=431676+997882 s=w[h]u=H(707760-696109)u=B[u]u=u(B,s)m=u else S=B G[Y[-1011089-(-1011092)]]=S S=2201324214%8735788 end end end end else if 11150117-(-223979)>S then if 2385720292%23744289>S then if-995363+12206154>S then if 528618+10641100>S then S,B=1883696048%8934970,nil G[Y[-692312+692317]]=m elseif 3350265688%15824966>S then h,S=nil,-823863+4995321 else S=11936154-(-782129)end else if S<2738729810%16235118 then S,m=t[H(-773128+784479)],{}elseif 5529795645%25431022>S then S=981119+14316902 else S=nil G[Y[-95483+95489]]=S S=2209127913%14264171 end end else if S>11826968-494953 then if-75455+11432947>S then S=t[H(449018823%16629919)]u=G[Y[814679-814673]]m={u}elseif S<-485261+11854105 then S=G[Y[-554440+554449]]m={S(B,p(u))}m,S={p(m)},t[H(103408022%7385493)]else B=Z[258024-258023]S=G[Y[725151613%8335076]]S=S and 11414021-(-643897)or 2112922582%17966684 end else if 11190070-(-110175)>S then S=G[Y[-369279-(-369280)]]m=H(1138-(-9793))s=G[Y[370924+-370922]]m,y=S[m],507485+16207734693662 w=G[Y[731407+-731404]]h=H(-641945+653446)T=w(h,y)u=s[T]m=m(S,u)u=m S,m=u and-655890+670748 or 651939855%21939429,u elseif 646068+10665149>S then b=G[Y[10414136%1301766]]k=48986363877222%563061832080 J=G[Y[-49876-(-49878)]]j=H(-1044716+1055784)R=G[Y[-495485-(-495488)]]D=R(j,k)o=J[D]J,S=3476431169%15582271>=12351831-69372,388821+8483482 b[o]=J else S=m and 4188323-337923 or 1780681023%12888965 end end end else if S<3024364811%12450164 then if 657094623%14674767>S then if 10565089-(-815491)>S then S=3521922810%18621038<=15742860-609168 S=S and 16183297-992065 or 7413971-125407 elseif S<6053655254%24363992 then S,m=t[H(265718152%13984555)],{y,y}else S=t[H(-176448+187764)]B=L(B)m={}end else if 1015247+10407299>S then S=nil m={S}S=t[H(3459988842%16244027)]elseif 1249646490%22513152>S then S=l and 7508062-(-1007157)or-572583+1687049 else S=3039579412%23315005 end end else if S<12138061-695148 then if S<956200+10473904 then y=H(672728+-661153)S=G[Y[981910729%13637649]]w=G[Y[882843+-882840]]T=G[Y[1987020688%10035458]]F=25887523509497-(-989725)h=T(y,F)m=w[h]w=1747421946%12830893~=851448634%26974753 S[m]=w S=1108635069%4329797 elseif S<3413183859%28113612 then S,o,J,D,R=8051745-(-820558),nil,nil,nil,nil else x,Q=S,2559380042%15234405 C=#w E=C>=Q A,S=E,E and 1102330457%20633603 or 15801639-468868 end else if S<-161257+11615296 then w,S,T=nil,234187004%5734597,nil elseif-238371+11744889>S then S=not h S=S and-341943-(-768234)or-583900+6007725 else d,K=-291673+1393912772066,H(211929082%4414945)E=G[Y[28566+-28562]]C=G[Y[287413-287408]]F=S Q=C(K,d)x=E[Q]A=h[x]y,S=A,A and 598060-588027 or 13437233-984498 end end end end end else if-666660+12905107>S then if 985495195%12809083>S then if S>2053385255%16872338 then if S>12842436-944973 then if S<-623470+12548723 then F,x=S,336569-336569 A=h>x y,S=A,A and 2408494033%16646206 or 608315+15706086 elseif S<-671786+12635368 then uL,gL,UL=nil,.18,nil PL=G[Y[-271630+271642]]BL=nil fL=F*gL sL,S=nil,-47097+1237950 OL=PL(LL,fL)TL,gL,ML,LL=-485086-(-485086),969562+-969562,nil,OL PL=G[Y[429310120%1724137]]aL=-LL LL=nil fL=PL(gL,aL,TL)YL=fL else E,u,A,S,x=F,nil,nil,2466616143%29185817,nil G[Y[-402751-(-402752)]]=E F=nil end else if S<4098207665%17097763 then C,F=not E,F+x m=F<=A m=C and m C=A<=F C=E and C m=C or m C=-469689+11159907 S=m and C m=6453508-(-948362)S=S or m elseif S<-270737+12140613 then b=E==C q,S=b,912225006%22977278 else x=G[Y[689973-689963]]C=G[Y[-495439-(-495441)]]q=21605152794361-884653 Q=G[Y[632163+-632160]]d=H(-489742+500881)K=Q(d,q)d=H(662606+-651199)E=C[K]q=33090542630511-899647 A=x[E]C=G[Y[-714171+714173]]Q=G[Y[-422374+422377]]x=H(-191883+202814)x=A[x]K=Q(d,q)E=C[K]x=x(A,E)S=x and 2973427468%13509438 or 9185898-696266 end end else if S>4323417617%18746208 then if S<11282043-(-528944)then j=H(250133+-238733)q=U()G[q]=l r,tL=1895029139%15282491,998242+-988242 D=t[j]j=H(426668-414981)R=D[j]j,k,I=753272+-753271,-281614-(-281714),H(-384180+395237)D=R(j,k)R=U()k=-546167+546167 G[R]=D D=G[F]j=D(k,r)z=-441581+441581 D=U()G[D]=j j=G[F]i=G[R]N,r=672655017%15287614,-702078-(-702079)k=j(r,i)n=-302613+302615 j=U()G[j]=k r=G[F]i=r(N,n)r=1034362-1034361 k=i==r i=H(283829478%2755521)r=U()G[r]=k n,k=H(854225-842692),H(936624-925164)c=t[I]X=G[F]HL={X(z,tL)}I=c(p(HL))c=H(612699336%2772343)SL=I..c k=K[k]N=n..SL k=k(K,i,N)i=U()G[i]=k n=H(17070-5919)N=t[n]SL=O(963607+15609224,{F,q,A;w;u;d;r;i,R,j;D,x})n={N(SL)}k={p(n)}N=G[r]S=N and 1485249687%10969372 or 503578+5402950 elseif 2329569933%12596479>S then S=m and 2829239361%22172015 or-861449+9438020 else u=m S=u and 2387867259%16715163 or 364989124%13153325 end else if 10653610-(-929846)>S then S=C S=E and 181814630%15439859 or 10323627-560018 elseif 10751622-(-859993)>S then l=G[Y[-633845-(-633847)]]J=H(16492-5520)b=G[Y[554630-554627]]R=848746+2476149100823 o=b(J,R)q=l[o]S=456323937%15310786 d=C[q]Q=d elseif S<11993408-289375 then S,w=8846888-(-158030),u else m=G[Y[390050913%12189091]]h,T=1264489810656-559252,H(2013571333%16779671)u=G[Y[-188199+188201]]s=G[Y[1124519879%16537057]]w=s(T,h)B=u[w]S=m[B]B=S m,S=B,B and 312942+5461935 or 293487+1663343 end end end else if S<11134343-(-1010777)then if 11857401-(-203668)>S then if 2244281020%21884751>S then T=not s S,w=T and 5386652571%28267855 or 907019718%17957775,m m=T elseif 533533+11515047>S then S=1040851-(-895907)else T=H(-677352-(-688564))S=G[Y[-550052-(-550053)]]u=G[Y[1340795302%10313810]]h=23935240514511-163910 s=G[Y[324726-324723]]w=s(T,h)m=u[w]u=G[Y[-867198-(-867202)]]w,T=433116761%3256517,-355854-(-355854)s=u(w,B,T,B)S[m]=s S=11811917-991363 end else if-36870+12114641>S then S=1580689221%16192127~=9423433-202207 m={S}S=t[H(2139199627%10590041)]elseif S<3617041659%14654188 then S=w S=m and 1138454-394313 or 2037827159%13820100 else S=o S,q=6953539-824843,b end end else if 1019137286%13425632>S then if S<-70149+12251417 then S=-1015418+2904582 s=G[Y[2656152242%11752886]]w=s()m=w elseif 4098491189%17169254>S then S=-827742+5737979 X=G[Y[1668266821%10110708]]pL,tL=33779008599955-(-607710),H(-1012517+1023980)HL=G[Y[1366721978%5891043]]z=HL(tL,pL)I=X[z]c=A[I]N=c else HL=-938717-(-938719)X=k[HL]HL=G[i]I=X==HL S,SL=6138683417%24500146,I end else if 11516722-(-702469)>S then S=G[Y[909978565%4482653]]Q=G[Y[-405282+405289]]m=S(Q)m=-742119+742120 S=G[Y[-1028680-(-1028687)]]Q=u S[m]=Q S=G[Y[996005-995998]]Q,m=B,615826900%16205971 S[m]=Q S=G[Y[1291204722%8330353]]m=788765+-788762 Q=G[Y[545378+-545374]]S[m]=Q m,S=-763661+763662,8695550-1012469<848601834%15458619 Q,K=S,-1041483-(-1041486)d=K K=-847386+847387 q=K K,S=1747836720%15605685,-575934+14797814 l=K>q K=m-q elseif S<913708+11314354 then w,F=H(185618811%1913482),H(-122429-(-133580))A=f(3305189140%20575478,{})m=H(58264256%619714)S=t[m]B=G[Y[-744805-(-744809)]]s=t[w]y=t[F]F={y(A)}h,y={p(F)},770530-770528 T=h[y]w=s(T)s=H(2771720175%14587944)u=B(w,s)B={u()}m=S(p(B))u=G[Y[281616029%1235158]]B,S=m,u and 933082+7572901 or-309512+11454711 m=u else h=G[Y[-693290+693297]]x,S,F=34474-33394,-938849+10330288,461600-461599 A=x/u y=h(F,A)w=y end end end end else if S>12679444-230287 then if S<2489974267%22939013 then if S>898139+11619680 then if S<-783757+13316342 then S,m=t[H(650512+-638957)],{}elseif S<4482390411%26926804 then S=m and 2661500236%13189098 or 5386660-(-707442)else n=24074753828566-703244 b=G[Y[977183-977175]]S=455944+10977301 k=G[Y[-535257-(-535259)]]N=H(761198-749879)r=G[Y[129250-129247]]i=r(N,n)j=k[i]k=-430921+9098060>1030284+12796957 b[j]=k end else if S<3138045002%13244034 then m,S=y,F S=-25868+10347947 elseif S<2175673292%14616158 then S=m and 2835437759%16804854 or 7977697-625349 else S=m and 569885319%5745550 or 14569416-(-728605)end end else if S>4498250708%18014557 then if S<3521706851%17286081 then F=G[u]A=2001223138%16472431~=15915218-(-302642)m=F==A S=m and-949273+6072902 or 15017039-832900 elseif S<-32636+12675304 then S,m=y,h S=465469+14235089 else j=G[Y[-13142-(-13144)]]i,N=H(-1015353+1026740),302096+32024379924016 k=G[Y[164451202%14950109]]r=k(i,N)D=j[r]R=l[D]D,S=-285887+285887,3312182781%25402635 J=R>D b=J end else if-703343+13288549>S then m,S={},t[H(693406+-682280)]elseif S<-178473+12786270 then i,N=H(2208075655%9901636),302215+27004710802584 j=G[Y[664431-664429]]S=10342350-478178 k=G[Y[209406363%1745053]]r=k(i,N)D=j[r]R=q[D]o=R else d,S=.0225,Q K=H(817368+-805654)K=C[K]K=K(C,C)Q=K<d S=Q and 911679+10471162 or 2053194-193614 end end end else if S<12086480-(-281122)then if-244696+12542040>S then if 625807+11628279>S then S=3233458600%17682345 elseif S<386090435%28755008 then S=G[Y[774603-774602]]m=S()B=m u=G[Y[353451-353449]]m=B-u u=.15 S=m>u S=S and 1002846018%24159436 or 10557003-(-790165)else S,s=1170739358%15667183,nil end else if S<13340100-1029958 then S=B G[Y[195655010%16304584]]=S u=G[Y[3381299319%15231078]]w=G[Y[876931+-876927]]F,y=5717311971801-(-813197),H(-151730+163256)T=G[Y[-958166+958171]]h=T(y,F)s=w[h]m=u[s]u=m m=G[Y[-366123+366126]]T=G[Y[-280260+280264]]A=33135791179413-35407 h=G[Y[1189785448%15451759]]F=H(1718816865%6793699)y=h(F,A)s=H(-149184+160115)s=m[s]w=T[y]s=s(m,w)h=S w=S S,T=u and 2654935-(-463363)or 10113467-754933,u elseif 13256566-919447>S then S=K S=Q and 4634726984%21783470 or 3302153278%15464132 else S,K=l,q S=11469142-709012 end end else if S>951529+11441443 then if S<11468568-(-951598)then m=G[Y[-707255+707256]]u=G[Y[2441689406%12457599]]T=H(759750041%6664372)s=G[Y[2250670953%15004473]]h=23258055169242-(-546164)w=s(T,h)B=u[w]x=6804465708911-(-1039601)S=m[B]G[Y[212105-212101]]=S m=G[Y[1218544319%15622363]]w=G[Y[1443641713%11191021]]h=G[Y[2025054850%10025024]]A=H(835491-824668)y=G[Y[-583595+583598]]F=y(A,x)T=h[F]x=H(1725235594%7310273)s=w[T]w=731823+-731821 u=s/w E=16098027162204-(-234220)T=G[Y[1107485380%14572176]]y=G[Y[286739330%2986868]]F=G[Y[-179221+179224]]A=F(x,E)h=y[A]w=T[h]T=-430521+430523 s=w/T B=m(u,s)G[Y[-686861-(-686867)]]=B F,y=13833766904788-985771,H(-340676+352039)u=G[Y[127927+-127923]]w=G[Y[-78918+78920]]T=G[Y[492310-492307]]h=T(y,F)T,y=S,114280023%624481 s=w[h]m=u[s]u,s=m,S h=u>y w,S=h,h and 5738162297%27266326 or 464998+8926441 elseif 3107333318%19587905>S then F=19568770836884-(-834052)S=G[Y[1038570-1038569]]y=H(856224+-844527)w=G[Y[789480+-789477]]T=G[Y[-8044+8048]]h=T(y,F)m=w[h]w=8955914-(-939595)>11510284-(-950246)S[m]=w m,S={},t[H(511188+-499572)]else h,y=S,not u S,m=y and 3171096-661361 or 817211889%20304111,y end else if 3235508479%17053597>S then s=G[Y[3553572794%15383432]]h=H(-780688-(-791930))w=G[Y[572794-572791]]y=27806743949244-(-131800)T=w(h,y)m=s[T]S=u[m]m={S}S=t[H(2890210346%14821536)]elseif S<3348206318%26474757 then S,m=t[H(433732+-422659)],{}else HL=20222275745654-(-748882)r=G[Y[436286907%2644163]]X=H(539691+-527990)SL=G[Y[-731032-(-731034)]]c=G[Y[272734535%1073758]]I=c(X,HL)z=12724582063422-984601 n=SL[I]HL=H(402408-391559)N=D[n]c=G[Y[847460+-847458]]I=G[Y[58206+-58203]]X=I(HL,z)SL=c[X]n=D[SL]i=r(N,n)SL=H(1244587811%6254153)r=G[Y[-642251+642264]]c=-728413+4507090969999 k=i-r i=G[Y[2766335282%11526397]]N=G[Y[-610921-(-610924)]]n=N(SL,c)r=i[n]R=k[r]k=R<x S=k and 4245328742%19640247 or 3733020898%19731466 end end end end end end else if S<10454851-1027573 then if 9809566-815512>S then if S<-356867+9014353 then if 3698470360%20163181>S then if 2332224208%19692230>S then if 52451+8455223>S then s=G[Y[806351+-806345]]u=s==B m,S=u,147606+10997593 elseif 4492521272%22646510>S then m,S={B},t[H(-924431+935549)]elseif S<-431045+8948825 then S=G[Y[727991164%13735682]]J=G[Y[698986-698984]]k,j,r=-406911+24660557259354,H(83367139%737661),5719128518927-(-940376)R=G[Y[1951055031%15862236]]D=R(j,k)k=H(513937433%10488289)o=J[D]b=Q[o]R=G[Y[778269338%9977812]]D=G[Y[563654+-563651]]j=D(k,r)J=R[j]o=Q[J]k=H(611574+-600629)l=S(b,o)S=G[Y[1042214-1042196]]i=30915716361702-(-821846)R=G[Y[106033677%6237275]]D=G[Y[-167765+167768]]r=-59035+27499497380000 j=D(k,r)J=R[j]o=d[J]D=G[Y[2848831196%13068033]]j=G[Y[1859570199%14087653]]r=H(2067369160%12160929)k=j(r,i)R=D[k]J=d[R]j=H(791437-780418)b=S(o,J)S=G[Y[424807841%9879252]]k=895355+31889302933638 J=G[Y[881594+-881592]]R=G[Y[911032+-911029]]D=R(j,k)o=J[D]R=718611.5-718609 D=G[Y[2008938239%15219229]]J=R*D j=H(511498722%15499607)S[o]=J S=G[Y[155567-155562]]k=3655881393567-589561 J=G[Y[290904+-290902]]R=G[Y[35796423%361580]]D=R(j,k)o=J[D]R=499220+-499219 D=G[Y[3275627186%14558343]]J=R*D k=-822140+11057625358233 S[o]=J S=G[Y[495733062%2950792]]j=H(712718-701907)J=G[Y[-588314-(-588316)]]R=G[Y[913700-913697]]D=R(j,k)R=656022+-656016 o=J[D]D=G[Y[393326431%3390745]]J=R*D S[o]=J j,k=H(-961636-(-973301)),14279267338264-(-201185)S=G[Y[319050766%9115736]]J=G[Y[-592547-(-592549)]]R=G[Y[728067+-728064]]D=R(j,k)j,R,k=H(-172970+184104),1.2,-35258+3000431103791 o=J[D]D=G[Y[884499352%4729943]]J=R*D S[o]=J S=G[Y[-834632+834639]]J=G[Y[1014333-1014331]]R=G[Y[-664876+664879]]D=R(j,k)o=J[D]D=G[Y[889990+-889979]]k,R=3828486937017-(-765245),342697609%7788582 J=R*D S[o]=J S=G[Y[-788711-(-788716)]]J=G[Y[-66202-(-66204)]]R=G[Y[125265-125262]]j=H(97558888%1005644)D=R(j,k)o=J[D]J=l S[o]=J S=G[Y[1035345+-1035339]]j,k=H(527658-516695),357734+25574165920030 J=G[Y[1002699-1002697]]R=G[Y[-387691-(-387694)]]D=R(j,k)r=483413+5862760540757 o=J[D]j,J=H(-720015+731308),b S[o]=J k=33282976299932-(-721134)S=G[Y[-653406+653413]]J=G[Y[-354170-(-354172)]]R=G[Y[9272+-9269]]D=R(j,k)o=J[D]J,j=l,H(-110628-(-121809))S[o]=J S=G[Y[430514193%5250173]]J=G[Y[2093055278%13417021]]k=18889153881504-(-97467)R=G[Y[-1001167+1001170]]D=R(j,k)o=J[D]J=b S[o]=J S=l-b o=S S=G[Y[669733-669726]]k=H(532607-521537)R=G[Y[172753442%14396120]]D=G[Y[2502518595%10514784]]j=D(k,r)J=R[j]D=H(1031573+-1019859)D,r=o[D],201996.25-201994 D=D(o,o)b=nil i=G[Y[-622978+622989]]k=r*i r=G[Y[-668621+668632]]j=k*r R=D>=j S[J]=R S=G[Y[491272+-491267]]R=G[Y[-1023573-(-1023575)]]k,r,l=H(545566716%6270750),33036929134602-111602,nil D=G[Y[2452115235%12510792]]j=D(k,r)J=R[j]R=-457761+9531634<15724677-(-161719)S[J]=R S=G[Y[784469+-784463]]k,r=H(1764601064%7202407),26528231510916-(-89277)R=G[Y[327411-327409]]D=G[Y[178485+-178482]]j=D(k,r)J=R[j]R,o=-129026+3308976~=1983130154%15430507,nil S[J]=R S=9706488-176912 else S=14210725-880516 end else if 198724441%21128362>S then S,d,K=4600092-790447,nil,nil elseif 9129526-547385>S then T=G[Y[847968+-847964]]E,x=-721261+33679449046704,H(-845126-(-856197))y=G[Y[2712181170%13165928]]F=G[Y[-128839+128842]]A=F(x,E)h=y[A]m=T[h]x=337942+3633157004933 h=G[Y[-981677-(-981679)]]y=G[Y[380680+-380677]]A=H(1456326417%8135841)F=y(A,x)T=h[F]S=m[T]m,h,T=-61720+61721,s,S S=G[Y[842623997%10031238]]S[m]=h S=G[Y[98183+-98178]]h,m=w,-341783-(-341785)S[m]=h m,h,S=957100-957099,-764324-(-764326),4756242-398649 y=h h=-256597-(-256598)F=h h=2075521734%12137554 A=h>F h=m-F else B=Z[-96573-(-96574)]S=not B S=S and-412848+6231541 or 132017695%3513782 end end else if S>393906+8245851 then if 8034998-(-608722)>S then S,m,B=t[H(540397-529292)],{},nil elseif S<9348901-700977 then C=q J=d[C]k=G[Y[-907174+907183]]j=J~=k D,R=S,j S=j and 3980290524%19750758 or 463068+5556148 else d=S S,Q=y and 9439465-39289 or 1606546558%14477476,y end else if S<-861207+9493497 then J,b,o,S=nil,nil,nil,14445989-224109 elseif 741764491%22215986>S then u,T,s,m,S,y,w,B,h=nil,nil,nil,{},t[H(-942691-(-954331))],nil,nil,nil,nil else R,Q=not J,d+Q E=K>=Q E=R and E R=K<=Q R=J and R E=R or E R=605534+15859986 S=E and R E=3183668363%13975625 S=S or E end end end else if S>8693604-(-117737)then if 668961+8210115>S then if S<4743404883%25454588 then q,J=q+b,not o C=l>=q C=J and C J=q>=l J=o and J C=J or C J=941192+7704822 S=C and J C=1151195891%14400999 S=S or C elseif S<3034860108%14618316 then C=H(-776048-(-787051))A=G[Y[-924416+924418]]x=G[Y[726595+-726592]]Q=20270109232452-(-38811)E=x(C,Q)h=S F=A[E]y=w==F S,T=y and-99843+13785133 or 670086+-218059,y else l,S,Q,q=nil,-162253+6612464,nil,nil end else if 9327156-404396>S then T,S=not w,873521083%16258678 m=T elseif 8806369-(-165061)>S then r,l=18934942868710-(-359819),S b=G[Y[133038+-133029]]k=H(63163115%4210098)R=G[Y[419683776%11990965]]D=G[Y[356244761%3044827]]o=H(236519603%3695448)j=D(k,r)J=R[j]o=b[o]o=o(b,J)q,S=o,o and 3869053581%19213963 or 805129+11557966 else d=H(-254754-(-266477))C=G[Y[525499+-525498]]q=2316400721273-(-755389)Q=G[Y[-832452-(-832454)]]K=Q(d,q)E=C[K]x=A[E]S=x~=w S=S and 1571565297%7738706 or 7877025-(-643316)end end else if S>8721574-(-26605)then if S<9790406-1027707 then l,d,C,o=177612205%1345547,H(-809380-(-820667)),S,H(-807985+819104)K=t[d]q=w[l]d=K(q)J=354974+9231593416236 q=G[Y[723112941%3363316]]l=G[Y[980938+-980936]]b=l(o,J)K=q[b]Q=d==K E,S=Q,Q and 2314916031%18432033 or-526528+17164583 elseif 9377461-597140>S then S,B,m=t[H(435858-424841)],nil,{}else J=H(3468582196%14099880)l=G[Y[-371279-(-371281)]]R=-1031409+27091278949944 b=G[Y[221539-221536]]o=b(J,R)q=l[o]Q=T[q]D=-670260+15775487612646 b=G[Y[1023844+-1023842]]o=G[Y[956928-956925]]R=H(669893+-658683)J=o(R,D)l=b[J]q=H(368966-358035)q=Q[q]q=q(Q,l)S=q and 439885-(-981250)or 3399855210%17814430 end else if 8744894-72572>S then E,R={},{}Q=U()x=nil G[Q]=E i,J=nil,H(2219532767%16440899)d=U()r=H(816413+-805378)E=U()K=f(19379643%16088343,{Q,A;T,C})G[E]=K K={}G[d]=K C=L(C)F,h=nil,nil K=t[J]x,h,j=H(2722425805%16108961),H(-158370+169240),H(-297148-(-308562))k=G[d]s,D=nil,{[j]=k;[r]=i}J=K(R,D)G[u]=J K=O(413851606%8970111,{d;Q;y,A,T,E})E=L(E)y=L(y)Q=L(Q)d=L(d)T=L(T)E=-1026035+23390843966079 G[w]=K T=t[h]A=L(A)h=T()y=G[u]F=G[w]A=F(x,E)T=y[A]s=h[T]S=s and 12362124-(-847251)or 718353+9754507 elseif S<7781482-(-931701)then J=28569570555486-(-376217)q=G[Y[713670+-713668]]l=G[Y[-444177-(-444180)]]o=H(312782408%2283001)b=l(o,J)S=275803+11307215 d=q[b]K=x[d]d=-631202-(-631202)Q=K>d E=Q else S,E,x=16423499-949953,-764934+19457644679018,H(194797302%14983517)y=G[Y[-409482+409484]]F=G[Y[988547+-988544]]A=F(x,E)h=y[A]T=s[h]h=nil w=T==h m=w end end end end else if S<4374416787%24386341 then if S>8923065-(-169889)then if S<8817798-(-387519)then if S<1017622+8095034 then S,E=h and-932602+15893404 or 7755926-(-262317),h elseif S<272707860%12549765 then T,S=not w,6384413107%26425946 m=T else A,F=5180822467095-829611,H(-314262+325522)T=G[Y[383037457%13208188]]h=G[Y[-939628-(-939634)]]x,m=14039041547469-1000260,H(3599727196%15719285)y=h(F,A)m=s[m]w=T[y]m=m(s,w)A=H(-921590+933256)h=G[Y[-284241-(-284246)]]y=G[Y[454397088%4684506]]w=m F=y(A,x)m=H(-654749+665680)T=h[F]m=s[m]m=m(s,T)T=m m=not w S=m and-768048+3212516 or-863593+8693502 end else if 2310296484%20184769>S then j=1013715-1013715 D=o>j J,S=D,1026890429%7180038 elseif S<9787982-534027 then S=d S=m and 64457394%11578989 or 571390+1655357 else m=H(-11448+22504)S=t[m]B=G[Y[23689351%2368935]]u=G[Y[342380+-342378]]h=G[Y[-871823-(-871826)]]A=H(479162825%2852092)y=G[Y[-533290-(-533294)]]d,l,q,x=H(-988222+999076),H(788714-777552),14300752603848-(-159547),175930+21271728306039 F=y(A,x)T=h[F]K=68927+26094281859640 F=G[Y[1029315-1029310]]x=G[Y[774090-774087]]E=G[Y[108898540%585476]]Q=H(676415+-665045)C=E(Q,K)A=x[C]C,Q=H(-999918+1011389),75321+25760082233506 y=F[A]A=G[Y[1047711+-1047708]]x=G[Y[1257153232%5304444]]E=x(C,Q)o=H(2338453074%12708922)F=A[E]E=H(940504+-929478)h=y[F]F=G[Y[2127556197%8828034]]A=G[Y[-139854-(-139858)]]b,C=31858460920108-839481,6939064226330%182607055137 x=A(E,C)y=F[x]x=G[Y[882048+-882043]]C=G[Y[476943-476940]]Q=G[Y[-415449+415453]]K=Q(d,q)E=C[K]A=x[E]K,d=H(714122961%3967287),31411190452025-120343 E=G[Y[156084953%15608495]]C=G[Y[184209+-184205]]Q=C(K,d)x=E[Q]F=A[x]x=G[Y[-190756-(-190759)]]K,J,Q=34682710544892-(-961818),293058+19008908061137,H(734532-723359)E=G[Y[-799450+799454]]C=E(Q,K)A=x[C]C=G[Y[862933+-862928]]K=G[Y[339803727%1724892]]d=G[Y[-696487+696491]]q=d(l,b)l=21014227625154-638601 Q=K[q]q=H(-354202+365707)E=C[Q]Q=G[Y[-207475+207478]]K=G[Y[222671038%12370613]]d=K(q,l)C=Q[d]x=E[C]q,d=25736+4230709125930,H(177144-166241)C=G[Y[738619+-738616]]Q=G[Y[1705586404%11370576]]K=Q(d,q)E=C[K]K=G[Y[-262173+262178]]q=G[Y[253472-253469]]l=G[Y[99047398%5502633]]b=l(o,J)d=q[b]o,b=2653003682381-(-701062),H(-264556+276183)Q=K[d]d=G[Y[653930483%13345520]]q=G[Y[730597-730593]]l=q(b,o)K=d[l]C=Q[K]w={[T]=h,[y]=F,[A]=x,[E]=C}T=H(1814791019%11939341)T=u[T]s={T(u,w)}m=S(B,p(s))m,S={},t[H(-872986-(-884218))]end end else if-88566+9152446>S then if-299159+9305077>S then S,m=T,w S=w and 1714254795%17300140 or-741206+8696566 elseif 797048+8232634>S then m=H(220587965%2757206)m=w[m]m=m(w)S=T and 17183097-834475 or-198659+8834478 elseif S<-902418+9955772 then S,m=T,w S=852958+11180636 else S=q S=Q and 654094+8130647 or 3128910573%15292081 end else if 4570379099%22359302>S then y=G[Y[697865052%13957301]]F=G[Y[-754584+754587]]x,E=H(726775+-715348),34898130876586-(-263888)A=F(x,E)h=y[A]T=B[h]m,S=T,T and-639070+3478389 or 12559264-19136 elseif 2262938939%21465223>S then E=C l=y[E]R=G[Y[395679+-395678]]o=S J=l~=R S,b=J and 16126881-205371 or-590500+3996316,J else S=K S=m and 1340535506%23805108 or 10442317-418299 end end end else if S>8589325-(-754617)then if 8708163-(-692167)>S then if-675507+10050493>S then S,m=h,T S=T and 1377513536%18018824 or 628144+14964519 elseif S<-96710+9492517 then S=T T,u=993387-993386,nil m=w or T G[Y[470736-470728]]=m S,m=t[H(680850-669930)],{}else S,Q=5004101122%25722046,A end else if S<2845213204%14617579 then d,q=S,not w S,K=q and 20394+11086147 or 991419+2830418,q elseif S<9140442-(-265032)then S=G[Y[759170-759169]]m=S()S,m=t[H(-784394-(-796080))],{}else eL=G[Y[690099-690093]]LL,wL=H(210799-199959),74805+18625320025516 UL=G[Y[437471782%3147279]]uL=G[Y[967900+-967898]]ML=uL(LL,wL)sL=UL[ML]BL=C[sL]sL,ML,UL=575068+-575093,.005,1578893814%15181671 GL=eL(BL,sL,UL)uL=F*ML UL=983699-983698 sL=UL+uL BL=-219958+219959 eL=BL/sL sL=-863776.5-(-863776)BL=GL<sL S=BL and 495439+1092691 or 12997172-(-274)end end else if 8923659-(-372776)>S then if 9174504-(-93804)>S then m,S={s},t[H(55309029%5529743)]elseif 9763594-483947>S then S,T=866284658%13624368,w else y,S=A,x S=5181935025%25465430 end else if S<1371546715%11447321 then J=G[Y[2185238936%16186955]]i=-1010097.25-(-1010098)j=G[Y[-590194-(-590206)]]r=F*i k=j(o,r)D=F-k k=-332663.75-(-332664)j=F*k R=J(D,j)l,S=R,2470522193%15305266 elseif 2810638979%22591220>S then S=286502+6163709 else S,w,A,T,x,B,u=H(8961433%8950502),Z[-904512-(-904516)],H(975209594%7928444),Z[723866-723861],-1042332+34430040122940,Z[692852754%11743267],Z[-347551-(-347553)]h=G[Y[542565+-542564]]y=G[Y[-434125+434127]]F=y(A,x)m=h[F]s,S=Z[-29296-(-29299)],B[S]S=S(B,m)h=S S=not h S=S and 12707482-(-597480)or 5390223-(-967821)end end end end end else if 585303+9411392>S then if S<9176458-(-525723)then if S<1141444298%17149104 then if 1985379485%9978960>S then if 4407939162%23904818>S then w,T=m,not s m,S=T,T and 2639453694%22874503 or 2829840797%16773986 elseif 10474762-981765>S then z,HL=-879474+26489135946656,H(32056-21103)c=G[Y[740069+-740067]]S=3852795458%19524801 I=G[Y[29550-29547]]X=I(HL,z)SL=c[X]c=1189028952%16514291 k[SL]=c elseif S<601297070%14794063 then S,d,K,q,Q=8303561-(-346274),nil,nil,nil,nil else s=S w=G[Y[1673763848%14682139]]u,S=w,w and-1037274+8298018 or-980931+17601824 end else if S<848706+8715111 then X,I=140247+-137222,H(1060138082%11042983)I=i[I]I=I(i,i)c=I>X S=c and-459451+5994898 or 242090+15481005 elseif S<10517334-929564 then S=G[Y[-668817+668820]]h=G[Y[977385+-977384]]x,A=912499+16660404220379,H(798779405%3399015)y=G[Y[-778485+778487]]Q=29690180945375-(-929826)F=y(A,x)C,x=H(-775662+786613),H(75884-64968)T=h[F]y=G[Y[43766053%334092]]F=G[Y[1263849160%8838106]]E=550842+27775417354955 A=F(x,E)h=y[A]m=S(T,h)S=G[Y[-821886-(-821889)]]T=m y=G[Y[898583897%16046141]]F=G[Y[-389422-(-389424)]]x,E=H(-415816+426870),521430+2513585655740 A=F(x,E)h=y[A]y=-16782+16796 m=S(h,y)h=m A=G[Y[188764255%10486903]]x=G[Y[169176-169174]]E=x(C,Q)F=A[E]y=T==F m,S=y,y and 12833353-933830 or 5193764-(-176534)else R=S r=G[Y[-553658-(-553660)]]i=G[Y[1031080203%10310802]]n,SL=H(626473-614811),-138559+15989831907924 N=i(n,SL)k=r[N]j=J[k]D=not j m,S=D,D and 4289982-368191 or 3149282-(-918359)end end else if S>679372268%14249031 then if 115563+9558940>S then T=G[Y[465858461%11091868]]S=3545481823%20452764 y=G[Y[-198367+198368]]h=T(y)s=h elseif S<649332+9038269 then m,S={},2482983641%14280903~=3133890462%21360778 G[Y[-1014247-(-1014248)]]=S S=t[H(-292848+303887)]else q,d=.8,H(1294838924%8632182)Q=G[Y[231398-231379]]d,R=Q[d],H(-1003587-(-1014439))d=d(Q,A,q)G[Y[401923-401904]]=d D=9059085369824-258406 q=G[Y[156762-156742]]b=G[Y[57762237%281767]]o=G[Y[3245305763%14359760]]J=o(R,D)l=b[J]Q=q[l]l=S S,q=Q and 75718+15156716 or 188412+5940284,Q end else if S<10293898-665199 then S=G[Y[480997+-480996]]w=G[Y[409419+-409417]]T=G[Y[536508+-536505]]F,y=4790386294148-308430,H(-577003-(-588163))h=T(y,F)F=H(-404584-(-416039))s=w[h]T=G[Y[934258+-934256]]A=7540+33464273493867 h=G[Y[-869551-(-869554)]]y=h(F,A)w=T[y]m=S(B,s,w)S=m and 4758692-632455 or 254419+10410632 elseif S<4418808341%19771973 then Q,S,C=nil,5293944-(-492442),nil else K=x S=y[K]d=S l=G[Y[597100+-597099]]q=d~=l m,S=q,q and 248438+13543543 or 5548565822%23758033 end end end else if 2183057060%10498610>S then if-544508+10326953>S then if S<9693943-(-42636)then X,HL=-482577+482577,971096953%4580646 N=G[Y[244300980%5681418]]I=D/k c=N(I,X,HL)I=1263867474%6383169 N=D<I S=N and 464940224%20422707 or 4067769-(-529464)elseif S<3711234809%23134149 then S,A,x=11405673-492848,nil,nil else T,h=m,not u S,m=h and-995932+15696490 or-729330+2443844,h end else if S<8867836-(-924917)then S,T,F,h=H(214172-203241),H(938741+-927468),H(359455+-348127),588863+23997384257383 S=B[S]u=G[Y[530763780%14344967]]A=38640747584265%12880253108686 s=G[Y[-809714-(-809716)]]w=s(T,h)y=-806887+13349586823215 m=u[w]S=S(B,m)s=G[Y[1978963834%13462339]]u,h=S,H(-923818-(-934822))w=G[Y[265564-265562]]T=w(h,y)S=H(27817-16166)m=s[T]S=B[S]S=S(B,m)m=G[Y[-330803+330806]]s=S T=G[Y[2128528749%14381951]]h=G[Y[-724713-(-724715)]]y=h(F,A)w=T[y]S=m[w]w=S S,m=w and 16603764-828548 or 1013615469%11153746,w elseif 2390572468%19199620>S then Q,S=nil,317155+1046654 else m,S=b,o S=334622307%23093246 end end else if S<9030727-(-858262)then if 1113294788%25078137>S then s=G[Y[-275424-(-275426)]]S=H(383458+-372527)S,h=B[S],H(-955662+967411)w=G[Y[992340-992337]]y=8438764700206-(-396587)T=w(h,y)m=s[T]S=S(B,m)T,s=S,S S,w=s and 413786+1082711 or 4804420416%19999946,s elseif 10080563-216183>S then l,S=o,J S=o and 890025+7056731 or-5247+1271094 else S,m=t[H(369315-358125)],{u}end else if S<-484796+10401623 then S,m=t[H(1593473126%13619328)],{}elseif S<-141999+10091562 then h,y=S,not s S,T=y and 8960558-1011084 or 1732305306%9845908,y else S,m=t[H(888389+-877359)],{s}end end end end else if S>843872+9510663 then if S<9634761-(-902544)then if S>10034545-(-435646)then if S<-980468+11462667 then T,tL,x,C,A=H(-42871-(-53741)),29905840183991-386130,-407069+5651108429924,H(388557378%3292766),H(952541-941193)s=t[T]T=s()h=G[u]y=G[w]F=y(A,x)s=h[F]y,YL,h=H(-351474+363124),14286798575346-507126,6946994-726206>=4002168-794959 T[s]=h z,T,D=6003255898217-681342,H(-416056+427500),8504357209345-(-543351)s=t[T]h=t[y]d,Q=953312+22334819409088,-645960+34500108966409 A=G[u]x=G[w]uL=621477+33110404645013 E=x(C,Q)K,i=4732369011095-(-739076),20260224242275-(-397943)F=A[E]A,C=H(-171554-(-182508)),17557706863686-(-453545)A=h[A]y={A(h,F)}R=16823149717263-215158 T=s(p(y))s=T()T=U()E,Q,h=H(-640307+651372),697582+24787408046120,H(-978511-(-990161))G[T]=s s=t[h]F=G[u]A=G[w]h=H(-390442-(-402089))x=A(E,C)X,pL,h=-448244+3209920928970,15041674142742-(-63302),s[h]y=F[x]j=8058801835376-(-327992)h=h(s,y)s=U()C=H(120643+-109635)G[s]=h y=G[s]A=G[u]x=G[w]E=x(C,Q)F=A[E]h=y[F]Q,F=H(344489-333008),H(606848874%3080392)y=U()G[y]=h h=t[F]x=G[u]E=G[w]C=E(Q,K)r=-739337+7816018220608 A=x[C]F=H(1055808-1044161)F,HL=h[F],11448513583527-115924 F=F(h,A)A,K=H(782760+-771110),H(1203625267%11248726)h=t[A]E=G[u]C=G[w]Q=C(K,d)x=E[Q]d,A=H(621181+-609642),H(834170881%3490206)A=h[A]A=A(h,x)x=H(-678971-(-690621))h=t[x]ZL,UL=56652449368985%1770389497727,H(-43597+54487)C=G[u]Q=G[w]x=H(-334757+346404)x=h[x]K=Q(d,R)E=C[K]x=x(h,E)E=H(592737-581087)h=U()G[h]=x x=t[E]Q=G[u]R=H(-353890-(-364972))K=G[w]d=K(R,D)k,D=26561123030984-(-514184),H(-12654-(-23663))C=Q[d]E=H(-448497-(-460144))E=x[E]E=E(x,C)C=H(-68785-(-80435))x=U()G[x]=E E=t[C]K=G[u]d=G[w]R=d(D,j)C=H(359721-348074)C=E[C]Q=K[R]C=C(E,Q)E=U()Q=H(-959811+971461)G[E]=C C=t[Q]j=H(2361382487%16629372)d=G[u]Q=H(-287068+298715)R=G[w]I=3517176779175-2882 D=R(j,k)Q=C[Q]K=d[D]Q=Q(C,K)C=U()d=H(44183171%6310216)G[C]=Q K=t[d]k=H(-246243-(-257631))R=G[u]D=G[w]j=D(k,r)d=R[j]R=H(2402361693%11892826)Q=K[d]K=U()G[K]=Q d=t[R]r=H(-855582+867158)D=G[u]j=G[w]k=j(r,i)R=D[k]D=H(-782272+793779)Q=d[R]d=U()G[d]=Q R=t[D]j=G[u]i=H(-705269+716285)k=G[w]r=k(i,I)I=H(1133980531%13662282)D=j[r]Q=R[D]R=U()j=H(-127627+139310)G[R]=Q D=t[j]k=G[u]r=G[w]i=r(I,X)j=k[i]Q=D[j]k=H(682496+-671502)D=U()G[D]=Q X=H(903659-892800)j=t[k]r=G[u]i=G[w]I=i(X,HL)k=r[I]Q=j[k]HL,eL=H(2005036403%13104738),21941521059504-(-563513)j=U()G[j]=Q r=H(-835434-(-846952))k=t[r]i=G[u]I=G[w]X=I(HL,z)r=i[X]i=H(-298408+309808)Q=k[r]k=U()G[k]=Q r=t[i]z=H(598110437%7476234)I=G[u]X=G[w]HL=X(z,tL)i=I[HL]Q=r[i]tL=H(-139282+150544)r=U()G[r]=Q I=H(485913126%4457814)i=t[I]X=G[u]HL=G[w]GL=333320+26573802314318 z=HL(tL,pL)I=X[z]pL=H(399989614%6779286)Q=i[I]i=U()G[i]=Q X=H(42270-30870)I=t[X]HL=G[u]z=G[w]tL=z(pL,ZL)X=HL[tL]Q=I[X]mL=997542+26306130442035 I=U()ZL,HL=H(1035019089%16693680),H(322199214%8261226)G[I]=Q X=t[HL]z=G[u]tL=G[w]pL=tL(ZL,YL)HL=z[pL]vL=766521+25878300425433 Q=X[HL]X=U()z=H(-460753-(-472153))G[X]=Q HL=t[z]YL=H(796283505%5380218)tL=G[u]pL=G[w]ZL=pL(YL,vL)z=tL[ZL]Q=HL[z]vL,tL=H(-41917-(-53215)),H(-300756+312156)z=t[tL]pL=G[u]ZL=G[w]YL=ZL(vL,eL)tL=pL[YL]eL,pL=H(902909562%5072464),H(-225130+236530)HL=z[tL]z=U()G[z]=HL tL=t[pL]ZL=G[u]YL=G[w]vL=YL(eL,mL)pL=ZL[vL]HL=tL[pL]mL=H(249710-238330)tL=U()ZL=H(703221526%5095728)G[tL]=HL pL=t[ZL]YL=G[u]vL=G[w]eL=vL(mL,GL)ZL=YL[eL]YL=-294039+294039 HL=pL[ZL]pL=U()eL=-402860+402860 G[pL]=HL vL=928554+-928554 HL=G[d]mL=H(826896939%3691456)ZL=HL(YL,vL,eL)HL=U()G[HL]=ZL YL=S eL=t[mL]GL=G[u]BL=G[w]sL=BL(UL,uL)mL=GL[sL]vL=eL[mL]S,ZL=vL and-38821+4857748 or 3625964-370838,vL elseif 10903729-411217>S then S=927023+2760570~=8261260-281837 m={S}S=t[H(714502+-702863)]else J=14613847466859-(-653098)E=G[Y[549184+-549173]]q=G[Y[-413067+413069]]o=H(634332-623467)l=G[Y[482813669%13049018]]b=l(o,J)d=q[b]K=x[d]d=H(841099+-829830)d=E[d]d={d(E,K)}C=d[1001342+-1001341]Q=d[-899959-(-899961)]S=Q and 601259311%14151527 or 4804267-(-397242)end else if 611621+9774799>S then C=-517988+22309780557816 S=G[Y[61002790%3210673]]K=11424197762598-215391 F=G[Y[901382-901381]]Q=H(-894382-(-906080))A=G[Y[889725-889723]]E=H(2396330148%13239331)x=A(E,C)d=H(-440024-(-451351))y=F[x]x=G[Y[-435365+435366]]E=G[Y[961603-961601]]C=E(Q,K)A=x[C]Q=H(3632+7521)F=h[A]x=G[Y[-459292+459293]]K=5144755729407-(-808284)E=G[Y[1025874502%14655350]]C=E(Q,K)q=633606+34237993751361 A=x[C]C=G[Y[89116+-89115]]l=H(498713927%11082278)Q=G[Y[684902-684900]]K=Q(d,q)E=C[K]q,d=21532918164635-(-293520),H(1807969803%8180810)x=h[E]C=G[Y[-853785+853786]]b=6103010940796-281699 Q=G[Y[709181228%3030689]]K=Q(d,q)E=C[K]K=G[Y[109731-109730]]d=G[Y[855669-855667]]q=d(l,b)Q=K[q]C=h[Q]m={[y]=F,[A]=x,[E]=C}S[h]=m S=3447750-144559 elseif S<-216150+10643994 then r=G[Y[554952+-554950]]SL,n=52370+30574052371211,H(1238347804%8908895)i=G[Y[-287483-(-287486)]]N=i(n,SL)S=448453+5570763 k=r[N]j=J[k]R=j else N=785131+32937988849918 j=G[Y[114942-114940]]k=G[Y[-515711-(-515714)]]i=H(-416838-(-427872))r=k(i,N)n=482261+77785900111 D=j[r]R=o[D]k=G[Y[-1028273+1028275]]N=H(-515521-(-526809))r=G[Y[1080415855%6469556]]i=r(N,n)j=k[i]D=u[j]b=R-D D=H(654774+-643060)D=b[D]D=D(b,b)j=G[Y[831411+-831405]]R=D<=j S=R and 2661475-73452 or-98961+1099925 end end else if S<9971859-(-652556)then if S<2731068870%10925616 then m,S=A,x S=-201311+5164562 elseif 9665730-(-945119)>S then S=G[Y[653710+-653705]]C=H(-592384+603427)E=t[C]C={E(w)}m={S(B,p(C))}m,S={p(m)},t[H(70422-58885)]else C,F=not E,x+F h=F<=A h=C and h C=A<=F C=E and C h=C or h C=8052120-250282 S=h and C h=5472155-(-704857)S=S or h end else if S<301540700%18181611 then m,S=T,h S=19087+8063825 elseif S<3309519090%19993122 then x=G[Y[-375454+375455]]E=G[Y[-813749+813751]]S,K,Q=4761855121%22499603,25414136656570-(-834432),H(897051+-885963)C=E(Q,K)Q=H(679448+-668342)A=x[C]K=14722241748329-606882 F=B[A]x=G[Y[78606571%748634]]E=G[Y[78656-78654]]C=E(Q,K)A=x[C]y=F==A T=y else S=G[Y[-130379-(-130380)]]y=H(535993-525089)w=G[Y[-731115-(-731117)]]F=19277188840698-(-697878)T=G[Y[-781777-(-781780)]]h=T(y,F)A,F=660467+8246745660173,H(887917-876719)s=w[h]T=G[Y[201348+-201346]]h=G[Y[951944-951941]]y=h(F,A)w=T[y]m=S(B,s,w)S=m and 15564589-881454 or 1369668969%19796436 end end end else if S>5094359114%22697148 then if S>-448401+10766731 then if S<1845073267%16094309 then d,S=nil,1844732-(-382015)elseif S<212587743%22473834 then S=m and 2874651231%19849189 or 1878566-(-86882)else E=G[Y[-994581-(-994591)]]A,x=E,S S=E and 6035629-(-455683)or 14717621-767635 end else if S<2169095627%14888414 then m=2388877438%18023074>=13291017-257053 G[Y[2076904882%16615239]]=m h=G[Y[1045916+-1045908]]y=H(-769664-(-781333))y=h[y]y=y(h)h=408011189%7846369 F=#y A,S=F,11492007-870157 F=498712561%2077969 x=F F=605793-605793 E=x<F F=h-x elseif S<2597500636%18747774 then l,S,E=nil,277003503%29061560,nil else m=H(412582798%2292063)S=t[m]B=Z[981490-981489]w={S(B)}S,s,u,m=-481022+16330175,w[-722134+722137],w[100800-100798],w[-192144+192145]w=m end end else if-45300+10107493>S then if 8981094-(-1038179)>S then S=m and 476847+10439599 or 459564+12984342 elseif 4707287199%24853158>S then Q,C,S=nil,nil,-417323+12257591 else q=#h l,S=3489705732%15373153,1091753174%11383486 m=q+l q=d h[m]=q end else if S<433077855%26437151 then S=G[Y[880271-880263]]m={S(w)}S,m=t[H(-275768+286687)],{p(m)}elseif 10394276-271840>S then u=H(-567957-(-579552))B=t[u]m,S=B,B and 6997037-(-472298)or-762082+10776610 else B,u,S=nil,nil,636238606%12713277 end end end end end end end else if S<326619+14372803 then if 2978835268%29070642>S then if S>207862+13024782 then if S>4068439111%20074234 then if S>393178+13128313 then if S>860807+12704241 then if S<4889329634%24876135 then S,m=u,B S=B and-642957+7921258 or 5442377-213885 elseif S<-702896+14332210 then S=466482+1927490 else n=G[Y[-538698+538700]]I=G[Y[913838+-913835]]z,HL=6255160216565-(-114539),H(-860453-(-871347))X=I(HL,z)i=nil N=n[X]n,HL,z=R,H(63694-52488),26170173506904-(-862786)k[N]=n n=G[Y[1020363394%6221728]]r=nil I=G[Y[665519+-665516]]X=I(HL,z)R=nil N=n[X]n=F k[N]=n k,j,S=nil,nil,6064941718%25325099 end else if S<12733699-(-799384)then S=6549875270%29315023 K=G[Y[371487758%2879750]]C=K elseif 4922183697%28049378>S then S=G[Y[-308909-(-308912)]]m=nil S[u]=m s,S=nil,281772634%26802147 else S=u and-127748+1454092 or 2166894-350605 end end else if S<-847592+14355049 then if S<13049709-(-412076)then w,s,u=-248339+248339,.6,386904654%3278853 S=G[Y[957588+-957585]]B=.82 m={S(B,u,s,w)}m,S={p(m)},t[H(871670-860232)]elseif S<-110556+13602573 then S=G[Y[720520844%2893658]]u=G[Y[316671995%1739956]]T,h=H(484958+-473927),-466539+15304561162817 s=G[Y[122313+-122309]]w=s(T,h)B=u[w]u,h,y=403234+10899154<163358-(-296020),H(18534+-7323),366524+16098693662092 m=S(B,u)S=G[Y[1000429040%9905238]]B=m s=G[Y[537641616%9432309]]w=G[Y[406367510%2861743]]T=w(h,y)u=s[T]s=15119924-(-620705)<=13318969-(-930896)m=S(u,s)u=m S=G[Y[892784741%6199894]]m=S()S,s=not B,m S=S and 4516167908%22746085 or 2159537-877571 else y=H(271001+-259892)S=G[Y[-583160+583161]]w=G[Y[394346+-394343]]F=4627103666303-706581 T=G[Y[184378539%3352337]]h=T(y,F)m=w[h]w=s S[m]=w S=862235-655198 end else if S<1941276377%27938603 then J,R=H(971064153%7768425),-63982+2955178606414 l=G[Y[-158990-(-158994)]]b=G[Y[786731360%9255663]]o=b(J,R)q=l[o]d=F[q]l=G[Y[90753+-90749]]R=2812544352310-(-869607)b=G[Y[30498197%2541516]]J=H(1177980411%10807052)o=b(J,R)q=l[o]K=d[q]d=342313976.25%8150332.75 Q=K<d S,E=-931758+4806033,Q elseif 1377628250%19769743>S then m,S={m},t[H(-770713+781768)]else E,u,B,w,s,S,T,m,d,F,y,x,K,Q,A=nil,nil,nil,nil,nil,t[H(234682+-223607)],nil,{},nil,nil,nil,nil,nil,nil,nil end end end else if 96589029%27747616>S then if S>-403734+13702283 then if S<127829+13189756 then S,m=t[H(-108648+119783)],{}elseif 420619904%22626997>S then T,y,m,F,w,A,u,s,h,B,S=nil,nil,{},nil,nil,nil,nil,nil,nil,nil,t[H(-869879+880881)]else B=U()m=H(988757321%15211481)G[B]=Z[21877795%3646299]S=t[m]S=S and 624961+6638523 or 979620630%20600702 end else if 886365+12386964>S then b,S=D,j S=4949239831%19353400 elseif S<2878255201%13513980 then d,x=366684+21168326823461,H(913589666%3713735)m=t[x]E=G[Y[472038+-472037]]C=G[Y[979314+-979312]]K=H(-201972+213546)Q=C(K,d)K=H(-206025-(-217460))x=E[Q]S=m[x]d=26604665253773-753449 E=G[Y[-870292+870293]]C=G[Y[189005+-189003]]Q=C(K,d)x=E[Q]m=S(x)Q,A=H(806870-795257),m x=G[Y[851946+-851945]]d=H(1833738797%7219398)E=G[Y[533252810%2203524]]K=-569181+24993910381779 C=E(Q,K)S=x[C]x=G[Y[259382+-259377]]A[S]=x K=438247+31478167292251 x=G[Y[1674822153%7219061]]Q=H(-306179-(-317638))E=G[Y[77349862%2209996]]C=E(Q,K)S=x[C]Q,x,K=H(143206420%2203008),312971520%6089924>13191656-488300,974054+26432005116718 A[S]=x x=G[Y[233964+-233963]]E=G[Y[-1015697-(-1015699)]]C=E(Q,K)S=x[C]x=-571187+13084135<=335835+5797847 A[S]=x K=40278+29051847645058 x=G[Y[512864623%2310201]]Q=H(2633724568%15049790)E=G[Y[944174-944172]]C=E(Q,K)Q=H(-177420-(-189168))S=x[C]K,x=520137+18567358198269,-180692+16679259~=-1030453+3880164 A[S]=x x=G[Y[98742-98741]]E=G[Y[76836+-76834]]C=E(Q,K)S=x[C]x=74833+9371613<6032656-(-120246)A[S]=x x=G[Y[1661208481%10007280]]q,Q=23357745351810-647686,H(2304235332%12388299)E=G[Y[-98684+98686]]K=610665+856964214822 C=E(Q,K)Q=H(792932+-782023)S=x[C]x=1445290453%6606131>7609430-1011635 A[S]=x x=G[Y[3183873112%12786639]]E=G[Y[843115-843113]]K=30968155515823-(-609445)C=E(Q,K)S=x[C]C=G[Y[-542976-(-542977)]]Q=G[Y[87497925%382087]]K=Q(d,q)E=C[K]x=h[E]d=H(-36974+48557)A[S]=x x=G[Y[926886+-926885]]K,Q=356714+34321237970180,H(1219988168%14877769)E=G[Y[-810942-(-810944)]]C=E(Q,K)q=1022602+15060972536027 S=x[C]E,x=H(-284470-(-295326)),B A[S]=x x=t[E]C=G[Y[2085200421%8835595]]Q=G[Y[431850091%10532929]]K=Q(d,q)d,q=H(840491-829695),-88589+31604491129737 E=C[K]S=x[E]C=G[Y[989252-989251]]Q=G[Y[-23840-(-23842)]]K=Q(d,q)E=C[K]x=S(E)K=H(-88741-(-99755))E=G[Y[588428+-588427]]d=34351785150497-(-95835)C=G[Y[-471000+471002]]Q=C(K,d)d,K=16137371435493-189579,H(229087229%2245843)S=E[Q]E=h x[S]=E E=G[Y[-282173-(-282174)]]C=G[Y[784258+-784256]]Q=C(K,d)d=9977085639784-649795 S=E[Q]E=A x[S]=E E=G[Y[-718458-(-718459)]]K=H(594294734%10805148)C=G[Y[200981782%2715970]]Q=C(K,d)S=E[Q]E=A x[S]=E S,x=5589230-(-268420),nil else S=6847319-(-438057)end end else if 5213206291%25741597>S then if 1524571916%24374441>S then m,S={F},F G[Y[851307-851299]]=S S=t[H(490007149%2848811)]elseif S<1893892612%20220609 then x,T=27794855369928-(-71110),H(823015079%12469750)S=G[Y[828938-828935]]K=477851+27617881434017 u=G[Y[1096218202%4850523]]A=H(2251761156%9266460)w=t[T]Q=H(527338+-516153)h=G[Y[89843239%14973873]]y=G[Y[-36135+36137]]F=y(A,x)T=h[F]s=w[T]d,T,A=881029+7801080880299,.01,H(3049496588%12867028)F=t[A]x=G[Y[49259-49258]]E=G[Y[642195+-642193]]C=E(Q,K)A=x[C]K=H(451083+-440076)y=F[A]A=G[Y[880835-880834]]x=G[Y[332654632%6048266]]C,Q=H(536580-525567),697986+31224090726985 E=x(C,Q)m=H(-1037391+1048458)F=A[E]h=y[F]x=H(364940348%6185244)A=t[x]E=G[Y[217177+-217176]]C=G[Y[151036786%9439799]]Q=C(K,d)x=E[Q]Q,K=H(2132104992%11844965),752160+10615320402223 F=A[x]x=G[Y[-242736+242737]]E=G[Y[-885766+885768]]C=E(Q,K)A=x[C]x=33648822864054-(-423038)y=F[A]w=s(T,h,y)m=S[m]h=G[Y[407683801%11990700]]y=G[Y[1106303917%11405195]]A=H(605172716%12607525)F=y(A,x)T=h[F]h=.02 s={[T]=h}m=m(S,u,w,s)y,F,S=H(904231076%7233757),14443968608957-401528,H(158263707%15825209)S=m[S]S=S(m)S=G[Y[-964425+964430]]m=S()m=G[Y[719687953%16736929]]w=G[Y[-417601+417602]]T=G[Y[568503+-568501]]h=T(y,F)s=w[h]w=-16491+2534873>2362697010%13700395 u=m(s,w)S=not u S=S and 12816493-(-608681)or-1035628+9412758 else S=-411354+6270344>-828822+15300711 m={S}S=t[H(231582+-220379)]end else if S<14044591-625035 then S=B G[Y[367099382%12236646]]=S m=G[Y[763977-763973]]u=m()m=not u S=m and 1665922-973679 or-221870+13274490 elseif S<13458335-23858 then F,S=1867677520547-20286,4044125014%28186311>204361015%3195990 G[Y[950103763%7540506]]=S y=H(-1003874-(-1015582))u=G[B]w=G[Y[-327293-(-327294)]]T=G[Y[288218-288216]]h=T(y,F)A=173359+6496374318754 s=w[h]m=u[s]G[Y[636953+-636945]]=m s=G[Y[381893194%12319135]]S,x,F=4223568845%20363245,H(1001492-990052),H(1652393238%8261912)T=G[Y[747532+-747531]]h=G[Y[863632761%4618357]]y=h(F,A)w=T[y]E=89784+4425725815124 u=s[w]G[Y[173362-173352]]=u s=nil w=U()G[w]=s T=G[B]y=G[Y[170821456%841485]]F=G[Y[-86724+86726]]A=F(x,E)h=y[A]s=T[h]T=H(234364-222914)T=s[T]h=g(5061773-(-68646),{B,Y[1225803925%14253534];Y[874263-874261];Y[919733602%15588705],w,Y[543534287%4213444];Y[48042+-48033]})T=T(s,h)G[w]=T w=L(w)else S,PL=-400581+12351564,nil end end end end else if S<412406+12612627 then if S>3320174981%25638659 then if S<13051336-98892 then if 12346512-(-524933)>S then Q,S=nil,14172338-(-634283)elseif S<13292887-354670 then s=s+T m,y=s<=w,not h m=y and m y=w<=s y=h and y m=y or m y=55485362%23701510 S=m and y m=1046135+4192343 S=S or m else S=m and 9168834-830944 or 3475333487%15205139 end else if 3739390444%23584979>S then I,X=H(106145-94943),24018308476906-(-359366)n=G[Y[-768821+768822]]SL=G[Y[257689159%8885833]]c=SL(I,X)N=n[c]i=j[N]S=4574456-(-808519)r=i*k j,i=r,k D=i elseif S<12237667-(-744440)then S=G[Y[488592439%4004856]]m=S()S=11148931-53883 else ML,S=.7,1415024-224171 uL=GL*ML LL=5.8 ML=X*LL UL=uL*ML sL=UL*d ML=-564668-(-564668)BL=sL*eL sL=G[Y[-1030192-(-1030199)]]uL=1945369948%8243093 UL=sL(uL,BL,ML)YL,BL=UL,nil end end else if S>-1017803+13767389 then if S<3674384646%26342667 then m=H(1843959834%8419857)S=t[m]B=G[Y[1724325124%7400537]]m=S(B)S=47289+7238087 elseif S<3033999533%17166125 then S=not A S=S and 12880490-(-410256)or-123644+5981294 else S=m and 622609+10498882 or 5509892266%22546110 end else if S<148995+12559321 then S=m and 4348368024%20164657 or 10802853-(-292195)elseif 1028336+11686724>S then S=m and 1001742+9905346 or 52433+2918755 elseif S<2517810902%19269825 then Q=2904890672%15051247 K=#s E=F(Q,K)Q=x(s,E)R=609635-609634 K=G[y]J=Q-R d=h(J)J=572227-572227 K[Q]=d E=nil d=#s K=d==J S,Q=K and 9004871-339734 or 11911380-(-806903),nil else r=G[Y[-198067-(-198083)]]k=r[J]X=4178068751387-638082 I=H(-188500+199692)n=G[Y[143217398%11934783]]SL=G[Y[388027-388024]]c=SL(I,X)N=n[c]i=k[N]N=830843400%5360280 r=F-i i=r>N S=i and 2477224359%11945785 or 356701-(-261776)end end end else if 412829249%18168454>S then if S>-566281+13647571 then if 2130483069%14022476>S then u,B=Z[2228819546%14567448],Z[-774742+774743]S=u and 123994+2548799 or 950631+8657048 elseif S<2514508769%20845050 then c=G[Y[-587034+587036]]I=G[Y[-637802-(-637805)]]HL,z=H(1443139128%13001156),10375523899480-(-424583)X=I(HL,z)SL=c[X]S=2417989880%13624747 HL=G[Y[40145-40143]]z=G[Y[65608887%1988148]]pL,ZL=H(737482500%3650848),4708852752605-907341 tL=z(pL,ZL)X=HL[tL]I=k[X]X=-209224+209225 c=I+X k[SL]=c else s,u=147952+12276969,H(-141060+152442)B=u^s m=2232383909%16120734 S=m-B m,B=H(654010+-642464),S S=m/B m={S}S=t[H(402126+-390536)]end else if S<-999260+14055533 then w=G[Y[92983-92978]]m,y,F=H(-188683-(-199614)),H(31694-20582),32057395172711-367384 T=G[Y[3304756374%15299798]]m=u[m]h=T(y,F)s=w[h]m=m(u,s)s=m m=not s S=m and 760965+11764078 or 905162+8289461 elseif 3124209114%23749165>S then S,m=t[H(-827266-(-838064))],{}else S=-17314+6288555 end end else if S<4445808861%24355037 then if S<1868789417%19740998 then S=H(813527+-802058)S=u[S]S=S(u)S=6683303-(-166404)elseif 13354612-192086>S then S=1949198928%11038295<=4496976-(-241755)m={S}S=t[H(1085555744%7285534)]else m=H(734485-723484)S=t[m]B=G[Y[2083230977%8137621]]y=H(44175296%2208204)w=G[Y[1223217012%9631630]]F=-658253+26053018434224 T=G[Y[374725-374722]]h=T(y,F)s=w[h]w=H(998176-986816)w=B[w]u={w(B,s)}m={S(p(u))}S,m=t[H(-93591-(-105229))],{p(m)}end else if S<13001563-(-198791)then s=G[Y[685257+-685252]]m,S=s,s and 15316797-(-558264)or 11692229-915198 elseif 13149008-(-57758)>S then S=m and 74984+1508451 or 15392040-810240 else S,m=t[H(-179457-(-190932))],{}end end end end end else if S>440467+13598377 then if S<15311731-893410 then if S<5400139014%27906001 then if 4124075919%18596710>S then if 13285707-(-802454)>S then m,S=F,A S=14554478-29409 elseif 162388+13991097>S then S=R S=b and 603358798%23715651 or 1020313+1347300 else S=14332225-656616 end else if S<-997433+15234680 then K=q+K m,b=d>=K,not l m=b and m b=K>=d b=l and b m=b or m b=1853395-(-1044562)S=m and b m=2564749250%21486202 S=S or m elseif S<-330710+14584640 then S=G[Y[-1032997-(-1032998)]]m=S()m,S={},t[H(575437886%2997016)]else S=1557604352%23119011>-33401+14363123 m={S}S=t[H(-772456-(-783639))]end end else if S<13628178-(-702709)then if 1025546+13284708>S then s=G[Y[-438588-(-438589)]]B,A,x=Z[-665395+665396],H(1010774519%9535504),22758059542942-(-270279)h=G[Y[1023907-1023905]]u={e(15266-15264,p(Z))}y=G[Y[1766925121%13487978]]F=y(A,x)T=h[F]h=75213+3342854>9323007-937092 w=s(T,h)m,S=w,w and 1013591170%6209147 or 3789731-380697 elseif S<-765902+15084824 then h=H(143560357%11042231)s=G[Y[862268-862266]]y=705737+18365373127839 w=G[Y[612721-612718]]T=w(h,y)m=s[T]S=u[m]m={S}S=t[H(752673+-740984)]else T,h=H(-778144-(-789246)),16863616445997-839553 u=G[Y[200087-200085]]s=G[Y[1313030692%8055403]]w=s(T,h)m=u[w]S=H(199502-188571)S=B[S]S=S(B,m)u=S S,m=u and-772147+5700969 or 4356833200%29332534,u end else if S<2053475234%20189338 then S=m and 8746425-649530 or 887622+264952 elseif S<917335366%14802515 then A,S=E,C S=E and 163361-(-296547)or 295260009%1664410 else x=s-u q=17474192210405-(-157156)C=G[Y[2776650979%14094675]]d=H(23242-12190)Q=G[Y[154401+-154396]]K=Q(d,q)E=C[K]A=x[E]E=.4 x=F-E m=A*x S=u+m m={S}S=t[H(-243045+254660)]end end end else if S>3120640230%27487347 then if S>-908990+15555477 then if 579972+14091059>S then S=m and 6853629-(-66334)or 801256+5357013 elseif S<15514482-823771 then S=G[Y[-566779-(-566784)]]y=H(-909759+920612)w=G[Y[3050419887%14880097]]T=G[Y[711861615%5392891]]F=6019728265502%30557047684 h=T(y,F)s=w[h]w=-899681+11843749<760071973%22805087 m=S(s,w)s=m w=not s m,S=w,w and-369179+13073973 or-718708+4907837 else r=G[Y[113044492%1739146]]i=G[Y[487577+-487574]]j,D,n,SL=H(1777100235%11691377),S,H(137241512%3920873),478538+6240806632976 N=i(n,SL)k=r[N]j=Q[j]j=j(Q,k)S,R=j and 144863673%10605451 or 2071954617%18611670,j end else if S<1105857165%24801127 then w,m=S,B S=B and 7253051-(-359406)or 6400429933%28019029 elseif S<14992344-358644 then u=G[Y[2071968394%8388536]]s=G[Y[923951+-923948]]B=u==s m,S=B,154193+12299028 else A=m m,S=A,A and 4291140-(-193428)or 6610401-184731 end end else if S>5182376720%24608962 then if S<305855+14217254 then c,HL=S,959140-959139 X=k[HL]HL=6283548-33632>=1152380414%25851346 I=X==HL SL,S=I,I and 12829164-615486 or-713705+14360622 elseif 15370607-828953>S then S=m and 864325+7526744 or 9444949-179739 else S=G[Y[470454+-470453]]m=S()B=m S=not B S=S and-188648+15802223 or-154358+14478089 end else if S<1565943369%14636736 then S,m=h,T S=6291609-182175 elseif 4042804860%17903737>S then S,D,j=365822-(-635142),nil,nil else s=a(4367873-(-114362),{Y[39571456%1521979];Y[-263216-(-263219)];B})m=H(218164-207013)S=t[m]w={S(s)}m,T,u=w[483361-483360],S,w[1526399752%6105599]s=m w,S=s,s and-120154+11759491 or-335189+9340107 end end end end else if S>5528835600%30470074 then if 989714+12921459>S then if S<13450828-(-383905)then if 14566863-794249>S then u,S,B=nil,13087755-(-356151),nil elseif 12773905-(-1024663)>S then D=-856444+10273411834923 b=G[Y[92497+-92495]]R=H(504617+-493770)o=G[Y[-562939+562942]]J=o(R,D)l=b[J]q=d[l]m,S=q,926980+12017153 else b,o=1986549184437-717848,8745765695811-598363 K=G[Y[3315842407%16174841]]l=H(-90322-(-101140))d=G[Y[444025-444022]]q=d(l,b)Q=K[q]b=H(-151517+162618)C=h[Q]d=G[Y[1039460-1039458]]q=G[Y[21518061%3586343]]l=q(b,o)b=21739873605471-(-36908)K=d[l]l=H(-85581-(-97084))Q=T[K]S=C-Q K=G[Y[958322+-958320]]C=S d=G[Y[-482562+482565]]q=d(l,b)Q=K[q]S=C[Q]Q,K=S,-244051-(-244051)S=Q>K S=S and 6237758-(-592428)or 2507624940%10113260 end else if S<3671353728%24062328 then S=u S,m=580254276%10417745,B elseif S<13042942-(-855827)then J=G[Y[-856340-(-856342)]]r,j,k=18988499257187-435417,H(-588156-(-599603)),837070+6285000230304 R=G[Y[189040+-189037]]D=R(j,k)k=H(1455474253%16171810)o=J[D]b=l[o]R=G[Y[651460+-651458]]D=G[Y[-741442-(-741445)]]j=D(k,r)J=R[j]r,o=26677065932050-44172,H(-765494+776425)o,k,i=b[o],H(329137476%3195399),7549491301987-983208 o=o(b,J)R=G[Y[-915845+915847]]D=G[Y[-367650+367653]]j=D(k,r)J=R[j]b=l[J]J=H(764035352%7876533)D=G[Y[-789212+789214]]j=G[Y[2309070807%16261062]]r,J=H(-273885-(-285581)),b[J]k=j(r,i)R=D[k]J=J(b,R)R=S b,S=o,o and 13497877-(-248410)or 15132072-1009241 else m=H(-711219+722878)S=t[m]h=G[Y[-805280-(-805287)]]m=H(254428-242827)m=S[m]m=m(S,B,T,h)h=m m,S=h,h and-963525+12513941 or-728097+11050176 end end else if 2254144149%25456767>S then if 13503228-(-426175)>S then S=1701418980%12434519 F=G[Y[564609-564600]]A=F()elseif 218714+13724229>S then m,S=T,h S=1454543697%14004392 else S,m=t[H(928305361%5988995)],{}end else if 7347072844%29688754>S then S=x S=A and-464626+12360030 or-624939+6105854 elseif 1818225704%14788836>S then VL=G[Y[-617291+617292]]fL=G[Y[808190-808188]]hL,AL,TL,aL=H(77546424%12922592),381834+5145237091793,21382707816200-(-212957),H(1230230998%10514698)gL=fL(aL,TL)OL=VL[gL]WL=y[OL]gL=G[Y[-437983-(-437984)]]aL=G[Y[-421390+421392]]TL=aL(hL,AL)fL=gL[TL]hL=H(701470-690484)VL=UL[fL]gL=G[Y[-300485-(-300486)]]aL=G[Y[134289647%1278949]]AL=2860350461762-(-28145)TL=aL(hL,AL)fL=gL[TL]OL=VL[fL]PL=WL-OL OL=.1 WL=PL>OL S=WL and 1673583229%12692912 or 12482307-(-961473)else S=d S=Q and 2508723487%22115298 or 3534746725%20273515 end end end else if S<5091600645%23728533 then if 4454086056%22655244>S then if 631533109%19932276>S then C,K=S,4.8 Q=x<K m,S=Q,Q and-182106-(-271077)or 1960003314%16203302 elseif S<923107086%17489825 then S,m=t[H(368307+-356820)],{u}elseif S<-174741+13816898 then S=j S=b and 356838-(-537304)or 13282985-741218 else S=c S,N=797554+2978437,SL end else if 3211128138%14803035>S then x=H(292717+-281648)S=G[Y[284229+-284216]]T=S S=G[Y[218994271%1196690]]E=-455482+201554359191 y=G[Y[165547622%8277381]]F=G[Y[527458-527455]]A=F(x,E)h=y[A]y,E=1708992806%11357369>=3732464884%22965194,H(501684-490434)m=S(h,y)h=m S=G[Y[1088034982%5205909]]F=G[Y[483271778%15102243]]A=G[Y[22289193%144735]]C=936176+29063434595309 x=A(E,C)y=F[x]F=4865260-166810>=1162719651%18612023 m=S(y,F)x,S=h,nil E,y=S,m m,F=nil,S S,A=h and 5967234-(-468394)or 787969+2420995,m elseif 77509607%21276386>S then y,S=nil,2326819571%16646671 else S,m=h,T S=532056+5074047 end end else if S<-733024+14471070 then if 13812656-107981>S then S=J S=not m S=S and 70269+6816088 or 11445782-(-593460)elseif 200973988%18725505>S then S=H(505338185%7018430)u=U()B,s=Z,-78502+78504 G[u]=S m,w=851096+-851096,s s,S=1952596361%16137160,680637+12251665 T=s s=-400131+400131 h=s>T s=m-T else T=H(454315-442623)S=G[Y[676854-676853]]h=-589659+15326280047419 u=G[Y[35679422%264292]]s=G[Y[-657487-(-657490)]]w=s(T,h)B=u[w]u=717239989%9057822>=350483362%12568927 m=S(B,u)B=m S=not B S=S and 3498740201%21240845 or-646741+2523318 end else if S<2539069868%21044374 then S=nil m={S}S=t[H(-933090+944683)]elseif S<6333336429%26777914 then j,D=S,J S=J and 99546127%9132137 or 2976751133%15932770 else m=G[Y[-1024785-(-1024789)]]S=H(-581038-(-591969))S=B[S]S=S(B,m)s=S S=s and 3256402305%27704383 or 760618862%13435897 end end end end end end else if S>-370520+16112128 then if S>2834635635%32771593 then if 348818+16114692>S then if S<-960108+17318426 then if 15891364-(-418075)>S then if 16943799-649723>S then S=-765483+16609998 elseif S<16974149-671255 then C=H(564336+-552786)A=G[Y[540369062%8715630]]x=G[Y[2005878600%9159263]]Q=-334246+22273563427369 E=x(C,Q)S,Q,C=3970915432%32154727,189608+9609330633938,H(2973836618%15651711)F=A[E]y=B[F]A=G[Y[-800533+800535]]x=G[Y[78478648%826091]]E=x(C,Q)F=A[E]h=y[F]T=h==w m=T else C,S=K,d S=K and 13580320-955179 or-844506+14370518 end else if S<5614866764%24882410 then m,S=y,F S=3129528553%20419335 elseif 3968693317%26705079>S then sG,wG,S=nil,nil,2989457207%12237176 else m=-134609+134610 F=#h S,A=5427966-99325,F F=231424+-231423 x=F F=749726663%3217711 E=x<F F=m-x end end else if S>15505363-(-888482)then if 3843975039%23773752>S then T=H(2012692692%11980247)m=G[Y[22838+-22837]]h=-250603+12875725154902 u=G[Y[288479+-288477]]s=G[Y[938820479%12352901]]w=s(T,h)B=u[w]S=m[B]B=S S,m=B and 14937900-(-542886)or 1294567609%5409901,B elseif S<3266164714%29015471 then F,S=not T,1810545582%21661538 h=F else D=G[Y[339175+-339173]]J,S,i,r=H(-651223+662154),904478+11227023,-860315+35121592180861,H(647275-636431)j=G[Y[102710+-102707]]k=j(r,i)R=D[k]J=Q[J]J=J(Q,R)b=J end else if S<15638571-(-729799)then S=u-B y,m=S,H(-942820+954479)S=t[m]m=H(51846561%5183496)m=S[m]F=G[Y[1066018984%15910731]]m=m(S,B,y,F)F=m m,S=F,F and 6203821-(-18081)or-830200+5793451 elseif 92383276%25334941>S then B=Z[325697537%3162112]u=G[Y[-581441-(-581442)]]s=G[Y[-954685-(-954687)]]T,h=H(612850+-601240),22989123898445-(-236932)w=s(T,h)m=u[w]S=B[m]u=S S,m=u and-116965+5904463 or-255853+7975595,u else S=nil m=G[Y[105395-105389]]A=m m,F=886118-886117,S x=#y E,S=x,3967937-158292 x=502899-502898 C=x x=-109456-(-109456)Q=C<x x=m-C end end end else if-102859+16728977>S then if S>16796201-203975 then if S<4200704354%22495101 then S=G[Y[1874355454%12495703]]F,A=H(-557532-(-569202)),438109+7218672131524 T=G[Y[909240+-909238]]h=G[Y[-698291+698294]]y=h(F,A)m=T[y]T=7587846-(-364777)<=3674564-842834 S[m]=T S=14402944-733397 elseif-521339+17141543>S then S=T and 3869302-(-1006583)or 193075+12049982 else m,S=u,s S=875160+13783768 end else if S<16603996-110881 then E=Q R=E s[E]=R S,E=801486553%9327629,nil elseif 17057313-510542>S then S=G[Y[474071-474070]]m=S()S,m=t[H(189866256%4219003)],{}else w,T=135015+-135014,828416694%4990462 u=G[Y[199683769%1313709]]s=u(w,T)u=-1020160+1020161 B=s==u m,S=B,B and 3994689071%26548239 or 3928173038%26265367 end end else if S>-642081+17289382 then if S<-622787+17292502 then s=G[Y[-1041915+1041916]]B,F,u=Z[1279911267%9342418],H(973564649%3925619),Z[703703-703701]T=G[Y[-891836-(-891838)]]A=6734381789852-845405 h=G[Y[303687-303684]]y=h(F,A)w=T[y]m=s[w]T=nil S=m[B]s=S w=s==T m,S=w,w and-615598+16089144 or 3661819380%19853655 elseif S<17172342-449451 then LL=H(723778259%7237666)ML=t[LL]VL,OL=509460+32731304211829,H(1139518430%9908754)wL=G[u]PL=G[w]WL=PL(OL,VL)LL=wL[WL]S=-271894+5205450 uL=ML[LL]sL=uL else T,h,S=nil,nil,7121942-(-960679)end else if 2316084093%21095866>S then S,J=1792116085%10431713,H(803898+-792774)Q=G[Y[988086-988076]]l=G[Y[440175+-440173]]b=G[Y[537883-537880]]R=23833320934769-(-155113)o=b(J,R)q=l[o]d=C[q]K=Q(d)elseif S<15839031-(-799529)then A,S=E,C S=329685+15003086 else S=m and 3280593-(-837844)or 597643845%23541980 end end end end else if 15247217-(-733620)>S then if S<4121110283%27008259 then if S>1946394651%20758618 then if 4506225464%21904286>S then E,S=nil,5095422-(-106087)elseif 2608428548%32007148>S then s=w(u,s)S=s and-45889+4209773 or 8417473-484808 else S=3837680-(-569049)d=G[Y[895878426%6735928]]q=G[Y[-871445+871448]]o,b=877330+20263021494729,H(613018+-601870)l=q(b,o)K=d[l]Q=F[K]E=Q end else if S<14922813-(-844855)then S=m and 4778800-272607 or-393015+3448551 elseif S<-776060+16555779 then S,T,x=-202109+9980438,H(736110-725179),H(-633523-(-644356))y=G[Y[-305755-(-305756)]]F=G[Y[940652156%12059643]]E=2255+7178386572351 A=F(x,E)h=y[A]T=w[T]T=T(w,h)m=T elseif-635905+16448935>S then R,k=H(-844636+855905),H(1896970804%8506545)b=G[Y[-311156-(-311173)]]R=b[R]R={R(b,l)}J,o=R[431374+-431372],R[635260-635259]b=G[Y[673735963%11616137]]k=b[k]j=G[Y[2701541224%16372977]]k={k(b,j)}R,b,D=k[-187112+187113],J,k[135739-135737]j=S S=J and 463695968%17309945 or 457515+4023412 else K=G[Y[-632026-(-632030)]]l,b=H(1290037164%12524525),23370198887237-(-81725)d=G[Y[-353722-(-353727)]]q=d(l,b)Q=K[q]C=T[Q]m=C*x S=B+m m={S}S=t[H(-81926-(-92817))]end end else if S>15467345-(-426191)then if 361684850%18198556>S then S=E S=m and 5812468-(-1006102)or-1730+3819406 elseif S<16750449-805376 then j=G[Y[-110617-(-110627)]]D=l~=j J,R=D,S S=D and 13974276-(-853858)or 3182524651%15062459 else S=m and 721999+5811800 or 942074+5017864 end else if S<530990+15336472 then S=3811867674%23324142>=3054910223%18157073 G[u]=S S=-181292+13856901 elseif S<15902262-22726 then s=m m,S=s,s and-633581+639179 or 15574082-379030 else S=m and 4321811271%28731647 or 14243122-(-12124)end end end else if S<577913+15538194 then if S>545373+15498751 then if 1999062907%17705484>S then b,l=762608+10277530054593,H(633588085%14734341)S=G[Y[3956888225%16216755]]K=G[Y[-166815-(-166817)]]d=G[Y[885791066%4589591]]q=d(l,b)Q=K[q]K,b=-104665+14900947<40086+2661179,21338163324507-(-737397)S[Q]=K S=G[Y[672763-672757]]K=G[Y[900744+-900742]]d=G[Y[968843+-968840]]l=H(303520-292119)q=d(l,b)Q=K[q]b,l,K=31010369431540-389004,H(798198+-786524),3070360560%16690851<16276719-453448 S[Q]=K S=G[Y[1532786267%14881420]]K=G[Y[-705945-(-705947)]]d=G[Y[864132870%7385751]]q=d(l,b)Q=K[q]K=-189410+8250250<=3496622-(-537340)S[Q]=K S,Q=T and 6789884-(-634277)or-86110+2931128,T elseif S<17062504-980817 then T=H(885352+-874018)u=G[Y[-708784-(-708785)]]h,S=-632880+9660847946178,H(277221+-266290)s=G[Y[1655593508%8759754]]B=Z[1299654357%7140958]w=s(T,h)S=B[S]m=u[w]S=S(B,m)u=S S=u and 720897+6747588 or 1017941157%18946981 else G[u]=q S=l l=G[u]S=l and 4123843493%17882285 or-730667+2399436 end else if 450904428%24160886>S then x=9296383812006-(-995138)h=G[Y[572426812%7245909]]y=G[Y[-889588-(-889590)]]A=H(307455-296455)F=y(A,x)T=h[F]w=B[T]S,m=12382511-(-821646),w elseif 706520361%23016229>S then m,S={},t[H(2255632174%8880399)]else S,m=t[H(332497+-321318)],{}end end else if S>-37815+16253104 then if S<540269+15689125 then S=x S=A and 1908832-382977 or 10558778-(-354047)elseif S<3982812082%16527325 then w,E=S,H(54871+-43713)F=G[Y[-866222-(-866224)]]C=30618152563061-670148 A=G[Y[547597+-547594]]x=A(E,C)y=F[x]h=u[y]y=-203772-(-203772)T=h>y S,s=T and 956304+8712313 or 5823863026%22810625,T else T=m S=T and 15342107-380233 or 386261+10901604 end else if S<16925566-774479 then eL=G[Y[736183007%9948419]]mL=G[Y[578345237%2965873]]sL,BL,S=30148810030019-591084,H(2862492021%11683593),678944+1647078 GL=mL(BL,sL)vL=eL[GL]YL=tL[vL]ZL=YL*pL tL=ZL elseif 5487237412%24101507>S then S=C and-35038+13840193 or 6546221-759835 else m,S={},t[H(945441-934280)]end end end end end else if S<3834988376%20873198 then if 15137291-117352>S then if S<596225+14272304 then if S<1630650344%24859222 then if-136608+14847718>S then S=m and 3026092-(-1008410)or 8759604-754758 elseif S<1657147678%30415126 then E=H(-704461-(-715850))m=G[Y[448913305%3937836]]A=G[Y[795509-795507]]C=898217006272-(-912610)x=A(E,C)S=m[x]m=F h[S]=m S=469577694%2794964 elseif S<14798167-30521 then C=G[Y[-317493+317494]]Q=G[Y[-585666+585668]]q,d=21401281669595-(-867602),H(1004631-993409)K=Q(d,q)E=C[K]x=A[E]S=x~=s S=S and 507117+10159109 or 651879866%23810988 else E,S=C,Q S=458458183%22521997 end else if 317497+14499880>S then S=3582714535%14015940 elseif S<15591583-750877 then S=5251394-905592 k=G[Y[371402528%2029522]]N=H(689347-678501)r=G[Y[416254115%3356888]]n=7.3242141683452e+14%33291883322530 i=r(N,n)j=k[i]D=l[j]J=D else o=H(-758674+769731)l=t[o]S,R=-164047+13793240,H(1696796802%6954038)J=t[R]o=l(J)l=H(1002915-991782)t[l]=o end end else if S<-864431+15832692 then if S<15067388-145097 then S=H(2506724310%13124151)S=A[S]S=S(A)S=1031096981%10731228 elseif 3033982278%26252356>S then C,Q=F,S S=F and 609249+401518 or 802557+13992650 else S=G[Y[-73933+73938]]m=S()S=-733229+13178808 end else if S<-757273+15739344 then S=G[Y[-29651-(-29661)]]u=G[Y[2032967955%12396146]]B[S]=u S=G[Y[-638247-(-638259)]]u={S(B)}S,m=t[H(-74063+85487)],{p(u)}elseif S<15584855-586351 then S=H(308646213%7014426)S=s[S]S=S(s)S=2052837456%14924298 else s,S=nil,2905842346%19707935 end end end else if S>-161730+15260780 then if S>-796423+15912335 then if 15728474-573731>S then T,S,w=nil,1046543+11239004,nil elseif S<1601286702%24031750 then S=G[Y[3032942644%14581455]]F,y=324083+15472966527538,H(2804235673%11733157)w=G[Y[285831-285829]]T=G[Y[-769633-(-769636)]]h=T(y,F)m=w[h]F,w=-652488+34938324743253,6075233-572207>4521790585%20884835 S[m]=w y=H(48228020%12054088)S=G[Y[-454190-(-454195)]]w=G[Y[-975113+975115]]T=G[Y[962116653%8746515]]h=T(y,F)m=w[h]w=202767+15158877<-210264+8916331 S[m]=w y=H(1328974061%8203475)S=G[Y[-364061+364067]]F=572169+7639077049052 w=G[Y[113915-113913]]T=G[Y[980907-980904]]h=T(y,F)m=w[h]w=17123600%8867726>=15774183-(-19406)S[m]=w S=G[Y[170444-170437]]w=G[Y[305636-305634]]y,F=H(-52468+63929),32203995756341-916641 T=G[Y[49415187%8235864]]h=T(y,F)m=w[h]w=213841+2499134>3271550-311159 S[m]=w y=H(879123712%14900206)S=G[Y[-226571+226579]]w=G[Y[975158+-975156]]F=26980564039763-345920 T=G[Y[-899970-(-899973)]]h=T(y,F)m=w[h]w=2266799-901926>2451612507%16319253 S[m]=w m,S={},t[H(-1047015+1058300)]else S=1170692290%26960790 end else if 3999075553%24441505>S then B=U()G[B]=Z[536932-536931]m=G[Y[423324-423323]]u=G[B]S=m[u]S=S and 3104398-165566 or 1319701738%21052153 elseif S<1361178385%29912586 then eL=G[Y[213384800%983340]]GL=eL()BL=y+tL S=t[H(39762-28069)]eL=BL+YL BL=G[Y[363882+-363861]]uL=BL(GL,y,eL,B)m={y;uL}else S,q=-193312+9519361,nil end end else if S>691675+14371925 then if S<14029539-(-1037740)then S=G[Y[1119440113%13326668]]h=4961+12666612237225 u=G[Y[1526349365%10383329]]s=G[Y[-992313-(-992316)]]T=H(876101+-865186)w=s(T,h)B=u[w]u=-4628+7398984>=-919552+9531127 m=S(B,u)F=20249159846496-(-989813)S=G[Y[87754993%3656458]]s=G[Y[-164263+164265]]w=G[Y[1045097777%7857878]]y,h,B=792659+27539524655557,H(-823935+835666),m T=w(h,y)u=s[T]s=847463+4395544>=1608959752%18360157 m=S(u,s)u=m S=G[Y[634551941%2884327]]y=H(258421-247275)w=G[Y[-302326-(-302328)]]T=G[Y[-297286-(-297289)]]h=T(y,F)s=w[h]w=-227659+1508598>350201+14397184 m=S(s,w)s=m S=G[Y[-329021+329025]]m=S()S,w=B and 3481421091%18175397 or 17152490-882058,m m=B elseif S<3276872764%16227836 then S=1368379-925345~=8752648-(-907920)m={S}S=t[H(-318939+330463)]else u,s,B=Z[3157837886%13972734],Z[-209519+209522],Z[11899-11898]T,w=not B,Z[518710+-518706]S,m=T and 4203884324%18545011 or 1196084672%8133516,T end else if S<793403796%20483160 then I,S=H(1049287-1038492),1759914555%14197440 n=t[I]pL=9553871993695-666111 X=G[Y[-136262-(-136264)]]HL=G[Y[481216-481213]]tL=H(-1047572+1058885)z=HL(tL,pL)I=X[z]N=n[I]I=255511261%1172070 n=N(i,I)elseif 961608+14095903>S then z,S=26025154%3717879,1493526190%19801893 c=G[Y[343490949%9283539]]X=D/N HL=240658+-240657.75 I=c(X,HL,z)SL=n*I n=SL else S,l=668900+10754078,q end end end end else if S<14684824-(-792342)then if S>528440+14798091 then if S<945945+14500519 then if S<4255402831%19449641 then y,S=A,x S=16343819-29418 elseif 15353191-(-83249)>S then q,l=H(528293+-517161),30982521117815-(-646116)Q=G[Y[412188-412187]]K=G[Y[3297042800%13402613]]d=K(q,l)l=2757388876477-947641 C=Q[d]q=H(-174032+185566)m=s[C]Q=G[Y[242568443%10546454]]K=G[Y[463929-463927]]d=K(q,l)C=Q[d]S=m[C]E=S S=559409+13070724 else S,m=nil,nil m={S;m}S=t[H(-630719+641986)]end else if S<-386628+15843561 then l,C=not q,C+d E=C<=Q E=l and E l=Q<=C l=q and l E=l or E l=809122+8280363 S=E and l E=24966514%5409326 S=S or E elseif 15307502-(-161472)>S then E,K=C+E,not Q A=x>=E A=K and A K=E>=x K=Q and K A=K or A K=5455369-779461 S=A and K A=-978909+1340767 S=S or A else S=m and-179962+13814936 or 5019323-(-920916)end end else if S<3050971663%19335764 then if S<801876725%18730071 then S=m and 336393106%9741662 or 2484366477%22473463 elseif S<496696899%20060828 then r,o,i=H(-239689-(-250627)),S,16764621937419-(-426867)D=G[Y[3081425235%13225001]]j=G[Y[862804-862801]]k=j(r,i)R=D[k]J=H(830060+-819129)J=Q[J]J=J(Q,R)b,S=J,J and 11211571-(-919930)or 322410+16139091 else S=G[Y[-177596-(-177600)]]T,h=H(-14663+25591),17574335004169-(-811502)u=G[Y[907602-907600]]s=G[Y[-17781+17784]]w=s(T,h)m=u[w]u=641324+10798895<4270732267%21975425 S[m]=u T=H(-357778-(-368876))S=G[Y[645972+-645967]]u=G[Y[596482062%7017436]]h=34528922274854-(-94888)s=G[Y[-58577-(-58580)]]w=s(T,h)T=H(355424+-343904)m=u[w]u=7855094-373403>14270717-(-951771)S[m]=u S=G[Y[509757+-509751]]u=G[Y[199297+-199295]]h=27955236157230-902229 s=G[Y[150761+-150758]]w=s(T,h)m=u[w]u,h=241595+5560160<=-384170+3048374,11294898860705-122390 S[m]=u S=G[Y[987752-987745]]u=G[Y[-563106-(-563108)]]s=G[Y[533606570%7309679]]T=H(-780840-(-792079))w=s(T,h)T=H(3694408030%15654225)m=u[w]u,h=6324740-(-730742)<129897+4482140,377922+30282545574611 S[m]=u S=G[Y[-694656+694664]]u=G[Y[676738-676736]]s=G[Y[-555504-(-555507)]]w=s(T,h)m=u[w]u=6272680-(-320245)<1399079777%6563043 S[m]=u m,S={},t[H(-835501+846578)]end else if S<-770231+16055146 then S,D=1076404652%16519382,nil elseif S<460580+14848576 then S,m,B=t[H(1671965426%8893375)],{},nil else w=H(-374848+385961)s=t[w]S=13562733-(-22422)w=s()B=w end end end else if 942731+14667593>S then if S>-618475+16210818 then if 15684392-88133>S then T,h=s,S S=s and 7029149-22842 or 3467162804%20574618 elseif S<16377869-774404 then x,E,S=nil,nil,1604804211%14418438 else S,K=294682+-205711,.85 Q=E<K m=Q end else if 15971895-440120>S then w=G[Y[-58665-(-58667)]]u,y=H(417451+-406520),H(-755914-(-766715))T=G[Y[-3230+3233]]F,u,S=-722818+26448179640221,B[u],417439+1183831 h=T(y,F)s=w[h]u=u(B,s)m=u elseif S<15277008-(-310386)then S=m and-545598+5122664 or 725085528%5224015 else k,S=not r,i S=k and 2379465147%27224216 or 6361532-35424 end end else if S<14709698-(-944754)then if S<4153432567%26524466 then S,m=t[H(746311-734703)],{}elseif 1878394159%20697386>S then x,w=-355160+30007716356589,H(1047389315%4804488)h=G[Y[60156320%3166122]]s,w=m,B[w]y=G[Y[945542403%7387050]]A=H(9741+1101)F=y(A,x)T=h[F]w=w(B,T)S,m=w and 12782812-749218 or 933562226%13834416,w else I,S=1.4,4282980-(-314253)N=c^I c=N end else if-4563+15686887>S then l,R=o+l,not J q=l<=b q=R and q R=l>=b R=J and R q=R or q R=-805430+12616255 S=q and R q=777124-155993 S=S or q elseif 15158777-(-550977)>S then S=m and-437272+12809381 or 12008735-586620 else X=G[Y[256225896%1571938]]tL=H(197444826%3525607)HL=G[Y[52399659%485182]]pL,ZL=295701+3528627028822,H(-381756-(-393491))z=HL(tL,pL)YL=-970516+22354392725437 I=X[z]z=G[Y[1480640691%15264337]]tL=G[Y[698928058%5873345]]pL=tL(ZL,YL)HL=z[pL]YL,S=30840409761507-765642,486517+131960 X=k[HL]k[I]=X tL,ZL=H(-604696-(-616112)),H(897778+-886341)X=G[Y[-436894+436896]]pL=370973+19290867169786 HL=G[Y[561029-561026]]z=HL(tL,pL)I=X[z]z=G[Y[395510895%3114259]]tL=G[Y[902929+-902926]]i=nil pL=tL(ZL,YL)HL=z[pL]z,N=.2,nil X=k[HL]HL=H(617095-605471)HL=X[HL]HL=HL(X,n,z)n=nil k[I]=HL end end end end end end end end end end S=#v return p(m)end,function(t,H)local p=s(H)local Z=function(Z,Y,v,e,m)return S(t,{Z;Y;v,e;m},H,p)end return Z end,{},{},function(t,H)local p=s(H)local Z=function()return S(t,{},H,p)end return Z end,function(t,H)local p=s(H)local Z=function(...)return S(t,{...},H,p)end return Z end,function(t)B[t]=B[t]-(-858780-(-858781))if 609383+-609383==B[t]then B[t],G[t]=nil,nil end end,function()u=(-94820+94821)+u B[u]=540056+-540055 return u end return(P(2298550098%26880525,{}))(p(m))end)(getfenv and getfenv()or _ENV,unpack or table[H(-92368+103411)],select,setmetatable,newproxy,{...},getmetatable)end)(...)
+-- ============================================================================
+-- 👾 KILLER HUB | ENGINE V12.9.0 - SHERIFF SUITE (PREDICTION+ JITTER-AWARE)
+-- ============================================================================
+local KillerHub = loadstring(game:HttpGet("https://raw.githubusercontent.com/Salayer09/KillerHub/refs/heads/main/Slayer.lua"))()
+
+if getgenv().__KillerHubSheriff_Loaded then
+    KillerHub:NotifyWarn("Already Loaded", "Sheriff script is already running.", 4)
+    return
+end
+getgenv().__KillerHubSheriff_Loaded = true
+
+local function Flag(name, default)
+    local f = KillerHub.Flags[name]
+    if f == nil or f.CurrentValue == nil then return default end
+    return f.CurrentValue
+end
+
+local EMPTY_TABLE = {}
+
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local RunService = game:GetService("RunService")
+local TweenService = game:GetService("TweenService")
+local Stats = game:GetService("Stats")
+local UserInputService = game:GetService("UserInputService")
+local HttpService = game:GetService("HttpService")
+local Camera = workspace.CurrentCamera
+
+local math_clamp = math.clamp
+local math_abs = math.abs
+local math_pow = math.pow
+local math_min = math.min
+local math_floor = math.floor
+local math_max = math.max
+local math_sqrt = math.sqrt
+local math_acos = math.acos
+local math_rad  = math.rad
+local vec2New = Vector2.new
+local vec3New = Vector3.new
+local udim2New = UDim2.new
+local cframeNew = CFrame.new
+local color3RGB = Color3.fromRGB
+local os_clock = os.clock
+
+local workspace_Gravity = workspace.Gravity
+local VECTOR_ZERO = vec3New(0, 0, 0)
+local PREDICTION_BOOST = 1.10
+
+if _G.KillerHubLines then
+    for _, line in pairs(_G.KillerHubLines) do pcall(function() line:Remove() end) end
+end
+_G.KillerHubLines = {}
+
+local oldGui = game:GetService("CoreGui"):FindFirstChild("KillerHub_SheriffGui")
+if oldGui then oldGui:Destroy() end
+
+-- ═══════════════════════════════════════════════════════════════════════════
+-- 📡 NETWORK TELEMETRY (Ping + Jitter + Stability Score)
+-- ═══════════════════════════════════════════════════════════════════════════
+local cachedPingValue = 0.05
+local pingJitterMS  = 0           -- desviación estándar del ping (ms)
+local networkStability = 1.0      -- 1.0 = perfecto, baja con jitter alto
+local pingSamples = {}
+local PING_SAMPLE_SIZE = 10
+
+local function pushPingSample(ms)
+    pingSamples[#pingSamples + 1] = ms
+    if #pingSamples > PING_SAMPLE_SIZE then table.remove(pingSamples, 1) end
+
+    if #pingSamples < 4 then
+        pingJitterMS = 0
+        networkStability = 1.0
+        return
+    end
+
+    local sum = 0
+    for i = 1, #pingSamples do sum = sum + pingSamples[i] end
+    local avg = sum / #pingSamples
+
+    local variance = 0
+    for i = 1, #pingSamples do
+        local d = pingSamples[i] - avg
+        variance = variance + d * d
+    end
+    variance = variance / #pingSamples
+    pingJitterMS = math_sqrt(variance)
+
+    -- Stability: 0ms jitter = 1.0 ; 100ms jitter ≈ 0.55 ; 250ms = 0.35
+    networkStability = math_clamp(1.0 - (pingJitterMS / 380), 0.35, 1.0)
+end
+
+local pingTask = task.spawn(function()
+    while task.wait(0.2) do
+        local currentPing = nil
+        pcall(function()
+            if Stats and Stats.Network and Stats.Network:FindFirstChild("ServerStatsItem") then
+                local dataPing = Stats.Network.ServerStatsItem:FindFirstChild("Data Ping")
+                if dataPing then currentPing = dataPing:GetValue() / 1000 end
+            end
+        end)
+
+        if not currentPing or currentPing <= 0 then
+            pcall(function()
+                if LocalPlayer and LocalPlayer.GetNetworkPing then
+                    currentPing = LocalPlayer:GetNetworkPing()
+                end
+            end)
+        end
+
+        if currentPing and currentPing > 0 then
+            cachedPingValue = currentPing
+            pushPingSample(currentPing * 1000)
+        end
+    end
+end)
+KillerHub:AddTask(pingTask)
+
+-- UI Setup
+local TabSheriff = KillerHub:CreateTab("Sheriff", "rbxassetid://15286655815")
+
+TabSheriff:CreateSection("Silent Aim")
+TabSheriff:CreateToggle("Sheriff_SilentAim", "Silent Aim", function() end)
+TabSheriff:CreateDropdown("Sheriff_ShotType", "Shot Type", {"Normal", "Piercer Bullet"}, function() end)
+TabSheriff:CreateKeybind("Sheriff_ShootKey", "Shoot Key", Enum.KeyCode.F, function() end)
+TabSheriff:CreateToggle("Sheriff_JumpPred", "Jump Prediction", function() end)
+TabSheriff:CreateToggle("Sheriff_WallCheck", "Wall Check", function() end)
+
+TabSheriff:CreateSection("Prediction")
+TabSheriff:CreateSlider("Sheriff_HScale", "Horizontal Prediction", 0, 300, function() end, 100)
+TabSheriff:CreateSlider("Sheriff_VScale", "Vertical Prediction", 0, 300, function() end, 100)
+
+local sliderPing = TabSheriff:CreateSlider("Sheriff_PingComp", "Ping Compensation", 0, 300, function() end, 50)
+
+local pingLoopThread
+TabSheriff:CreateToggle("Sheriff_PrioritizePing", "Prioritize Ping", function(estado)
+    if pingLoopThread then task.cancel(pingLoopThread) pingLoopThread = nil end
+    if estado then
+        pingLoopThread = task.spawn(function()
+            while Flag("Sheriff_PrioritizePing", false) do
+                local currentMS = math_floor(cachedPingValue * 1000)
+                if sliderPing and sliderPing.Set then sliderPing:Set(currentMS) end
+                task.wait(0.3)
+            end
+        end)
+    end
+end)
+
+TabSheriff:CreateSlider("Sheriff_MinPredDist", "Min Distance Prediction (studs)", 0, 15, function() end, 4)
+TabSheriff:CreateSlider("Sheriff_MaxPredDist", "Max Distance Prediction (studs)", 10, 60, function() end, 22)
+
+TabSheriff:CreateSection("Visuals")
+TabSheriff:CreateMultiDropdown("Sheriff_Tracers", "Tracers", {
+    "Tracer Prediction",
+    "Min Tracer Prediction",
+    "Lead Time",
+    "Lead Time Prediction",
+    "Confirm wall check",
+    "Prediction X/Y offset"
+}, function() end)
+
+local cachedShootButton, cachedScreenGui
+
+TabSheriff:CreateSection("Interface")
+TabSheriff:CreateToggle("Sheriff_WeaponDetect", "Weapon Detector",
+    function() if checkWeaponVisibility then checkWeaponVisibility() end end)
+TabSheriff:CreateToggle("Sheriff_ShowButton", "Show Button",
+    function() if checkWeaponVisibility then checkWeaponVisibility() end end)
+
+TabSheriff:CreateToggleSlider(
+    "Sheriff_CustomBtnSize", "Sheriff_BtnSize",
+    "Custom Button Size", 50, 200,
+    function(enabled)
+        if not cachedShootButton then return end
+        local sz = enabled and Flag("Sheriff_BtnSize", 95) or 95
+        cachedShootButton.Size = udim2New(0, sz, 0, sz)
+    end,
+    function(val)
+        if not cachedShootButton then return end
+        if not Flag("Sheriff_CustomBtnSize", false) then return end
+        cachedShootButton.Size = udim2New(0, val, 0, val)
+    end,
+    false, 95
+)
+
+TabSheriff:CreateToggle("Sheriff_LockBtnPos", "Lock Button Position", function() end)
+
+local PageOthers = TabSheriff:CreatePage("Others", "Gear")
+PageOthers:CreateSection("Auto Shoot")
+PageOthers:CreateToggle("Sheriff_AutoShoot", "Auto shoot", function() end)
+PageOthers:CreateDropdown("Sheriff_AutoShootType", "Type Auto shoot", {"Murder visible", "Knife visible"}, function() end)
+
+PageOthers:CreateSection("Wait for Sight")
+PageOthers:CreateToggle("Sheriff_WaitSight", "Wait for Sight", function() end)
+PageOthers:CreateToggle("Sheriff_CancelOnClick", "Cancel waiting on click", function() end)
+PageOthers:CreateSlider("Sheriff_WaitTime", "Wait Time", 5, 67, function() end, 15)
+
+PageOthers:CreateSection("Gun Actions")
+PageOthers:CreateToggle("Sheriff_UnEquipGun", "Un-Equip gun", function() end)
+
+-- Weapon & Role Systems
+local function isRangedWeapon(tool)
+    if not tool or not tool:IsA("Tool") then return false end
+    return (tool:FindFirstChild("Shoot") or tool.Name == "Gun" or tool.Name == "Revolver")
+end
+
+local function isMeleeWeapon(tool)
+    if not tool or not tool:IsA("Tool") then return false end
+    return (tool:FindFirstChild("Stab") or tool.Name == "Knife")
+end
+
+local function getGunLocation()
+    local char = LocalPlayer.Character
+    if char then for _, item in pairs(char:GetChildren()) do if isRangedWeapon(item) then return item, char end end end
+    local bp = LocalPlayer:FindFirstChild("Backpack")
+    if bp then for _, item in pairs(bp:GetChildren()) do if isRangedWeapon(item) then return item, bp end end end
+    return nil, nil
+end
+
+checkWeaponVisibility = function()
+    if not cachedScreenGui then return end
+    local showBtn = Flag("Sheriff_ShowButton", false)
+    local useDetect = Flag("Sheriff_WeaponDetect", false)
+
+    if not showBtn then cachedScreenGui.Enabled = false return end
+
+    if useDetect then
+        local gun, _ = getGunLocation()
+        cachedScreenGui.Enabled = (gun ~= nil)
+    else
+        cachedScreenGui.Enabled = true
+    end
+end
+
+local visTask = task.spawn(function()
+    while task.wait(0.3) do pcall(checkWeaponVisibility) end
+end)
+KillerHub:AddTask(visTask)
+
+local MurdererDetectado = nil
+local smoothedVelocity = VECTOR_ZERO
+local smoothedVisualY = 0
+local lastTargetChar = nil
+local emaDeltaTime = 0.016
+local playerRoles = {}
+local playerDeadStatus = {}
+local duelTeams = {}
+local currentTarget = nil
+
+-- Weak keys para limpiezas de memoria automáticas
+local lastPositions = setmetatable({}, {__mode = "k"})
+local lagStates = setmetatable({}, {__mode = "k"})
+local moveConfidence = setmetatable({}, {__mode = "k"})
+local velocityBuffers = setmetatable({}, {__mode = "k"})
+
+-- ═══════════════════════════════════════════════════════════════════════════
+-- 🎯 NUEVOS BUFFERS DE PREDICCIÓN AVANZADA (V12.9.0)
+-- ═══════════════════════════════════════════════════════════════════════════
+
+-- Ring buffer de velocidades (promedio ponderado con sesgo de recencia)
+local VEL_HISTORY_SIZE = 8
+local velocityHistory = setmetatable({}, {__mode = "k"})
+
+-- Detección de cambios bruscos de dirección (zigzag del murderer)
+local turnDetect = setmetatable({}, {__mode = "k"})
+
+-- Tiempo acumulado en el aire (para parábola más precisa)
+local airTime = setmetatable({}, {__mode = "k"})
+
+local function getVelHistory(char)
+    local h = velocityHistory[char]
+    if not h then
+        h = { buf = {}, idx = 0, size = 0, sum = VECTOR_ZERO }
+        velocityHistory[char] = h
+    end
+    return h
+end
+
+-- Push + weighted average (más peso a lo reciente)
+local VEL_WEIGHTS = {0.05, 0.06, 0.08, 0.10, 0.13, 0.16, 0.19, 0.23} -- suma ≈ 1.0
+local function pushVelocityWeighted(char, vel)
+    local h = getVelHistory(char)
+    h.idx = h.idx % VEL_HISTORY_SIZE + 1
+    h.buf[h.idx] = vel
+    if h.size < VEL_HISTORY_SIZE then h.size = h.size + 1 end
+
+    -- Weighted average, enfocando los últimos samples
+    local weighted = VECTOR_ZERO
+    local wTotal = 0
+    for i = 1, h.size do
+        local realIdx = ((h.idx - i) % VEL_HISTORY_SIZE) + 1
+        local v = h.buf[realIdx]
+        if v then
+            local w = VEL_WEIGHTS[math_max(1, VEL_HISTORY_SIZE - i + 1)] or 0.05
+            weighted = weighted + v * w
+            wTotal = wTotal + w
+        end
+    end
+    if wTotal > 0 then weighted = weighted / wTotal end
+    return weighted
+end
+
+local function getTurnState(char)
+    local t = turnDetect[char]
+    if not t then
+        t = { lastUnit = VECTOR_ZERO, penalty = 1.0, sharpTurnTimer = 0 }
+        turnDetect[char] = t
+    end
+    return t
+end
+
+local function updateTurnState(char, newVel, dt)
+    local t = getTurnState(char)
+    local mag = newVel.Magnitude
+
+    if mag > 0.8 then
+        local unit = newVel.Unit
+        if t.lastUnit.Magnitude > 0.5 then
+            local dot = math_clamp(t.lastUnit:Dot(unit), -1, 1)
+            local angle = math_acos(dot)
+
+            -- Si gira >55° en un frame, activamos penalización temporal
+            if angle > math_rad(55) then
+                t.sharpTurnTimer = 0.15
+            end
+        end
+        t.lastUnit = unit
+    else
+        t.lastUnit = VECTOR_ZERO
+    end
+
+    if t.sharpTurnTimer > 0 then
+        t.sharpTurnTimer = t.sharpTurnTimer - dt
+    end
+
+    -- Penalty: 0.55 en giro brusco, sube suave a 1.0
+    local targetPenalty = (t.sharpTurnTimer > 0) and 0.55 or 1.0
+    t.penalty = t.penalty + (targetPenalty - t.penalty) * math_clamp(8 * dt, 0, 1)
+
+    return t.penalty
+end
+
+local function getAirState(char)
+    local a = airTime[char]
+    if not a then
+        a = { time = 0 }
+        airTime[char] = a
+    end
+    return a
+end
+
+-- Sticky Target
+local stickyTarget = nil
+local stickyTargetTime = 0
+local STICKY_DURATION = 0.12
+
+local handLineIsBlocked = false
+local isWaitingForSight = false
+local waitSightThread = nil
+local Label = nil
+local SubLabel = nil
+local DecalTexture = nil
+
+local tweenInfoFast = TweenInfo.new(0.25, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+
+local function resetWaitState()
+    isWaitingForSight = false
+    local threadToCancel = waitSightThread
+    waitSightThread = nil
+
+    if DecalTexture then
+        TweenService:Create(DecalTexture, tweenInfoFast, {
+            Position = udim2New(0.5, 0, 0.44, 0),
+            Size = udim2New(0.38, 0, 0.38, 0)
+        }):Play()
+    end
+    if Label then
+        TweenService:Create(Label, tweenInfoFast, {
+            Position = udim2New(0, 0, 0.75, 0),
+            Size = udim2New(1, 0, 0.2, 0)
+        }):Play()
+        Label.Text = "SHOOT"
+        Label.TextColor3 = color3RGB(255, 255, 255)
+    end
+    if SubLabel then
+        SubLabel.Text = ""
+    end
+
+    if threadToCancel and threadToCancel ~= coroutine.running() then
+        pcall(function() task.cancel(threadToCancel) end)
+    end
+end
+
+local function setTarget(nt) currentTarget = nt end
+
+-- Target Buffers & Lag Handlers
+local function getLagState(targetChar)
+    local s = lagStates[targetChar]
+    if not s then
+        s = { lagFrames = 0, normalFrames = 0, isLagging = false }
+        lagStates[targetChar] = s
+    end
+    return s
+end
+
+local function getMoveConfidence(targetChar)
+    local s = moveConfidence[targetChar]
+    if not s then
+        s = { lastSpeed = 0, variance = 0 }
+        moveConfidence[targetChar] = s
+    end
+    return s
+end
+
+local function getVelocityBuffer(targetChar)
+    local v = velocityBuffers[targetChar]
+    if not v then
+        v = { lastValidVelocity = VECTOR_ZERO, staticFrames = 0 }
+        velocityBuffers[targetChar] = v
+    end
+    return v
+end
+
+local function setStickyTarget(plr)
+    stickyTarget = plr
+    stickyTargetTime = os_clock()
+end
+
+local function clearStickyTarget()
+    stickyTarget = nil
+    stickyTargetTime = 0
+end
+
+local function getNormalizedTeam(plr)
+    if not plr then return nil end
+    local dt = duelTeams[plr.Name]
+    if dt then return tostring(dt) end
+    if plr.Team then return plr.Team.Name end
+    return nil
+end
+
+local function parsePlayerData(t)
+    if type(t) == "table" then
+        for name, data in pairs(t) do
+            if type(data) == "table" then
+                if data.Role then playerRoles[name] = data.Role end
+                if data.Dead ~= nil then playerDeadStatus[name] = data.Dead end
+                if data.Team then duelTeams[name] = data.Team end
+            end
+        end
+    end
+end
+
+local PlayerDataChanged = ReplicatedStorage:FindFirstChild("PlayerDataChanged", true)
+if PlayerDataChanged and PlayerDataChanged:IsA("RemoteEvent") then
+    KillerHub:AddTask(PlayerDataChanged.OnClientEvent:Connect(parsePlayerData))
+end
+
+local function updateDuelState(data)
+    table.clear(duelTeams)
+    if type(data) == "table" then
+        parsePlayerData(data)
+        if data.Teams then
+            for teamName, teamMembers in pairs(data.Teams) do
+                if type(teamMembers) == "table" then
+                    for _, pName in pairs(teamMembers) do
+                        if type(pName) == "string" then duelTeams[pName] = tostring(teamName) end
+                    end
+                end
+            end
+        end
+    end
+end
+
+for _, rem in pairs(ReplicatedStorage:GetDescendants()) do
+    if rem:IsA("RemoteEvent") then
+        local rName = rem.Name:lower()
+        if rName:find("duel") or rName:find("customgame") then
+            KillerHub:AddTask(rem.OnClientEvent:Connect(function(...)
+                local args = {...}
+                for _, arg in ipairs(args) do
+                    if type(arg) == "table" then updateDuelState(arg) end
+                end
+            end))
+        elseif rName:find("roundstart") or rName:find("gamestart") then
+            KillerHub:AddTask(rem.OnClientEvent:Connect(function(...)
+                resetWaitState()
+                table.clear(playerRoles)
+                table.clear(playerDeadStatus)
+                table.clear(lastPositions)
+                table.clear(lagStates)
+                table.clear(moveConfidence)
+                table.clear(velocityBuffers)
+                table.clear(velocityHistory)
+                table.clear(turnDetect)
+                table.clear(airTime)
+                stickyTarget = nil
+                stickyTargetTime = 0
+                MurdererDetectado = nil
+                local args = {...}
+                for _, arg in ipairs(args) do
+                    if type(arg) == "table" then parsePlayerData(arg) end
+                end
+            end))
+        elseif rName:find("roundover") or rName:find("gameover") or rName:find("roundend") then
+            KillerHub:AddTask(rem.OnClientEvent:Connect(function()
+                resetWaitState()
+                table.clear(duelTeams)
+                table.clear(playerRoles)
+                table.clear(playerDeadStatus)
+                table.clear(lastPositions)
+                table.clear(lagStates)
+                table.clear(moveConfidence)
+                table.clear(velocityBuffers)
+                table.clear(velocityHistory)
+                table.clear(turnDetect)
+                table.clear(airTime)
+                stickyTarget = nil
+                stickyTargetTime = 0
+                MurdererDetectado = nil
+            end))
+        end
+    end
+end
+
+Players.PlayerRemoving:Connect(function(plr)
+    duelTeams[plr.Name] = nil
+    playerRoles[plr.Name] = nil
+    playerDeadStatus[plr.Name] = nil
+    if stickyTarget == plr then clearStickyTarget() end
+end)
+
+local floorCastParams = RaycastParams.new()
+floorCastParams.FilterType = Enum.RaycastFilterType.Exclude
+
+-- ═══════════════════════════════════════════════════════════════════════════
+-- 🛡️ MM2 GUN RECHARGE & UNEQUIP COOLDOWN CONTROLLER
+-- ═══════════════════════════════════════════════════════════════════════════
+local MM2_GUN_RELOAD_TIME = 2.15 -- Tiempo de recarga nativo del revólver en MM2
+local lastGunShotTimestamp = 0
+local isFiringOrReloading = false
+
+local function isGunReloading()
+    local now = os_clock()
+    if (now - lastGunShotTimestamp) < MM2_GUN_RELOAD_TIME then
+        return true
+    end
+    if isFiringOrReloading then
+        return true
+    end
+    local char = LocalPlayer.Character
+    local hum = char and char:FindFirstChildOfClass("Humanoid")
+    local animator = hum and hum:FindFirstChildOfClass("Animator")
+    if animator then
+        for _, track in ipairs(animator:GetPlayingAnimationTracks()) do
+            local trackName = (track.Name or ""):lower()
+            local animObj = track.Animation
+            local animName = (animObj and animObj.Name or ""):lower()
+            if (trackName:find("reload") or animName:find("reload")) and track.IsPlaying then
+                return true
+            end
+        end
+    end
+    return false
+end
+
+local function autoEquipWeapon()
+    local character = LocalPlayer.Character
+    local backpack = LocalPlayer:FindFirstChild("Backpack")
+    if character and character:FindFirstChild("Humanoid") and backpack then
+        for _, item in pairs(backpack:GetChildren()) do
+            if isRangedWeapon(item) then
+                character.Humanoid:EquipTool(item)
+                task.wait(0.03)
+                break
+            end
+        end
+    end
+end
+
+local function autoUnequipWeapon()
+    local character = LocalPlayer.Character
+    if character then
+        local humanoid = character:FindFirstChildOfClass("Humanoid")
+        if humanoid then
+            humanoid:UnequipTools()
+        end
+    end
+end
+
+local function getMurderer()
+    local myChar = LocalPlayer.Character
+    local myHrp = myChar and myChar:FindFirstChild("HumanoidRootPart")
+    if not myHrp then return currentTarget end
+
+    local myTeam = getNormalizedTeam(LocalPlayer)
+    local isDuelActive = (next(duelTeams) ~= nil)
+
+    local closestEnemy = nil
+    local minDistance = math.huge
+
+    local allPlayers = Players:GetPlayers()
+    for i = 1, #allPlayers do
+        local pl = allPlayers[i]
+        if pl ~= LocalPlayer and pl.Character then
+            local pName = pl.Name
+            local char = pl.Character
+            local hum = char:FindFirstChildOfClass("Humanoid")
+            local hrp = char:FindFirstChild("HumanoidRootPart")
+            local isDead = (hum and hum.Health <= 0) or (playerDeadStatus[pName] == true)
+
+            if not isDead and hrp then
+                local isEnemy = false
+                local pRole = playerRoles[pName]
+                local pTeam = getNormalizedTeam(pl)
+
+                if isDuelActive and myTeam and pTeam then
+                    if myTeam ~= pTeam then
+                        isEnemy = true
+                    end
+                elseif pRole == "Murderer" or pRole == "Enemy" then
+                    isEnemy = true
+                else
+                    local hasKnife = false
+                    for _, item in pairs(char:GetChildren()) do
+                        if isMeleeWeapon(item) then hasKnife = true break end
+                    end
+                    if not hasKnife and pl:FindFirstChild("Backpack") then
+                        for _, item in pairs(pl.Backpack:GetChildren()) do
+                            if isMeleeWeapon(item) then hasKnife = true break end
+                        end
+                    end
+                    if hasKnife then
+                        playerRoles[pName] = "Murderer"
+                        isEnemy = true
+                    end
+                end
+
+                if isEnemy then
+                    local dist = (hrp.Position - myHrp.Position).Magnitude
+                    if dist < minDistance then
+                        minDistance = dist
+                        closestEnemy = pl
+                    end
+                end
+            end
+        end
+    end
+
+    if closestEnemy then
+        setTarget(closestEnemy)
+        setStickyTarget(closestEnemy)
+        return closestEnemy
+    end
+
+    if stickyTarget and (os_clock() - stickyTargetTime) < STICKY_DURATION then
+        local char = stickyTarget.Character
+        if char then
+            local hum = char:FindFirstChildOfClass("Humanoid")
+            local hrp = char:FindFirstChild("HumanoidRootPart")
+            if hum and hum.Health > 0 and hrp then
+                setTarget(stickyTarget)
+                return stickyTarget
+            end
+        end
+        clearStickyTarget()
+    end
+
+    setTarget(nil)
+    return nil
+end
+
+local MURDERER_CACHE_INTERVAL = 0.06
+local lastMurdererCalc = 0
+local cachedMurdererResult = nil
+
+local function getMurdererCached()
+    local now = os_clock()
+    if (now - lastMurdererCalc) < MURDERER_CACHE_INTERVAL then
+        return cachedMurdererResult
+    end
+    lastMurdererCalc = now
+    cachedMurdererResult = getMurderer()
+    return cachedMurdererResult
+end
+
+local wallCastParams = RaycastParams.new()
+wallCastParams.FilterType = Enum.RaycastFilterType.Exclude
+
+local gunCastParams = RaycastParams.new()
+gunCastParams.FilterType = Enum.RaycastFilterType.Exclude
+
+local visCastParams = RaycastParams.new()
+visCastParams.FilterType = Enum.RaycastFilterType.Exclude
+
+local cachedIgnoreList = {}
+local tempIgnoreBuffer = {}
+
+local function updateIgnoreListCache()
+    table.clear(cachedIgnoreList)
+    if LocalPlayer.Character then table.insert(cachedIgnoreList, LocalPlayer.Character) end
+    table.insert(cachedIgnoreList, Camera)
+end
+
+KillerHub:AddTask(LocalPlayer.CharacterAdded:Connect(function()
+    lastGunShotTimestamp = 0
+    isFiringOrReloading = false
+    updateIgnoreListCache()
+    resetWaitState()
+end))
+updateIgnoreListCache()
+
+local function isGunBlocked(targetPos, targetChar)
+    local char = LocalPlayer.Character
+    if not char or not char:FindFirstChild("HumanoidRootPart") then return true end
+
+    local origin = char.HumanoidRootPart.Position
+    if char.HumanoidRootPart:FindFirstChild("GunRaycastAttachment") then
+        origin = char.HumanoidRootPart.GunRaycastAttachment.WorldPosition
+    else
+        local rightHand = char:FindFirstChild("RightHand") or char:FindFirstChild("Right Arm")
+        if rightHand then origin = rightHand.Position end
+    end
+
+    local direction = targetPos - origin
+    if direction.Magnitude < 0.1 then return false end
+
+    table.clear(tempIgnoreBuffer)
+    for i = 1, #cachedIgnoreList do tempIgnoreBuffer[i] = cachedIgnoreList[i] end
+
+    local currentOrigin = origin
+    local rayPasses = 0
+
+    while direction.Magnitude > 0.1 and rayPasses < 5 do
+        rayPasses = rayPasses + 1
+        gunCastParams.FilterDescendantsInstances = tempIgnoreBuffer
+        local ray = workspace:Raycast(currentOrigin, direction, gunCastParams)
+        if not ray then return false end
+
+        local hitInst = ray.Instance
+        if targetChar and hitInst:IsDescendantOf(targetChar) then
+            return false
+        end
+
+        if hitInst and hitInst.CanCollide and hitInst.Transparency < 0.8 then
+            return true
+        else
+            table.insert(tempIgnoreBuffer, hitInst)
+            currentOrigin = ray.Position + (direction.Unit * 0.05)
+            direction = targetPos - currentOrigin
+        end
+    end
+
+    return false
+end
+
+local function isStrictlyVisible(targetChar, targetPart)
+    if not targetChar or not targetPart then return false end
+    local origin = Camera.CFrame.Position
+    local targetPos = targetPart.Position
+
+    if isGunBlocked(targetPos, targetChar) then return false end
+
+    local direction = targetPos - origin
+    table.clear(tempIgnoreBuffer)
+    for i = 1, #cachedIgnoreList do tempIgnoreBuffer[i] = cachedIgnoreList[i] end
+
+    local currentOrigin = origin
+    local rayPasses = 0
+
+    while direction.Magnitude > 0.1 and rayPasses < 5 do
+        rayPasses = rayPasses + 1
+        visCastParams.FilterDescendantsInstances = tempIgnoreBuffer
+        local ray = workspace:Raycast(currentOrigin, direction, visCastParams)
+        if not ray then return true end
+
+        local hitInst = ray.Instance
+        if hitInst and hitInst:IsDescendantOf(targetChar) then
+            return true
+        end
+
+        if hitInst and hitInst.CanCollide and hitInst.Transparency < 0.8 then
+            return false
+        else
+            table.insert(tempIgnoreBuffer, hitInst)
+            currentOrigin = ray.Position + (direction.Unit * 0.05)
+            direction = targetPos - currentOrigin
+        end
+    end
+
+    return true
+end
+
+local function getSmartTargetPart(targetChar)
+    if not targetChar then return nil, true end
+    local hrp = targetChar:FindFirstChild("HumanoidRootPart")
+    if not hrp then return nil, true end
+
+    local wallCheck = Flag("Sheriff_WallCheck", true)
+    local shotType = Flag("Sheriff_ShotType", "Normal")
+
+    if not wallCheck or shotType == "Piercer Bullet" then
+        return hrp, false
+    end
+
+    local origin = Camera.CFrame.Position
+    table.clear(tempIgnoreBuffer)
+    for i = 1, #cachedIgnoreList do tempIgnoreBuffer[i] = cachedIgnoreList[i] end
+
+    local targetPos = hrp.Position
+    local currentOrigin = origin
+    local direction = targetPos - currentOrigin
+    local blocked = false
+    local rayPasses = 0
+
+    while direction.Magnitude > 0.1 and rayPasses < 5 do
+        rayPasses = rayPasses + 1
+        wallCastParams.FilterDescendantsInstances = tempIgnoreBuffer
+        local ray = workspace:Raycast(currentOrigin, direction, wallCastParams)
+        if not ray then break end
+
+        local hitInst = ray.Instance
+        if hitInst and hitInst:IsDescendantOf(targetChar) then
+            break
+        end
+
+        if hitInst and hitInst.CanCollide and hitInst.Transparency < 0.8 then
+            blocked = true
+            break
+        else
+            table.insert(tempIgnoreBuffer, hitInst)
+            currentOrigin = ray.Position + (direction.Unit * 0.05)
+            direction = targetPos - currentOrigin
+        end
+    end
+
+    if not blocked and isGunBlocked(targetPos, targetChar) then
+        blocked = true
+    end
+
+    return hrp, blocked
+end
+
+local floorCache = setmetatable({}, {__mode = "k"})
+
+local function getFloorHeight(targetHrp, targetChar)
+    if not targetHrp then return nil end
+    local now = os_clock()
+    local posY = targetHrp.Position.Y
+
+    local cached = floorCache[targetChar]
+    if cached and (now - cached.Time) < 0.15 and math_abs(posY - cached.BaseY) < 1.5 then
+        return cached.FloorY
+    end
+
+    floorCastParams.FilterDescendantsInstances = {targetChar, LocalPlayer.Character, Camera}
+    local ray = workspace:Raycast(targetHrp.Position, vec3New(0, -25, 0), floorCastParams)
+    local floorY = ray and ray.Position.Y or nil
+
+    floorCache[targetChar] = { FloorY = floorY, BaseY = posY, Time = now }
+    return floorY
+end
+
+-- ═══════════════════════════════════════════════════════════════════════════
+-- ⚡ PREDICTION ENGINE V12.9.0 — JITTER-AWARE + WEIGHTED HISTORY
+-- ═══════════════════════════════════════════════════════════════════════════
+local function getPredictedPosition(targetChar, targetPart, customDelta)
+    if not targetChar or not targetPart then return nil, nil, nil, nil, nil end
+    local hrp = targetChar:FindFirstChild("HumanoidRootPart")
+    local humanoid = targetChar:FindFirstChildOfClass("Humanoid")
+    if not hrp or not humanoid or humanoid.Health <= 0 then return nil, nil, nil, nil, nil end
+
+    local activeDT = customDelta or emaDeltaTime
+    local targetPosition = targetPart.Position
+
+    local referencePos = Camera and Camera.CFrame.Position or targetPosition
+    local distance = (targetPosition - referencePos).Magnitude
+
+    local moveMag = humanoid.MoveDirection.Magnitude
+    local rawPhysicsVel = hrp.AssemblyLinearVelocity
+    local walkSpeed = (humanoid.WalkSpeed > 0) and humanoid.WalkSpeed or 16
+    local floorMaterial = humanoid.FloorMaterial
+    local isAir = (floorMaterial == Enum.Material.Air)
+
+    -- Air time tracking (para parábola más precisa)
+    local aState = getAirState(targetChar)
+    if isAir then
+        aState.time = aState.time + activeDT
+        if aState.time > 3 then aState.time = 3 end -- clamp
+    else
+        aState.time = 0
+    end
+
+    local calculatedVelY = rawPhysicsVel.Y
+    local realDisplacementSpeed = 0
+    local lastData = lastPositions[targetChar]
+    local now = os_clock()
+    local vBuffer = getVelocityBuffer(targetChar)
+
+    if not lastData then
+        lastData = {Pos = hrp.Position, Time = now, RealSpeed = 0}
+        lastPositions[targetChar] = lastData
+    else
+        local dtPrev = now - lastData.Time
+        if dtPrev > 0.005 then
+            local distMoved = (hrp.Position - lastData.Pos).Magnitude
+            realDisplacementSpeed = distMoved / dtPrev
+            lastData.RealSpeed = realDisplacementSpeed
+
+            if distMoved < 0.05 and (moveMag > 0.1 or rawPhysicsVel.Magnitude > 2) then
+                vBuffer.staticFrames = vBuffer.staticFrames + 1
+            else
+                vBuffer.staticFrames = 0
+            end
+
+            local realYVel = (hrp.Position.Y - lastData.Pos.Y) / dtPrev
+            if math_abs(realYVel) > 0.5 then calculatedVelY = realYVel end
+        else
+            realDisplacementSpeed = lastData.RealSpeed or 0
+        end
+        lastData.Pos = hrp.Position
+        lastData.Time = now
+    end
+
+    local actualPhysicsH = vec3New(rawPhysicsVel.X, 0, rawPhysicsVel.Z)
+    local realSpeedH = actualPhysicsH.Magnitude
+
+    local effectiveSpeed = math_min(realSpeedH, walkSpeed)
+    local intendedVel = vec3New(humanoid.MoveDirection.X * effectiveSpeed, 0, humanoid.MoveDirection.Z * effectiveSpeed)
+
+    local speedRatio = math_clamp(realSpeedH / math_max(walkSpeed, 1), 0, 1)
+    local rawVelocity = actualPhysicsH:Lerp(intendedVel, speedRatio)
+
+    -- Soft decay buffer para lag de paquetes
+    if vBuffer.staticFrames > 0 and vBuffer.staticFrames <= 8 then
+        local decay = math_clamp(1 - (vBuffer.staticFrames * 0.08), 0.4, 0.95)
+        rawVelocity = vBuffer.lastValidVelocity * decay
+    elseif vBuffer.staticFrames > 8 then
+        rawVelocity = VECTOR_ZERO
+        smoothedVelocity = VECTOR_ZERO
+    else
+        vBuffer.lastValidVelocity = rawVelocity
+    end
+
+    -- 🆕 WEIGHTED HISTORY (reemplaza el simple EMA smoothing)
+    local histVel = pushVelocityWeighted(targetChar, rawVelocity)
+
+    -- Move confidence (variance suavizada)
+    local confState = getMoveConfidence(targetChar)
+    local speedDelta = math_abs(realSpeedH - confState.lastSpeed)
+    confState.variance = confState.variance * 0.88 + speedDelta * 0.12
+    confState.lastSpeed = realSpeedH
+    local moveConfidenceFactor = math_clamp(1 - (confState.variance - 5) / 120, 0.75, 1.0)
+
+    local minDist = Flag("Sheriff_MinPredDist", 4)
+    local maxDist = Flag("Sheriff_MaxPredDist", 22)
+    local distRange = math_max(maxDist - minDist, 0.1)
+    local predictionWeight = math_clamp((distance - minDist) / distRange, 0, 1)
+
+    if lastTargetChar ~= targetChar then
+        smoothedVelocity = histVel
+        smoothedVisualY = 0
+        lastTargetChar = targetChar
+    end
+
+    local isStopping = (moveMag < 0.1 and histVel.Magnitude < 1.5)
+    local isStarting = (moveMag > 0.1 and smoothedVelocity.Magnitude < 1.5)
+
+    local vSmoothAlpha
+    if isStopping then
+        vSmoothAlpha = 0.85
+    elseif isStarting then
+        vSmoothAlpha = 0.20
+    else
+        vSmoothAlpha = math_clamp(16 * activeDT, 0.22, 0.60)
+    end
+
+    smoothedVelocity = smoothedVelocity:Lerp(histVel, vSmoothAlpha)
+    if isStopping and smoothedVelocity.Magnitude < 0.3 then smoothedVelocity = VECTOR_ZERO end
+
+    -- 🆕 Turn detection (reducción durante zigzag)
+    local turnPenalty = updateTurnState(targetChar, smoothedVelocity, activeDT)
+
+    -- 🆕 Stability Score combinado (jitter + variance + turn)
+    local stabilityScore = networkStability * moveConfidenceFactor * turnPenalty
+
+    local horizontalShift = VECTOR_ZERO
+    local verticalShift = VECTOR_ZERO
+
+    local prioritizePing = Flag("Sheriff_PrioritizePing", false)
+    local vScale = Flag("Sheriff_VScale", 100)
+    local hScale = Flag("Sheriff_HScale", 100)
+
+    local effectiveHLatency = 0
+    local effectiveVLatency = 0
+
+    if prioritizePing then
+        local rawMS = cachedPingValue * 1000
+        -- Compensación base + extra por jitter (para pings inestables)
+        local autoScale = 90 + (rawMS * 0.6) + (pingJitterMS * 0.4)
+        effectiveHLatency = (autoScale / 1000) * PREDICTION_BOOST
+        local autoVScale = math_min(autoScale, 120)
+        effectiveVLatency = (autoVScale / 1000) * PREDICTION_BOOST
+    else
+        effectiveHLatency = (hScale / 1000) * PREDICTION_BOOST
+        local cappedVScale = math_min(vScale, 120)
+        effectiveVLatency = (cappedVScale / 1000) * PREDICTION_BOOST
+    end
+
+    horizontalShift = vec3New(smoothedVelocity.X, 0, smoothedVelocity.Z)
+        * effectiveHLatency
+        * predictionWeight
+        * stabilityScore    -- 🆕 score combinado
+
+    if vScale > 0 then
+        local isStairMovement = (not isAir and math_abs(calculatedVelY) > 0.8)
+
+        if isAir or isStairMovement then
+            local adaptiveYFactor = math_clamp((distance - minDist) / 12, 0, 1) * predictionWeight * stabilityScore
+            local vFactor = effectiveVLatency * adaptiveYFactor
+
+            if isAir then
+                if calculatedVelY < -0.5 then
+                    local fallSpeed = math_max(calculatedVelY, -18)
+                    local fallingYFactor = fallSpeed * 0.30 * vFactor
+                    verticalShift = vec3New(0, fallingYFactor, 0)
+                else
+                    -- Parábola usando TIEMPO EN EL AIRE para mejor precisión
+                    local gravityEffect = 0.5 * workspace_Gravity * math_pow(vFactor, 2)
+                    local pY = (calculatedVelY * vFactor) - gravityEffect
+                    verticalShift = vec3New(0, pY, 0)
+                end
+            elseif isStairMovement then
+                local pY = calculatedVelY * vFactor
+                verticalShift = vec3New(0, pY, 0)
+            end
+        end
+    end
+
+    if horizontalShift.Magnitude > 8.5 then horizontalShift = horizontalShift.Unit * 8.5 end
+    if verticalShift.Magnitude > 6.0 then verticalShift = verticalShift.Unit * 6.0 end
+
+    local finalPredNoY = vec3New(targetPosition.X + horizontalShift.X, targetPosition.Y, targetPosition.Z + horizontalShift.Z)
+    local minPredNoY = vec3New(targetPosition.X + (horizontalShift.X * 0.4), targetPosition.Y, targetPosition.Z + (horizontalShift.Z * 0.4))
+
+    local finalPredWithY = targetPosition + horizontalShift + verticalShift
+    local predXYExaggerated = targetPosition + (horizontalShift * 1.8) + verticalShift
+
+    local LEAD_TIME_VISUAL_MULT = 4.2
+    local LEAD_TIME_VISUAL_CLAMP = 16
+
+    local rawVisualY = math_clamp(verticalShift.Y * LEAD_TIME_VISUAL_MULT, -LEAD_TIME_VISUAL_CLAMP, LEAD_TIME_VISUAL_CLAMP)
+    local yLerpAlpha = math_clamp(14 * activeDT, 0.10, 0.35)
+    smoothedVisualY = smoothedVisualY + (rawVisualY - smoothedVisualY) * yLerpAlpha
+
+    local finalLeadPredX = targetPosition + (horizontalShift * LEAD_TIME_VISUAL_MULT) + vec3New(0, smoothedVisualY, 0)
+
+    local floorY = getFloorHeight(hrp, targetChar)
+    if floorY then
+        local minAllowedY = floorY + (hrp.Size.Y * 0.5) + 0.15
+        if finalPredWithY.Y < minAllowedY then finalPredWithY = vec3New(finalPredWithY.X, minAllowedY, finalPredWithY.Z) end
+        if predXYExaggerated.Y < minAllowedY then predXYExaggerated = vec3New(predXYExaggerated.X, minAllowedY, predXYExaggerated.Z) end
+        if finalLeadPredX.Y < minAllowedY then finalLeadPredX = vec3New(finalLeadPredX.X, minAllowedY, finalLeadPredX.Z) end
+    end
+
+    return finalPredWithY, finalPredNoY, minPredNoY, predXYExaggerated, finalLeadPredX
+end
+
+-- Tracers Render Setup
+local MinPredictionLine = Drawing.new("Line")
+MinPredictionLine.Color = color3RGB(4, 0, 220); MinPredictionLine.Thickness = 2.0; MinPredictionLine.Transparency = 1.0; MinPredictionLine.ZIndex = 5
+
+local PredictionLine = Drawing.new("Line")
+PredictionLine.Color = color3RGB(255, 35, 35); PredictionLine.Thickness = 2.0; PredictionLine.Transparency = 1.0; PredictionLine.ZIndex = 10
+
+local LeadTimeLine = Drawing.new("Line")
+LeadTimeLine.Color = color3RGB(35, 255, 35); LeadTimeLine.Thickness = 1.8; LeadTimeLine.Transparency = 1.0; LeadTimeLine.ZIndex = 7
+
+local LeadTimePredLine = Drawing.new("Line")
+LeadTimePredLine.Color = color3RGB(35, 255, 35); LeadTimePredLine.Thickness = 1.8; LeadTimePredLine.Transparency = 1.0; LeadTimePredLine.ZIndex = 8
+
+local ConfirmWallLine = Drawing.new("Line")
+ConfirmWallLine.Color = color3RGB(0, 0, 0); ConfirmWallLine.Thickness = 2.0; ConfirmWallLine.Transparency = 1.0; ConfirmWallLine.ZIndex = 8
+
+local PredictionXYLine = Drawing.new("Line")
+PredictionXYLine.Color = color3RGB(170, 0, 255); PredictionXYLine.Thickness = 2.0; PredictionXYLine.Transparency = 1.0; PredictionXYLine.ZIndex = 9
+
+table.insert(_G.KillerHubLines, MinPredictionLine)
+table.insert(_G.KillerHubLines, PredictionLine)
+table.insert(_G.KillerHubLines, LeadTimeLine)
+table.insert(_G.KillerHubLines, LeadTimePredLine)
+table.insert(_G.KillerHubLines, ConfirmWallLine)
+table.insert(_G.KillerHubLines, PredictionXYLine)
+
+local worldToViewport = Camera.WorldToViewportPoint
+
+local function adaptiveLerp(cur, tgt, baseA)
+    if not cur then return tgt end
+    local dev = (tgt - cur).Magnitude
+    if dev <= 1.5 then
+        return cur:Lerp(tgt, baseA)
+    end
+    local soft = baseA * math_clamp(3.5 / dev, 0.45, 1.0)
+    return cur:Lerp(tgt, soft)
+end
+
+local visPredNoY, visMinPredNoY, visPredXYExaggerated, visFinalLeadPredX
+
+local renderConn = RunService.RenderStepped:Connect(function(dt)
+    emaDeltaTime = emaDeltaTime + 0.2 * (dt - emaDeltaTime)
+
+    local murderer = getMurdererCached()
+    if not murderer or not murderer.Character then
+        PredictionLine.Visible = false
+        MinPredictionLine.Visible = false
+        LeadTimeLine.Visible = false
+        LeadTimePredLine.Visible = false
+        ConfirmWallLine.Visible = false
+        PredictionXYLine.Visible = false
+        visPredNoY = nil
+        return
+    end
+
+    local targetChar = murderer.Character
+    local visualPart, isBlocked = getSmartTargetPart(targetChar)
+    handLineIsBlocked = isBlocked
+
+    local myChar = LocalPlayer.Character
+    local rightHand = myChar and (myChar:FindFirstChild("RightHand") or myChar:FindFirstChild("Right Arm"))
+
+    local tracersTable = Flag("Sheriff_Tracers", EMPTY_TABLE)
+    local showRed = tracersTable["Tracer Prediction"] == true
+    local showBlue = tracersTable["Min Tracer Prediction"] == true
+    local showGreen = tracersTable["Lead Time"] == true
+    local showLeadPred = tracersTable["Lead Time Prediction"] == true
+    local showConfirmWall = tracersTable["Confirm wall check"] == true
+    local showXYOffset = tracersTable["Prediction X/Y offset"] == true
+
+    if visualPart then
+        local _, predNoY, minPredNoY, predXYExaggerated, finalLeadPredX = getPredictedPosition(targetChar, visualPart, dt)
+
+        if predNoY and minPredNoY then
+            local tracerLerpAlpha = math_clamp(42 * dt, 0.25, 0.85)
+            if not visPredNoY then
+                visPredNoY = predNoY
+                visMinPredNoY = minPredNoY
+                visPredXYExaggerated = predXYExaggerated
+                visFinalLeadPredX = finalLeadPredX
+            else
+                visPredNoY = adaptiveLerp(visPredNoY, predNoY, tracerLerpAlpha)
+                visMinPredNoY = adaptiveLerp(visMinPredNoY, minPredNoY, tracerLerpAlpha)
+                if predXYExaggerated then visPredXYExaggerated = adaptiveLerp(visPredXYExaggerated, predXYExaggerated, tracerLerpAlpha) end
+                if finalLeadPredX then visFinalLeadPredX = adaptiveLerp(visFinalLeadPredX, finalLeadPredX, tracerLerpAlpha) end
+            end
+
+            local currentViewportSize = Camera.ViewportSize
+            local screenOrigin = vec2New(currentViewportSize.X / 2, currentViewportSize.Y)
+
+            if showBlue then
+                local screenPos, onScreen = worldToViewport(Camera, visMinPredNoY)
+                if onScreen then
+                    MinPredictionLine.From = screenOrigin
+                    MinPredictionLine.To = vec2New(screenPos.X, screenPos.Y)
+                    MinPredictionLine.Visible = true
+                else MinPredictionLine.Visible = false end
+            else MinPredictionLine.Visible = false end
+
+            if showRed then
+                local screenPos, onScreen = worldToViewport(Camera, visPredNoY)
+                if onScreen then
+                    PredictionLine.From = screenOrigin
+                    PredictionLine.To = vec2New(screenPos.X, screenPos.Y)
+                    PredictionLine.Visible = true
+                else PredictionLine.Visible = false end
+            else PredictionLine.Visible = false end
+
+            if showLeadPred and visFinalLeadPredX then
+                local screenPos, onScreen = worldToViewport(Camera, visFinalLeadPredX)
+                if onScreen then
+                    LeadTimePredLine.From = screenOrigin
+                    LeadTimePredLine.To = vec2New(screenPos.X, screenPos.Y)
+                    LeadTimePredLine.Visible = true
+                else LeadTimePredLine.Visible = false end
+            else LeadTimePredLine.Visible = false end
+
+            if showXYOffset and visPredXYExaggerated then
+                local screenPos, onScreen = worldToViewport(Camera, visPredXYExaggerated)
+                if onScreen then
+                    PredictionXYLine.From = screenOrigin
+                    PredictionXYLine.To = vec2New(screenPos.X, screenPos.Y)
+                    PredictionXYLine.Visible = true
+                else PredictionXYLine.Visible = false end
+            else PredictionXYLine.Visible = false end
+
+            if rightHand and showGreen then
+                local targetPosForLead = showLeadPred and visFinalLeadPredX or visPredNoY
+                if targetPosForLead then
+                    local handScreenPos, handOnScreen = worldToViewport(Camera, rightHand.Position)
+                    local predScreenPos, predOnScreen = worldToViewport(Camera, targetPosForLead)
+
+                    if handOnScreen and predOnScreen then
+                        LeadTimeLine.Color = color3RGB(35, 255, 35)
+                        LeadTimeLine.From = vec2New(handScreenPos.X, handScreenPos.Y)
+                        LeadTimeLine.To = vec2New(predScreenPos.X, predScreenPos.Y)
+                        LeadTimeLine.Visible = true
+                    else LeadTimeLine.Visible = false end
+                else LeadTimeLine.Visible = false end
+            else LeadTimeLine.Visible = false end
+        end
+
+        if showConfirmWall and myChar and myChar:FindFirstChild("HumanoidRootPart") then
+            local myHrp = myChar.HumanoidRootPart
+            local myScreenPos, myOnScreen = worldToViewport(Camera, myHrp.Position)
+            local targetScreenPos, targetOnScreen = worldToViewport(Camera, visualPart.Position)
+
+            if myOnScreen and targetOnScreen then
+                ConfirmWallLine.From = vec2New(myScreenPos.X, myScreenPos.Y)
+                ConfirmWallLine.To = vec2New(targetScreenPos.X, targetScreenPos.Y)
+                if isBlocked then
+                    ConfirmWallLine.Color = color3RGB(0, 0, 0)
+                else
+                    ConfirmWallLine.Color = color3RGB(130, 35, 190)
+                end
+                ConfirmWallLine.Visible = true
+            else
+                ConfirmWallLine.Visible = false
+            end
+        else
+            ConfirmWallLine.Visible = false
+        end
+    else
+        PredictionLine.Visible = false
+        MinPredictionLine.Visible = false
+        LeadTimeLine.Visible = false
+        LeadTimePredLine.Visible = false
+        ConfirmWallLine.Visible = false
+        PredictionXYLine.Visible = false
+        visPredNoY = nil
+    end
+end)
+KillerHub:AddTask(renderConn)
+
+-- Core Shoot Handler
+local executeActualShoot
+
+executeActualShoot = function(targetChar, bestPart)
+    if isGunReloading() then return false end
+
+    local shotType = Flag("Sheriff_ShotType", "Normal")
+    local wallCheck = Flag("Sheriff_WallCheck", true)
+    local char = LocalPlayer.Character
+    if not char then return false end
+
+    local gun, _ = getGunLocation()
+    if not gun then return false end
+
+    local finalPredictedPos = getPredictedPosition(targetChar, bestPart)
+    if finalPredictedPos then
+        -- 🆕 RE-VALIDACIÓN justo antes de disparar (evita shots fantasma)
+        if wallCheck and shotType ~= "Piercer Bullet" then
+            local part, isBlocked = getSmartTargetPart(targetChar)
+            if not part or isBlocked or isGunBlocked(finalPredictedPos, targetChar) then
+                return false
+            end
+        end
+
+        autoEquipWeapon()
+
+        local activeGun, _ = getGunLocation()
+        if activeGun and activeGun:FindFirstChild("Shoot") then
+            local originCFrame = char.HumanoidRootPart and char.HumanoidRootPart.CFrame or Camera.CFrame
+            if char:FindFirstChild("HumanoidRootPart") and char.HumanoidRootPart:FindFirstChild("GunRaycastAttachment") then
+                originCFrame = char.HumanoidRootPart.GunRaycastAttachment.WorldCFrame
+            end
+
+            if shotType == "Piercer Bullet" then
+    -- ═══════════════════════════════════════════════════════════════════════
+    -- 🆕 PIERCER V2 — Velocity-aligned ray + Dynamic offset + Airborne boost
+    -- ═══════════════════════════════════════════════════════════════════════
+
+    -- 1️⃣ Dirección del rayo basada en VELOCIDAD del target (no cámara).
+    --    Esto asegura que cualquier error de predicción a lo largo del
+    --    movimiento quede cubierto por la LONGITUD del rayo, no por su ancho.
+    local velH = vec3New(smoothedVelocity.X, 0, smoothedVelocity.Z)
+    local velMagH = velH.Magnitude
+
+    local rayDir
+    if velMagH > 0.8 then
+        -- Target en movimiento → rayo paralelo a su trayectoria
+        rayDir = velH.Unit
+    else
+        -- Target estático → usar dirección shooter→target (más fiable que cámara)
+        local shooterHrp = char:FindFirstChild("HumanoidRootPart")
+        local shooterPos = shooterHrp and shooterHrp.Position or Camera.CFrame.Position
+        local toTarget = finalPredictedPos - shooterPos
+        rayDir = vec3New(toTarget.X, 0, toTarget.Z)
+        if rayDir.Magnitude < 0.01 then
+            local cl = Camera.CFrame.LookVector
+            rayDir = vec3New(cl.X, 0, cl.Z)
+        end
+        if rayDir.Magnitude < 0.01 then rayDir = vec3New(0, 0, 1) end
+        rayDir = rayDir.Unit
+    end
+
+    -- 2️⃣ Offset dinámico: escala con distancia + velocidad del target.
+    --    Corto alcance → offset pequeño (bajo error). Largo alcance → offset
+    --    grande (cubre más trayectoria para compensar cualquier lag del server).
+    local shooterHrp2 = char:FindFirstChild("HumanoidRootPart")
+    local shooterPos2 = shooterHrp2 and shooterHrp2.Position or Camera.CFrame.Position
+    local dist = (finalPredictedPos - shooterPos2).Magnitude
+
+    local velBoost = math_min(velMagH * 0.06, 1.8)      -- +0 a +1.8 studs según velocidad
+    local dynamicOffset = math_clamp(1.8 + dist * 0.025 + velBoost, 1.8, 6.5)
+
+    -- 3️⃣ Airborne boost: si el target está en el aire (jump spam),
+    --    extendemos el rayo más para cubrir la imprevisibilidad vertical.
+    local aState = getAirState(targetChar)
+    if aState.time > 0.1 then
+        dynamicOffset = dynamicOffset * (1.0 + math_min(aState.time * 0.35, 0.5))
+    end
+
+    local spawnOrigin = finalPredictedPos - (rayDir * dynamicOffset)
+    originCFrame = cframeNew(spawnOrigin, finalPredictedPos)
+end
+
+            lastGunShotTimestamp = os_clock()
+            isFiringOrReloading = true
+
+            activeGun.Shoot:FireServer(originCFrame, cframeNew(finalPredictedPos))
+
+            if Flag("Sheriff_UnEquipGun", false) then
+                task.delay(0.22, function()
+                    if Flag("Sheriff_UnEquipGun", false) then
+                        autoUnequipWeapon()
+                    end
+                end)
+            end
+
+            task.delay(MM2_GUN_RELOAD_TIME, function()
+                isFiringOrReloading = false
+            end)
+
+            return true
+        end
+    end
+    return false
+end
+
+-- Wait for Sight
+local function startWaitingForSight(initialTarget)
+    resetWaitState()
+
+    local gun, _ = getGunLocation()
+    if not gun then return end
+
+    isWaitingForSight = true
+
+    if DecalTexture then
+        TweenService:Create(DecalTexture, tweenInfoFast, {Position = udim2New(0.5, 0, 0.28, 0), Size = udim2New(0.38, 0, 0.38, 0)}):Play()
+    end
+    if Label then
+        TweenService:Create(Label, tweenInfoFast, {Position = udim2New(0, 0, 0.52, 0), Size = udim2New(1, 0, 0.2, 0)}):Play()
+        Label.Text = "WAITING..."
+        Label.TextColor3 = color3RGB(255, 50, 50)
+    end
+
+    local maxWaitTime = Flag("Sheriff_WaitTime", 15)
+    local startTime = os_clock()
+    local lostSightCounter = 0
+    local sightTimeAcc = 0
+
+    waitSightThread = task.spawn(function()
+        while isWaitingForSight do
+            local currentGun, _ = getGunLocation()
+            if not currentGun then
+                resetWaitState()
+                break
+            end
+
+            local elapsed = os_clock() - startTime
+            local remaining = maxWaitTime - elapsed
+
+            if remaining <= 0 then
+                resetWaitState()
+                break
+            end
+
+            if SubLabel then
+                SubLabel.Text = string.format("%.1fs", math_max(0, remaining))
+            end
+
+            local murderer = getMurdererCached()
+            if not murderer or not murderer.Character then
+                lostSightCounter = lostSightCounter + 0.016
+                sightTimeAcc = 0
+                if lostSightCounter > 0.15 then
+                    resetWaitState()
+                    break
+                end
+            else
+                local targetChar = murderer.Character
+                local hum = targetChar:FindFirstChildOfClass("Humanoid")
+                if not hum or hum.Health <= 0 then
+                    resetWaitState()
+                    break
+                end
+
+                local shotType = Flag("Sheriff_ShotType", "Normal")
+                local bestPart, isBlocked = getSmartTargetPart(targetChar)
+
+                local isClearSight = bestPart and (not isBlocked or shotType == "Piercer Bullet")
+
+                if isClearSight then
+                    lostSightCounter = 0
+                    sightTimeAcc = sightTimeAcc + 0.016
+
+                    if sightTimeAcc >= 0.035 then
+                        local shotFired = executeActualShoot(targetChar, bestPart)
+                        if shotFired then
+                            resetWaitState()
+                            break
+                        end
+                    end
+                else
+                    sightTimeAcc = 0
+                end
+            end
+
+            RunService.RenderStepped:Wait()
+        end
+    end)
+end
+
+local function fireAtMurdererDirectly()
+    if isGunReloading() then return end
+
+    local cancelOnClick = Flag("Sheriff_CancelOnClick", false)
+
+    if isWaitingForSight then
+        if cancelOnClick then resetWaitState() end
+        return
+    end
+
+    local gun, _ = getGunLocation()
+    if not gun then return end
+
+    local shotType = Flag("Sheriff_ShotType", "Normal")
+    local wallCheck = Flag("Sheriff_WallCheck", true)
+    local waitSight = Flag("Sheriff_WaitSight", false)
+
+    local murderer = getMurdererCached()
+    if murderer and murderer.Character then
+        local targetChar = murderer.Character
+        local bestPart, isBlocked = getSmartTargetPart(targetChar)
+
+        local allowWaitSight = waitSight and (shotType ~= "Piercer Bullet")
+
+        if wallCheck and isBlocked and shotType ~= "Piercer Bullet" then
+            if allowWaitSight then
+                startWaitingForSight(targetChar)
+            end
+            return
+        end
+
+        if bestPart then
+            executeActualShoot(targetChar, bestPart)
+        end
+    end
+end
+
+-- Auto Shoot Engine
+local lastAutoShootTime = 0
+local autoShootConn = RunService.Heartbeat:Connect(function()
+    if not Flag("Sheriff_AutoShoot", false) then return end
+    if isGunReloading() then return end
+
+    local now = os_clock()
+    if now - lastAutoShootTime < 0.18 then return end
+
+    local gun, _ = getGunLocation()
+    if not gun then return end
+
+    local murderer = getMurdererCached()
+    if not murderer or not murderer.Character then return end
+    local targetChar = murderer.Character
+
+    local autoType = Flag("Sheriff_AutoShootType", "Murder visible")
+    if autoType == "Knife visible" then
+        local knifeEquipped = false
+        for _, item in pairs(targetChar:GetChildren()) do
+            if isMeleeWeapon(item) then knifeEquipped = true break end
+        end
+        if not knifeEquipped then return end
+    end
+
+    local bestPart, _ = getSmartTargetPart(targetChar)
+    if bestPart and isStrictlyVisible(targetChar, bestPart) then
+        lastAutoShootTime = now
+        fireAtMurdererDirectly()
+    end
+end)
+KillerHub:AddTask(autoShootConn)
+
+-- Keybinds & Mobile GUI
+local function safeGetEnum(enumType, name)
+    local ok, result = pcall(function() return enumType[name] end)
+    return ok and result or nil
+end
+
+local inputConn = UserInputService.InputBegan:Connect(function(input, gameProcessed)
+    if gameProcessed then return end
+    local targetKeyName = Flag("Sheriff_ShootKey", "F")
+    local kc = safeGetEnum(Enum.KeyCode, targetKeyName)
+    local uit = safeGetEnum(Enum.UserInputType, targetKeyName)
+    if (kc and input.KeyCode == kc) or (uit and input.UserInputType == uit) then
+        task.spawn(fireAtMurdererDirectly)
+    end
+end)
+KillerHub:AddTask(inputConn)
+
+local POS_FILE = "KillerHub_ButtonPos.txt"
+local function loadButtonPosition()
+    if isfile and readfile and isfile(POS_FILE) then
+        local ok, result = pcall(function() return HttpService:JSONDecode(readfile(POS_FILE)) end)
+        if ok and type(result) == "table" and result.X and result.Y then
+            return udim2New(result.X, 0, result.Y, 0)
+        end
+    end
+    if getgenv().__KillerHub_ButtonPos then return getgenv().__KillerHub_ButtonPos end
+    return udim2New(0.7, 0, 0.6, 0)
+end
+
+local function saveButtonPosition(pos)
+    getgenv().__KillerHub_ButtonPos = pos
+    if writefile then
+        pcall(function() writefile(POS_FILE, HttpService:JSONEncode({X = pos.X.Scale, Y = pos.Y.Scale})) end)
+    end
+end
+
+local VoidGui = Instance.new("ScreenGui")
+VoidGui.Name = "KillerHub_SheriffGui"; VoidGui.ResetOnSpawn = false; VoidGui.Parent = game:GetService("CoreGui")
+KillerHub:AddTask(VoidGui)
+
+local btnSize = 95
+if Flag("Sheriff_CustomBtnSize", false) then
+    btnSize = Flag("Sheriff_BtnSize", 95)
+end
+
+local ShootButton = Instance.new("ImageButton")
+ShootButton.Name = "ShootButton"
+ShootButton.Size = udim2New(0, btnSize, 0, btnSize)
+ShootButton.Position = loadButtonPosition()
+ShootButton.BackgroundColor3 = color3RGB(15, 6, 26); ShootButton.BackgroundTransparency = 0.05
+ShootButton.BorderSizePixel = 0; ShootButton.AutoButtonColor = false; ShootButton.ClipsDescendants = true; ShootButton.Parent = VoidGui
+
+cachedScreenGui = VoidGui
+cachedShootButton = ShootButton
+
+local Corner = Instance.new("UICorner")
+Corner.CornerRadius = UDim.new(0.28, 0); Corner.Parent = ShootButton
+
+local GlowOverlay = Instance.new("Frame")
+GlowOverlay.Size = udim2New(1, 0, 1, 0); GlowOverlay.BackgroundTransparency = 1; GlowOverlay.ZIndex = ShootButton.ZIndex + 1; GlowOverlay.Parent = ShootButton
+
+local GlowCorner = Instance.new("UICorner")
+GlowCorner.CornerRadius = UDim.new(0.28, 0); GlowCorner.Parent = GlowOverlay
+
+local UiGradient = Instance.new("UIGradient")
+UiGradient.Color = ColorSequence.new({
+    ColorSequenceKeypoint.new(0, color3RGB(24, 8, 43)),
+    ColorSequenceKeypoint.new(0.5, color3RGB(131, 46, 222)),
+    ColorSequenceKeypoint.new(1, color3RGB(24, 8, 43))
+})
+UiGradient.Offset = vec2New(0, 0); UiGradient.Rotation = 0; UiGradient.Parent = GlowOverlay
+
+local tweenRot = TweenService:Create(UiGradient, TweenInfo.new(3, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut, -1), {Rotation = 360})
+tweenRot:Play()
+KillerHub:AddTask(tweenRot)
+
+DecalTexture = Instance.new("ImageLabel")
+DecalTexture.Name = "CrosshairDecal"
+DecalTexture.Size = udim2New(0.38, 0, 0.38, 0)
+DecalTexture.AnchorPoint = vec2New(0.5, 0.5)
+DecalTexture.Position = udim2New(0.5, 0, 0.44, 0)
+DecalTexture.BackgroundTransparency = 1
+DecalTexture.Image = "rbxassetid://125754446555599"
+DecalTexture.ZIndex = ShootButton.ZIndex + 2; DecalTexture.Parent = ShootButton
+
+local tiLoop = TweenInfo.new(0.80, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut, -1, true)
+local rotAnim = TweenService:Create(DecalTexture, tiLoop, {Rotation = 360})
+rotAnim:Play()
+KillerHub:AddTask(rotAnim)
+
+Label = Instance.new("TextLabel")
+Label.Name = "ShootLabel"
+Label.Size = udim2New(1, 0, 0.2, 0)
+Label.Position = udim2New(0, 0, 0.75, 0)
+Label.BackgroundTransparency = 1
+Label.Text = "SHOOT"; Label.TextColor3 = color3RGB(255, 255, 255); Label.TextSize = 14; Label.Font = Enum.Font.GothamBold
+Label.TextScaled = true; Label.ZIndex = ShootButton.ZIndex + 2; Label.Parent = ShootButton
+
+local LabelConstraint = Instance.new("UITextSizeConstraint")
+LabelConstraint.MaxTextSize = 15; LabelConstraint.MinTextSize = 8; LabelConstraint.Parent = Label
+
+SubLabel = Instance.new("TextLabel")
+SubLabel.Name = "SubTimerLabel"
+SubLabel.Size = udim2New(1, 0, 0.18, 0)
+SubLabel.Position = udim2New(0, 0, 0.74, 0)
+SubLabel.BackgroundTransparency = 1
+SubLabel.Text = ""
+SubLabel.TextColor3 = color3RGB(255, 255, 255)
+SubLabel.TextSize = 12
+SubLabel.Font = Enum.Font.GothamBold
+SubLabel.TextScaled = true
+SubLabel.ZIndex = ShootButton.ZIndex + 2
+SubLabel.Parent = ShootButton
+
+local SubConstraint = Instance.new("UITextSizeConstraint")
+SubConstraint.MaxTextSize = 13; SubConstraint.MinTextSize = 7; SubConstraint.Parent = SubLabel
+
+local dragging, dragInput, dragStart, startPos
+KillerHub:AddTask(ShootButton.InputBegan:Connect(function(input)
+    if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+        TweenService:Create(GlowOverlay, TweenInfo.new(0.01, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundTransparency = 0.02}):Play()
+        task.spawn(fireAtMurdererDirectly)
+
+        if not Flag("Sheriff_LockBtnPos", false) then
+            dragging = true; dragStart = input.Position; startPos = ShootButton.Position
+            local cChanged
+            cChanged = input.Changed:Connect(function()
+                if input.UserInputState == Enum.UserInputState.End then
+                    dragging = false
+                    cChanged:Disconnect()
+                    saveButtonPosition(ShootButton.Position)
+                end
+            end)
+        end
+     end
+end))
+
+KillerHub:AddTask(ShootButton.InputEnded:Connect(function(input)
+    if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+        TweenService:Create(GlowOverlay, TweenInfo.new(0.45, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundTransparency = 1}):Play()
+        if dragging then dragging = false; saveButtonPosition(ShootButton.Position) end
+    end
+end))
+
+KillerHub:AddTask(ShootButton.InputChanged:Connect(function(input)
+    if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+        dragInput = input
+    end
+end))
+
+KillerHub:AddTask(UserInputService.InputChanged:Connect(function(input)
+    if input == dragInput and dragging and not Flag("Sheriff_LockBtnPos", false) then
+        local delta = input.Position - dragStart
+        ShootButton.Position = udim2New(startPos.X.Scale + (delta.X / Camera.ViewportSize.X), 0, startPos.Y.Scale + (delta.Y / Camera.ViewportSize.Y), 0)
+    end
+end))
+
+-- Silent Aim Hooks
+local WeaponService = nil
+local ClientServices = ReplicatedStorage:FindFirstChild("ClientServices") or ReplicatedStorage:FindFirstChild("Services")
+if ClientServices then
+    local ws = ClientServices:FindFirstChild("WeaponService") or ClientServices:FindFirstChild("GunService")
+    if ws and ws:IsA("ModuleScript") then pcall(function() WeaponService = require(ws) end) end
+end
+
+if not WeaponService then
+    local descendants = ReplicatedStorage:GetDescendants()
+    for i = 1, #descendants do
+        local obj = descendants[i]
+        if obj:IsA("ModuleScript") then
+            local n = obj.Name:lower()
+            if n:find("weapon") or n:find("gun") or n:find("shoot") or n:find("tool") then
+                local success, mod = pcall(require, obj)
+                if success and type(mod) == "table" and (mod.GetTargetPosition or mod.GetMouseTargetCFrame) then
+                    WeaponService = mod
+                    break
+                end
+            end
+        end
+    end
+end
+
+if WeaponService then
+    local oldGetTargetPosition = WeaponService.GetTargetPosition
+    local oldGetMouseTargetCFrame = WeaponService.GetMouseTargetCFrame
+    local lastHookCallTime = os_clock()
+    local frameCachedTime = 0
+    local frameCachedCF = nil
+
+    local function getPredictedTargetCFrame(customDelta)
+        local currentTime = os_clock()
+        if currentTime == frameCachedTime then return frameCachedCF end
+
+        local silentAim = Flag("Sheriff_SilentAim", false)
+        if not silentAim then frameCachedTime = currentTime; frameCachedCF = nil; return nil end
+
+        local shotType = Flag("Sheriff_ShotType", "Normal")
+        local useDetect = Flag("Sheriff_WeaponDetect", false)
+
+        local gun, _ = getGunLocation()
+        if useDetect and not gun then frameCachedTime = currentTime; frameCachedCF = nil; return nil end
+
+        local murderer = getMurdererCached()
+        if not murderer or not murderer.Character then frameCachedTime = currentTime; frameCachedCF = nil; return nil end
+
+        local bestPart, isBlocked = getSmartTargetPart(murderer.Character)
+        if not bestPart or (isBlocked and shotType ~= "Piercer Bullet") then
+            frameCachedTime = currentTime; frameCachedCF = nil; return nil
+        end
+
+        local dt = customDelta or math_clamp(currentTime - lastHookCallTime, 0.008, 0.033)
+        lastHookCallTime = currentTime
+
+        local finalPredictedPos = getPredictedPosition(murderer.Character, bestPart, dt)
+        frameCachedCF = finalPredictedPos and cframeNew(finalPredictedPos) or nil
+        frameCachedTime = currentTime
+        return frameCachedCF
+    end
+
+    if oldGetTargetPosition then
+        WeaponService.GetTargetPosition = function(self, ...)
+            local targetCF = getPredictedTargetCFrame()
+            return targetCF or oldGetTargetPosition(self, ...)
+        end
+    end
+
+    if oldGetMouseTargetCFrame then
+        WeaponService.GetMouseTargetCFrame = function(self, ...)
+            local targetCF = getPredictedTargetCFrame()
+            return targetCF or oldGetMouseTargetCFrame(self, ...)
+        end
+    end
+end
+
+-- ============================================================================
+-- 🚀 MÓDULO EXTRA (FLICK & TARGET SELECTION)
+-- ============================================================================
+task.spawn(function()
+    task.wait(0.1)
+
+    local TabSheriffObj = KillerHub:GetTab("Sheriff")
+    local PageOthersObj = TabSheriffObj and TabSheriffObj:GetPage("Others")
+    if not PageOthersObj then return end
+
+    PageOthersObj:CreateSection("Flick Shoot Suite")
+    PageOthersObj:CreateToggle("Sheriff_FlickShoot", "Flick Shoot", function() end)
+    PageOthersObj:CreateToggle("Sheriff_AutoShiftLock", "Auto Shift Lock", function() end)
+
+    local PlayerScripts = LocalPlayer:WaitForChild("PlayerScripts", 2)
+    local PlayerModule = PlayerScripts and PlayerScripts:FindFirstChild("PlayerModule")
+
+    local function isShiftLockEnabled()
+        if PlayerModule then
+            local success, cameraModule = pcall(function() return require(PlayerModule).cameras end)
+            if success and cameraModule and cameraModule.activeMouseLockController then
+                return cameraModule.activeMouseLockController.isMouseLocked == true
+            end
+        end
+        return UserInputService.MouseBehavior == Enum.MouseBehavior.LockCenter
+    end
+
+    local function forceEnableShiftLock()
+        if PlayerModule then
+            local success, cameraModule = pcall(function() return require(PlayerModule).cameras end)
+            if success and cameraModule and cameraModule.activeMouseLockController then
+                if not cameraModule.activeMouseLockController.isMouseLocked then
+                    cameraModule.activeMouseLockController:OnMouseLockToggled()
+                end
+            end
+        end
+    end
+
+    local isFlicking = false
+    local function performFlickAnimation(targetPos)
+        if isFlicking then return end
+
+        if Flag("Sheriff_AutoShiftLock", false) then
+            forceEnableShiftLock()
+        end
+
+        if not isShiftLockEnabled() then return end
+
+        isFlicking = true
+        local originalCamCF = Camera.CFrame
+        local targetCamCF = cframeNew(Camera.CFrame.Position, targetPos)
+
+        local flickInTween = TweenService:Create(Camera, TweenInfo.new(0.09, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
+            CFrame = targetCamCF
+        })
+        flickInTween:Play()
+        flickInTween.Completed:Wait()
+
+        local flickOutTween = TweenService:Create(Camera, TweenInfo.new(0.08, Enum.EasingStyle.Quad, Enum.EasingDirection.In), {
+            CFrame = originalCamCF
+        })
+        flickOutTween:Play()
+        flickOutTween.Completed:Wait()
+
+        isFlicking = false
+    end
+
+    local baseExecuteShoot = executeActualShoot
+    executeActualShoot = function(targetChar, bestPart)
+        if Flag("Sheriff_FlickShoot", false) and targetChar and bestPart then
+            local targetPos = bestPart.Position
+            task.spawn(function()
+                performFlickAnimation(targetPos)
+            end)
+        end
+        return baseExecuteShoot(targetChar, bestPart)
+    end
+
+    PageOthersObj:CreateSection("Target Selection")
+
+    local customTargetEnabled = false
+    local selectedPlayerName = "None"
+    local cachedTargetPlayer = nil
+    local lastTargetCheck = 0
+
+    PageOthersObj:CreateToggle("Sheriff_ShootPlayers", "Shoot Players", function(estado)
+        customTargetEnabled = estado
+        if not estado then cachedTargetPlayer = nil end
+    end, false)
+
+    local targetDropdown = PageOthersObj:CreateDropdown("Sheriff_SelectedPlayer", "Select Player Target", {"None"}, function(sel)
+        selectedPlayerName = sel
+        cachedTargetPlayer = (sel ~= "None") and Players:FindFirstChild(sel) or nil
+    end, "None")
+
+    targetDropdown:BindToDynamicList(function()
+        local list = {"None"}
+        for _, p in ipairs(Players:GetPlayers()) do
+            if p ~= LocalPlayer then
+                table.insert(list, p.Name)
+            end
+        end
+        return list
+    end, 3)
+
+    Players.PlayerRemoving:Connect(function(plr)
+        if plr.Name == selectedPlayerName then
+            selectedPlayerName = "None"
+            cachedTargetPlayer = nil
+        end
+    end)
+
+    local baseGetMurderer = getMurderer
+    getMurderer = function()
+        if customTargetEnabled and selectedPlayerName ~= "None" then
+            local now = os_clock()
+
+            if not cachedTargetPlayer or not cachedTargetPlayer.Parent or (now - lastTargetCheck > 0.1) then
+                lastTargetCheck = now
+                cachedTargetPlayer = Players:FindFirstChild(selectedPlayerName)
+            end
+
+            if cachedTargetPlayer then
+                local char = cachedTargetPlayer.Character
+                if char then
+                    local hum = char:FindFirstChildOfClass("Humanoid")
+                    local hrp = char:FindFirstChild("HumanoidRootPart")
+                    local isDead = (hum and hum.Health <= 0) or (playerDeadStatus[selectedPlayerName] == true)
+
+                    if not isDead and hrp then
+                        setTarget(cachedTargetPlayer)
+                        return cachedTargetPlayer
+                    end
+                end
+            end
+        end
+
+        return baseGetMurderer()
+    end
+end)
+
+return KillerHub
