@@ -1,5 +1,5 @@
 -- ============================================================================
--- 👾 KILLER HUB | ENGINE V12.9.0 - SHERIFF SUITE (PREDICTION+ JITTER-AWARE)
+-- 👾 KILLER HUB | ENGINE V12.9.2 - SHERIFF SUITE (FULL OPTIMIZED + RELOAD QUEUE)
 -- ============================================================================
 local KillerHub = loadstring(game:HttpGet("https://raw.githubusercontent.com/Salayer09/KillerHub/refs/heads/main/Slayer.lua"))()
 
@@ -56,6 +56,7 @@ local function isGunReadyToShoot()
 end
 
 local checkWeaponVisibility = nil
+local recomputeWeaponPresence = nil
 
 if _G.KillerHubLines then
     for _, line in pairs(_G.KillerHubLines) do pcall(function() line:Remove() end) end
@@ -125,7 +126,9 @@ local pingTask = task.spawn(function()
 end)
 KillerHub:AddTask(pingTask)
 
--- UI Setup
+-- ═══════════════════════════════════════════════════════════════════════════
+-- 🎛️ UI SETUP
+-- ═══════════════════════════════════════════════════════════════════════════
 local TabSheriff = KillerHub:CreateTab("Sheriff", "rbxassetid://15286655815")
 
 TabSheriff:CreateSection("Silent Aim")
@@ -172,7 +175,7 @@ local cachedShootButton, cachedScreenGui
 
 TabSheriff:CreateSection("Interface")
 TabSheriff:CreateToggle("Sheriff_WeaponDetect", "Weapon Detector",
-    function() if checkWeaponVisibility then checkWeaponVisibility() end end)
+    function() if recomputeWeaponPresence then recomputeWeaponPresence() end end)
 TabSheriff:CreateToggle("Sheriff_ShowButton", "Show Button",
     function() if checkWeaponVisibility then checkWeaponVisibility() end end)
 
@@ -207,7 +210,9 @@ PageOthers:CreateSlider("Sheriff_WaitTime", "Wait Time", 5, 67, function() end, 
 PageOthers:CreateSection("Gun Actions")
 PageOthers:CreateToggle("Sheriff_UnEquipGun", "Un-Equip gun", function() end)
 
--- Weapon & Role Systems
+-- ═══════════════════════════════════════════════════════════════════════════
+-- 🔫 WEAPON & ROLE SYSTEMS
+-- ═══════════════════════════════════════════════════════════════════════════
 local function isRangedWeapon(tool)
     if not tool or not tool:IsA("Tool") then return false end
     return (tool:FindFirstChild("Shoot") or tool.Name == "Gun" or tool.Name == "Revolver")
@@ -226,26 +231,93 @@ local function getGunLocation()
     return nil, nil
 end
 
+-- ═══════════════════════════════════════════════════════════════════════════
+-- ⚡ DETECCIÓN DE ARMA EVENT-DRIVEN (INSTANTÁNEA + 0 POLLING)
+-- ═══════════════════════════════════════════════════════════════════════════
+local hasRangedWeaponCached = false
+
 checkWeaponVisibility = function()
     if not cachedScreenGui then return end
     local showBtn = Flag("Sheriff_ShowButton", false)
     local useDetect = Flag("Sheriff_WeaponDetect", false)
 
     if not showBtn then cachedScreenGui.Enabled = false return end
-
     if useDetect then
-        local gun, _ = getGunLocation()
-        cachedScreenGui.Enabled = (gun ~= nil)
+        cachedScreenGui.Enabled = hasRangedWeaponCached
     else
         cachedScreenGui.Enabled = true
     end
 end
 
-local visTask = task.spawn(function()
-    while task.wait(0.3) do pcall(checkWeaponVisibility) end
-end)
-KillerHub:AddTask(visTask)
+recomputeWeaponPresence = function()
+    hasRangedWeaponCached = (getGunLocation() ~= nil)
+    if checkWeaponVisibility then checkWeaponVisibility() end
+end
 
+local weaponListenerConns = {}
+
+local function clearWeaponListeners()
+    for _, c in ipairs(weaponListenerConns) do
+        pcall(function() c:Disconnect() end)
+    end
+    table.clear(weaponListenerConns)
+end
+
+local function bindWeaponListeners()
+    clearWeaponListeners()
+
+    local char = LocalPlayer.Character
+    if char then
+        table.insert(weaponListenerConns, char.ChildAdded:Connect(function(c)
+            if c:IsA("Tool") then recomputeWeaponPresence() end
+        end))
+        table.insert(weaponListenerConns, char.ChildRemoved:Connect(function(c)
+            if c:IsA("Tool") then recomputeWeaponPresence() end
+        end))
+    end
+
+    local bp = LocalPlayer:FindFirstChild("Backpack")
+    if bp then
+        table.insert(weaponListenerConns, bp.ChildAdded:Connect(function(c)
+            if c:IsA("Tool") then recomputeWeaponPresence() end
+        end))
+        table.insert(weaponListenerConns, bp.ChildRemoved:Connect(function(c)
+            if c:IsA("Tool") then recomputeWeaponPresence() end
+        end))
+    end
+
+    recomputeWeaponPresence()
+end
+
+KillerHub:AddTask(LocalPlayer.CharacterAdded:Connect(function()
+    task.wait(0.15)
+    bindWeaponListeners()
+end))
+
+do
+    local bp = LocalPlayer:FindFirstChild("Backpack")
+    if bp then
+        table.insert(weaponListenerConns, bp.ChildAdded:Connect(function(c)
+            if c:IsA("Tool") then recomputeWeaponPresence() end
+        end))
+        table.insert(weaponListenerConns, bp.ChildRemoved:Connect(function(c)
+            if c:IsA("Tool") then recomputeWeaponPresence() end
+        end))
+    else
+        LocalPlayer.ChildAdded:Connect(function(c)
+            if c.Name == "Backpack" then
+                task.wait(0.05)
+                bindWeaponListeners()
+            end
+        end)
+    end
+end
+
+bindWeaponListeners()
+
+-- ═══════════════════════════════════════════════════════════════════════════
+-- 🧠 CORE STATE
+-- ═══════════════════════════════════════════════════════════════════════════
 local MurdererDetectado = nil
 local smoothedVelocity = VECTOR_ZERO
 local smoothedVisualY = 0
@@ -262,7 +334,7 @@ local moveConfidence = setmetatable({}, {__mode = "k"})
 local velocityBuffers = setmetatable({}, {__mode = "k"})
 
 -- ═══════════════════════════════════════════════════════════════════════════
--- 🎯 BUFFERS DE PREDICCIÓN AVANZADA (V12.9.0)
+-- 🎯 BUFFERS DE PREDICCIÓN AVANZADA
 -- ═══════════════════════════════════════════════════════════════════════════
 local VEL_HISTORY_SIZE = 8
 local velocityHistory = setmetatable({}, {__mode = "k"})
@@ -318,7 +390,6 @@ local function updateTurnState(char, newVel, dt)
         if t.lastUnit.Magnitude > 0.5 then
             local dot = math_clamp(t.lastUnit:Dot(unit), -1, 1)
             local angle = math_acos(dot)
-
             if angle > math_rad(55) then
                 t.sharpTurnTimer = 0.15
             end
@@ -347,7 +418,9 @@ local function getAirState(char)
     return a
 end
 
--- Sticky Target
+-- ═══════════════════════════════════════════════════════════════════════════
+-- 🎯 STICKY TARGET & WAIT STATE
+-- ═══════════════════════════════════════════════════════════════════════════
 local stickyTarget = nil
 local stickyTargetTime = 0
 local STICKY_DURATION = 0.12
@@ -391,7 +464,6 @@ end
 
 local function setTarget(nt) currentTarget = nt end
 
--- Target Buffers & Lag Handlers
 local function getLagState(targetChar)
     local s = lagStates[targetChar]
     if not s then
@@ -530,6 +602,9 @@ Players.PlayerRemoving:Connect(function(plr)
     if stickyTarget == plr then clearStickyTarget() end
 end)
 
+-- ═══════════════════════════════════════════════════════════════════════════
+-- 🎯 RAYCASTS & TARGETING
+-- ═══════════════════════════════════════════════════════════════════════════
 local floorCastParams = RaycastParams.new()
 floorCastParams.FilterType = Enum.RaycastFilterType.Exclude
 
@@ -829,7 +904,7 @@ local function getFloorHeight(targetHrp, targetChar)
 end
 
 -- ═══════════════════════════════════════════════════════════════════════════
--- ⚡ PREDICTION ENGINE V12.9.0 — JITTER-AWARE + WEIGHTED HISTORY
+-- ⚡ PREDICTION ENGINE
 -- ═══════════════════════════════════════════════════════════════════════════
 local function getPredictedPosition(targetChar, targetPart, customDelta)
     if not targetChar or not targetPart then return nil, nil, nil, nil, nil end
@@ -1024,7 +1099,9 @@ local function getPredictedPosition(targetChar, targetPart, customDelta)
     return finalPredWithY, finalPredNoY, minPredNoY, predXYExaggerated, finalLeadPredX
 end
 
--- Tracers Render Setup
+-- ═══════════════════════════════════════════════════════════════════════════
+-- 📊 TRACERS RENDER SETUP
+-- ═══════════════════════════════════════════════════════════════════════════
 local MinPredictionLine = Drawing.new("Line")
 MinPredictionLine.Color = color3RGB(4, 0, 220); MinPredictionLine.Thickness = 2.0; MinPredictionLine.Transparency = 1.0; MinPredictionLine.ZIndex = 5
 
@@ -1064,17 +1141,47 @@ end
 
 local visPredNoY, visMinPredNoY, visPredXYExaggerated, visFinalLeadPredX
 
+local function hideAllLines()
+    PredictionLine.Visible = false
+    MinPredictionLine.Visible = false
+    LeadTimeLine.Visible = false
+    LeadTimePredLine.Visible = false
+    ConfirmWallLine.Visible = false
+    PredictionXYLine.Visible = false
+end
+
+-- ═══════════════════════════════════════════════════════════════════════════
+-- 🚀 RENDER LOOP OPTIMIZADO (EARLY-OUT + FLAG CACHE + VIEWPORT CACHE)
+-- ═══════════════════════════════════════════════════════════════════════════
 local renderConn = RunService.RenderStepped:Connect(function(dt)
     emaDeltaTime = emaDeltaTime + 0.2 * (dt - emaDeltaTime)
 
+    local useDetect = Flag("Sheriff_WeaponDetect", false)
+    local tracersTable = Flag("Sheriff_Tracers", EMPTY_TABLE)
+
+    -- GATE POR WEAPON DETECT
+    if useDetect and not hasRangedWeaponCached then
+        hideAllLines()
+        visPredNoY = nil
+        return
+    end
+
+    local showRed = tracersTable["Tracer Prediction"] == true
+    local showBlue = tracersTable["Min Tracer Prediction"] == true
+    local showGreen = tracersTable["Lead Time"] == true
+    local showLeadPred = tracersTable["Lead Time Prediction"] == true
+    local showConfirmWall = tracersTable["Confirm wall check"] == true
+    local showXYOffset = tracersTable["Prediction X/Y offset"] == true
+
+    if not (showRed or showBlue or showGreen or showLeadPred or showConfirmWall or showXYOffset) then
+        hideAllLines()
+        visPredNoY = nil
+        return
+    end
+
     local murderer = getMurdererCached()
     if not murderer or not murderer.Character then
-        PredictionLine.Visible = false
-        MinPredictionLine.Visible = false
-        LeadTimeLine.Visible = false
-        LeadTimePredLine.Visible = false
-        ConfirmWallLine.Visible = false
-        PredictionXYLine.Visible = false
+        hideAllLines()
         visPredNoY = nil
         return
     end
@@ -1086,13 +1193,8 @@ local renderConn = RunService.RenderStepped:Connect(function(dt)
     local myChar = LocalPlayer.Character
     local rightHand = myChar and (myChar:FindFirstChild("RightHand") or myChar:FindFirstChild("Right Arm"))
 
-    local tracersTable = Flag("Sheriff_Tracers", EMPTY_TABLE)
-    local showRed = tracersTable["Tracer Prediction"] == true
-    local showBlue = tracersTable["Min Tracer Prediction"] == true
-    local showGreen = tracersTable["Lead Time"] == true
-    local showLeadPred = tracersTable["Lead Time Prediction"] == true
-    local showConfirmWall = tracersTable["Confirm wall check"] == true
-    local showXYOffset = tracersTable["Prediction X/Y offset"] == true
+    local viewportSize = Camera.ViewportSize
+    local screenOrigin = vec2New(viewportSize.X * 0.5, viewportSize.Y)
 
     if visualPart then
         local _, predNoY, minPredNoY, predXYExaggerated, finalLeadPredX = getPredictedPosition(targetChar, visualPart, dt)
@@ -1110,9 +1212,6 @@ local renderConn = RunService.RenderStepped:Connect(function(dt)
                 if predXYExaggerated then visPredXYExaggerated = adaptiveLerp(visPredXYExaggerated, predXYExaggerated, tracerLerpAlpha) end
                 if finalLeadPredX then visFinalLeadPredX = adaptiveLerp(visFinalLeadPredX, finalLeadPredX, tracerLerpAlpha) end
             end
-
-            local currentViewportSize = Camera.ViewportSize
-            local screenOrigin = vec2New(currentViewportSize.X / 2, currentViewportSize.Y)
 
             if showBlue then
                 local screenPos, onScreen = worldToViewport(Camera, visMinPredNoY)
@@ -1187,18 +1286,15 @@ local renderConn = RunService.RenderStepped:Connect(function(dt)
             ConfirmWallLine.Visible = false
         end
     else
-        PredictionLine.Visible = false
-        MinPredictionLine.Visible = false
-        LeadTimeLine.Visible = false
-        LeadTimePredLine.Visible = false
-        ConfirmWallLine.Visible = false
-        PredictionXYLine.Visible = false
+        hideAllLines()
         visPredNoY = nil
     end
 end)
 KillerHub:AddTask(renderConn)
 
--- Core Shoot Handler
+-- ═══════════════════════════════════════════════════════════════════════════
+-- 🎯 CORE SHOOT HANDLER
+-- ═══════════════════════════════════════════════════════════════════════════
 local executeActualShoot
 
 executeActualShoot = function(targetChar, bestPart)
@@ -1265,11 +1361,9 @@ executeActualShoot = function(targetChar, bestPart)
             end
 
             activeGun.Shoot:FireServer(originCFrame, cframeNew(finalPredictedPos))
-            
-            -- Se registra el instante del disparo para el cooldown
+
             lastShotTimestamp = os_clock()
 
-            -- Desequipado automático exacto a los 0.22s
             if Flag("Sheriff_UnEquipGun", false) then
                 task.delay(0.22, autoUnequipWeapon)
             end
@@ -1280,9 +1374,12 @@ executeActualShoot = function(targetChar, bestPart)
     return false
 end
 
--- Wait for Sight
+-- ═══════════════════════════════════════════════════════════════════════════
+-- ⏳ WAIT FOR SIGHT (CON SOPORTE DE RELOAD)
+-- ═══════════════════════════════════════════════════════════════════════════
 local function startWaitingForSight(initialTarget)
-    if not isGunReadyToShoot() then return end
+    -- Ya NO exige que el arma esté lista al inicio:
+    -- el propio loop espera a que termine de recargar.
     resetWaitState()
 
     local gun, _ = getGunLocation()
@@ -1320,8 +1417,14 @@ local function startWaitingForSight(initialTarget)
                 break
             end
 
+            -- SubLabel: muestra el reload pendiente o el tiempo restante
             if SubLabel then
-                SubLabel.Text = string.format("%.1fs", math_max(0, remaining))
+                if not isGunReadyToShoot() then
+                    local reloadRemaining = GUN_RELOAD_COOLDOWN - (os_clock() - lastShotTimestamp)
+                    SubLabel.Text = string.format("RELOAD %.1fs", math_max(0, reloadRemaining))
+                else
+                    SubLabel.Text = string.format("%.1fs", math_max(0, remaining))
+                end
             end
 
             local murderer = getMurdererCached()
@@ -1342,10 +1445,10 @@ local function startWaitingForSight(initialTarget)
 
                 local shotType = Flag("Sheriff_ShotType", "Normal")
                 local bestPart, isBlocked = getSmartTargetPart(targetChar)
-
                 local isClearSight = bestPart and (not isBlocked or shotType == "Piercer Bullet")
 
-                if isClearSight then
+                -- Sólo dispara cuando el arma esté lista Y la visión esté limpia
+                if isClearSight and isGunReadyToShoot() then
                     lostSightCounter = 0
                     sightTimeAcc = sightTimeAcc + 0.016
 
@@ -1367,9 +1470,6 @@ local function startWaitingForSight(initialTarget)
 end
 
 local function fireAtMurdererDirectly()
-    -- Bloquea la llamada si el arma sigue en recarga
-    if not isGunReadyToShoot() then return end
-
     local cancelOnClick = Flag("Sheriff_CancelOnClick", false)
 
     if isWaitingForSight then
@@ -1385,26 +1485,38 @@ local function fireAtMurdererDirectly()
     local waitSight = Flag("Sheriff_WaitSight", false)
 
     local murderer = getMurdererCached()
-    if murderer and murderer.Character then
-        local targetChar = murderer.Character
-        local bestPart, isBlocked = getSmartTargetPart(targetChar)
+    if not murderer or not murderer.Character then return end
 
-        local allowWaitSight = waitSight and (shotType ~= "Piercer Bullet")
+    local targetChar = murderer.Character
+    local bestPart, isBlocked = getSmartTargetPart(targetChar)
 
-        if wallCheck and isBlocked and shotType ~= "Piercer Bullet" then
-            if allowWaitSight then
-                startWaitingForSight(targetChar)
-            end
-            return
+    local allowWaitSight = waitSight and (shotType ~= "Piercer Bullet")
+
+    -- 🔄 Si el arma está recargando y Wait for Sight está activo →
+    -- entra en cola (WAITING) y disparará automáticamente al terminar la recarga.
+    if not isGunReadyToShoot() then
+        if allowWaitSight then
+            startWaitingForSight(targetChar)
         end
+        return
+    end
 
-        if bestPart then
-            executeActualShoot(targetChar, bestPart)
+    -- Si el muro bloquea y Wait for Sight está activo → también espera
+    if wallCheck and isBlocked and shotType ~= "Piercer Bullet" then
+        if allowWaitSight then
+            startWaitingForSight(targetChar)
         end
+        return
+    end
+
+    if bestPart then
+        executeActualShoot(targetChar, bestPart)
     end
 end
 
--- Auto Shoot Engine
+-- ═══════════════════════════════════════════════════════════════════════════
+-- 🤖 AUTO SHOOT ENGINE
+-- ═══════════════════════════════════════════════════════════════════════════
 local lastAutoShootTime = 0
 local autoShootConn = RunService.Heartbeat:Connect(function()
     if not Flag("Sheriff_AutoShoot", false) then return end
@@ -1437,7 +1549,9 @@ local autoShootConn = RunService.Heartbeat:Connect(function()
 end)
 KillerHub:AddTask(autoShootConn)
 
--- Keybinds & Mobile GUI
+-- ═══════════════════════════════════════════════════════════════════════════
+-- ⌨️ KEYBINDS
+-- ═══════════════════════════════════════════════════════════════════════════
 local function safeGetEnum(enumType, name)
     local ok, result = pcall(function() return enumType[name] end)
     return ok and result or nil
@@ -1454,6 +1568,9 @@ local inputConn = UserInputService.InputBegan:Connect(function(input, gameProces
 end)
 KillerHub:AddTask(inputConn)
 
+-- ═══════════════════════════════════════════════════════════════════════════
+-- 🎨 MOBILE GUI
+-- ═══════════════════════════════════════════════════════════════════════════
 local POS_FILE = "KillerHub_ButtonPos.txt"
 local function loadButtonPosition()
     if isfile and readfile and isfile(POS_FILE) then
@@ -1554,6 +1671,8 @@ SubLabel.Parent = ShootButton
 local SubConstraint = Instance.new("UITextSizeConstraint")
 SubConstraint.MaxTextSize = 13; SubConstraint.MinTextSize = 7; SubConstraint.Parent = SubLabel
 
+checkWeaponVisibility()
+
 local dragging, dragInput, dragStart, startPos
 KillerHub:AddTask(ShootButton.InputBegan:Connect(function(input)
     if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
@@ -1594,7 +1713,9 @@ KillerHub:AddTask(UserInputService.InputChanged:Connect(function(input)
     end
 end))
 
--- Silent Aim Hooks
+-- ═══════════════════════════════════════════════════════════════════════════
+-- 🎯 SILENT AIM HOOKS
+-- ═══════════════════════════════════════════════════════════════════════════
 local WeaponService = nil
 local ClientServices = ReplicatedStorage:FindFirstChild("ClientServices") or ReplicatedStorage:FindFirstChild("Services")
 if ClientServices then
@@ -1636,6 +1757,10 @@ if WeaponService then
         local shotType = Flag("Sheriff_ShotType", "Normal")
         local useDetect = Flag("Sheriff_WeaponDetect", false)
 
+        if useDetect and not hasRangedWeaponCached then
+            frameCachedTime = currentTime; frameCachedCF = nil; return nil
+        end
+
         local gun, _ = getGunLocation()
         if useDetect and not gun then frameCachedTime = currentTime; frameCachedCF = nil; return nil end
 
@@ -1671,9 +1796,9 @@ if WeaponService then
     end
 end
 
--- ============================================================================
+-- ═══════════════════════════════════════════════════════════════════════════
 -- 🚀 MÓDULO EXTRA (FLICK & TARGET SELECTION)
--- ============================================================================
+-- ═══════════════════════════════════════════════════════════════════════════
 task.spawn(function()
     task.wait(0.1)
 
