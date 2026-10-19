@@ -1,5 +1,5 @@
 -- ============================================================================
--- 👾 KILLER HUB | ENGINE V12.9.2 - SHERIFF SUITE (FULL OPTIMIZED + RELOAD QUEUE)
+-- 👾 KILLER HUB | ENGINE V12.9.3 - SHERIFF SUITE (MULTI-TARGET + WALLCHECK)
 -- ============================================================================
 local KillerHub = loadstring(game:HttpGet("https://raw.githubusercontent.com/Salayer09/KillerHub/refs/heads/main/Slayer.lua"))()
 
@@ -47,7 +47,6 @@ local workspace_Gravity = workspace.Gravity
 local VECTOR_ZERO = vec3New(0, 0, 0)
 local PREDICTION_BOOST = 1.10
 
--- Control de Cooldown de la Pistola (MM2 Sheriff Reload ~3.6s)
 local lastShotTimestamp = 0
 local GUN_RELOAD_COOLDOWN = 3.6
 
@@ -67,7 +66,7 @@ local oldGui = game:GetService("CoreGui"):FindFirstChild("KillerHub_SheriffGui")
 if oldGui then oldGui:Destroy() end
 
 -- ═══════════════════════════════════════════════════════════════════════════
--- 📡 NETWORK TELEMETRY (Ping + Jitter + Stability Score)
+-- 📡 NETWORK TELEMETRY
 -- ═══════════════════════════════════════════════════════════════════════════
 local cachedPingValue = 0.05
 local pingJitterMS  = 0
@@ -96,7 +95,6 @@ local function pushPingSample(ms)
     end
     variance = variance / #pingSamples
     pingJitterMS = math_sqrt(variance)
-
     networkStability = math_clamp(1.0 - (pingJitterMS / 380), 0.35, 1.0)
 end
 
@@ -109,7 +107,6 @@ local pingTask = task.spawn(function()
                 if dataPing then currentPing = dataPing:GetValue() / 1000 end
             end
         end)
-
         if not currentPing or currentPing <= 0 then
             pcall(function()
                 if LocalPlayer and LocalPlayer.GetNetworkPing then
@@ -117,7 +114,6 @@ local pingTask = task.spawn(function()
                 end
             end)
         end
-
         if currentPing and currentPing > 0 then
             cachedPingValue = currentPing
             pushPingSample(currentPing * 1000)
@@ -232,7 +228,7 @@ local function getGunLocation()
 end
 
 -- ═══════════════════════════════════════════════════════════════════════════
--- ⚡ DETECCIÓN DE ARMA EVENT-DRIVEN (INSTANTÁNEA + 0 POLLING)
+-- ⚡ DETECCIÓN DE ARMA EVENT-DRIVEN
 -- ═══════════════════════════════════════════════════════════════════════════
 local hasRangedWeaponCached = false
 
@@ -318,7 +314,6 @@ bindWeaponListeners()
 -- ═══════════════════════════════════════════════════════════════════════════
 -- 🧠 CORE STATE
 -- ═══════════════════════════════════════════════════════════════════════════
-local MurdererDetectado = nil
 local smoothedVelocity = VECTOR_ZERO
 local smoothedVisualY = 0
 local lastTargetChar = nil
@@ -405,7 +400,6 @@ local function updateTurnState(char, newVel, dt)
 
     local targetPenalty = (t.sharpTurnTimer > 0) and 0.55 or 1.0
     t.penalty = t.penalty + (targetPenalty - t.penalty) * math_clamp(8 * dt, 0, 1)
-
     return t.penalty
 end
 
@@ -453,9 +447,7 @@ local function resetWaitState()
         Label.Text = "SHOOT"
         Label.TextColor3 = color3RGB(255, 255, 255)
     end
-    if SubLabel then
-        SubLabel.Text = ""
-    end
+    if SubLabel then SubLabel.Text = "" end
 
     if threadToCancel and threadToCancel ~= coroutine.running() then
         pcall(function() task.cancel(threadToCancel) end)
@@ -567,7 +559,6 @@ for _, rem in pairs(ReplicatedStorage:GetDescendants()) do
                 table.clear(airTime)
                 stickyTarget = nil
                 stickyTargetTime = 0
-                MurdererDetectado = nil
                 local args = {...}
                 for _, arg in ipairs(args) do
                     if type(arg) == "table" then parsePlayerData(arg) end
@@ -589,7 +580,6 @@ for _, rem in pairs(ReplicatedStorage:GetDescendants()) do
                 table.clear(airTime)
                 stickyTarget = nil
                 stickyTargetTime = 0
-                MurdererDetectado = nil
             end))
         end
     end
@@ -607,125 +597,6 @@ end)
 -- ═══════════════════════════════════════════════════════════════════════════
 local floorCastParams = RaycastParams.new()
 floorCastParams.FilterType = Enum.RaycastFilterType.Exclude
-
-local function autoEquipWeapon()
-    local character = LocalPlayer.Character
-    local backpack = LocalPlayer:FindFirstChild("Backpack")
-    if character and character:FindFirstChild("Humanoid") and backpack then
-        for _, item in pairs(backpack:GetChildren()) do
-            if isRangedWeapon(item) then
-                character.Humanoid:EquipTool(item)
-                break
-            end
-        end
-    end
-end
-
-local function autoUnequipWeapon()
-    local character = LocalPlayer.Character
-    if character then
-        local humanoid = character:FindFirstChildOfClass("Humanoid")
-        if humanoid then
-            humanoid:UnequipTools()
-        end
-    end
-end
-
-local function getMurderer()
-    local myChar = LocalPlayer.Character
-    local myHrp = myChar and myChar:FindFirstChild("HumanoidRootPart")
-    if not myHrp then return currentTarget end
-
-    local myTeam = getNormalizedTeam(LocalPlayer)
-    local isDuelActive = (next(duelTeams) ~= nil)
-
-    local closestEnemy = nil
-    local minDistance = math.huge
-
-    local allPlayers = Players:GetPlayers()
-    for i = 1, #allPlayers do
-        local pl = allPlayers[i]
-        if pl ~= LocalPlayer and pl.Character then
-            local pName = pl.Name
-            local char = pl.Character
-            local hum = char:FindFirstChildOfClass("Humanoid")
-            local hrp = char:FindFirstChild("HumanoidRootPart")
-            local isDead = (hum and hum.Health <= 0) or (playerDeadStatus[pName] == true)
-
-            if not isDead and hrp then
-                local isEnemy = false
-                local pRole = playerRoles[pName]
-                local pTeam = getNormalizedTeam(pl)
-
-                if isDuelActive and myTeam and pTeam then
-                    if myTeam ~= pTeam then
-                        isEnemy = true
-                    end
-                elseif pRole == "Murderer" or pRole == "Enemy" then
-                    isEnemy = true
-                else
-                    local hasKnife = false
-                    for _, item in pairs(char:GetChildren()) do
-                        if isMeleeWeapon(item) then hasKnife = true break end
-                    end
-                    if not hasKnife and pl:FindFirstChild("Backpack") then
-                        for _, item in pairs(pl.Backpack:GetChildren()) do
-                            if isMeleeWeapon(item) then hasKnife = true break end
-                        end
-                    end
-                    if hasKnife then
-                        playerRoles[pName] = "Murderer"
-                        isEnemy = true
-                    end
-                end
-
-                if isEnemy then
-                    local dist = (hrp.Position - myHrp.Position).Magnitude
-                    if dist < minDistance then
-                        minDistance = dist
-                        closestEnemy = pl
-                    end
-                end
-            end
-        end
-    end
-
-    if closestEnemy then
-        setTarget(closestEnemy)
-        setStickyTarget(closestEnemy)
-        return closestEnemy
-    end
-
-    if stickyTarget and (os_clock() - stickyTargetTime) < STICKY_DURATION then
-        local char = stickyTarget.Character
-        if char then
-            local hum = char:FindFirstChildOfClass("Humanoid")
-            local hrp = char:FindFirstChild("HumanoidRootPart")
-            if hum and hum.Health > 0 and hrp then
-                setTarget(stickyTarget)
-                return stickyTarget
-            end
-        end
-        clearStickyTarget()
-    end
-
-    setTarget(nil)
-    return nil
-end
-
-local MURDERER_CACHE_INTERVAL = 0.06
-local lastMurdererCalc = 0
-local cachedMurdererResult = nil
-
-local function getMurdererCached()
-    local now = os_clock()
-    if (now - lastMurdererCalc) < MURDERER_CACHE_INTERVAL then
-        return cachedMurdererResult
-    end
-    lastMurdererCalc = now
-    cachedMurdererResult = getMurderer()
-    return cachedMurdererResult
-end
 
 local wallCastParams = RaycastParams.new()
 wallCastParams.FilterType = Enum.RaycastFilterType.Exclude
@@ -752,6 +623,185 @@ KillerHub:AddTask(LocalPlayer.CharacterAdded:Connect(function()
 end))
 updateIgnoreListCache()
 
+local function autoEquipWeapon()
+    local character = LocalPlayer.Character
+    local backpack = LocalPlayer:FindFirstChild("Backpack")
+    if character and character:FindFirstChild("Humanoid") and backpack then
+        for _, item in pairs(backpack:GetChildren()) do
+            if isRangedWeapon(item) then
+                character.Humanoid:EquipTool(item)
+                break
+            end
+        end
+    end
+end
+
+local function autoUnequipWeapon()
+    local character = LocalPlayer.Character
+    if character then
+        local humanoid = character:FindFirstChildOfClass("Humanoid")
+        if humanoid then humanoid:UnequipTools() end
+    end
+end
+
+-- ═══════════════════════════════════════════════════════════════════════════
+-- 🎯 VISIBILIDAD RÁPIDA (1 raycast por enemigo, reutiliza buffers)
+-- ═══════════════════════════════════════════════════════════════════════════
+local function isCharacterVisibleQuick(targetChar)
+    if not targetChar then return false end
+    local hrp = targetChar:FindFirstChild("HumanoidRootPart")
+    if not hrp then return false end
+
+    local origin = Camera.CFrame.Position
+    local targetPos = hrp.Position
+    local direction = targetPos - origin
+    if direction.Magnitude < 0.5 then return true end
+
+    table.clear(tempIgnoreBuffer)
+    for i = 1, #cachedIgnoreList do tempIgnoreBuffer[i] = cachedIgnoreList[i] end
+
+    visCastParams.FilterDescendantsInstances = tempIgnoreBuffer
+    local ray = workspace:Raycast(origin, direction, visCastParams)
+    if not ray then return true end
+    if ray.Instance:IsDescendantOf(targetChar) then return true end
+    return false
+end
+
+-- ═══════════════════════════════════════════════════════════════════════════
+-- 🎯 SELECCIÓN MULTI-TARGET CON WALLCHECK
+-- ═══════════════════════════════════════════════════════════════════════════
+local ENEMY_ROLES = {
+    Murderer = true,
+    Enemy = true,
+    Infected = true,
+}
+
+local MAX_VIS_CHECKS = 4
+
+local function getMurderer()
+    local myChar = LocalPlayer.Character
+    local myHrp = myChar and myChar:FindFirstChild("HumanoidRootPart")
+    if not myHrp then return currentTarget end
+
+    local myTeam = getNormalizedTeam(LocalPlayer)
+    local isDuelActive = (next(duelTeams) ~= nil)
+
+    -- Recopilar TODOS los enemigos válidos con su distancia
+    local enemies = {}
+    local allPlayers = Players:GetPlayers()
+
+    for i = 1, #allPlayers do
+        local pl = allPlayers[i]
+        if pl ~= LocalPlayer and pl.Character then
+            local pName = pl.Name
+            local char = pl.Character
+            local hum = char:FindFirstChildOfClass("Humanoid")
+            local hrp = char:FindFirstChild("HumanoidRootPart")
+            local isDead = (hum and hum.Health <= 0) or (playerDeadStatus[pName] == true)
+
+            if not isDead and hrp then
+                local isEnemy = false
+                local pRole = playerRoles[pName]
+                local pTeam = getNormalizedTeam(pl)
+
+                if isDuelActive and myTeam and pTeam then
+                    if myTeam ~= pTeam then isEnemy = true end
+                elseif pRole and ENEMY_ROLES[pRole] then
+                    isEnemy = true
+                else
+                    -- Detección por cuchillo (Infección / Murderer no marcado)
+                    local hasKnife = false
+                    for _, item in pairs(char:GetChildren()) do
+                        if isMeleeWeapon(item) then hasKnife = true break end
+                    end
+                    if not hasKnife and pl:FindFirstChild("Backpack") then
+                        for _, item in pairs(pl.Backpack:GetChildren()) do
+                            if isMeleeWeapon(item) then hasKnife = true break end
+                        end
+                    end
+                    if hasKnife then
+                        playerRoles[pName] = "Murderer"
+                        isEnemy = true
+                    end
+                end
+
+                if isEnemy then
+                    local dist = (hrp.Position - myHrp.Position).Magnitude
+                    enemies[#enemies + 1] = {
+                        player = pl,
+                        char = char,
+                        hrp = hrp,
+                        dist = dist,
+                    }
+                end
+            end
+        end
+    end
+
+    -- Sin enemigos → fallback sticky
+    if #enemies == 0 then
+        if stickyTarget and (os_clock() - stickyTargetTime) < STICKY_DURATION then
+            local char = stickyTarget.Character
+            if char then
+                local hum = char:FindFirstChildOfClass("Humanoid")
+                local hrp = char:FindFirstChild("HumanoidRootPart")
+                if hum and hum.Health > 0 and hrp then
+                    setTarget(stickyTarget)
+                    return stickyTarget
+                end
+            end
+            clearStickyTarget()
+        end
+        setTarget(nil)
+        return nil
+    end
+
+    -- Ordenar por distancia (solo si hay más de 1)
+    if #enemies > 1 then
+        table.sort(enemies, function(a, b) return a.dist < b.dist end)
+    end
+
+    local wallCheck = Flag("Sheriff_WallCheck", true)
+    local shotType = Flag("Sheriff_ShotType", "Normal")
+    local shouldFilterVis = wallCheck and shotType ~= "Piercer Bullet"
+
+    local chosen = enemies[1] -- Por defecto: el más cercano
+
+    -- 🔍 Si hay WallCheck + múltiples enemigos → elegir el más cercano VISIBLE
+    if shouldFilterVis and #enemies > 1 then
+        local maxChecks = math_min(#enemies, MAX_VIS_CHECKS)
+        for i = 1, maxChecks do
+            if isCharacterVisibleQuick(enemies[i].char) then
+                chosen = enemies[i]
+                break
+            end
+        end
+        -- Si ninguno es visible → chosen sigue siendo enemies[1] (fallback al más cercano)
+    end
+
+    local plr = chosen.player
+    setTarget(plr)
+    setStickyTarget(plr)
+    return plr
+end
+
+local MURDERER_CACHE_INTERVAL = 0.06
+local lastMurdererCalc = 0
+local cachedMurdererResult = nil
+
+local function getMurdererCached()
+    local now = os_clock()
+    if (now - lastMurdererCalc) < MURDERER_CACHE_INTERVAL then
+        return cachedMurdererResult
+    end
+    lastMurdererCalc = now
+    cachedMurdererResult = getMurderer()
+    return cachedMurdererResult
+end
+
+-- ═══════════════════════════════════════════════════════════════════════════
+-- 🎯 RAYCASTS DETALLADOS
+-- ═══════════════════════════════════════════════════════════════════════════
 local function isGunBlocked(targetPos, targetChar)
     local char = LocalPlayer.Character
     if not char or not char:FindFirstChild("HumanoidRootPart") then return true end
@@ -817,9 +867,7 @@ local function isStrictlyVisible(targetChar, targetPart)
         if not ray then return true end
 
         local hitInst = ray.Instance
-        if hitInst and hitInst:IsDescendantOf(targetChar) then
-            return true
-        end
+        if hitInst and hitInst:IsDescendantOf(targetChar) then return true end
 
         if hitInst and hitInst.CanCollide and hitInst.Transparency < 0.8 then
             return false
@@ -862,9 +910,7 @@ local function getSmartTargetPart(targetChar)
         if not ray then break end
 
         local hitInst = ray.Instance
-        if hitInst and hitInst:IsDescendantOf(targetChar) then
-            break
-        end
+        if hitInst and hitInst:IsDescendantOf(targetChar) then break end
 
         if hitInst and hitInst.CanCollide and hitInst.Transparency < 0.8 then
             blocked = true
@@ -876,10 +922,7 @@ local function getSmartTargetPart(targetChar)
         end
     end
 
-    if not blocked and isGunBlocked(targetPos, targetChar) then
-        blocked = true
-    end
-
+    if not blocked and isGunBlocked(targetPos, targetChar) then blocked = true end
     return hrp, blocked
 end
 
@@ -1132,9 +1175,7 @@ local worldToViewport = Camera.WorldToViewportPoint
 local function adaptiveLerp(cur, tgt, baseA)
     if not cur then return tgt end
     local dev = (tgt - cur).Magnitude
-    if dev <= 1.5 then
-        return cur:Lerp(tgt, baseA)
-    end
+    if dev <= 1.5 then return cur:Lerp(tgt, baseA) end
     local soft = baseA * math_clamp(3.5 / dev, 0.45, 1.0)
     return cur:Lerp(tgt, soft)
 end
@@ -1151,7 +1192,7 @@ local function hideAllLines()
 end
 
 -- ═══════════════════════════════════════════════════════════════════════════
--- 🚀 RENDER LOOP OPTIMIZADO (EARLY-OUT + FLAG CACHE + VIEWPORT CACHE)
+-- 🚀 RENDER LOOP OPTIMIZADO
 -- ═══════════════════════════════════════════════════════════════════════════
 local renderConn = RunService.RenderStepped:Connect(function(dt)
     emaDeltaTime = emaDeltaTime + 0.2 * (dt - emaDeltaTime)
@@ -1159,7 +1200,6 @@ local renderConn = RunService.RenderStepped:Connect(function(dt)
     local useDetect = Flag("Sheriff_WeaponDetect", false)
     local tracersTable = Flag("Sheriff_Tracers", EMPTY_TABLE)
 
-    -- GATE POR WEAPON DETECT
     if useDetect and not hasRangedWeaponCached then
         hideAllLines()
         visPredNoY = nil
@@ -1254,7 +1294,6 @@ local renderConn = RunService.RenderStepped:Connect(function(dt)
                 if targetPosForLead then
                     local handScreenPos, handOnScreen = worldToViewport(Camera, rightHand.Position)
                     local predScreenPos, predOnScreen = worldToViewport(Camera, targetPosForLead)
-
                     if handOnScreen and predOnScreen then
                         LeadTimeLine.Color = color3RGB(35, 255, 35)
                         LeadTimeLine.From = vec2New(handScreenPos.X, handScreenPos.Y)
@@ -1269,7 +1308,6 @@ local renderConn = RunService.RenderStepped:Connect(function(dt)
             local myHrp = myChar.HumanoidRootPart
             local myScreenPos, myOnScreen = worldToViewport(Camera, myHrp.Position)
             local targetScreenPos, targetOnScreen = worldToViewport(Camera, visualPart.Position)
-
             if myOnScreen and targetOnScreen then
                 ConfirmWallLine.From = vec2New(myScreenPos.X, myScreenPos.Y)
                 ConfirmWallLine.To = vec2New(targetScreenPos.X, targetScreenPos.Y)
@@ -1361,7 +1399,6 @@ executeActualShoot = function(targetChar, bestPart)
             end
 
             activeGun.Shoot:FireServer(originCFrame, cframeNew(finalPredictedPos))
-
             lastShotTimestamp = os_clock()
 
             if Flag("Sheriff_UnEquipGun", false) then
@@ -1378,8 +1415,6 @@ end
 -- ⏳ WAIT FOR SIGHT (CON SOPORTE DE RELOAD)
 -- ═══════════════════════════════════════════════════════════════════════════
 local function startWaitingForSight(initialTarget)
-    -- Ya NO exige que el arma esté lista al inicio:
-    -- el propio loop espera a que termine de recargar.
     resetWaitState()
 
     local gun, _ = getGunLocation()
@@ -1411,13 +1446,11 @@ local function startWaitingForSight(initialTarget)
 
             local elapsed = os_clock() - startTime
             local remaining = maxWaitTime - elapsed
-
             if remaining <= 0 then
                 resetWaitState()
                 break
             end
 
-            -- SubLabel: muestra el reload pendiente o el tiempo restante
             if SubLabel then
                 if not isGunReadyToShoot() then
                     local reloadRemaining = GUN_RELOAD_COOLDOWN - (os_clock() - lastShotTimestamp)
@@ -1447,11 +1480,9 @@ local function startWaitingForSight(initialTarget)
                 local bestPart, isBlocked = getSmartTargetPart(targetChar)
                 local isClearSight = bestPart and (not isBlocked or shotType == "Piercer Bullet")
 
-                -- Sólo dispara cuando el arma esté lista Y la visión esté limpia
                 if isClearSight and isGunReadyToShoot() then
                     lostSightCounter = 0
                     sightTimeAcc = sightTimeAcc + 0.016
-
                     if sightTimeAcc >= 0.035 then
                         local shotFired = executeActualShoot(targetChar, bestPart)
                         if shotFired then
@@ -1489,29 +1520,19 @@ local function fireAtMurdererDirectly()
 
     local targetChar = murderer.Character
     local bestPart, isBlocked = getSmartTargetPart(targetChar)
-
     local allowWaitSight = waitSight and (shotType ~= "Piercer Bullet")
 
-    -- 🔄 Si el arma está recargando y Wait for Sight está activo →
-    -- entra en cola (WAITING) y disparará automáticamente al terminar la recarga.
     if not isGunReadyToShoot() then
-        if allowWaitSight then
-            startWaitingForSight(targetChar)
-        end
+        if allowWaitSight then startWaitingForSight(targetChar) end
         return
     end
 
-    -- Si el muro bloquea y Wait for Sight está activo → también espera
     if wallCheck and isBlocked and shotType ~= "Piercer Bullet" then
-        if allowWaitSight then
-            startWaitingForSight(targetChar)
-        end
+        if allowWaitSight then startWaitingForSight(targetChar) end
         return
     end
 
-    if bestPart then
-        executeActualShoot(targetChar, bestPart)
-    end
+    if bestPart then executeActualShoot(targetChar, bestPart) end
 end
 
 -- ═══════════════════════════════════════════════════════════════════════════
@@ -1837,26 +1858,18 @@ task.spawn(function()
     local isFlicking = false
     local function performFlickAnimation(targetPos)
         if isFlicking then return end
-
-        if Flag("Sheriff_AutoShiftLock", false) then
-            forceEnableShiftLock()
-        end
-
+        if Flag("Sheriff_AutoShiftLock", false) then forceEnableShiftLock() end
         if not isShiftLockEnabled() then return end
 
         isFlicking = true
         local originalCamCF = Camera.CFrame
         local targetCamCF = cframeNew(Camera.CFrame.Position, targetPos)
 
-        local flickInTween = TweenService:Create(Camera, TweenInfo.new(0.09, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
-            CFrame = targetCamCF
-        })
+        local flickInTween = TweenService:Create(Camera, TweenInfo.new(0.09, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {CFrame = targetCamCF})
         flickInTween:Play()
         flickInTween.Completed:Wait()
 
-        local flickOutTween = TweenService:Create(Camera, TweenInfo.new(0.08, Enum.EasingStyle.Quad, Enum.EasingDirection.In), {
-            CFrame = originalCamCF
-        })
+        local flickOutTween = TweenService:Create(Camera, TweenInfo.new(0.08, Enum.EasingStyle.Quad, Enum.EasingDirection.In), {CFrame = originalCamCF})
         flickOutTween:Play()
         flickOutTween.Completed:Wait()
 
@@ -1867,9 +1880,7 @@ task.spawn(function()
     executeActualShoot = function(targetChar, bestPart)
         if Flag("Sheriff_FlickShoot", false) and targetChar and bestPart then
             local targetPos = bestPart.Position
-            task.spawn(function()
-                performFlickAnimation(targetPos)
-            end)
+            task.spawn(function() performFlickAnimation(targetPos) end)
         end
         return baseExecuteShoot(targetChar, bestPart)
     end
@@ -1894,9 +1905,7 @@ task.spawn(function()
     targetDropdown:BindToDynamicList(function()
         local list = {"None"}
         for _, p in ipairs(Players:GetPlayers()) do
-            if p ~= LocalPlayer then
-                table.insert(list, p.Name)
-            end
+            if p ~= LocalPlayer then table.insert(list, p.Name) end
         end
         return list
     end, 3)
@@ -1912,7 +1921,6 @@ task.spawn(function()
     getMurderer = function()
         if customTargetEnabled and selectedPlayerName ~= "None" then
             local now = os_clock()
-
             if not cachedTargetPlayer or not cachedTargetPlayer.Parent or (now - lastTargetCheck > 0.1) then
                 lastTargetCheck = now
                 cachedTargetPlayer = Players:FindFirstChild(selectedPlayerName)
@@ -1924,7 +1932,6 @@ task.spawn(function()
                     local hum = char:FindFirstChildOfClass("Humanoid")
                     local hrp = char:FindFirstChild("HumanoidRootPart")
                     local isDead = (hum and hum.Health <= 0) or (playerDeadStatus[selectedPlayerName] == true)
-
                     if not isDead and hrp then
                         setTarget(cachedTargetPlayer)
                         return cachedTargetPlayer
@@ -1932,7 +1939,6 @@ task.spawn(function()
                 end
             end
         end
-
         return baseGetMurderer()
     end
 end)
