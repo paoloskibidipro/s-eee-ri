@@ -1,5 +1,5 @@
 -- ============================================================================
--- 👾 KILLER HUB | ENGINE V12.9.3 - SHERIFF SUITE (MULTI-TARGET + WALLCHECK)
+-- 👾 KILLER HUB | ENGINE V12.9.4 - SHERIFF SUITE (MULTI-TARGET + WALLCHECK)
 -- ============================================================================
 local KillerHub = loadstring(game:HttpGet("https://raw.githubusercontent.com/Salayer09/KillerHub/refs/heads/main/Slayer.lua"))()
 
@@ -17,44 +17,65 @@ end
 
 local EMPTY_TABLE = {}
 
-local Players = game:GetService("Players")
-local LocalPlayer = Players.LocalPlayer
-local ReplicatedStorage = game:GetService("ReplicatedStorage")
-local RunService = game:GetService("RunService")
-local TweenService = game:GetService("TweenService")
-local Stats = game:GetService("Stats")
-local UserInputService = game:GetService("UserInputService")
-local HttpService = game:GetService("HttpService")
-local Camera = workspace.CurrentCamera
+local Players             = game:GetService("Players")
+local LocalPlayer         = Players.LocalPlayer
+local ReplicatedStorage   = game:GetService("ReplicatedStorage")
+local RunService          = game:GetService("RunService")
+local TweenService        = game:GetService("TweenService")
+local Stats               = game:GetService("Stats")
+local UserInputService    = game:GetService("UserInputService")
+local HttpService         = game:GetService("HttpService")
+local Camera              = workspace.CurrentCamera
 
-local math_clamp = math.clamp
-local math_abs = math.abs
-local math_pow = math.pow
-local math_min = math.min
-local math_floor = math.floor
-local math_max = math.max
-local math_sqrt = math.sqrt
-local math_acos = math.acos
-local math_rad  = math.rad
-local vec2New = Vector2.new
-local vec3New = Vector3.new
-local udim2New = UDim2.new
-local cframeNew = CFrame.new
-local color3RGB = Color3.fromRGB
-local os_clock = os.clock
+local math_clamp  = math.clamp
+local math_abs    = math.abs
+local math_pow    = math.pow
+local math_min    = math.min
+local math_floor  = math.floor
+local math_max    = math.max
+local math_sqrt   = math.sqrt
+local math_acos   = math.acos
+local math_rad    = math.rad
+local vec2New     = Vector2.new
+local vec3New     = Vector3.new
+local udim2New    = UDim2.new
+local cframeNew   = CFrame.new
+local color3RGB   = Color3.fromRGB
+local os_clock    = os.clock
 
 local workspace_Gravity = workspace.Gravity
-local VECTOR_ZERO = vec3New(0, 0, 0)
-local PREDICTION_BOOST = 1.10
+local VECTOR_ZERO       = vec3New(0, 0, 0)
 
-local lastShotTimestamp = 0
-local GUN_RELOAD_COOLDOWN = 3.6
+-- ┌─────────────────────────────────────────────────────────────────────────┐
+-- │  PREDICTION_BOOST: separado por eje para mayor control fino             │
+-- └─────────────────────────────────────────────────────────────────────────┘
+local PRED_BOOST_H = 1.12   -- horizontal  (era 1.10 global)
+local PRED_BOOST_V = 1.05   -- vertical    (era 1.10 global, menor para estabilidad)
+
+-- ┌─────────────────────────────────────────────────────────────────────────┐
+-- │  RELOAD / SHOT TRACKING                                                  │
+-- │  lastShotTimestamp   → seteado SÓLO por executeActualShoot (gun shoot)   │
+-- │  lastManualShotTime  → seteado SÓLO al disparar manualmente (keybind/btn)│
+-- │  isGunReadyToShoot() → compara contra lastShotTimestamp únicamente       │
+-- └─────────────────────────────────────────────────────────────────────────┘
+local lastShotTimestamp  = 0
+local lastManualShotTime = 0
+local GUN_RELOAD_COOLDOWN = 3.6  -- segundos; ajusta si MM2 cambia
 
 local function isGunReadyToShoot()
     return (os_clock() - lastShotTimestamp) >= GUN_RELOAD_COOLDOWN
 end
 
-local checkWeaponVisibility = nil
+-- Retorna si el disparo manual reciente podría generar falso positivo
+-- (el usuario apretó shoot mientras recargaba, no hubo disparo real)
+local MANUAL_SHOT_GRACE = 0.08   -- 80 ms de gracia para diferencia de timing
+local function wasRecentManualShot()
+    -- Si el manual fue MÁS NUEVO que el último disparo real + gracia,
+    -- significa que se apretó el botón sin que el arma haya disparado.
+    return (lastManualShotTime - lastShotTimestamp) > MANUAL_SHOT_GRACE
+end
+
+local checkWeaponVisibility  = nil
 local recomputeWeaponPresence = nil
 
 if _G.KillerHubLines then
@@ -68,19 +89,19 @@ if oldGui then oldGui:Destroy() end
 -- ═══════════════════════════════════════════════════════════════════════════
 -- 📡 NETWORK TELEMETRY
 -- ═══════════════════════════════════════════════════════════════════════════
-local cachedPingValue = 0.05
-local pingJitterMS  = 0
+local cachedPingValue  = 0.05
+local pingJitterMS     = 0
 local networkStability = 1.0
-local pingSamples = {}
-local PING_SAMPLE_SIZE = 10
+local pingSamples      = {}
+local PING_SAMPLE_SIZE = 12   -- +2 muestras → media más suave
 
 local function pushPingSample(ms)
     pingSamples[#pingSamples + 1] = ms
     if #pingSamples > PING_SAMPLE_SIZE then table.remove(pingSamples, 1) end
 
     if #pingSamples < 4 then
-        pingJitterMS = 0
-        networkStability = 1.0
+        pingJitterMS      = 0
+        networkStability  = 1.0
         return
     end
 
@@ -93,13 +114,14 @@ local function pushPingSample(ms)
         local d = pingSamples[i] - avg
         variance = variance + d * d
     end
-    variance = variance / #pingSamples
+    variance     = variance / #pingSamples
     pingJitterMS = math_sqrt(variance)
-    networkStability = math_clamp(1.0 - (pingJitterMS / 380), 0.35, 1.0)
+    -- Estabilidad: menos agresiva con pings altos para no sobre-penalizar
+    networkStability = math_clamp(1.0 - (pingJitterMS / 420), 0.40, 1.0)
 end
 
 local pingTask = task.spawn(function()
-    while task.wait(0.2) do
+    while task.wait(0.18) do   -- era 0.20, un tick más rápido
         local currentPing = nil
         pcall(function()
             if Stats and Stats.Network and Stats.Network:FindFirstChild("ServerStatsItem") then
@@ -136,7 +158,7 @@ TabSheriff:CreateToggle("Sheriff_WallCheck", "Wall Check", function() end)
 
 TabSheriff:CreateSection("Prediction")
 TabSheriff:CreateSlider("Sheriff_HScale", "Horizontal Prediction", 0, 300, function() end, 100)
-TabSheriff:CreateSlider("Sheriff_VScale", "Vertical Prediction", 0, 300, function() end, 100)
+TabSheriff:CreateSlider("Sheriff_VScale", "Vertical Prediction",   0, 300, function() end, 100)
 
 local sliderPing = TabSheriff:CreateSlider("Sheriff_PingComp", "Ping Compensation", 0, 300, function() end, 50)
 
@@ -154,7 +176,7 @@ TabSheriff:CreateToggle("Sheriff_PrioritizePing", "Prioritize Ping", function(es
     end
 end)
 
-TabSheriff:CreateSlider("Sheriff_MinPredDist", "Min Distance Prediction (studs)", 0, 15, function() end, 4)
+TabSheriff:CreateSlider("Sheriff_MinPredDist", "Min Distance Prediction (studs)", 0,  15, function() end, 4)
 TabSheriff:CreateSlider("Sheriff_MaxPredDist", "Max Distance Prediction (studs)", 10, 60, function() end, 22)
 
 TabSheriff:CreateSection("Visuals")
@@ -234,9 +256,8 @@ local hasRangedWeaponCached = false
 
 checkWeaponVisibility = function()
     if not cachedScreenGui then return end
-    local showBtn = Flag("Sheriff_ShowButton", false)
-    local useDetect = Flag("Sheriff_WeaponDetect", false)
-
+    local showBtn    = Flag("Sheriff_ShowButton", false)
+    local useDetect  = Flag("Sheriff_WeaponDetect", false)
     if not showBtn then cachedScreenGui.Enabled = false return end
     if useDetect then
         cachedScreenGui.Enabled = hasRangedWeaponCached
@@ -253,15 +274,12 @@ end
 local weaponListenerConns = {}
 
 local function clearWeaponListeners()
-    for _, c in ipairs(weaponListenerConns) do
-        pcall(function() c:Disconnect() end)
-    end
+    for _, c in ipairs(weaponListenerConns) do pcall(function() c:Disconnect() end) end
     table.clear(weaponListenerConns)
 end
 
 local function bindWeaponListeners()
     clearWeaponListeners()
-
     local char = LocalPlayer.Character
     if char then
         table.insert(weaponListenerConns, char.ChildAdded:Connect(function(c)
@@ -271,7 +289,6 @@ local function bindWeaponListeners()
             if c:IsA("Tool") then recomputeWeaponPresence() end
         end))
     end
-
     local bp = LocalPlayer:FindFirstChild("Backpack")
     if bp then
         table.insert(weaponListenerConns, bp.ChildAdded:Connect(function(c)
@@ -281,7 +298,6 @@ local function bindWeaponListeners()
             if c:IsA("Tool") then recomputeWeaponPresence() end
         end))
     end
-
     recomputeWeaponPresence()
 end
 
@@ -301,10 +317,7 @@ do
         end))
     else
         LocalPlayer.ChildAdded:Connect(function(c)
-            if c.Name == "Backpack" then
-                task.wait(0.05)
-                bindWeaponListeners()
-            end
+            if c.Name == "Backpack" then task.wait(0.05) bindWeaponListeners() end
         end)
     end
 end
@@ -314,27 +327,27 @@ bindWeaponListeners()
 -- ═══════════════════════════════════════════════════════════════════════════
 -- 🧠 CORE STATE
 -- ═══════════════════════════════════════════════════════════════════════════
-local smoothedVelocity = VECTOR_ZERO
-local smoothedVisualY = 0
-local lastTargetChar = nil
-local emaDeltaTime = 0.016
-local playerRoles = {}
-local playerDeadStatus = {}
-local duelTeams = {}
-local currentTarget = nil
+local smoothedVelocity  = VECTOR_ZERO
+local smoothedVisualY   = 0
+local lastTargetChar    = nil
+local emaDeltaTime      = 0.016
+local playerRoles       = {}
+local playerDeadStatus  = {}
+local duelTeams         = {}
+local currentTarget     = nil
 
-local lastPositions = setmetatable({}, {__mode = "k"})
-local lagStates = setmetatable({}, {__mode = "k"})
-local moveConfidence = setmetatable({}, {__mode = "k"})
-local velocityBuffers = setmetatable({}, {__mode = "k"})
+local lastPositions    = setmetatable({}, {__mode = "k"})
+local lagStates        = setmetatable({}, {__mode = "k"})
+local moveConfidence   = setmetatable({}, {__mode = "k"})
+local velocityBuffers  = setmetatable({}, {__mode = "k"})
 
 -- ═══════════════════════════════════════════════════════════════════════════
 -- 🎯 BUFFERS DE PREDICCIÓN AVANZADA
 -- ═══════════════════════════════════════════════════════════════════════════
 local VEL_HISTORY_SIZE = 8
-local velocityHistory = setmetatable({}, {__mode = "k"})
-local turnDetect = setmetatable({}, {__mode = "k"})
-local airTime = setmetatable({}, {__mode = "k"})
+local velocityHistory  = setmetatable({}, {__mode = "k"})
+local turnDetect       = setmetatable({}, {__mode = "k"})
+local airTime          = setmetatable({}, {__mode = "k"})
 
 local function getVelHistory(char)
     local h = velocityHistory[char]
@@ -345,7 +358,9 @@ local function getVelHistory(char)
     return h
 end
 
-local VEL_WEIGHTS = {0.05, 0.06, 0.08, 0.10, 0.13, 0.16, 0.19, 0.23}
+-- Pesos ligeramente más cargados hacia muestras recientes
+local VEL_WEIGHTS = {0.04, 0.05, 0.07, 0.09, 0.13, 0.17, 0.21, 0.24}
+
 local function pushVelocityWeighted(char, vel)
     local h = getVelHistory(char)
     h.idx = h.idx % VEL_HISTORY_SIZE + 1
@@ -353,14 +368,14 @@ local function pushVelocityWeighted(char, vel)
     if h.size < VEL_HISTORY_SIZE then h.size = h.size + 1 end
 
     local weighted = VECTOR_ZERO
-    local wTotal = 0
+    local wTotal   = 0
     for i = 1, h.size do
         local realIdx = ((h.idx - i) % VEL_HISTORY_SIZE) + 1
         local v = h.buf[realIdx]
         if v then
-            local w = VEL_WEIGHTS[math_max(1, VEL_HISTORY_SIZE - i + 1)] or 0.05
+            local w = VEL_WEIGHTS[math_max(1, VEL_HISTORY_SIZE - i + 1)] or 0.04
             weighted = weighted + v * w
-            wTotal = wTotal + w
+            wTotal   = wTotal + w
         end
     end
     if wTotal > 0 then weighted = weighted / wTotal end
@@ -377,13 +392,13 @@ local function getTurnState(char)
 end
 
 local function updateTurnState(char, newVel, dt)
-    local t = getTurnState(char)
+    local t   = getTurnState(char)
     local mag = newVel.Magnitude
 
     if mag > 0.8 then
         local unit = newVel.Unit
         if t.lastUnit.Magnitude > 0.5 then
-            local dot = math_clamp(t.lastUnit:Dot(unit), -1, 1)
+            local dot   = math_clamp(t.lastUnit:Dot(unit), -1, 1)
             local angle = math_acos(dot)
             if angle > math_rad(55) then
                 t.sharpTurnTimer = 0.15
@@ -405,26 +420,23 @@ end
 
 local function getAirState(char)
     local a = airTime[char]
-    if not a then
-        a = { time = 0 }
-        airTime[char] = a
-    end
+    if not a then a = { time = 0 } airTime[char] = a end
     return a
 end
 
 -- ═══════════════════════════════════════════════════════════════════════════
 -- 🎯 STICKY TARGET & WAIT STATE
 -- ═══════════════════════════════════════════════════════════════════════════
-local stickyTarget = nil
+local stickyTarget     = nil
 local stickyTargetTime = 0
-local STICKY_DURATION = 0.12
+local STICKY_DURATION  = 0.12
 
-local handLineIsBlocked = false
-local isWaitingForSight = false
-local waitSightThread = nil
-local Label = nil
-local SubLabel = nil
-local DecalTexture = nil
+local handLineIsBlocked  = false
+local isWaitingForSight  = false
+local waitSightThread    = nil
+local Label              = nil
+local SubLabel           = nil
+local DecalTexture       = nil
 
 local tweenInfoFast = TweenInfo.new(0.25, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
 
@@ -436,17 +448,18 @@ local function resetWaitState()
     if DecalTexture then
         TweenService:Create(DecalTexture, tweenInfoFast, {
             Position = udim2New(0.5, 0, 0.44, 0),
-            Size = udim2New(0.38, 0, 0.38, 0)
+            Size     = udim2New(0.38, 0, 0.38, 0)
         }):Play()
     end
     if Label then
         TweenService:Create(Label, tweenInfoFast, {
             Position = udim2New(0, 0, 0.75, 0),
-            Size = udim2New(1, 0, 0.2, 0)
+            Size     = udim2New(1, 0, 0.2, 0)
         }):Play()
-        Label.Text = "SHOOT"
+        Label.Text       = "SHOOT"
         Label.TextColor3 = color3RGB(255, 255, 255)
     end
+    -- SubLabel limpiado en resetWaitState siempre
     if SubLabel then SubLabel.Text = "" end
 
     if threadToCancel and threadToCancel ~= coroutine.running() then
@@ -458,38 +471,29 @@ local function setTarget(nt) currentTarget = nt end
 
 local function getLagState(targetChar)
     local s = lagStates[targetChar]
-    if not s then
-        s = { lagFrames = 0, normalFrames = 0, isLagging = false }
-        lagStates[targetChar] = s
-    end
+    if not s then s = { lagFrames = 0, normalFrames = 0, isLagging = false } lagStates[targetChar] = s end
     return s
 end
 
 local function getMoveConfidence(targetChar)
     local s = moveConfidence[targetChar]
-    if not s then
-        s = { lastSpeed = 0, variance = 0 }
-        moveConfidence[targetChar] = s
-    end
+    if not s then s = { lastSpeed = 0, variance = 0 } moveConfidence[targetChar] = s end
     return s
 end
 
 local function getVelocityBuffer(targetChar)
     local v = velocityBuffers[targetChar]
-    if not v then
-        v = { lastValidVelocity = VECTOR_ZERO, staticFrames = 0 }
-        velocityBuffers[targetChar] = v
-    end
+    if not v then v = { lastValidVelocity = VECTOR_ZERO, staticFrames = 0 } velocityBuffers[targetChar] = v end
     return v
 end
 
 local function setStickyTarget(plr)
-    stickyTarget = plr
+    stickyTarget     = plr
     stickyTargetTime = os_clock()
 end
 
 local function clearStickyTarget()
-    stickyTarget = nil
+    stickyTarget     = nil
     stickyTargetTime = 0
 end
 
@@ -505,9 +509,9 @@ local function parsePlayerData(t)
     if type(t) == "table" then
         for name, data in pairs(t) do
             if type(data) == "table" then
-                if data.Role then playerRoles[name] = data.Role end
+                if data.Role then playerRoles[name]       = data.Role end
                 if data.Dead ~= nil then playerDeadStatus[name] = data.Dead end
-                if data.Team then duelTeams[name] = data.Team end
+                if data.Team then duelTeams[name]         = data.Team end
             end
         end
     end
@@ -547,7 +551,8 @@ for _, rem in pairs(ReplicatedStorage:GetDescendants()) do
         elseif rName:find("roundstart") or rName:find("gamestart") then
             KillerHub:AddTask(rem.OnClientEvent:Connect(function(...)
                 resetWaitState()
-                lastShotTimestamp = 0
+                lastShotTimestamp  = 0
+                lastManualShotTime = 0
                 table.clear(playerRoles)
                 table.clear(playerDeadStatus)
                 table.clear(lastPositions)
@@ -557,7 +562,7 @@ for _, rem in pairs(ReplicatedStorage:GetDescendants()) do
                 table.clear(velocityHistory)
                 table.clear(turnDetect)
                 table.clear(airTime)
-                stickyTarget = nil
+                stickyTarget     = nil
                 stickyTargetTime = 0
                 local args = {...}
                 for _, arg in ipairs(args) do
@@ -567,7 +572,8 @@ for _, rem in pairs(ReplicatedStorage:GetDescendants()) do
         elseif rName:find("roundover") or rName:find("gameover") or rName:find("roundend") then
             KillerHub:AddTask(rem.OnClientEvent:Connect(function()
                 resetWaitState()
-                lastShotTimestamp = 0
+                lastShotTimestamp  = 0
+                lastManualShotTime = 0
                 table.clear(duelTeams)
                 table.clear(playerRoles)
                 table.clear(playerDeadStatus)
@@ -578,7 +584,7 @@ for _, rem in pairs(ReplicatedStorage:GetDescendants()) do
                 table.clear(velocityHistory)
                 table.clear(turnDetect)
                 table.clear(airTime)
-                stickyTarget = nil
+                stickyTarget     = nil
                 stickyTargetTime = 0
             end))
         end
@@ -586,8 +592,8 @@ for _, rem in pairs(ReplicatedStorage:GetDescendants()) do
 end
 
 Players.PlayerRemoving:Connect(function(plr)
-    duelTeams[plr.Name] = nil
-    playerRoles[plr.Name] = nil
+    duelTeams[plr.Name]       = nil
+    playerRoles[plr.Name]     = nil
     playerDeadStatus[plr.Name] = nil
     if stickyTarget == plr then clearStickyTarget() end
 end)
@@ -607,8 +613,8 @@ gunCastParams.FilterType = Enum.RaycastFilterType.Exclude
 local visCastParams = RaycastParams.new()
 visCastParams.FilterType = Enum.RaycastFilterType.Exclude
 
-local cachedIgnoreList = {}
-local tempIgnoreBuffer = {}
+local cachedIgnoreList  = {}
+local tempIgnoreBuffer  = {}
 
 local function updateIgnoreListCache()
     table.clear(cachedIgnoreList)
@@ -619,19 +625,17 @@ end
 KillerHub:AddTask(LocalPlayer.CharacterAdded:Connect(function()
     updateIgnoreListCache()
     resetWaitState()
-    lastShotTimestamp = 0
+    lastShotTimestamp  = 0
+    lastManualShotTime = 0
 end))
 updateIgnoreListCache()
 
 local function autoEquipWeapon()
     local character = LocalPlayer.Character
-    local backpack = LocalPlayer:FindFirstChild("Backpack")
+    local backpack   = LocalPlayer:FindFirstChild("Backpack")
     if character and character:FindFirstChild("Humanoid") and backpack then
         for _, item in pairs(backpack:GetChildren()) do
-            if isRangedWeapon(item) then
-                character.Humanoid:EquipTool(item)
-                break
-            end
+            if isRangedWeapon(item) then character.Humanoid:EquipTool(item) break end
         end
     end
 end
@@ -645,14 +649,14 @@ local function autoUnequipWeapon()
 end
 
 -- ═══════════════════════════════════════════════════════════════════════════
--- 🎯 VISIBILIDAD RÁPIDA (1 raycast por enemigo, reutiliza buffers)
+-- 🎯 VISIBILIDAD RÁPIDA
 -- ═══════════════════════════════════════════════════════════════════════════
 local function isCharacterVisibleQuick(targetChar)
     if not targetChar then return false end
     local hrp = targetChar:FindFirstChild("HumanoidRootPart")
     if not hrp then return false end
 
-    local origin = Camera.CFrame.Position
+    local origin    = Camera.CFrame.Position
     local targetPos = hrp.Position
     local direction = targetPos - origin
     if direction.Magnitude < 0.5 then return true end
@@ -670,46 +674,39 @@ end
 -- ═══════════════════════════════════════════════════════════════════════════
 -- 🎯 SELECCIÓN MULTI-TARGET CON WALLCHECK
 -- ═══════════════════════════════════════════════════════════════════════════
-local ENEMY_ROLES = {
-    Murderer = true,
-    Enemy = true,
-    Infected = true,
-}
-
+local ENEMY_ROLES   = { Murderer = true, Enemy = true, Infected = true }
 local MAX_VIS_CHECKS = 4
 
 local function getMurderer()
     local myChar = LocalPlayer.Character
-    local myHrp = myChar and myChar:FindFirstChild("HumanoidRootPart")
+    local myHrp  = myChar and myChar:FindFirstChild("HumanoidRootPart")
     if not myHrp then return currentTarget end
 
-    local myTeam = getNormalizedTeam(LocalPlayer)
+    local myTeam      = getNormalizedTeam(LocalPlayer)
     local isDuelActive = (next(duelTeams) ~= nil)
 
-    -- Recopilar TODOS los enemigos válidos con su distancia
-    local enemies = {}
+    local enemies    = {}
     local allPlayers = Players:GetPlayers()
 
     for i = 1, #allPlayers do
-        local pl = allPlayers[i]
+        local pl   = allPlayers[i]
         if pl ~= LocalPlayer and pl.Character then
-            local pName = pl.Name
-            local char = pl.Character
-            local hum = char:FindFirstChildOfClass("Humanoid")
-            local hrp = char:FindFirstChild("HumanoidRootPart")
+            local pName  = pl.Name
+            local char   = pl.Character
+            local hum    = char:FindFirstChildOfClass("Humanoid")
+            local hrp    = char:FindFirstChild("HumanoidRootPart")
             local isDead = (hum and hum.Health <= 0) or (playerDeadStatus[pName] == true)
 
             if not isDead and hrp then
                 local isEnemy = false
-                local pRole = playerRoles[pName]
-                local pTeam = getNormalizedTeam(pl)
+                local pRole   = playerRoles[pName]
+                local pTeam   = getNormalizedTeam(pl)
 
                 if isDuelActive and myTeam and pTeam then
                     if myTeam ~= pTeam then isEnemy = true end
                 elseif pRole and ENEMY_ROLES[pRole] then
                     isEnemy = true
                 else
-                    -- Detección por cuchillo (Infección / Murderer no marcado)
                     local hasKnife = false
                     for _, item in pairs(char:GetChildren()) do
                         if isMeleeWeapon(item) then hasKnife = true break end
@@ -719,36 +716,24 @@ local function getMurderer()
                             if isMeleeWeapon(item) then hasKnife = true break end
                         end
                     end
-                    if hasKnife then
-                        playerRoles[pName] = "Murderer"
-                        isEnemy = true
-                    end
+                    if hasKnife then playerRoles[pName] = "Murderer" isEnemy = true end
                 end
 
                 if isEnemy then
                     local dist = (hrp.Position - myHrp.Position).Magnitude
-                    enemies[#enemies + 1] = {
-                        player = pl,
-                        char = char,
-                        hrp = hrp,
-                        dist = dist,
-                    }
+                    enemies[#enemies + 1] = { player = pl, char = char, hrp = hrp, dist = dist }
                 end
             end
         end
     end
 
-    -- Sin enemigos → fallback sticky
     if #enemies == 0 then
         if stickyTarget and (os_clock() - stickyTargetTime) < STICKY_DURATION then
             local char = stickyTarget.Character
             if char then
                 local hum = char:FindFirstChildOfClass("Humanoid")
                 local hrp = char:FindFirstChild("HumanoidRootPart")
-                if hum and hum.Health > 0 and hrp then
-                    setTarget(stickyTarget)
-                    return stickyTarget
-                end
+                if hum and hum.Health > 0 and hrp then setTarget(stickyTarget) return stickyTarget end
             end
             clearStickyTarget()
         end
@@ -756,27 +741,20 @@ local function getMurderer()
         return nil
     end
 
-    -- Ordenar por distancia (solo si hay más de 1)
     if #enemies > 1 then
         table.sort(enemies, function(a, b) return a.dist < b.dist end)
     end
 
-    local wallCheck = Flag("Sheriff_WallCheck", true)
-    local shotType = Flag("Sheriff_ShotType", "Normal")
-    local shouldFilterVis = wallCheck and shotType ~= "Piercer Bullet"
+    local wallCheck        = Flag("Sheriff_WallCheck", true)
+    local shotType         = Flag("Sheriff_ShotType", "Normal")
+    local shouldFilterVis  = wallCheck and shotType ~= "Piercer Bullet"
+    local chosen           = enemies[1]
 
-    local chosen = enemies[1] -- Por defecto: el más cercano
-
-    -- 🔍 Si hay WallCheck + múltiples enemigos → elegir el más cercano VISIBLE
     if shouldFilterVis and #enemies > 1 then
         local maxChecks = math_min(#enemies, MAX_VIS_CHECKS)
         for i = 1, maxChecks do
-            if isCharacterVisibleQuick(enemies[i].char) then
-                chosen = enemies[i]
-                break
-            end
+            if isCharacterVisibleQuick(enemies[i].char) then chosen = enemies[i] break end
         end
-        -- Si ninguno es visible → chosen sigue siendo enemies[1] (fallback al más cercano)
     end
 
     local plr = chosen.player
@@ -786,15 +764,13 @@ local function getMurderer()
 end
 
 local MURDERER_CACHE_INTERVAL = 0.06
-local lastMurdererCalc = 0
-local cachedMurdererResult = nil
+local lastMurdererCalc        = 0
+local cachedMurdererResult    = nil
 
 local function getMurdererCached()
     local now = os_clock()
-    if (now - lastMurdererCalc) < MURDERER_CACHE_INTERVAL then
-        return cachedMurdererResult
-    end
-    lastMurdererCalc = now
+    if (now - lastMurdererCalc) < MURDERER_CACHE_INTERVAL then return cachedMurdererResult end
+    lastMurdererCalc     = now
     cachedMurdererResult = getMurderer()
     return cachedMurdererResult
 end
@@ -821,34 +797,28 @@ local function isGunBlocked(targetPos, targetChar)
     for i = 1, #cachedIgnoreList do tempIgnoreBuffer[i] = cachedIgnoreList[i] end
 
     local currentOrigin = origin
-    local rayPasses = 0
-
+    local rayPasses     = 0
     while direction.Magnitude > 0.1 and rayPasses < 5 do
         rayPasses = rayPasses + 1
         gunCastParams.FilterDescendantsInstances = tempIgnoreBuffer
         local ray = workspace:Raycast(currentOrigin, direction, gunCastParams)
         if not ray then return false end
-
         local hitInst = ray.Instance
-        if targetChar and hitInst:IsDescendantOf(targetChar) then
-            return false
-        end
-
+        if targetChar and hitInst:IsDescendantOf(targetChar) then return false end
         if hitInst and hitInst.CanCollide and hitInst.Transparency < 0.8 then
             return true
         else
             table.insert(tempIgnoreBuffer, hitInst)
             currentOrigin = ray.Position + (direction.Unit * 0.05)
-            direction = targetPos - currentOrigin
+            direction     = targetPos - currentOrigin
         end
     end
-
     return false
 end
 
 local function isStrictlyVisible(targetChar, targetPart)
     if not targetChar or not targetPart then return false end
-    local origin = Camera.CFrame.Position
+    local origin    = Camera.CFrame.Position
     local targetPos = targetPart.Position
 
     if isGunBlocked(targetPos, targetChar) then return false end
@@ -858,67 +828,58 @@ local function isStrictlyVisible(targetChar, targetPart)
     for i = 1, #cachedIgnoreList do tempIgnoreBuffer[i] = cachedIgnoreList[i] end
 
     local currentOrigin = origin
-    local rayPasses = 0
-
+    local rayPasses     = 0
     while direction.Magnitude > 0.1 and rayPasses < 5 do
         rayPasses = rayPasses + 1
         visCastParams.FilterDescendantsInstances = tempIgnoreBuffer
         local ray = workspace:Raycast(currentOrigin, direction, visCastParams)
         if not ray then return true end
-
         local hitInst = ray.Instance
         if hitInst and hitInst:IsDescendantOf(targetChar) then return true end
-
         if hitInst and hitInst.CanCollide and hitInst.Transparency < 0.8 then
             return false
         else
             table.insert(tempIgnoreBuffer, hitInst)
             currentOrigin = ray.Position + (direction.Unit * 0.05)
-            direction = targetPos - currentOrigin
+            direction     = targetPos - currentOrigin
         end
     end
-
     return true
 end
 
 local function getSmartTargetPart(targetChar)
     if not targetChar then return nil, true end
-    local hrp = targetChar:FindFirstChild("HumanoidRootPart")
+    local hrp       = targetChar:FindFirstChild("HumanoidRootPart")
     if not hrp then return nil, true end
 
     local wallCheck = Flag("Sheriff_WallCheck", true)
-    local shotType = Flag("Sheriff_ShotType", "Normal")
+    local shotType  = Flag("Sheriff_ShotType", "Normal")
 
-    if not wallCheck or shotType == "Piercer Bullet" then
-        return hrp, false
-    end
+    if not wallCheck or shotType == "Piercer Bullet" then return hrp, false end
 
-    local origin = Camera.CFrame.Position
+    local origin    = Camera.CFrame.Position
     table.clear(tempIgnoreBuffer)
     for i = 1, #cachedIgnoreList do tempIgnoreBuffer[i] = cachedIgnoreList[i] end
 
-    local targetPos = hrp.Position
+    local targetPos     = hrp.Position
     local currentOrigin = origin
-    local direction = targetPos - currentOrigin
-    local blocked = false
-    local rayPasses = 0
+    local direction     = targetPos - currentOrigin
+    local blocked       = false
+    local rayPasses     = 0
 
     while direction.Magnitude > 0.1 and rayPasses < 5 do
         rayPasses = rayPasses + 1
         wallCastParams.FilterDescendantsInstances = tempIgnoreBuffer
         local ray = workspace:Raycast(currentOrigin, direction, wallCastParams)
         if not ray then break end
-
         local hitInst = ray.Instance
         if hitInst and hitInst:IsDescendantOf(targetChar) then break end
-
         if hitInst and hitInst.CanCollide and hitInst.Transparency < 0.8 then
-            blocked = true
-            break
+            blocked = true break
         else
             table.insert(tempIgnoreBuffer, hitInst)
             currentOrigin = ray.Position + (direction.Unit * 0.05)
-            direction = targetPos - currentOrigin
+            direction     = targetPos - currentOrigin
         end
     end
 
@@ -930,7 +891,7 @@ local floorCache = setmetatable({}, {__mode = "k"})
 
 local function getFloorHeight(targetHrp, targetChar)
     if not targetHrp then return nil end
-    local now = os_clock()
+    local now  = os_clock()
     local posY = targetHrp.Position.Y
 
     local cached = floorCache[targetChar]
@@ -939,7 +900,7 @@ local function getFloorHeight(targetHrp, targetChar)
     end
 
     floorCastParams.FilterDescendantsInstances = {targetChar, LocalPlayer.Character, Camera}
-    local ray = workspace:Raycast(targetHrp.Position, vec3New(0, -25, 0), floorCastParams)
+    local ray    = workspace:Raycast(targetHrp.Position, vec3New(0, -25, 0), floorCastParams)
     local floorY = ray and ray.Position.Y or nil
 
     floorCache[targetChar] = { FloorY = floorY, BaseY = posY, Time = now }
@@ -947,39 +908,38 @@ local function getFloorHeight(targetHrp, targetChar)
 end
 
 -- ═══════════════════════════════════════════════════════════════════════════
--- ⚡ PREDICTION ENGINE
+-- ⚡ PREDICTION ENGINE  (mejorado)
 -- ═══════════════════════════════════════════════════════════════════════════
 local function getPredictedPosition(targetChar, targetPart, customDelta)
     if not targetChar or not targetPart then return nil, nil, nil, nil, nil end
-    local hrp = targetChar:FindFirstChild("HumanoidRootPart")
+    local hrp      = targetChar:FindFirstChild("HumanoidRootPart")
     local humanoid = targetChar:FindFirstChildOfClass("Humanoid")
     if not hrp or not humanoid or humanoid.Health <= 0 then return nil, nil, nil, nil, nil end
 
-    local activeDT = customDelta or emaDeltaTime
+    local activeDT      = customDelta or emaDeltaTime
     local targetPosition = targetPart.Position
 
     local referencePos = Camera and Camera.CFrame.Position or targetPosition
-    local distance = (targetPosition - referencePos).Magnitude
+    local distance     = (targetPosition - referencePos).Magnitude
 
-    local moveMag = humanoid.MoveDirection.Magnitude
+    local moveMag       = humanoid.MoveDirection.Magnitude
     local rawPhysicsVel = hrp.AssemblyLinearVelocity
-    local walkSpeed = (humanoid.WalkSpeed > 0) and humanoid.WalkSpeed or 16
+    local walkSpeed     = (humanoid.WalkSpeed > 0) and humanoid.WalkSpeed or 16
     local floorMaterial = humanoid.FloorMaterial
-    local isAir = (floorMaterial == Enum.Material.Air)
+    local isAir         = (floorMaterial == Enum.Material.Air)
 
     local aState = getAirState(targetChar)
     if isAir then
-        aState.time = aState.time + activeDT
-        if aState.time > 3 then aState.time = 3 end
+        aState.time = math_min(aState.time + activeDT, 3)
     else
         aState.time = 0
     end
 
-    local calculatedVelY = rawPhysicsVel.Y
+    local calculatedVelY     = rawPhysicsVel.Y
     local realDisplacementSpeed = 0
-    local lastData = lastPositions[targetChar]
-    local now = os_clock()
-    local vBuffer = getVelocityBuffer(targetChar)
+    local lastData           = lastPositions[targetChar]
+    local now                = os_clock()
+    local vBuffer            = getVelocityBuffer(targetChar)
 
     if not lastData then
         lastData = {Pos = hrp.Position, Time = now, RealSpeed = 0}
@@ -989,7 +949,7 @@ local function getPredictedPosition(targetChar, targetPart, customDelta)
         if dtPrev > 0.005 then
             local distMoved = (hrp.Position - lastData.Pos).Magnitude
             realDisplacementSpeed = distMoved / dtPrev
-            lastData.RealSpeed = realDisplacementSpeed
+            lastData.RealSpeed    = realDisplacementSpeed
 
             if distMoved < 0.05 and (moveMag > 0.1 or rawPhysicsVel.Magnitude > 2) then
                 vBuffer.staticFrames = vBuffer.staticFrames + 1
@@ -1002,46 +962,49 @@ local function getPredictedPosition(targetChar, targetPart, customDelta)
         else
             realDisplacementSpeed = lastData.RealSpeed or 0
         end
-        lastData.Pos = hrp.Position
+        lastData.Pos  = hrp.Position
         lastData.Time = now
     end
 
     local actualPhysicsH = vec3New(rawPhysicsVel.X, 0, rawPhysicsVel.Z)
-    local realSpeedH = actualPhysicsH.Magnitude
+    local realSpeedH     = actualPhysicsH.Magnitude
 
     local effectiveSpeed = math_min(realSpeedH, walkSpeed)
-    local intendedVel = vec3New(humanoid.MoveDirection.X * effectiveSpeed, 0, humanoid.MoveDirection.Z * effectiveSpeed)
+    local intendedVel    = vec3New(
+        humanoid.MoveDirection.X * effectiveSpeed, 0,
+        humanoid.MoveDirection.Z * effectiveSpeed
+    )
 
-    local speedRatio = math_clamp(realSpeedH / math_max(walkSpeed, 1), 0, 1)
+    local speedRatio  = math_clamp(realSpeedH / math_max(walkSpeed, 1), 0, 1)
     local rawVelocity = actualPhysicsH:Lerp(intendedVel, speedRatio)
 
     if vBuffer.staticFrames > 0 and vBuffer.staticFrames <= 8 then
-        local decay = math_clamp(1 - (vBuffer.staticFrames * 0.08), 0.4, 0.95)
-        rawVelocity = vBuffer.lastValidVelocity * decay
+        local decay   = math_clamp(1 - (vBuffer.staticFrames * 0.08), 0.4, 0.95)
+        rawVelocity   = vBuffer.lastValidVelocity * decay
     elseif vBuffer.staticFrames > 8 then
-        rawVelocity = VECTOR_ZERO
-        smoothedVelocity = VECTOR_ZERO
+        rawVelocity        = VECTOR_ZERO
+        smoothedVelocity   = VECTOR_ZERO
     else
         vBuffer.lastValidVelocity = rawVelocity
     end
 
     local histVel = pushVelocityWeighted(targetChar, rawVelocity)
 
-    local confState = getMoveConfidence(targetChar)
+    local confState  = getMoveConfidence(targetChar)
     local speedDelta = math_abs(realSpeedH - confState.lastSpeed)
-    confState.variance = confState.variance * 0.88 + speedDelta * 0.12
+    confState.variance  = confState.variance * 0.88 + speedDelta * 0.12
     confState.lastSpeed = realSpeedH
     local moveConfidenceFactor = math_clamp(1 - (confState.variance - 5) / 120, 0.75, 1.0)
 
-    local minDist = Flag("Sheriff_MinPredDist", 4)
-    local maxDist = Flag("Sheriff_MaxPredDist", 22)
-    local distRange = math_max(maxDist - minDist, 0.1)
+    local minDist        = Flag("Sheriff_MinPredDist", 4)
+    local maxDist        = Flag("Sheriff_MaxPredDist", 22)
+    local distRange      = math_max(maxDist - minDist, 0.1)
     local predictionWeight = math_clamp((distance - minDist) / distRange, 0, 1)
 
     if lastTargetChar ~= targetChar then
         smoothedVelocity = histVel
-        smoothedVisualY = 0
-        lastTargetChar = targetChar
+        smoothedVisualY  = 0
+        lastTargetChar   = targetChar
     end
 
     local isStopping = (moveMag < 0.1 and histVel.Magnitude < 1.5)
@@ -1051,92 +1014,98 @@ local function getPredictedPosition(targetChar, targetPart, customDelta)
     if isStopping then
         vSmoothAlpha = 0.85
     elseif isStarting then
-        vSmoothAlpha = 0.20
+        -- Arranque: convergencia más rápida para no llegar tarde
+        vSmoothAlpha = 0.28
     else
-        vSmoothAlpha = math_clamp(16 * activeDT, 0.22, 0.60)
+        vSmoothAlpha = math_clamp(18 * activeDT, 0.24, 0.62)  -- ligeramente más ágil
     end
 
     smoothedVelocity = smoothedVelocity:Lerp(histVel, vSmoothAlpha)
     if isStopping and smoothedVelocity.Magnitude < 0.3 then smoothedVelocity = VECTOR_ZERO end
 
-    local turnPenalty = updateTurnState(targetChar, smoothedVelocity, activeDT)
-    local stabilityScore = networkStability * moveConfidenceFactor * turnPenalty
+    local turnPenalty     = updateTurnState(targetChar, smoothedVelocity, activeDT)
+    local stabilityScore  = networkStability * moveConfidenceFactor * turnPenalty
 
-    local horizontalShift = VECTOR_ZERO
-    local verticalShift = VECTOR_ZERO
-
-    local prioritizePing = Flag("Sheriff_PrioritizePing", false)
-    local vScale = Flag("Sheriff_VScale", 100)
-    local hScale = Flag("Sheriff_HScale", 100)
+    -- ┌─────────────────────────────────────────────────────────────────────┐
+    -- │  LEAD TIME real basado en ping actual + distancia / velocidad bala  │
+    -- │  Bala MM2 viaja ~2000 studs/s (estimado del decompile)              │
+    -- └─────────────────────────────────────────────────────────────────────┘
+    local BULLET_SPEED   = 2000   -- studs/s; ajusta con Cheat Engine si varía
+    local bulletTravelT  = distance / BULLET_SPEED
+    local networkLatency = cachedPingValue * 0.5  -- RTT/2 = one-way
 
     local effectiveHLatency = 0
     local effectiveVLatency = 0
 
+    local prioritizePing = Flag("Sheriff_PrioritizePing", false)
+    local vScale         = Flag("Sheriff_VScale", 100)
+    local hScale         = Flag("Sheriff_HScale", 100)
+
     if prioritizePing then
-        local rawMS = cachedPingValue * 1000
-        local autoScale = 90 + (rawMS * 0.6) + (pingJitterMS * 0.4)
-        effectiveHLatency = (autoScale / 1000) * PREDICTION_BOOST
-        local autoVScale = math_min(autoScale, 120)
-        effectiveVLatency = (autoVScale / 1000) * PREDICTION_BOOST
+        -- Auto: ping + travel time, boosteado por H/V independientes
+        local rawMS    = cachedPingValue * 1000
+        local autoBase = networkLatency + bulletTravelT
+        effectiveHLatency = (autoBase + (pingJitterMS * 0.003)) * PRED_BOOST_H
+        local autoVScale  = math_min(rawMS * 0.9, 120)
+        effectiveVLatency = (autoVScale / 1000) * PRED_BOOST_V
     else
-        effectiveHLatency = (hScale / 1000) * PREDICTION_BOOST
+        effectiveHLatency = ((hScale / 1000) + bulletTravelT) * PRED_BOOST_H
         local cappedVScale = math_min(vScale, 120)
-        effectiveVLatency = (cappedVScale / 1000) * PREDICTION_BOOST
+        effectiveVLatency  = (cappedVScale / 1000) * PRED_BOOST_V
     end
 
-    horizontalShift = vec3New(smoothedVelocity.X, 0, smoothedVelocity.Z)
+    local horizontalShift = vec3New(smoothedVelocity.X, 0, smoothedVelocity.Z)
         * effectiveHLatency
         * predictionWeight
         * stabilityScore
+
+    local verticalShift = VECTOR_ZERO
 
     if vScale > 0 then
         local isStairMovement = (not isAir and math_abs(calculatedVelY) > 0.8)
 
         if isAir or isStairMovement then
             local adaptiveYFactor = math_clamp((distance - minDist) / 12, 0, 1) * predictionWeight * stabilityScore
-            local vFactor = effectiveVLatency * adaptiveYFactor
+            local vFactor         = effectiveVLatency * adaptiveYFactor
 
             if isAir then
                 if calculatedVelY < -0.5 then
-                    local fallSpeed = math_max(calculatedVelY, -18)
+                    local fallSpeed   = math_max(calculatedVelY, -18)
                     local fallingYFactor = fallSpeed * 0.30 * vFactor
-                    verticalShift = vec3New(0, fallingYFactor, 0)
+                    verticalShift     = vec3New(0, fallingYFactor, 0)
                 else
                     local gravityEffect = 0.5 * workspace_Gravity * math_pow(vFactor, 2)
-                    local pY = (calculatedVelY * vFactor) - gravityEffect
-                    verticalShift = vec3New(0, pY, 0)
+                    local pY            = (calculatedVelY * vFactor) - gravityEffect
+                    verticalShift       = vec3New(0, pY, 0)
                 end
             elseif isStairMovement then
-                local pY = calculatedVelY * vFactor
-                verticalShift = vec3New(0, pY, 0)
+                verticalShift = vec3New(0, calculatedVelY * vFactor, 0)
             end
         end
     end
 
     if horizontalShift.Magnitude > 8.5 then horizontalShift = horizontalShift.Unit * 8.5 end
-    if verticalShift.Magnitude > 6.0 then verticalShift = verticalShift.Unit * 6.0 end
+    if verticalShift.Magnitude   > 6.0 then verticalShift   = verticalShift.Unit   * 6.0 end
 
-    local finalPredNoY = vec3New(targetPosition.X + horizontalShift.X, targetPosition.Y, targetPosition.Z + horizontalShift.Z)
-    local minPredNoY = vec3New(targetPosition.X + (horizontalShift.X * 0.4), targetPosition.Y, targetPosition.Z + (horizontalShift.Z * 0.4))
+    local finalPredNoY       = vec3New(targetPosition.X + horizontalShift.X, targetPosition.Y, targetPosition.Z + horizontalShift.Z)
+    local minPredNoY         = vec3New(targetPosition.X + horizontalShift.X * 0.4, targetPosition.Y, targetPosition.Z + horizontalShift.Z * 0.4)
+    local finalPredWithY     = targetPosition + horizontalShift + verticalShift
+    local predXYExaggerated  = targetPosition + (horizontalShift * 1.8) + verticalShift
 
-    local finalPredWithY = targetPosition + horizontalShift + verticalShift
-    local predXYExaggerated = targetPosition + (horizontalShift * 1.8) + verticalShift
-
-    local LEAD_TIME_VISUAL_MULT = 4.2
+    local LEAD_TIME_VISUAL_MULT  = 4.2
     local LEAD_TIME_VISUAL_CLAMP = 16
 
-    local rawVisualY = math_clamp(verticalShift.Y * LEAD_TIME_VISUAL_MULT, -LEAD_TIME_VISUAL_CLAMP, LEAD_TIME_VISUAL_CLAMP)
-    local yLerpAlpha = math_clamp(14 * activeDT, 0.10, 0.35)
-    smoothedVisualY = smoothedVisualY + (rawVisualY - smoothedVisualY) * yLerpAlpha
-
+    local rawVisualY  = math_clamp(verticalShift.Y * LEAD_TIME_VISUAL_MULT, -LEAD_TIME_VISUAL_CLAMP, LEAD_TIME_VISUAL_CLAMP)
+    local yLerpAlpha  = math_clamp(14 * activeDT, 0.10, 0.35)
+    smoothedVisualY   = smoothedVisualY + (rawVisualY - smoothedVisualY) * yLerpAlpha
     local finalLeadPredX = targetPosition + (horizontalShift * LEAD_TIME_VISUAL_MULT) + vec3New(0, smoothedVisualY, 0)
 
     local floorY = getFloorHeight(hrp, targetChar)
     if floorY then
         local minAllowedY = floorY + (hrp.Size.Y * 0.5) + 0.15
-        if finalPredWithY.Y < minAllowedY then finalPredWithY = vec3New(finalPredWithY.X, minAllowedY, finalPredWithY.Z) end
+        if finalPredWithY.Y    < minAllowedY then finalPredWithY    = vec3New(finalPredWithY.X,    minAllowedY, finalPredWithY.Z)    end
         if predXYExaggerated.Y < minAllowedY then predXYExaggerated = vec3New(predXYExaggerated.X, minAllowedY, predXYExaggerated.Z) end
-        if finalLeadPredX.Y < minAllowedY then finalLeadPredX = vec3New(finalLeadPredX.X, minAllowedY, finalLeadPredX.Z) end
+        if finalLeadPredX.Y    < minAllowedY then finalLeadPredX    = vec3New(finalLeadPredX.X,    minAllowedY, finalLeadPredX.Z)    end
     end
 
     return finalPredWithY, finalPredNoY, minPredNoY, predXYExaggerated, finalLeadPredX
@@ -1145,23 +1114,23 @@ end
 -- ═══════════════════════════════════════════════════════════════════════════
 -- 📊 TRACERS RENDER SETUP
 -- ═══════════════════════════════════════════════════════════════════════════
-local MinPredictionLine = Drawing.new("Line")
-MinPredictionLine.Color = color3RGB(4, 0, 220); MinPredictionLine.Thickness = 2.0; MinPredictionLine.Transparency = 1.0; MinPredictionLine.ZIndex = 5
+local MinPredictionLine  = Drawing.new("Line")
+MinPredictionLine.Color  = color3RGB(4,0,220); MinPredictionLine.Thickness  = 2.0; MinPredictionLine.Transparency  = 1.0; MinPredictionLine.ZIndex  = 5
 
-local PredictionLine = Drawing.new("Line")
-PredictionLine.Color = color3RGB(255, 35, 35); PredictionLine.Thickness = 2.0; PredictionLine.Transparency = 1.0; PredictionLine.ZIndex = 10
+local PredictionLine     = Drawing.new("Line")
+PredictionLine.Color     = color3RGB(255,35,35); PredictionLine.Thickness     = 2.0; PredictionLine.Transparency     = 1.0; PredictionLine.ZIndex     = 10
 
-local LeadTimeLine = Drawing.new("Line")
-LeadTimeLine.Color = color3RGB(35, 255, 35); LeadTimeLine.Thickness = 1.8; LeadTimeLine.Transparency = 1.0; LeadTimeLine.ZIndex = 7
+local LeadTimeLine       = Drawing.new("Line")
+LeadTimeLine.Color       = color3RGB(35,255,35); LeadTimeLine.Thickness       = 1.8; LeadTimeLine.Transparency       = 1.0; LeadTimeLine.ZIndex       = 7
 
-local LeadTimePredLine = Drawing.new("Line")
-LeadTimePredLine.Color = color3RGB(35, 255, 35); LeadTimePredLine.Thickness = 1.8; LeadTimePredLine.Transparency = 1.0; LeadTimePredLine.ZIndex = 8
+local LeadTimePredLine   = Drawing.new("Line")
+LeadTimePredLine.Color   = color3RGB(35,255,35); LeadTimePredLine.Thickness   = 1.8; LeadTimePredLine.Transparency   = 1.0; LeadTimePredLine.ZIndex   = 8
 
-local ConfirmWallLine = Drawing.new("Line")
-ConfirmWallLine.Color = color3RGB(0, 0, 0); ConfirmWallLine.Thickness = 2.0; ConfirmWallLine.Transparency = 1.0; ConfirmWallLine.ZIndex = 8
+local ConfirmWallLine    = Drawing.new("Line")
+ConfirmWallLine.Color    = color3RGB(0,0,0); ConfirmWallLine.Thickness    = 2.0; ConfirmWallLine.Transparency    = 1.0; ConfirmWallLine.ZIndex    = 8
 
-local PredictionXYLine = Drawing.new("Line")
-PredictionXYLine.Color = color3RGB(170, 0, 255); PredictionXYLine.Thickness = 2.0; PredictionXYLine.Transparency = 1.0; PredictionXYLine.ZIndex = 9
+local PredictionXYLine   = Drawing.new("Line")
+PredictionXYLine.Color   = color3RGB(170,0,255); PredictionXYLine.Thickness   = 2.0; PredictionXYLine.Transparency   = 1.0; PredictionXYLine.ZIndex   = 9
 
 table.insert(_G.KillerHubLines, MinPredictionLine)
 table.insert(_G.KillerHubLines, PredictionLine)
@@ -1183,58 +1152,48 @@ end
 local visPredNoY, visMinPredNoY, visPredXYExaggerated, visFinalLeadPredX
 
 local function hideAllLines()
-    PredictionLine.Visible = false
+    PredictionLine.Visible   = false
     MinPredictionLine.Visible = false
-    LeadTimeLine.Visible = false
+    LeadTimeLine.Visible     = false
     LeadTimePredLine.Visible = false
-    ConfirmWallLine.Visible = false
+    ConfirmWallLine.Visible  = false
     PredictionXYLine.Visible = false
 end
 
 -- ═══════════════════════════════════════════════════════════════════════════
--- 🚀 RENDER LOOP OPTIMIZADO
+-- 🚀 RENDER LOOP
 -- ═══════════════════════════════════════════════════════════════════════════
 local renderConn = RunService.RenderStepped:Connect(function(dt)
     emaDeltaTime = emaDeltaTime + 0.2 * (dt - emaDeltaTime)
 
-    local useDetect = Flag("Sheriff_WeaponDetect", false)
-    local tracersTable = Flag("Sheriff_Tracers", EMPTY_TABLE)
+    local useDetect     = Flag("Sheriff_WeaponDetect", false)
+    local tracersTable  = Flag("Sheriff_Tracers", EMPTY_TABLE)
 
-    if useDetect and not hasRangedWeaponCached then
-        hideAllLines()
-        visPredNoY = nil
-        return
-    end
+    if useDetect and not hasRangedWeaponCached then hideAllLines() visPredNoY = nil return end
 
-    local showRed = tracersTable["Tracer Prediction"] == true
-    local showBlue = tracersTable["Min Tracer Prediction"] == true
-    local showGreen = tracersTable["Lead Time"] == true
-    local showLeadPred = tracersTable["Lead Time Prediction"] == true
-    local showConfirmWall = tracersTable["Confirm wall check"] == true
-    local showXYOffset = tracersTable["Prediction X/Y offset"] == true
+    local showRed         = tracersTable["Tracer Prediction"]    == true
+    local showBlue        = tracersTable["Min Tracer Prediction"] == true
+    local showGreen       = tracersTable["Lead Time"]             == true
+    local showLeadPred    = tracersTable["Lead Time Prediction"]  == true
+    local showConfirmWall = tracersTable["Confirm wall check"]    == true
+    local showXYOffset    = tracersTable["Prediction X/Y offset"] == true
 
     if not (showRed or showBlue or showGreen or showLeadPred or showConfirmWall or showXYOffset) then
-        hideAllLines()
-        visPredNoY = nil
-        return
+        hideAllLines() visPredNoY = nil return
     end
 
     local murderer = getMurdererCached()
-    if not murderer or not murderer.Character then
-        hideAllLines()
-        visPredNoY = nil
-        return
-    end
+    if not murderer or not murderer.Character then hideAllLines() visPredNoY = nil return end
 
-    local targetChar = murderer.Character
+    local targetChar        = murderer.Character
     local visualPart, isBlocked = getSmartTargetPart(targetChar)
-    handLineIsBlocked = isBlocked
+    handLineIsBlocked       = isBlocked
 
-    local myChar = LocalPlayer.Character
+    local myChar    = LocalPlayer.Character
     local rightHand = myChar and (myChar:FindFirstChild("RightHand") or myChar:FindFirstChild("Right Arm"))
 
-    local viewportSize = Camera.ViewportSize
-    local screenOrigin = vec2New(viewportSize.X * 0.5, viewportSize.Y)
+    local viewportSize  = Camera.ViewportSize
+    local screenOrigin  = vec2New(viewportSize.X * 0.5, viewportSize.Y)
 
     if visualPart then
         local _, predNoY, minPredNoY, predXYExaggerated, finalLeadPredX = getPredictedPosition(targetChar, visualPart, dt)
@@ -1242,62 +1201,50 @@ local renderConn = RunService.RenderStepped:Connect(function(dt)
         if predNoY and minPredNoY then
             local tracerLerpAlpha = math_clamp(42 * dt, 0.25, 0.85)
             if not visPredNoY then
-                visPredNoY = predNoY
-                visMinPredNoY = minPredNoY
+                visPredNoY           = predNoY
+                visMinPredNoY        = minPredNoY
                 visPredXYExaggerated = predXYExaggerated
-                visFinalLeadPredX = finalLeadPredX
+                visFinalLeadPredX    = finalLeadPredX
             else
-                visPredNoY = adaptiveLerp(visPredNoY, predNoY, tracerLerpAlpha)
-                visMinPredNoY = adaptiveLerp(visMinPredNoY, minPredNoY, tracerLerpAlpha)
+                visPredNoY           = adaptiveLerp(visPredNoY, predNoY, tracerLerpAlpha)
+                visMinPredNoY        = adaptiveLerp(visMinPredNoY, minPredNoY, tracerLerpAlpha)
                 if predXYExaggerated then visPredXYExaggerated = adaptiveLerp(visPredXYExaggerated, predXYExaggerated, tracerLerpAlpha) end
-                if finalLeadPredX then visFinalLeadPredX = adaptiveLerp(visFinalLeadPredX, finalLeadPredX, tracerLerpAlpha) end
+                if finalLeadPredX    then visFinalLeadPredX    = adaptiveLerp(visFinalLeadPredX,    finalLeadPredX,    tracerLerpAlpha) end
             end
 
             if showBlue then
-                local screenPos, onScreen = worldToViewport(Camera, visMinPredNoY)
-                if onScreen then
-                    MinPredictionLine.From = screenOrigin
-                    MinPredictionLine.To = vec2New(screenPos.X, screenPos.Y)
-                    MinPredictionLine.Visible = true
+                local sp, on = worldToViewport(Camera, visMinPredNoY)
+                if on then MinPredictionLine.From = screenOrigin; MinPredictionLine.To = vec2New(sp.X, sp.Y); MinPredictionLine.Visible = true
                 else MinPredictionLine.Visible = false end
             else MinPredictionLine.Visible = false end
 
             if showRed then
-                local screenPos, onScreen = worldToViewport(Camera, visPredNoY)
-                if onScreen then
-                    PredictionLine.From = screenOrigin
-                    PredictionLine.To = vec2New(screenPos.X, screenPos.Y)
-                    PredictionLine.Visible = true
+                local sp, on = worldToViewport(Camera, visPredNoY)
+                if on then PredictionLine.From = screenOrigin; PredictionLine.To = vec2New(sp.X, sp.Y); PredictionLine.Visible = true
                 else PredictionLine.Visible = false end
             else PredictionLine.Visible = false end
 
             if showLeadPred and visFinalLeadPredX then
-                local screenPos, onScreen = worldToViewport(Camera, visFinalLeadPredX)
-                if onScreen then
-                    LeadTimePredLine.From = screenOrigin
-                    LeadTimePredLine.To = vec2New(screenPos.X, screenPos.Y)
-                    LeadTimePredLine.Visible = true
+                local sp, on = worldToViewport(Camera, visFinalLeadPredX)
+                if on then LeadTimePredLine.From = screenOrigin; LeadTimePredLine.To = vec2New(sp.X, sp.Y); LeadTimePredLine.Visible = true
                 else LeadTimePredLine.Visible = false end
             else LeadTimePredLine.Visible = false end
 
             if showXYOffset and visPredXYExaggerated then
-                local screenPos, onScreen = worldToViewport(Camera, visPredXYExaggerated)
-                if onScreen then
-                    PredictionXYLine.From = screenOrigin
-                    PredictionXYLine.To = vec2New(screenPos.X, screenPos.Y)
-                    PredictionXYLine.Visible = true
+                local sp, on = worldToViewport(Camera, visPredXYExaggerated)
+                if on then PredictionXYLine.From = screenOrigin; PredictionXYLine.To = vec2New(sp.X, sp.Y); PredictionXYLine.Visible = true
                 else PredictionXYLine.Visible = false end
             else PredictionXYLine.Visible = false end
 
             if rightHand and showGreen then
                 local targetPosForLead = showLeadPred and visFinalLeadPredX or visPredNoY
                 if targetPosForLead then
-                    local handScreenPos, handOnScreen = worldToViewport(Camera, rightHand.Position)
-                    local predScreenPos, predOnScreen = worldToViewport(Camera, targetPosForLead)
-                    if handOnScreen and predOnScreen then
-                        LeadTimeLine.Color = color3RGB(35, 255, 35)
-                        LeadTimeLine.From = vec2New(handScreenPos.X, handScreenPos.Y)
-                        LeadTimeLine.To = vec2New(predScreenPos.X, predScreenPos.Y)
+                    local hSp, hOn = worldToViewport(Camera, rightHand.Position)
+                    local pSp, pOn = worldToViewport(Camera, targetPosForLead)
+                    if hOn and pOn then
+                        LeadTimeLine.Color = color3RGB(35,255,35)
+                        LeadTimeLine.From  = vec2New(hSp.X, hSp.Y)
+                        LeadTimeLine.To    = vec2New(pSp.X, pSp.Y)
                         LeadTimeLine.Visible = true
                     else LeadTimeLine.Visible = false end
                 else LeadTimeLine.Visible = false end
@@ -1306,26 +1253,17 @@ local renderConn = RunService.RenderStepped:Connect(function(dt)
 
         if showConfirmWall and myChar and myChar:FindFirstChild("HumanoidRootPart") then
             local myHrp = myChar.HumanoidRootPart
-            local myScreenPos, myOnScreen = worldToViewport(Camera, myHrp.Position)
-            local targetScreenPos, targetOnScreen = worldToViewport(Camera, visualPart.Position)
-            if myOnScreen and targetOnScreen then
-                ConfirmWallLine.From = vec2New(myScreenPos.X, myScreenPos.Y)
-                ConfirmWallLine.To = vec2New(targetScreenPos.X, targetScreenPos.Y)
-                if isBlocked then
-                    ConfirmWallLine.Color = color3RGB(0, 0, 0)
-                else
-                    ConfirmWallLine.Color = color3RGB(130, 35, 190)
-                end
+            local mSp, mOn = worldToViewport(Camera, myHrp.Position)
+            local tSp, tOn = worldToViewport(Camera, visualPart.Position)
+            if mOn and tOn then
+                ConfirmWallLine.From    = vec2New(mSp.X, mSp.Y)
+                ConfirmWallLine.To      = vec2New(tSp.X, tSp.Y)
+                ConfirmWallLine.Color   = isBlocked and color3RGB(0,0,0) or color3RGB(130,35,190)
                 ConfirmWallLine.Visible = true
-            else
-                ConfirmWallLine.Visible = false
-            end
-        else
-            ConfirmWallLine.Visible = false
-        end
+            else ConfirmWallLine.Visible = false end
+        else ConfirmWallLine.Visible = false end
     else
-        hideAllLines()
-        visPredNoY = nil
+        hideAllLines() visPredNoY = nil
     end
 end)
 KillerHub:AddTask(renderConn)
@@ -1336,9 +1274,9 @@ KillerHub:AddTask(renderConn)
 local executeActualShoot
 
 executeActualShoot = function(targetChar, bestPart)
-    local shotType = Flag("Sheriff_ShotType", "Normal")
+    local shotType  = Flag("Sheriff_ShotType", "Normal")
     local wallCheck = Flag("Sheriff_WallCheck", true)
-    local char = LocalPlayer.Character
+    local char      = LocalPlayer.Character
     if not char then return false end
 
     local gun, _ = getGunLocation()
@@ -1363,7 +1301,7 @@ executeActualShoot = function(targetChar, bestPart)
             end
 
             if shotType == "Piercer Bullet" then
-                local velH = vec3New(smoothedVelocity.X, 0, smoothedVelocity.Z)
+                local velH    = vec3New(smoothedVelocity.X, 0, smoothedVelocity.Z)
                 local velMagH = velH.Magnitude
 
                 local rayDir
@@ -1372,7 +1310,7 @@ executeActualShoot = function(targetChar, bestPart)
                 else
                     local shooterHrp = char:FindFirstChild("HumanoidRootPart")
                     local shooterPos = shooterHrp and shooterHrp.Position or Camera.CFrame.Position
-                    local toTarget = finalPredictedPos - shooterPos
+                    local toTarget   = finalPredictedPos - shooterPos
                     rayDir = vec3New(toTarget.X, 0, toTarget.Z)
                     if rayDir.Magnitude < 0.01 then
                         local cl = Camera.CFrame.LookVector
@@ -1384,9 +1322,9 @@ executeActualShoot = function(targetChar, bestPart)
 
                 local shooterHrp2 = char:FindFirstChild("HumanoidRootPart")
                 local shooterPos2 = shooterHrp2 and shooterHrp2.Position or Camera.CFrame.Position
-                local dist = (finalPredictedPos - shooterPos2).Magnitude
+                local dist        = (finalPredictedPos - shooterPos2).Magnitude
 
-                local velBoost = math_min(velMagH * 0.06, 1.8)
+                local velBoost      = math_min(velMagH * 0.06, 1.8)
                 local dynamicOffset = math_clamp(1.8 + dist * 0.025 + velBoost, 1.8, 6.5)
 
                 local aState = getAirState(targetChar)
@@ -1395,9 +1333,10 @@ executeActualShoot = function(targetChar, bestPart)
                 end
 
                 local spawnOrigin = finalPredictedPos - (rayDir * dynamicOffset)
-                originCFrame = cframeNew(spawnOrigin, finalPredictedPos)
+                originCFrame      = cframeNew(spawnOrigin, finalPredictedPos)
             end
 
+            -- ⚑ ÚNICO LUGAR donde se setea lastShotTimestamp
             activeGun.Shoot:FireServer(originCFrame, cframeNew(finalPredictedPos))
             lastShotTimestamp = os_clock()
 
@@ -1412,7 +1351,7 @@ executeActualShoot = function(targetChar, bestPart)
 end
 
 -- ═══════════════════════════════════════════════════════════════════════════
--- ⏳ WAIT FOR SIGHT (CON SOPORTE DE RELOAD)
+-- ⏳ WAIT FOR SIGHT — sin "RELOAD" en el label, sin false positive
 -- ═══════════════════════════════════════════════════════════════════════════
 local function startWaitingForSight(initialTarget)
     resetWaitState()
@@ -1420,78 +1359,75 @@ local function startWaitingForSight(initialTarget)
     local gun, _ = getGunLocation()
     if not gun then return end
 
+    -- ─── Guard: si el botón fue apretado MIENTRAS se recargaba (falso positivo),
+    --     y el arma AÚN no está lista, no arrancar el wait — no hubo disparo real.
+    if wasRecentManualShot() and not isGunReadyToShoot() then
+        -- El usuario apretó durante el reload; no hay nada que esperar
+        return
+    end
+
     isWaitingForSight = true
 
     if DecalTexture then
-        TweenService:Create(DecalTexture, tweenInfoFast, {Position = udim2New(0.5, 0, 0.28, 0), Size = udim2New(0.38, 0, 0.38, 0)}):Play()
+        TweenService:Create(DecalTexture, tweenInfoFast, {
+            Position = udim2New(0.5, 0, 0.28, 0),
+            Size     = udim2New(0.38, 0, 0.38, 0)
+        }):Play()
     end
     if Label then
-        TweenService:Create(Label, tweenInfoFast, {Position = udim2New(0, 0, 0.52, 0), Size = udim2New(1, 0, 0.2, 0)}):Play()
-        Label.Text = "WAITING..."
+        TweenService:Create(Label, tweenInfoFast, {
+            Position = udim2New(0, 0, 0.52, 0),
+            Size     = udim2New(1, 0, 0.2, 0)
+        }):Play()
+        Label.Text       = "WAITING..."
         Label.TextColor3 = color3RGB(255, 50, 50)
     end
 
-    local maxWaitTime = Flag("Sheriff_WaitTime", 15)
-    local startTime = os_clock()
+    local maxWaitTime    = Flag("Sheriff_WaitTime", 15)
+    local startTime      = os_clock()
     local lostSightCounter = 0
-    local sightTimeAcc = 0
+    local sightTimeAcc   = 0
 
     waitSightThread = task.spawn(function()
         while isWaitingForSight do
             local currentGun, _ = getGunLocation()
-            if not currentGun then
-                resetWaitState()
-                break
-            end
+            if not currentGun then resetWaitState() break end
 
-            local elapsed = os_clock() - startTime
+            local elapsed   = os_clock() - startTime
             local remaining = maxWaitTime - elapsed
-            if remaining <= 0 then
-                resetWaitState()
-                break
-            end
+            if remaining <= 0 then resetWaitState() break end
 
+            -- Label: sólo el tiempo restante del wait. Nada de "RELOAD".
             if SubLabel then
-                if not isGunReadyToShoot() then
-                    local reloadRemaining = GUN_RELOAD_COOLDOWN - (os_clock() - lastShotTimestamp)
-                    SubLabel.Text = string.format("RELOAD %.1fs", math_max(0, reloadRemaining))
-                else
-                    SubLabel.Text = string.format("%.1fs", math_max(0, remaining))
-                end
+                SubLabel.Text = string.format("%.1fs", math_max(0, remaining))
             end
 
             local murderer = getMurdererCached()
             if not murderer or not murderer.Character then
                 lostSightCounter = lostSightCounter + 0.016
-                sightTimeAcc = 0
-                if lostSightCounter > 0.15 then
-                    resetWaitState()
-                    break
-                end
+                sightTimeAcc     = 0
+                if lostSightCounter > 0.15 then resetWaitState() break end
             else
                 local targetChar = murderer.Character
                 local hum = targetChar:FindFirstChildOfClass("Humanoid")
-                if not hum or hum.Health <= 0 then
-                    resetWaitState()
-                    break
-                end
+                if not hum or hum.Health <= 0 then resetWaitState() break end
 
-                local shotType = Flag("Sheriff_ShotType", "Normal")
+                local shotType            = Flag("Sheriff_ShotType", "Normal")
                 local bestPart, isBlocked = getSmartTargetPart(targetChar)
-                local isClearSight = bestPart and (not isBlocked or shotType == "Piercer Bullet")
+                local isClearSight        = bestPart and (not isBlocked or shotType == "Piercer Bullet")
 
+                -- Disparar sólo cuando LOS Y cooldown se cumplen simultáneamente
                 if isClearSight and isGunReadyToShoot() then
                     lostSightCounter = 0
-                    sightTimeAcc = sightTimeAcc + 0.016
+                    sightTimeAcc     = sightTimeAcc + 0.016
                     if sightTimeAcc >= 0.035 then
                         local shotFired = executeActualShoot(targetChar, bestPart)
-                        if shotFired then
-                            resetWaitState()
-                            break
-                        end
+                        if shotFired then resetWaitState() break end
                     end
                 else
-                    sightTimeAcc = 0
+                    -- Si sólo falta el reload: esperar en silencio, timer sigue corriendo
+                    lostSightCounter = 0
+                    sightTimeAcc     = 0
                 end
             end
 
@@ -1508,19 +1444,22 @@ local function fireAtMurdererDirectly()
         return
     end
 
+    -- Marcar intento manual ANTES de todo
+    lastManualShotTime = os_clock()
+
     local gun, _ = getGunLocation()
     if not gun then return end
 
-    local shotType = Flag("Sheriff_ShotType", "Normal")
-    local wallCheck = Flag("Sheriff_WallCheck", true)
-    local waitSight = Flag("Sheriff_WaitSight", false)
+    local shotType    = Flag("Sheriff_ShotType", "Normal")
+    local wallCheck   = Flag("Sheriff_WallCheck", true)
+    local waitSight   = Flag("Sheriff_WaitSight", false)
 
     local murderer = getMurdererCached()
     if not murderer or not murderer.Character then return end
 
-    local targetChar = murderer.Character
+    local targetChar          = murderer.Character
     local bestPart, isBlocked = getSmartTargetPart(targetChar)
-    local allowWaitSight = waitSight and (shotType ~= "Piercer Bullet")
+    local allowWaitSight      = waitSight and (shotType ~= "Piercer Bullet")
 
     if not isGunReadyToShoot() then
         if allowWaitSight then startWaitingForSight(targetChar) end
@@ -1581,8 +1520,8 @@ end
 local inputConn = UserInputService.InputBegan:Connect(function(input, gameProcessed)
     if gameProcessed then return end
     local targetKeyName = Flag("Sheriff_ShootKey", "F")
-    local kc = safeGetEnum(Enum.KeyCode, targetKeyName)
-    local uit = safeGetEnum(Enum.UserInputType, targetKeyName)
+    local kc  = safeGetEnum(Enum.KeyCode,       targetKeyName)
+    local uit = safeGetEnum(Enum.UserInputType,  targetKeyName)
     if (kc and input.KeyCode == kc) or (uit and input.UserInputType == uit) then
         task.spawn(fireAtMurdererDirectly)
     end
@@ -1616,78 +1555,83 @@ VoidGui.Name = "KillerHub_SheriffGui"; VoidGui.ResetOnSpawn = false; VoidGui.Par
 KillerHub:AddTask(VoidGui)
 
 local btnSize = 95
-if Flag("Sheriff_CustomBtnSize", false) then
-    btnSize = Flag("Sheriff_BtnSize", 95)
-end
+if Flag("Sheriff_CustomBtnSize", false) then btnSize = Flag("Sheriff_BtnSize", 95) end
 
 local ShootButton = Instance.new("ImageButton")
-ShootButton.Name = "ShootButton"
-ShootButton.Size = udim2New(0, btnSize, 0, btnSize)
-ShootButton.Position = loadButtonPosition()
-ShootButton.BackgroundColor3 = color3RGB(15, 6, 26); ShootButton.BackgroundTransparency = 0.05
-ShootButton.BorderSizePixel = 0; ShootButton.AutoButtonColor = false; ShootButton.ClipsDescendants = true; ShootButton.Parent = VoidGui
+ShootButton.Name                 = "ShootButton"
+ShootButton.Size                 = udim2New(0, btnSize, 0, btnSize)
+ShootButton.Position             = loadButtonPosition()
+ShootButton.BackgroundColor3     = color3RGB(15, 6, 26)
+ShootButton.BackgroundTransparency = 0.05
+ShootButton.BorderSizePixel      = 0
+ShootButton.AutoButtonColor      = false
+ShootButton.ClipsDescendants     = true
+ShootButton.Parent               = VoidGui
 
-cachedScreenGui = VoidGui
+cachedScreenGui   = VoidGui
 cachedShootButton = ShootButton
 
 local Corner = Instance.new("UICorner")
 Corner.CornerRadius = UDim.new(0.28, 0); Corner.Parent = ShootButton
 
 local GlowOverlay = Instance.new("Frame")
-GlowOverlay.Size = udim2New(1, 0, 1, 0); GlowOverlay.BackgroundTransparency = 1; GlowOverlay.ZIndex = ShootButton.ZIndex + 1; GlowOverlay.Parent = ShootButton
+GlowOverlay.Size = udim2New(1,0,1,0); GlowOverlay.BackgroundTransparency = 1; GlowOverlay.ZIndex = ShootButton.ZIndex + 1; GlowOverlay.Parent = ShootButton
 
 local GlowCorner = Instance.new("UICorner")
 GlowCorner.CornerRadius = UDim.new(0.28, 0); GlowCorner.Parent = GlowOverlay
 
 local UiGradient = Instance.new("UIGradient")
 UiGradient.Color = ColorSequence.new({
-    ColorSequenceKeypoint.new(0, color3RGB(24, 8, 43)),
+    ColorSequenceKeypoint.new(0,   color3RGB(24, 8, 43)),
     ColorSequenceKeypoint.new(0.5, color3RGB(131, 46, 222)),
-    ColorSequenceKeypoint.new(1, color3RGB(24, 8, 43))
+    ColorSequenceKeypoint.new(1,   color3RGB(24, 8, 43))
 })
-UiGradient.Offset = vec2New(0, 0); UiGradient.Rotation = 0; UiGradient.Parent = GlowOverlay
+UiGradient.Offset   = vec2New(0, 0); UiGradient.Rotation = 0; UiGradient.Parent = GlowOverlay
 
 local tweenRot = TweenService:Create(UiGradient, TweenInfo.new(3, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut, -1), {Rotation = 360})
 tweenRot:Play()
 KillerHub:AddTask(tweenRot)
 
 DecalTexture = Instance.new("ImageLabel")
-DecalTexture.Name = "CrosshairDecal"
-DecalTexture.Size = udim2New(0.38, 0, 0.38, 0)
-DecalTexture.AnchorPoint = vec2New(0.5, 0.5)
-DecalTexture.Position = udim2New(0.5, 0, 0.44, 0)
+DecalTexture.Name               = "CrosshairDecal"
+DecalTexture.Size               = udim2New(0.38, 0, 0.38, 0)
+DecalTexture.AnchorPoint        = vec2New(0.5, 0.5)
+DecalTexture.Position           = udim2New(0.5, 0, 0.44, 0)
 DecalTexture.BackgroundTransparency = 1
-DecalTexture.Image = "rbxassetid://125754446555599"
-DecalTexture.ZIndex = ShootButton.ZIndex + 2; DecalTexture.Parent = ShootButton
+DecalTexture.Image              = "rbxassetid://125754446555599"
+DecalTexture.ZIndex             = ShootButton.ZIndex + 2; DecalTexture.Parent = ShootButton
 
-local tiLoop = TweenInfo.new(0.80, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut, -1, true)
-local rotAnim = TweenService:Create(DecalTexture, tiLoop, {Rotation = 360})
+local tiLoop   = TweenInfo.new(0.80, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut, -1, true)
+local rotAnim  = TweenService:Create(DecalTexture, tiLoop, {Rotation = 360})
 rotAnim:Play()
 KillerHub:AddTask(rotAnim)
 
 Label = Instance.new("TextLabel")
-Label.Name = "ShootLabel"
-Label.Size = udim2New(1, 0, 0.2, 0)
-Label.Position = udim2New(0, 0, 0.75, 0)
+Label.Name                = "ShootLabel"
+Label.Size                = udim2New(1, 0, 0.2, 0)
+Label.Position            = udim2New(0, 0, 0.75, 0)
 Label.BackgroundTransparency = 1
-Label.Text = "SHOOT"; Label.TextColor3 = color3RGB(255, 255, 255); Label.TextSize = 14; Label.Font = Enum.Font.GothamBold
-Label.TextScaled = true; Label.ZIndex = ShootButton.ZIndex + 2; Label.Parent = ShootButton
+Label.Text                = "SHOOT"
+Label.TextColor3          = color3RGB(255, 255, 255)
+Label.TextSize            = 14
+Label.Font                = Enum.Font.GothamBold
+Label.TextScaled          = true
+Label.ZIndex              = ShootButton.ZIndex + 2; Label.Parent = ShootButton
 
 local LabelConstraint = Instance.new("UITextSizeConstraint")
 LabelConstraint.MaxTextSize = 15; LabelConstraint.MinTextSize = 8; LabelConstraint.Parent = Label
 
 SubLabel = Instance.new("TextLabel")
-SubLabel.Name = "SubTimerLabel"
-SubLabel.Size = udim2New(1, 0, 0.18, 0)
-SubLabel.Position = udim2New(0, 0, 0.74, 0)
+SubLabel.Name                = "SubTimerLabel"
+SubLabel.Size                = udim2New(1, 0, 0.18, 0)
+SubLabel.Position            = udim2New(0, 0, 0.74, 0)
 SubLabel.BackgroundTransparency = 1
-SubLabel.Text = ""
-SubLabel.TextColor3 = color3RGB(255, 255, 255)
-SubLabel.TextSize = 12
-SubLabel.Font = Enum.Font.GothamBold
-SubLabel.TextScaled = true
-SubLabel.ZIndex = ShootButton.ZIndex + 2
-SubLabel.Parent = ShootButton
+SubLabel.Text                = ""
+SubLabel.TextColor3          = color3RGB(255, 255, 255)
+SubLabel.TextSize            = 12
+SubLabel.Font                = Enum.Font.GothamBold
+SubLabel.TextScaled          = true
+SubLabel.ZIndex              = ShootButton.ZIndex + 2; SubLabel.Parent = ShootButton
 
 local SubConstraint = Instance.new("UITextSizeConstraint")
 SubConstraint.MaxTextSize = 13; SubConstraint.MinTextSize = 7; SubConstraint.Parent = SubLabel
@@ -1711,13 +1655,13 @@ KillerHub:AddTask(ShootButton.InputBegan:Connect(function(input)
                 end
             end)
         end
-     end
+    end
 end))
 
 KillerHub:AddTask(ShootButton.InputEnded:Connect(function(input)
     if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
         TweenService:Create(GlowOverlay, TweenInfo.new(0.45, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundTransparency = 1}):Play()
-        if dragging then dragging = false; saveButtonPosition(ShootButton.Position) end
+        if dragging then dragging = false saveButtonPosition(ShootButton.Position) end
     end
 end))
 
@@ -1730,15 +1674,18 @@ end))
 KillerHub:AddTask(UserInputService.InputChanged:Connect(function(input)
     if input == dragInput and dragging and not Flag("Sheriff_LockBtnPos", false) then
         local delta = input.Position - dragStart
-        ShootButton.Position = udim2New(startPos.X.Scale + (delta.X / Camera.ViewportSize.X), 0, startPos.Y.Scale + (delta.Y / Camera.ViewportSize.Y), 0)
+        ShootButton.Position = udim2New(
+            startPos.X.Scale + (delta.X / Camera.ViewportSize.X), 0,
+            startPos.Y.Scale + (delta.Y / Camera.ViewportSize.Y), 0
+        )
     end
 end))
 
 -- ═══════════════════════════════════════════════════════════════════════════
 -- 🎯 SILENT AIM HOOKS
 -- ═══════════════════════════════════════════════════════════════════════════
-local WeaponService = nil
-local ClientServices = ReplicatedStorage:FindFirstChild("ClientServices") or ReplicatedStorage:FindFirstChild("Services")
+local WeaponService   = nil
+local ClientServices  = ReplicatedStorage:FindFirstChild("ClientServices") or ReplicatedStorage:FindFirstChild("Services")
 if ClientServices then
     local ws = ClientServices:FindFirstChild("WeaponService") or ClientServices:FindFirstChild("GunService")
     if ws and ws:IsA("ModuleScript") then pcall(function() WeaponService = require(ws) end) end
@@ -1762,21 +1709,21 @@ if not WeaponService then
 end
 
 if WeaponService then
-    local oldGetTargetPosition = WeaponService.GetTargetPosition
+    local oldGetTargetPosition    = WeaponService.GetTargetPosition
     local oldGetMouseTargetCFrame = WeaponService.GetMouseTargetCFrame
-    local lastHookCallTime = os_clock()
-    local frameCachedTime = 0
-    local frameCachedCF = nil
+    local lastHookCallTime        = os_clock()
+    local frameCachedTime         = 0
+    local frameCachedCF           = nil
 
     local function getPredictedTargetCFrame(customDelta)
         local currentTime = os_clock()
         if currentTime == frameCachedTime then return frameCachedCF end
 
-        local silentAim = Flag("Sheriff_SilentAim", false)
+        local silentAim  = Flag("Sheriff_SilentAim", false)
         if not silentAim then frameCachedTime = currentTime; frameCachedCF = nil; return nil end
 
-        local shotType = Flag("Sheriff_ShotType", "Normal")
-        local useDetect = Flag("Sheriff_WeaponDetect", false)
+        local shotType   = Flag("Sheriff_ShotType", "Normal")
+        local useDetect  = Flag("Sheriff_WeaponDetect", false)
 
         if useDetect and not hasRangedWeaponCached then
             frameCachedTime = currentTime; frameCachedCF = nil; return nil
@@ -1793,11 +1740,11 @@ if WeaponService then
             frameCachedTime = currentTime; frameCachedCF = nil; return nil
         end
 
-        local dt = customDelta or math_clamp(currentTime - lastHookCallTime, 0.008, 0.033)
-        lastHookCallTime = currentTime
+        local dt             = customDelta or math_clamp(currentTime - lastHookCallTime, 0.008, 0.033)
+        lastHookCallTime     = currentTime
 
         local finalPredictedPos = getPredictedPosition(murderer.Character, bestPart, dt)
-        frameCachedCF = finalPredictedPos and cframeNew(finalPredictedPos) or nil
+        frameCachedCF  = finalPredictedPos and cframeNew(finalPredictedPos) or nil
         frameCachedTime = currentTime
         return frameCachedCF
     end
@@ -1823,16 +1770,16 @@ end
 task.spawn(function()
     task.wait(0.1)
 
-    local TabSheriffObj = KillerHub:GetTab("Sheriff")
-    local PageOthersObj = TabSheriffObj and TabSheriffObj:GetPage("Others")
+    local TabSheriffObj  = KillerHub:GetTab("Sheriff")
+    local PageOthersObj  = TabSheriffObj and TabSheriffObj:GetPage("Others")
     if not PageOthersObj then return end
 
     PageOthersObj:CreateSection("Flick Shoot")
-    PageOthersObj:CreateToggle("Sheriff_FlickShoot", "Flick Shoot", function() end)
-    PageOthersObj:CreateToggle("Sheriff_AutoShiftLock", "Auto Shift Lock", function() end)
+    PageOthersObj:CreateToggle("Sheriff_FlickShoot",    "Flick Shoot",       function() end)
+    PageOthersObj:CreateToggle("Sheriff_AutoShiftLock", "Auto Shift Lock",   function() end)
 
-    local PlayerScripts = LocalPlayer:WaitForChild("PlayerScripts", 2)
-    local PlayerModule = PlayerScripts and PlayerScripts:FindFirstChild("PlayerModule")
+    local PlayerScripts  = LocalPlayer:WaitForChild("PlayerScripts", 2)
+    local PlayerModule   = PlayerScripts and PlayerScripts:FindFirstChild("PlayerModule")
 
     local function isShiftLockEnabled()
         if PlayerModule then
@@ -1863,13 +1810,17 @@ task.spawn(function()
 
         isFlicking = true
         local originalCamCF = Camera.CFrame
-        local targetCamCF = cframeNew(Camera.CFrame.Position, targetPos)
+        local targetCamCF   = cframeNew(Camera.CFrame.Position, targetPos)
 
-        local flickInTween = TweenService:Create(Camera, TweenInfo.new(0.09, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {CFrame = targetCamCF})
+        local flickInTween = TweenService:Create(Camera,
+            TweenInfo.new(0.09, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
+            {CFrame = targetCamCF})
         flickInTween:Play()
         flickInTween.Completed:Wait()
 
-        local flickOutTween = TweenService:Create(Camera, TweenInfo.new(0.08, Enum.EasingStyle.Quad, Enum.EasingDirection.In), {CFrame = originalCamCF})
+        local flickOutTween = TweenService:Create(Camera,
+            TweenInfo.new(0.08, Enum.EasingStyle.Quad, Enum.EasingDirection.In),
+            {CFrame = originalCamCF})
         flickOutTween:Play()
         flickOutTween.Completed:Wait()
 
@@ -1888,19 +1839,22 @@ task.spawn(function()
     PageOthersObj:CreateSection("Target Selection")
 
     local customTargetEnabled = false
-    local selectedPlayerName = "None"
-    local cachedTargetPlayer = nil
-    local lastTargetCheck = 0
+    local selectedPlayerName  = "None"
+    local cachedTargetPlayer  = nil
+    local lastTargetCheck     = 0
 
     PageOthersObj:CreateToggle("Sheriff_ShootPlayers", "Shoot Players", function(estado)
         customTargetEnabled = estado
         if not estado then cachedTargetPlayer = nil end
     end, false)
 
-    local targetDropdown = PageOthersObj:CreateDropdown("Sheriff_SelectedPlayer", "Select Player Target", {"None"}, function(sel)
-        selectedPlayerName = sel
-        cachedTargetPlayer = (sel ~= "None") and Players:FindFirstChild(sel) or nil
-    end, "None")
+    local targetDropdown = PageOthersObj:CreateDropdown(
+        "Sheriff_SelectedPlayer", "Select Player Target", {"None"},
+        function(sel)
+            selectedPlayerName  = sel
+            cachedTargetPlayer  = (sel ~= "None") and Players:FindFirstChild(sel) or nil
+        end, "None"
+    )
 
     targetDropdown:BindToDynamicList(function()
         local list = {"None"}
@@ -1922,15 +1876,15 @@ task.spawn(function()
         if customTargetEnabled and selectedPlayerName ~= "None" then
             local now = os_clock()
             if not cachedTargetPlayer or not cachedTargetPlayer.Parent or (now - lastTargetCheck > 0.1) then
-                lastTargetCheck = now
+                lastTargetCheck    = now
                 cachedTargetPlayer = Players:FindFirstChild(selectedPlayerName)
             end
 
             if cachedTargetPlayer then
                 local char = cachedTargetPlayer.Character
                 if char then
-                    local hum = char:FindFirstChildOfClass("Humanoid")
-                    local hrp = char:FindFirstChild("HumanoidRootPart")
+                    local hum    = char:FindFirstChildOfClass("Humanoid")
+                    local hrp    = char:FindFirstChild("HumanoidRootPart")
                     local isDead = (hum and hum.Health <= 0) or (playerDeadStatus[selectedPlayerName] == true)
                     if not isDead and hrp then
                         setTarget(cachedTargetPlayer)
